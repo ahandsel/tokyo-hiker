@@ -22,7 +22,7 @@ MARKDOWNLINT_CMD="markdownlint"
 function check_markdownlint_installed {
     if ! command -v $MARKDOWNLINT_CMD &>/dev/null; then
         printf "Error: markdownlint not found.\nInstall it by executing either:\n"
-        printf "npm install -g markdownlint-cli\nor\nbrew install markdownlint-cli\n"
+        printf "pnpm install -g markdownlint-cli\nor\nbrew install markdownlint-cli\n"
         exit 1
     fi
 }

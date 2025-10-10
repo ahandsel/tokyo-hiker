@@ -15,7 +15,7 @@ draft: false
 * [Day 4: Hiking + Bus; Chikatsuyu to Hongu Taisha](#day-4-hiking--bus-chikatsuyu-to-hongu-taisha)
 * [Hike: Chikatsuyu to Kumano Hongu Taisha](#hike-chikatsuyu-to-kumano-hongu-taisha)
   * [Option 1: Full Walk; 25 km](#option-1-full-walk-25-km)
-  * [Option 2: Challenging Walk; 17 km](#option-2-Challenging-walk-17-km)
+  * [Option 2: Challenging Walk; 17 km](#option-2-challenging-walk-17-km)
   * [Option 3: Highlight Walk; 7.5 km](#option-3-highlight-walk-75-km)
 * [Day 5: Boat Tour \& Back to Shirahama City](#day-5-boat-tour--back-to-shirahama-city)
 * [Resources](#resources)
