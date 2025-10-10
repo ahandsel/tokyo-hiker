@@ -37,18 +37,20 @@ Kamazawa Entrance (Bus)
 
 合計時間: 5 時間 11 分
 
-* 08:00 - [鎌沢入口バス停](https://yamap.com/landmarks/52708)
-* 08:25 - [標高389m地点](https://yamap.com/landmarks/52731)
-* 09:00 - [トイレ](https://yamap.com/landmarks/52729)
-* 09:02 - [三国山・生藤山登山口](https://yamap.com/landmarks/52728)
-* 09:27 - [軍刀利神社](https://yamap.com/landmarks/52727)
-* 09:37 - [佐野川峠](https://yamap.com/landmarks/52726)
-* 10:22 - [分岐](https://yamap.com/landmarks/52715)
-* 10:37 - [三国山](https://yamap.com/landmarks/87121)
-* 10:42 - [生藤山](https://yamap.com/landmarks/1644)
-* 11:01 - [茅丸](https://yamap.com/landmarks/63406)
-* 11:21 - [連行峰（連行山）](https://yamap.com/landmarks/74318)
-* 11:51 - [分岐](https://yamap.com/landmarks/52709)
-* 12:51 - [分岐](https://yamap.com/landmarks/248368)
-* 13:01 - [和田登山口](https://yamap.com/landmarks/166297)
-* 13:11 - [和田バス停](https://yamap.com/landmarks/52707)
+| Time  | Location                     | Yamap Link                                                | Google Maps Link                                              |
+| ----- | ---------------------------- | --------------------------------------------------------- | ------------------------------------------------------------- |
+| 08:00 | Kamazawa trail head bus stop | [鎌沢入口バス停](https://yamap.com/landmarks/52708)       | [鎌沢入口（バス）](https://maps.app.goo.gl/zkiMqz9Nkyz35M8r5) |
+| 08:25 | 389m altitude point          | [標高389m地点](https://yamap.com/landmarks/52731)         |                                                               |
+| 09:00 | Toilet & benches             | [トイレ](https://yamap.com/landmarks/52729)               | [県立鎌沢休憩所](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)       |
+| 09:02 |                              | [三国山・生藤山登山口](https://yamap.com/landmarks/52728) | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 09:27 |                              | [軍刀利神社](https://yamap.com/landmarks/52727)           | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 09:37 |                              | [佐野川峠](https://yamap.com/landmarks/52726)             | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 10:22 |                              | [分岐](https://yamap.com/landmarks/52715)                 | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 10:37 |                              | [三国山](https://yamap.com/landmarks/87121)               | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 10:42 |                              | [生藤山](https://yamap.com/landmarks/1644)                | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 11:01 |                              | [茅丸](https://yamap.com/landmarks/63406)                 | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 11:21 |                              | [連行峰（連行山）](https://yamap.com/landmarks/74318)     | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 11:51 |                              | [分岐](https://yamap.com/landmarks/52709)                 | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 12:51 |                              | [分岐](https://yamap.com/landmarks/248368)                | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 13:01 |                              | [和田登山口](https://yamap.com/landmarks/166297)          | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |
+| 13:11 |                              | [和田バス停](https://yamap.com/landmarks/52707)           | [Google Maps](https://goo.gl/maps/VEwYVzoW8eZZuQeh7)          |

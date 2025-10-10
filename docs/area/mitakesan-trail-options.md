@@ -1,45 +1,26 @@
 ---
-title: "Hiking Plan: OkuTama Area on Sat, Oct 8"
-date:   2022-10-06
+title: Mitakesan trail options
+description: Various hiking options to reach Mitakesan and take the cable car down
 draft: false
 ---
 
 # {{$frontmatter.title}}
 
-Following hiking plans are set to 1.5x speed.  
-It would be a slow, relaxing hike.
+Here are various hiking options to reach the Mitakesan Cable Car station from different starting points.
+
+> [!NOTE] ⏱️ 1.5x hiking speed is used to estimate time. Allows for a moderate pace with breaks.
+
+> [!WARNING] 🚠 The last cable car down from Mt. Mitake is 18:30! ⚠️
 
 
 ## Table of contents <!-- omit in toc -->
 
-* [Goal / How to get home](#goal--how-to-get-home)
-  * [Time Tables](#time-tables)
 * [Compare](#compare)
 * [Level 1 - Start from Futamatao Station](#level-1---start-from-futamatao-station)
 * [Level 2 - Start from Hinatawada Station](#level-2---start-from-hinatawada-station)
 * [Level 3 - Start from Musashi-Itsukaichi Station](#level-3---start-from-musashi-itsukaichi-station)
 * [Level 4 - Start from OkuTama Station](#level-4---start-from-okutama-station)
-
-
-## Goal / How to get home
-
-Following trails all end at the **Mitakesan Cable Car**
-* [Mitakesan Cable Car Station / 御岳山駅](https://goo.gl/maps/W7baocnkbqSZ1iDZ7)
-* [Timetable from 2022-0-12 from www.mitaketozan.co.jp](https://www.mitaketozan.co.jp/images/timetable__20220312.jpg)
-* [mitaketozan.co.jp/timetable.html](https://www.mitaketozan.co.jp/timetable.html)
-
-
-### Time Tables
-
-| Mitakesan Cable Car 🚠 -> JR Mitake Station 🚉 |
-| -------------------------------------------- |
-| 16:34 -> 17:00                               |
-| 17:06 -> 17:35                               |
-| 17:30 -> 18:03                               |
-| 18:00 -> 18:29                               |
-| 18:30 -> 18:59                               |
-
-⚠️ **Note:** The last cable car down from Mt. Mitake is 18:30! ⚠️
+* [Goal: Mitakesan cable car](#goal-mitakesan-cable-car)
 
 
 ## Compare
@@ -130,3 +111,12 @@ Timeline:
 
 **Route**:
 * [OkuTama station -> Mitakesan Cable Car - YAMAP](https://yamap.com/plans/code/yDRyCMECNz-PyyMM5z4wPsv6yQkNpJnb5XG3StIN_Ti2jFhj6oEK7awYQ6wL9pPOYZ8)
+
+
+## Goal: Mitakesan cable car
+
+Following trails all end at the **Mitakesan Cable Car** which takes down the mountain.
+With a bus ride from the bottom station, you can get back to JR Ome line at **Mitake Station**.
+
+<!--@include: ./snippets/mitakesan-cable-car.md-->
+

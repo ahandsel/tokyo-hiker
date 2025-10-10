@@ -1,6 +1,6 @@
 ---
 title: "Guide: Overnight Hiking in Okutama"
-date:   2022-10-01
+date: 2025-10-11
 categories: guide
 ---
 

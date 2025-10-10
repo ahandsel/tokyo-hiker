@@ -1,4 +1,11 @@
-# Tokyo Hiker
+# Tokyo hiker
+
+A blog about hiking in Tokyo and surrounding areas.
+
+Built with [VitePress](https://vitepress.dev/).
+
+
+## Dev notes
 
 A revamp to my Japan_Guide blog using [VitePress static site generator](https://vitepress.dev/).
 
@@ -10,14 +17,10 @@ Also using the following plugins:
 * [@vite-pwa/assets-generator](
 * [@vite-pwa/vitepress](
 * [vite-plugin-pwa](
-
-* [markdown-link-check](
 * [markdownlint-cli2](
 
 
-## Dev notes
-
-Start the dev server
+## Start the dev server
 
 ```bash
 pnpm run dev

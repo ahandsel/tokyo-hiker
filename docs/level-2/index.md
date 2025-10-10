@@ -4,4 +4,4 @@ title: "Intermediate hikes"
 
 # {{$frontmatter.title}}
 
-<!--@include: ../md-index-list.md-->
+<!--@include: ../snippets/md-index-list.md-->

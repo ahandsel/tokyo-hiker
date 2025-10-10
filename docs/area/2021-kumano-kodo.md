@@ -1,8 +1,10 @@
 ---
 title: "Kumano Kodou 2021 Trip Outline"
-date:   2021-05-01
 draft: false
 ---
+
+# {{$frontmatter.title}}
+
 
 ## Table of Content <!-- omit in toc -->
 
@@ -82,7 +84,7 @@ Hiking: Takijiri-Oji to Takahara
 * Time: 2~3 hr
 * Elevation Gain: ~430 m
 * Elevation Loss: ~200 m
-* ![TAKIJIRI-OJI TO TAKAHARA Map](./public/takahara-chikatsuyu-oji-map.png)
+* ![TAKIJIRI-OJI TO TAKAHARA Map](/takahara-chikatsuyu-oji-map.png)
 * Short but steep uphill walk from Takijiri to the ridge top settlement of Takahara.
 * The trailhead is located behind the Takijiri-oji shrine pavilion.
 * The trail starts off with a challenging grade so set a slow, easy pace, watching your steps on the rocks and roots.
@@ -108,7 +110,7 @@ Hiking: Takahara to Chikatsuyu
 This walk continues into the forested mountains east of Takahara climbing up and over ridges into the next watershed, descending into the village of Chikatsuyu.
 
 NOTE: The [Michi-no-Eki](https://goo.gl/maps/8DgnSWfo2RsNqxLu6) rest area near numbered signpost 23 sells drinks, snacks, and simple meals.
-* ![TAKAHARA TO Chikatsuyu Map](./public/takahara-chikatsuyu-oji-map.png)
+* ![TAKAHARA TO Chikatsuyu Map](/takahara-chikatsuyu-oji-map.png)
 
 Overnight: Chikatsuyu Village
 * Kumano Travel: [Minshuku Momiji-no-Sato](https://www.kumano-travel.com/en/accommodations/minshuku-momiji-no-sato)

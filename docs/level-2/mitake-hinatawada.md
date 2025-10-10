@@ -92,29 +92,4 @@ Mt. Hinode - Umenoki Pass - Hinatawada Station Longitudinal Course
 Google Maps List:  
 [Hinatawada Station to Mitakesan Hike - Google Maps:](https://goo.gl/maps/faGvA5BdW2gki31bA)
 
-
-## Mitakesan Cable Car TimeTable
-
-* Mitakesan Cable [Car Station (`御岳山駅`)](https://goo.gl/maps/W7baocnkbqSZ1iDZ7)
-* [Timetable from 2023-05-01 from www.mitaketozan.co.jp](https://www.mitaketozan.co.jp/images/timetable__20230318.jpg)
-* [mitaketozan.co.jp/timetable.html](https://www.mitaketozan.co.jp/timetable.html)
-
-| Mitakesan Cable Car 🚠 -> JR Mitake Station 🚉 |
-| -------------------------------------------- |
-| 16:34 -> 17:00                               |
-| 17:06 -> 17:35                               |
-| 17:30 -> 18:03                               |
-| 18:00 -> 18:29                               |
-| 18:30 -> 18:59                               |
-
-
-### ⚠️ The last cable car down from Mt. Mitake is 18:30! ⚠️
-
-DO NOT MISS THE LAST CABLE CAR DOWN FROM MT. MITAKE!
-
-![Mitakesan Cable Car Timetable](/mitake-cablecar-timetable.png)
-
-
-## Notes on the Hiking Trail Options
-
-Following YAMAP routes are set to 1.4x speed for a slow, relaxing hike.
+<!--@include: ../snippets/mitakesan-cable-car.md-->

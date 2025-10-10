@@ -1,8 +1,11 @@
 ---
 title: "Mt. Mitake + Rock Garden"
+description: "Easy trail with Mononoke-vibes on Mitakesan"
 ---
 
-# Mt. Mitake + Rock Garden Route
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Getting There
@@ -37,3 +40,5 @@ Mitake Station -> Bus -> Rope way -> Hike 🥾 -> Rope way -> Bus -> Mitake Stat
 * Trail Running 👟 = 2/5 ; pretty steep & rocky so not good for running
 * Simple to get to Mitake station from Shinjuku on express trail (morning)
 * ⚠️ MAKE SURE YOU KNOW THE CABLE CAR TIMETABLES! HAVE PLENTY OF TIME FOR THE CABLE CAR!!!
+
+<!--@include: ../snippets/mitakesan-cable-car.md-->
