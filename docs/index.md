@@ -7,10 +7,10 @@ hero:
   text: "Hiking options near Tokyo"
   tagline: Believe it or not but there are a lot of hiking options in Tokyo!
   image:
-    src: /cat-icon-profile.png
+    src: /hiker.png
     alt: ahandsel Cat, white cat coding on a laptop
-    width: 200px
-    height: 200px
+    width: 250px
+    height: 250px
   # actions:
   #   - theme: brand
   #     text: Markdown Examples
