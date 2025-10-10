@@ -60,7 +60,10 @@ function run_markdownlint {
 
 function scan_markdown_files {
     local directory="$1"
-    find "$directory" -type f -name "*.md" -print
+    find "$directory" -type f -name "*.md" \
+        -not -path "*/node_modules/*" \
+        -not -path "*/.vitepress/*" \
+        -print
 }
 
 # Main Script

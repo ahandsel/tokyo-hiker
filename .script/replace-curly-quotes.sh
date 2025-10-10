@@ -48,8 +48,11 @@ process_files() {
 # Export function so it can be used by find
 export -f process_files
 
-# Find all .md files and process them
-find "$directory" -type f -name '*.md' -exec bash -c 'process_files "$0"' {} \;
+# Find all .md files and process them, excluding node_modules and .vitepress folders
+find "$directory" -type f -name '*.md' \
+  -not -path "*/node_modules/*" \
+  -not -path "*/.vitepress/*" \
+  -exec bash -c 'process_files "$0"' {} \;
 
 # Summary of modifications
 if [ ${#modified_files[@]} -eq 0 ]; then
