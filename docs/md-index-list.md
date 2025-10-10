@@ -2,6 +2,8 @@
 draft: true
 ---
 
+<!-- markdownlint-disable MD033 MD041-->
+
 <script setup>
 /**
  * Lists all .md files in the same folder as this index.md,

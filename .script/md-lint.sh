@@ -22,7 +22,7 @@ MARKDOWNLINT_CMD="markdownlint"
 function check_markdownlint_installed {
     if ! command -v $MARKDOWNLINT_CMD &>/dev/null; then
         printf "Error: markdownlint not found.\nInstall it by executing either:\n"
-        printf "npm install -g markdownlint-cli\nor\nbrew install markdownlint-cli\n"
+        printf "pnpm install -g markdownlint-cli\nor\nbrew install markdownlint-cli\n"
         exit 1
     fi
 }
@@ -60,7 +60,10 @@ function run_markdownlint {
 
 function scan_markdown_files {
     local directory="$1"
-    find "$directory" -type f -name "*.md" -print
+    find "$directory" -type f -name "*.md" \
+        -not -path "*/node_modules/*" \
+        -not -path "*/.vitepress/*" \
+        -print
 }
 
 # Main Script
