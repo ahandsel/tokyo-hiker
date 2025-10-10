@@ -13,6 +13,7 @@
     "@vite-pwa/assets-generator": "^1.0.1",
     "@vite-pwa/vitepress": "^1.0.0",
     "markdown-link-check": "^3.13.7",
+    "markdownlint-cli": "^0.45.0",
     "markdownlint-cli2": "^0.18.1",
     "sharp": "^0.34.4",
     "sharp-ico": "^0.1.5",
