@@ -52,4 +52,4 @@ description: "Nice hike from OkuTama Station with a possible view of Mt. Fuji fr
 
 ⚠️ **Note:** The last cable car down from Mt. Mitake is 18:30! ⚠️
 
-![Timetable from 2023-05-01 from www.mitaketozan.co.jp](mitake-cable-car-timetable-20230318.png)
+![Timetable from 2023-05-01 from www.mitaketozan.co.jp](../public/mitake-cablecar-timetable.png)

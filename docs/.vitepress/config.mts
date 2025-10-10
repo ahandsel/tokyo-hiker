@@ -65,7 +65,7 @@ const vitePressOptions = {
     pwaAssets: {
       // config: true,
       preset: "minimal-2023",
-      image: "public/cat-icon-profile.png",
+      image: "public/favicon.png",
     },
     workbox: {
       globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,woff2}"],
