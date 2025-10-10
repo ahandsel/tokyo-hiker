@@ -1,6 +1,6 @@
 Guntōri Shrine - Sanogawa Pass - Kayamaru - Rengyō Peak - Wada Bus Stop Traversal Route
 
-* [軍刀利神社-佐野川峠-茅丸-連行峰-和田バス停 縦走コースの地図・登山ルート・登山口情報 | YAMAP / ヤマップ](http - com/model-courses/17888)
+* [軍刀利神社-佐野川峠-茅丸-連行峰-和田バス停 縦走コースの地図・登山ルート・登山口情報 | YAMAP / ヤマップ](https://yamap.com/model-courses/17888)
 
 You can select more than one. Later on, you can easily add more.
 
