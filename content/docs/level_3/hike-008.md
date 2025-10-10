@@ -26,7 +26,7 @@ Wada [Sagamihara City] (Bus)
 
 Kamazawa Entrance (Bus)
 * `鎌沢入口（バス）`
-* https://maps.app.goo.gl/VEwYVzoW8eZZuQeh7
+* [maps.app.goo.gl/VEwYVzoW8eZZuQeh7](https://maps.app.goo.gl/VEwYVzoW8eZZuQeh7)
 
 ---
 
