@@ -1,7 +1,44 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-temp.md
-.DS_Store
+# Temp files
+temp.*
+.temp
+
+# Private files
+private/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependencies
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# npm/yarn/pnpm caches
+.npm
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Lint/style caches
+.eslintcache
+.stylelintcache
+
+# npm pack output
+*.tgz
+
+# Framework build outputs
+dist
+.cache/
+**/.vitepress/dist
+**/.vitepress/cache
+
+# dotenv
+.env
+.env.*

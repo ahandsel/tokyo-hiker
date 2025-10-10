@@ -1,22 +1,16 @@
 {
-  "MD001": false,
-  "MD002": false,
-  "MD006": false,
-  "MD009": {
-    "br_spaces": 2
-  },
+  "blanks-around-fences": true,
+  "MD004": { "style": "asterisk" },
+  "MD007": { "indent": 2 },
+  "MD009": { "br_spaces": 2 },
+  "MD012": { "maximum": 2 },
   "MD013": false,
   "MD014": false,
-  "MD022": false,
+  "MD022": { "lines_above": 2, "lines_below": 1 },
   "MD024": false,
-  "MD025": false,
+  "MD025": {"front_matter_title": ""},
   "MD026": false,
   "MD032": false,
-  "MD033": {
-    "allowed_elements": ["br", "pre", "ul", "li", "ol"]
-  },
-  "MD034": false,
-  "MD036": false,
-  "MD041": false,
-  "MD051": false
+  "MD033": { "allowed_elements": ["br", "pre", "ul", "li", "ol"] },
+  "MD036": false
 }

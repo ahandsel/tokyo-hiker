@@ -1,0 +1,17 @@
+{
+  "replace": [
+    {
+      "pattern": "^/(.*\\.(?:png|jpe?g|gif|svg|webp|ico))$",
+      "replacement": "public/$1"
+    },
+    {
+      "pattern": "^(images/.*)$",
+      "replacement": "public/$1"
+    }
+  ],
+  "ignorePatterns": [
+    "^https?://",
+    "^mailto:",
+    "^#"
+  ]
+}

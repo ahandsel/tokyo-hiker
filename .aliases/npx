@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "npx is not allowed. Please use pnpm instead"
+exit 1

@@ -1,42 +1,15 @@
 {
-  "cSpell.words": [
-    "Agano",
-    "Chuo",
-    "Combini",
-    "Gora",
-    "Hakone",
-    "Hakone-Yumoto",
-    "Hakonetozan",
-    "Heikuro",
-    "Higashi",
-    "Hinatawada",
-    "Hinode",
-    "Hosoda-ya",
-    "InariYama",
-    "Iriguchi",
-    "Jinba",
-    "Jinbakōgenshita",
-    "Keio",
-    "Kintoki",
-    "Koburi",
-    "MIRAHAKONE",
-    "Mitake",
-    "Mitakesan",
-    "mitaketozan",
-    "Miyaginoeigyoshomae",
-    "mt-takaos",
-    "Myojingatake",
-    "Myojogatake",
-    "Nokogiri",
-    "Odake",
-    "OkuTama",
-    "Sagamiko",
-    "Takaosanguchi",
-    "Tonomine",
-    "Tozanguchi",
-    "Wadatoge",
-    "Yagurazawa",
-    "YAMAP",
-    "Yumoto"
-  ]
+  "japanese-proofreading.textlint.全角文字と半角文字の間": false,
+  "japanese-proofreading.textlint.全角文字どうし": false,
+  "japanese-proofreading.textlint.ピリオドとカンマの使用（半角）": false,
+  "japanese-proofreading.textlint.丸かっこ（）": false,
+  "japanese-proofreading.textlint.大かっこ［］": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.wordWrap": "on"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  }
 }

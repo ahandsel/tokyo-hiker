@@ -1,0 +1,35 @@
+{
+  "name": "tokyo-hiker",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "packageManager": "pnpm@10.17.1",
+  "devDependencies": {
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2",
+    "@nolebase/vitepress-plugin-meta": "^2.18.2",
+    "@vite-pwa/assets-generator": "^1.0.1",
+    "@vite-pwa/vitepress": "^1.0.0",
+    "markdown-link-check": "^3.13.7",
+    "markdownlint-cli2": "^0.18.1",
+    "sharp": "^0.34.4",
+    "sharp-ico": "^0.1.5",
+    "vite-plugin-pwa": "^1.0.3",
+    "vitepress": "^1.6.4",
+    "vitepress-sidebar": "^1.33.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "glob": "^11.0.3",
+    "gray-matter": "^4.0.3",
+    "openai": "^5.23.2"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "onFail": "error"
+    }
+  }
+}
