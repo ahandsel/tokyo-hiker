@@ -5,7 +5,7 @@ description: "Where to get maps for Japanese hiking trails"
 
 # {{$frontmatter.title}}
 
-I HIGHLY recommend using an app like YAMAP or AllTrails when hiking!
+> [!TIP] Trail apps like YAMAP & AllTrails are must-haves! 🥾
 
 You may think you do not need a map for a well-marked trail, but you really do need one for the following reasons:
 * Restroom locations 💩
@@ -14,8 +14,7 @@ You may think you do not need a map for a well-marked trail, but you really do n
 * Photo and lunch spots 📸 🍱
 * Transport information (bus stops, train stations, etc.) 🚉 🚌 🚠
 
-> [!IMPORTANT]  
-> TRUST ME! YOU NEED IT!  
+> [!IMPORTANT] TRUST ME! YOU NEED IT!  
 > Or you will really wished you had when you are crawling back to the train station way past your schedule after hiking in the dark...
 
 
