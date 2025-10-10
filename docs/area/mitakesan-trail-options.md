@@ -118,5 +118,5 @@ Timeline:
 Following trails all end at the **Mitakesan Cable Car** which takes down the mountain.
 With a bus ride from the bottom station, you can get back to JR Ome line at **Mitake Station**.
 
-<!--@include: ./snippets/mitakesan-cable-car.md-->
+<!--@include: ../snippets/mitakesan-cable-car.md-->
 
