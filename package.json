@@ -6,7 +6,7 @@
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.18.2",
   "devDependencies": {
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2",
     "@nolebase/vitepress-plugin-meta": "^2.18.2",
@@ -24,7 +24,8 @@
     "dotenv": "^17.2.3",
     "glob": "^11.0.3",
     "gray-matter": "^4.0.3",
-    "openai": "^5.23.2"
+    "npm-check-updates": "^19.0.0",
+    "openai": "^6.3.0"
   },
   "devEngines": {
     "packageManager": {
