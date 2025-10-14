@@ -10,6 +10,8 @@ Here are various hiking options to reach the Mitakesan Cable Car station from di
 
 > [!NOTE] ⏱️ 1.5x hiking speed is used to estimate time. Allows for a moderate pace with breaks.
 
+<br>
+
 > [!WARNING] 🚠 The last cable car down from Mt. Mitake is 18:30! ⚠️
 
 

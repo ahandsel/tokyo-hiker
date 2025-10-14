@@ -45,6 +45,8 @@ features:
       height: 32px
 ---
 
+<!-- markdownlint-disable MD041 -->
+
 <!--@include: ./snippets/trail-difficulty.md-->
 
 ---
