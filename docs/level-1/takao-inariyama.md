@@ -1,18 +1,24 @@
 ---
-title: "Mt. Takao's InariYama Trail"
+title: "Mt. Takao Inariyama Trail (dirt trail) route"
+description: "Hiking route to Mt. Takao from Takaosanguchi Station via Inariyama Trail (dirt trail)."
+excludeFromSidebar: false
 ---
 
-# Mt. Takao's InariYama Trail (Dirt Trail) Route
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
-## Getting There
+## Getting there
 
-Train station 🚉:  
-Takaosanguchi Station / 高尾山口駅 / <https://goo.gl/maps/RZAncG96KWGftEGEA>
+Train station:  
+Takaosanguchi Station / 高尾山口駅 / [Google Maps][]
 
-Travel from Shinjuku?  **1 hr**
-* 9 am -> 9:43 am via Mt.Takao-Go 1 Rapid-Liner (⚡ Needs Seat reservation; ¥800)
-* 9:01 am -> 9:56 am via Limited Express + Local (Only ¥390)
+Travel from Shinjuku - approximately 1 hour  
+* 09:00 -> 09:43 via Mt. Takao-Go 1 Rapid-Liner (seat reservation required; ¥800)  
+* 09:01 -> 09:56 via Limited Express + Local (¥390)  
+
+[Google Maps]: https://goo.gl/maps/RZAncG96KWGftEGEA  
 
 
 ## Overview
@@ -22,14 +28,18 @@ Takaosanguchi Station -> Hike 🥾 -> Takaosanguchi Station
 
 ## Food
 
-* No stress, just bring water
-* Cafe & Combini at the station & on the mountain
-* [Hosoda-ya / 細田屋](https://goo.gl/maps/Y6SFpHgKx4dziUgK7) - Soba shop on the trail
+* Bring water  
+* Cafes and convenience stores at the station and on the mountain  
+* [Yamabiko Chaya / やまびこ茶屋][] - soba shop on the trail  
+
+[Yamabiko Chaya / やまびこ茶屋]: https://maps.app.goo.gl/DY7v3xXZDyviK1uD6  
 
 
 ## Summary
 
-* Easy, can get a bit busy
-* Hiking Poles 🔧 = 1/5 not needed ~
-* Trail Running 👟 = 4/5 Totally doable ~
-* Super easy to get to from Shinjuku
+* Easy route, but can be crowded  
+* Hiking poles - 1/5 (not needed)  
+* Trail running - 4/5 (suitable)  
+* Very accessible from Shinjuku  
+
+<!--@include: ../snippets/footer.md-->

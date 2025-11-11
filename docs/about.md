@@ -11,3 +11,5 @@ This blog is for fellow hikers wanting to explore hiking trails around Tokyo and
 Hope you find it helpful ~
 
 YAMAP Profile: [Tokyo.Hiker](https://yamap.com/users/988731)
+
+<!--@include: ../snippets/footer.md-->

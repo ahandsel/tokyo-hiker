@@ -1,3 +1,6 @@
+# Copilot instructions
+
+
 ## Project context
 
 * Static site built with **VitePress**.

@@ -1,5 +1,7 @@
 ---
 title: "Hinatawada Station to Mitakesan Cable Car via Mt. Hinode (日の出山)"
+description: "Hiking route from Hinatawada Station (日向和田駅) to Mitakesan Cable Car Station (御岳山駅) via Mt. Hinode (日の出山)"
+excludeFromSidebar: false
 ---
 
 # Hinatawada Station to Mitakesan Cable Car via Mt. Hinode (日の出山) Route
@@ -93,3 +95,4 @@ Google Maps List:
 [Hinatawada Station to Mitakesan Hike - Google Maps:](https://goo.gl/maps/faGvA5BdW2gki31bA)
 
 <!--@include: ../snippets/mitakesan-cable-car.md-->
+<!--@include: ../snippets/footer.md-->

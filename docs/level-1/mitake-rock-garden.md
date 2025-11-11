@@ -1,7 +1,9 @@
 ---
 title: "Mt. Mitake + Rock Garden"
-description: "Easy trail with Mononoke-vibes on Mitakesan"
+description: "Hiking route on Mitakesan (御岳山) Mononoke-vibes that are perfect for family outing
+excludeFromSidebar: false
 ---
+
 
 # {{$frontmatter.title}}
 
@@ -17,7 +19,7 @@ Cable Car station 🚠:
 Mitakesan Station / 御岳山駅 / <https://goo.gl/maps/fUiVTkKLTc9JgUx59>
 
 Travel from Shinjuku?  **2 hr**
-* 7:44 am -> 9:04 am {Mitake Station} + 9:12 am bus -> 9:30 am Cable Car -> 9:36 am
+* 07:44 -> 09:04  {Mitake Station} + 09:12 bus -> 09:30 Cable Car -> 09:36
 * [Google Maps Route](https://goo.gl/maps/d1DcUD19ftQLvQN5A)
 
 
@@ -42,3 +44,4 @@ Mitake Station -> Bus -> Rope way -> Hike 🥾 -> Rope way -> Bus -> Mitake Stat
 * ⚠️ MAKE SURE YOU KNOW THE CABLE CAR TIMETABLES! HAVE PLENTY OF TIME FOR THE CABLE CAR!!!
 
 <!--@include: ../snippets/mitakesan-cable-car.md-->
+<!--@include: ../snippets/footer.md-->
