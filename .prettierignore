@@ -1,2 +1,4 @@
 # pnpm
 pnpm-lock.yaml
+# Markdown files are excluded from Prettier formatting because they are handled by markdownlint-cli2 (see the `md-lint` script) for formatting and linting.
+*.md
