@@ -20,7 +20,7 @@
 
 * Node 18+ or 20. Prefer LTS in CI.
 * Build with `vitepress build` to `.vitepress/dist`.
-* Use GitHub Pages “Actions” workflow (`upload-pages-artifact` + `deploy-pages`).
+* Use GitHub Pages "Actions" workflow (`upload-pages-artifact` + `deploy-pages`).
 * Prefer plain Markdown + VitePress features over custom plugins unless requested.
 
 
