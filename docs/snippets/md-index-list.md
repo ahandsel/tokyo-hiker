@@ -1,6 +1,6 @@
 ---
-title: "Markdown Index List Snippet"
-description: "Dynamically generated list of markdown pages in the same folder, excluding index.md."
+title: 'Markdown Index List Snippet'
+description: 'Dynamically generated list of markdown pages in the same folder, excluding index.md.'
 excludeFromSidebar: true
 ---
 

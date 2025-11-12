@@ -27,8 +27,8 @@
 ## Commands
 
 * Install: `pnpm install`
-* Dev: `pnpm dev`  _(or `vitepress dev docs` if scripts missing)_
-* Build: `pnpm build`  _(or `vitepress build docs`)_
+* Dev: `pnpm dev` _(or `vitepress dev docs` if scripts missing)_
+* Build: `pnpm build` _(or `vitepress build docs`)_
 * Preview build: `pnpm preview`
 * Lint Markdown: `pnpm lint`
 

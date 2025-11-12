@@ -4,7 +4,6 @@ description: "Hiking route on Mitakesan (御岳山) Mononoke-vibes that are perf
 excludeFromSidebar: false
 ---
 
-
 # {{$frontmatter.title}}
 
 {{$frontmatter.description}}
@@ -18,8 +17,8 @@ Mitake Station / 御嶽駅 / <https://goo.gl/maps/DMhiun282BQ1sZGS9>
 Cable Car station 🚠:  
 Mitakesan Station / 御岳山駅 / <https://goo.gl/maps/fUiVTkKLTc9JgUx59>
 
-Travel from Shinjuku?  **2 hr**
-* 07:44 -> 09:04  {Mitake Station} + 09:12 bus -> 09:30 Cable Car -> 09:36
+Travel from Shinjuku? **2 hr**
+* 07:44 -> 09:04 {Mitake Station} + 09:12 bus -> 09:30 Cable Car -> 09:36
 * [Google Maps Route](https://goo.gl/maps/d1DcUD19ftQLvQN5A)
 
 

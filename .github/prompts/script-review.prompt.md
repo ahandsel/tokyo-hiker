@@ -1,7 +1,7 @@
 ---
 mode: 'agent'
-model: GPT-4o
-tools: ['search/codebase', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'runCommands/terminalSelection', 'runCommands/terminalLastCommand', 'openSimpleBrowser', 'fetch','search/searchResults', 'githubRepo', 'extensions', 'edit/editFiles', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'ms-vscode.vscode-websearchforcopilot/websearch']
+model: GPT-5 mini
+tools: [ 'changes', 'edit', 'extensions', 'fetch', 'githubRepo', 'ms-vscode.vscode-websearchforcopilot/websearch', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runNotebooks', 'runTasks', 'search', 'testFailure', 'usages', 'vscodeAPI']
 description: 'Review and improve my script for code quality, readability, reusability, scalability, and security.'
 ---
 
@@ -35,11 +35,11 @@ If the code is too long to process in one go, break it into smaller sections and
 2. Identify the language the code is written in. Default to Bash if unsure.
 3. Identify the purpose of the code.
 4. Review the code for improvements in:
-    * Code quality
-    * Readability
-    * Reusability
-    * Scalability
-    * Security
+   * Code quality
+   * Readability
+   * Reusability
+   * Scalability
+   * Security
 5. Compare the code against best practices for the identified language.
 6. Compare the code against the other scripts in the codebase for consistency. They are located in the `script/` directory.
 7. Where applicable, ensure consistency with the other scripts in the codebase.

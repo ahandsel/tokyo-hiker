@@ -22,11 +22,11 @@ excludeFromSidebar: false
 
 These are the main options for spending the night in the Okutama area.
 
-| Options                              | Notes                        |
-| ------------------------------------ | ---------------------------- |
-| Near [Ome Station / 青梅駅][]        | Cheapest option but plain    |
+| Options                             | Notes                        |
+| ----------------------------------- | ---------------------------- |
+| Near [Ome Station / 青梅駅][]       | Cheapest option but plain    |
 | Near [Okutama Station / 奥多摩駅][] | Moderately priced and simple |
-| On [Mt. Mitake / 御岳山][]           | More expensive but scenic    |
+| On [Mt. Mitake / 御岳山][]          | More expensive but scenic    |
 
 My recommended ryokan on Mt. Mitake:
 
@@ -48,7 +48,6 @@ For those who want to stay overnight and hike the next day, [Mt. Odake / 大岳�
 ### Level 1
 
 Take the cable car up to the top of Mt. Mitake and hike around the Rock Garden area.
-
 * Start and goal: [Mitakesan Station (御岳山駅)][] 🚞
 * YAMAP route: [御岳山駅発着 - 御岳山・ロックガーデン周回コースの地図・登山ルート・登山口情報][]
 
@@ -65,7 +64,7 @@ Take the cable car up to the top of Mt. Mitake and hike around the Rock Garden a
 ### Level 3
 
 * Start: [Okutama Station / 奥多摩駅][] 🚂
-* Goal: [Hinatawada Station / 日向和田駅][]  
+* Goal: [Hinatawada Station / 日向和田駅][]
 * YAMAP: [Okutama station to Hinatawada Station][]
 
 [Ome Station / 青梅駅]: https://goo.gl/maps/vRuULkJ2HUb8iCFU7

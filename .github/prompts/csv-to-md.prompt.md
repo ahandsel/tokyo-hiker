@@ -1,7 +1,7 @@
 ---
 mode: 'agent'
-model: GPT-4o
-tools: ['search/codebase', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'runCommands/terminalSelection', 'runCommands/terminalLastCommand', 'openSimpleBrowser', 'fetch','search/searchResults', 'githubRepo', 'extensions', 'edit/editFiles', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'ms-vscode.vscode-websearchforcopilot/websearch']
+model: GPT-5 mini
+tools: [ 'changes', 'edit', 'extensions', 'fetch', 'githubRepo', 'ms-vscode.vscode-websearchforcopilot/websearch', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runNotebooks', 'runTasks', 'search', 'testFailure', 'usages', 'vscodeAPI']
 description: 'Convert CSV tables into Markdown tables following the specified template.'
 ---
 
@@ -42,8 +42,8 @@ Convert CSV tables into Markdown tables. No commentary. No summaries. Output onl
 When requested, use this template as the target schema:
 
 ```markdown
-| key_name | en | comment |
-|----------|----|---------|
+| key_name | en  | comment |
+| -------- | --- | ------- |
 ```
 
 
@@ -61,7 +61,7 @@ keyValue,englishValue,descriptionValue
 ### Output (Markdown)
 
 ```markdown
-| key_name | en            | comment           |
-|----------|---------------|-------------------|
-| keyValue | englishValue  | descriptionValue  |
+| key_name | en           | comment          |
+| -------- | ------------ | ---------------- |
+| keyValue | englishValue | descriptionValue |
 ```

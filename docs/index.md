@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Tokyo Hiker 🥾"
-  text: "Hiking options near Tokyo"
+  name: 'Tokyo Hiker 🥾'
+  text: 'Hiking options near Tokyo'
   tagline: Believe it or not but there are a lot of hiking options in Tokyo!
   image:
     src: /hiker.png
@@ -20,7 +20,7 @@ hero:
   #     link: /api-examples
 
 features:
-# add emojis for each feature
+  # add emojis for each feature
   - title: Easy hikes
     details: Great for first-time hikers or those looking for a relaxing stroll.
     link: /level-1/

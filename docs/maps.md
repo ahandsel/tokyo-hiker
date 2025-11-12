@@ -1,6 +1,6 @@
 ---
-title: "Hiking maps in Japan"
-description: "Where to get maps for Japanese hiking trails"
+title: 'Hiking maps in Japan'
+description: 'Where to get maps for Japanese hiking trails'
 ---
 
 # {{$frontmatter.title}}

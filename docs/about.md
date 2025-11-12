@@ -4,7 +4,7 @@ title: About
 
 # Hello 👋
 
-I am a Californian ex-pats living in Tokyo 🌉🌲🏖  
+I am a Californian ex-pats living in Tokyo 🌉🌲🏖
 
 This blog is for fellow hikers wanting to explore hiking trails around Tokyo and Japan.
 

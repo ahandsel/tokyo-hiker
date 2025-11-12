@@ -27,16 +27,16 @@ Here are several hiking options to reach the Mitakesan Cable Car station from di
 
 ## Compare
 
-| Metrics             | Option 1                            | Option 2                                | Option 3                                                  | Option 4                          |
-| ------------------- | ----------------------------------- | --------------------------------------- | --------------------------------------------------------- | --------------------------------- |
-| Start station       | [Futamatao / `二俣尾駅`][Futamatao] | [Hinatawada / `日向和田駅`][Hinatawada] | [Musashi-Itsukaichi / `武蔵五日市駅`][Musashi-Itsukaichi] | [Okutama / `奥多摩駅`][Okutama] |
-| Start time          | 10:00                               | 10:00                                   | 08:15                                                     | 08:00                             |
-| Length of time      | 6 hr 46 min                         | 7 hr 10 min                             | 9 hr 13 min                                               | 9 hr 46 min                       |
-| Distance            | 9.5 km                              | 9.9 km                                  | 12.7 km                                                   | 11.6 km                           |
-| Elevation - gain    | 1083 m                              | 1031 m                                  | 1246 m                                                    | 1440 m                            |
-| Elevation - decline | 473 m                               | 400 m                                   | 588 m                                                     | 938 m                             |
-| End time            | 16:46                               | 17:10                                   | 17:28                                                     | 17:46                             |
-| YAMAP routes        | [Futamatao Station Route][]         | [Hinatawada Station Route][]            | [Musashi-Itsukaichi Station Route][]                      | [Okutama Station Route][]         |
+| Metrics              | Option 1                            | Option 2                                | Option 3                                                  | Option 4                        |
+| -------------------- | ----------------------------------- | --------------------------------------- | --------------------------------------------------------- | ------------------------------- |
+| Start station        | [Futamatao / `二俣尾駅`][Futamatao] | [Hinatawada / `日向和田駅`][Hinatawada] | [Musashi-Itsukaichi / `武蔵五日市駅`][Musashi-Itsukaichi] | [Okutama / `奥多摩駅`][Okutama] |
+| Start time           | 10:00                               | 10:00                                   | 08:15                                                     | 08:00                           |
+| Length of time       | 6 hr 46 min                         | 7 hr 10 min                             | 9 hr 13 min                                               | 9 hr 46 min                     |
+| Distance             | 9.5 km                              | 9.9 km                                  | 12.7 km                                                   | 11.6 km                         |
+| Elevation gain ↗️    | 1083 m                              | 1031 m                                  | 1246 m                                                    | 1440 m                          |
+| Elevation decline ↘️ | 473 m                               | 400 m                                   | 588 m                                                     | 938 m                           |
+| End time             | 16:46                               | 17:10                                   | 17:28                                                     | 17:46                           |
+| YAMAP routes         | [Futamatao Station Route][]         | [Hinatawada Station Route][]            | [Musashi-Itsukaichi Station Route][]                      | [Okutama Station Route][]       |
 
 
 ## Level 1 - Start from Futamatao Station
@@ -44,8 +44,8 @@ Here are several hiking options to reach the Mitakesan Cable Car station from di
 Metrics:
 * Length of time: 6 hr 46 min
 * Distance: 9.5 km
-* Elevation - gain: 1083 m
-* Elevation - decline: 473 m
+* Elevation gain ↗️: 1083 m
+* Elevation decline ↘️: 473 m
 
 Locations:
 * Start: [Futamatao Station / 二俣尾駅][Futamatao]
@@ -63,8 +63,8 @@ Timeline:
 Metrics:
 * Length of time: 7 hr 10 min
 * Distance: 9.9 km
-* Elevation - gain: 1031 m
-* Elevation - decline: 400 m
+* Elevation gain ↗️: 1031 m
+* Elevation decline ↘️: 400 m
 
 Locations:
 * Start: [Hinatawada Station / 日向和田駅][Hinatawada]
@@ -82,8 +82,8 @@ Timeline:
 Metrics:
 * Length of time: 9 hr 13 min
 * Distance: 12.7 km
-* Elevation - gain: 1246 m
-* Elevation - decline: 588 m
+* Elevation gain ↗️: 1246 m
+* Elevation decline ↘️: 588 m
 
 Locations:
 * Start: [Musashi-Itsukaichi Station / 武蔵五日市駅][Musashi-Itsukaichi]
@@ -101,8 +101,8 @@ Timeline:
 Metrics:
 * Length of time: 9 hr 46 min
 * Distance: 11.6 km
-* Elevation - gain: 1440 m
-* Elevation - decline: 938 m
+* Elevation gain ↗️: 1440 m
+* Elevation decline ↘️: 938 m
 
 Locations:
 * Start: [Okutama Station / 奥多摩駅][Okutama]

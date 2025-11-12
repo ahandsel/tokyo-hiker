@@ -1,6 +1,6 @@
 ---
-title: "Kumano Kodo 2021 trip outline"
-description: "Outline for Kumano Kodo hiking trip in May 2021"
+title: 'Kumano Kodo 2021 trip outline'
+description: 'Outline for Kumano Kodo hiking trip in May 2021'
 excludeFromSidebar: false
 ---
 
@@ -101,8 +101,8 @@ Bus
 Hiking: Takijiri-Oji to Takahara
 * Distance: approximately 4 km
 * Time: 2 to 3 hours
-* Elevation gain: approximately 430 m
-* Elevation loss: approximately 200 m
+* Elevation gain ↗️: approximately 430 m
+* Elevation decline ↘️: approximately 200 m
 * ![Takijiri-Oji to Takahara map][img-takahara-map]
 * Short but steep uphill walk from Takijiri to the ridge top settlement of Takahara.
 * The trailhead is behind the Takijiri-Oji shrine pavilion.
@@ -128,8 +128,8 @@ Hiking: Takahara to Chikatsuyu
 * [Chikatsuyu][]
 * Distance: approximately 10 km
 * Time: 4 to 6 hours
-* Elevation gain: approximately 590 m
-* Elevation loss: approximately 640 m
+* Elevation gain ↗️: approximately 590 m
+* Elevation decline ↘️: approximately 640 m
 
 [Rest stop on Kumano / 牛馬童子像休憩所][]
 This walk continues into forested mountains east of Takahara, climbing ridges and descending into Chikatsuyu.
@@ -170,8 +170,8 @@ Overnight: Yunomine Onsen
 
 * Distance: approximately 25 km
 * Time: 9 to 12 hours
-* Elevation gain: approximately 1210 m
-* Elevation loss: approximately 1470 m
+* Elevation gain ↗️: approximately 1210 m
+* Elevation decline ↘️: approximately 1470 m
 
 This is a challenging full-day walk with many climbs and descents, finishing at Kumano Hongu Taisha.  
 Start early if attempting the full walk.
@@ -190,8 +190,8 @@ Hike: Doyukawa-Bashi to Hongu Taisha
 * [Hongu Taisha][]
 * Distance: approximately 17 km
 * Time: 6 to 9 hours
-* Elevation gain: approximately 770 m
-* Elevation loss: approximately 1170 m
+* Elevation gain ↗️: approximately 770 m
+* Elevation decline ↘️: approximately 1170 m
 
 [Doyukawa-Bashi / 道湯川橋]: https://goo.gl/maps/poKZ3G2we3JcdJgaA
 [Hongu Taisha]: https://goo.gl/maps/k9JonS3ENZdatJP8A
@@ -209,8 +209,8 @@ Bus: Chikatsuyu to Hosshinmon-Oji
 Hike part 1: Hosshinmon-Oji to Hongu Taisha
 * Distance: approximately 7.5 km
 * Time: 2 to 3 hours
-* Elevation gain: approximately 190 m
-* Elevation loss: approximately 460 m
+* Elevation gain ↗️: approximately 190 m
+* Elevation decline ↘️: approximately 460 m
 
 This section from Hosshinmon-Oji to Hongu is popular, with forested trails and settlement scenery. It is a good option for those who want time to explore the shrines and sites in Hongu.
 
@@ -251,8 +251,7 @@ Overnight: Shirahama City
 
 ## Resources
 
-Videos
-* [Trail logistics - how to plan and book the Kumano Kodo Trail][]
+Videos: [Trail logistics - how to plan and book the Kumano Kodo Trail][]
 
 Kumano Travel
 * Main site: <https://www.tb-kumano.jp/en/kumano-kodo/>

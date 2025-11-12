@@ -1,6 +1,6 @@
 ---
-title: "Mitakesan cable car snippet"
-description: "Information about the Mitakesan Cable Car, including stations, routes, phone numbers, costs, and timetables."
+title: 'Mitakesan cable car snippet'
+description: 'Information about the Mitakesan Cable Car, including stations, routes, phone numbers, costs, and timetables.'
 excludeFromSidebar: true
 ---
 
@@ -46,11 +46,11 @@ Cost:
 |   17 | 00, 30     | 30                    |
 |   18 | 00, 30     | 00, 30                |
 
-* Timetable as of 2025-10-11.  
+* Timetable as of 2025-10-11.
 * For more details, see [mitaketozan.co.jp/timetable.html][].
 
 [img-mitake-mitakesan]: /mitake-station-to-mitakesan.png
-[JR Mitake Station / 御嶽駅]: https://maps.app.goo.gl/SQbr1D3ey8Rhg6819  
-[Mitakesan Cable Car Station / 御岳山駅]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7  
+[JR Mitake Station / 御嶽駅]: https://maps.app.goo.gl/SQbr1D3ey8Rhg6819
+[Mitakesan Cable Car Station / 御岳山駅]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7
 [mitaketozan.co.jp/timetable.html]: https://www.mitaketozan.co.jp/timetable.html
-[Takimoto Station / 滝本駅]: https://maps.app.goo.gl/om1N7HyGpp6Y71pE8  
+[Takimoto Station / 滝本駅]: https://maps.app.goo.gl/om1N7HyGpp6Y71pE8

@@ -1,5 +1,5 @@
 ---
-title: "Hiking trail difficulty rating snippet"
+title: 'Hiking trail difficulty rating snippet'
 excludeFromSidebar: false
 ---
 
