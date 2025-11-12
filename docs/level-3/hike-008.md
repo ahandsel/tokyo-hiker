@@ -14,35 +14,20 @@ excludeFromSidebar: false
 [軍刀利神社-佐野川峠-茅丸-連行峰-和田バス停 縦走コース - YAMAP][]  
 _Gundari Shrine - Sanokawa Pass - Kayamaru - Renkōmine Peak - Wada Bus Stop traverse route_
 
-[軍刀利神社-佐野川峠-茅丸-連行峰-和田バス停 縦走コース - YAMAP]: https://yamap.com/model-courses/17888
-
 
 ## Key locations
 
-**Start**: Kamasawa Iriguchi Bus Stop - `鎌沢入口（バス）`
-* [maps.app.goo.gl/VEwYVzoW8eZZuQeh7][]
+**Start**: Kamasawa Iriguchi Bus Stop - `鎌沢入口（バス）` - [Google Maps][県立鎌沢休憩所]
 
-Gundari Shrine - `軍刀利神社`
-* [maps.app.goo.gl/jWTTQSdfrp7jouBn8][]
+Gundari Shrine - `軍刀利神社` - [Google Maps][maps.app.goo.gl/jWTTQSdfrp7jouBn8]
 
-Sanokawa Pass - `三国峠`
-* [maps.app.goo.gl/Khsy8ZiQpxstuz7C9][]
+Sanokawa Pass - `三国峠` - [Google Maps][maps.app.goo.gl/Khsy8ZiQpxstuz7C9]
 
-Kayamaru - `茅丸`
-* [maps.app.goo.gl/62jHQSHgWtoky6pj6][]
+Kayamaru - `茅丸` - [Google Maps][maps.app.goo.gl/62jHQSHgWtoky6pj6]
 
-Rengyōho - `連行峰`
-* [maps.app.goo.gl/usF5Pe4QhjYMcU7w7][]
+Rengyōho - `連行峰` - [Google Maps][maps.app.goo.gl/usF5Pe4QhjYMcU7w7]
 
-**End**: Wada (Sagamihara City) Bus Stop - `和田［相模原市］（バス）`
-* [maps.app.goo.gl/J38DeLd3Mm6jDvnC7][]
-
-[maps.app.goo.gl/vewyvzoW8eZZuqeh7]: https://maps.app.goo.gl/VEwYVzoW8eZZuQeh7
-[maps.app.goo.gl/jwttqsdfrp7joubn8]: https://maps.app.goo.gl/jWTTQSdfrp7jouBn8
-[maps.app.goo.gl/khsy8ziqpxstuz7c9]: https://maps.app.goo.gl/Khsy8ZiQpxstuz7C9
-[maps.app.goo.gl/62jhqshgwtoky6pj6]: https://maps.app.goo.gl/62jHQSHgWtoky6pj6
-[maps.app.goo.gl/usf5pe4qhjymcu7w7]: https://maps.app.goo.gl/usF5Pe4QhjYMcU7w7
-[maps.app.goo.gl/j38deld3mm6jdvnc7]: https://maps.app.goo.gl/J38DeLd3Mm6jDvnC7
+**End**: Wada (Sagamihara City) Bus Stop - `和田［相模原市］（バス）` - [Google Maps][maps.app.goo.gl/J38DeLd3Mm6jDvnC7]
 
 
 ## Route details
@@ -69,7 +54,6 @@ Standard timetable for this route:
 | 13:01 | Wada trailhead                  | [和田登山口][和田登山口]                     | [Google Maps][google-maps-11]                 |
 | 13:11 | Wada (Sagamihara City) Bus Stop | [和田バス停][和田バス停]                     | [和田［相模原市］（バス）][KoHHeyCskXPbi5Hx7] |
 
-[mFF5apBP4xwdnBru8]: https://maps.app.goo.gl/mFF5apBP4xwdnBru8
 [bsF1zJDsSsL4Wb9cA]: https://maps.app.goo.gl/bsF1zJDsSsL4Wb9cA
 [google-maps-1]: https://www.google.co.jp/maps/place/35%C2%B039'23.8%22N+139%C2%B008'06.8%22E/@35.6566153,139.1326331,17z/data=!3m1!4b1!4m4!3m3!8m2!3d35.6566153!4d139.135208?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D
 [google-maps-10]: https://www.google.co.jp/maps/place/35%C2%B039'22.3%22N+139%C2%B009'12.9%22E/@35.6561964,139.1510132,17z/data=!3m1!4b1!4m4!3m3!8m2!3d35.6561964!4d139.1535881?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D
@@ -79,9 +63,15 @@ Standard timetable for this route:
 [google-maps-3]: https://www.google.co.jp/maps/place/35%C2%B039'35.5%22N+139%C2%B007'56.1%22E/@35.6598529,139.1296769,17z/data=!3m1!4b1!4m4!3m3!8m2!3d35.6598529!4d139.1322518?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D
 [google-maps-4]: https://www.google.co.jp/maps/place/35%C2%B040'05.3%22N+139%C2%B007'48.4%22E/@35.668139,139.1275364,17z/data=!3m1!4b1!4m4!3m3!8m2!3d35.668139!4d139.1301113?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D
 [google-maps-5]: https://www.google.co.jp/maps/place/35%C2%B040'18.5%22N+139%C2%B007'51.7%22E/@35.6717919,139.1284611,17z/data=!3m1!4b1!4m4!3m3!8m2!3d35.6717919!4d139.131036?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D
-[nBCQtS6CCxjqwbsp7]: https://maps.app.goo.gl/nBCQtS6CCxjqwbsp7
 [google-maps-9]: https://www.google.co.jp/maps/place/35%C2%B039'59.5%22N+139%C2%B009'05.0%22E/@35.6665173,139.148809,17z/data=!3m1!4b1!4m4!3m3!8m2!3d35.6665173!4d139.1513839?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D
 [KoHHeyCskXPbi5Hx7]: https://maps.app.goo.gl/KoHHeyCskXPbi5Hx7
+[maps.app.goo.gl/62jhqshgwtoky6pj6]: https://maps.app.goo.gl/62jHQSHgWtoky6pj6
+[maps.app.goo.gl/j38deld3mm6jdvnc7]: https://maps.app.goo.gl/J38DeLd3Mm6jDvnC7
+[maps.app.goo.gl/jwttqsdfrp7joubn8]: https://maps.app.goo.gl/jWTTQSdfrp7jouBn8
+[maps.app.goo.gl/khsy8ziqpxstuz7c9]: https://maps.app.goo.gl/Khsy8ZiQpxstuz7C9
+[maps.app.goo.gl/usf5pe4qhjymcu7w7]: https://maps.app.goo.gl/usF5Pe4QhjYMcU7w7
+[mFF5apBP4xwdnBru8]: https://maps.app.goo.gl/mFF5apBP4xwdnBru8
+[nBCQtS6CCxjqwbsp7]: https://maps.app.goo.gl/nBCQtS6CCxjqwbsp7
 [トイレ]: https://yamap.com/landmarks/52729
 [三国山・生藤山登山口]: https://yamap.com/landmarks/52728
 [三国山]: https://yamap.com/landmarks/87121
@@ -95,6 +85,7 @@ Standard timetable for this route:
 [生藤山]: https://yamap.com/landmarks/1644
 [県立鎌沢休憩所]: https://goo.gl/maps/VEwYVzoW8eZZuQeh7
 [茅丸]: https://yamap.com/landmarks/63406
+[軍刀利神社-佐野川峠-茅丸-連行峰-和田バス停 縦走コース - YAMAP]: https://yamap.com/model-courses/17888
 [軍刀利神社]: https://yamap.com/landmarks/52727
 [連行峰（連行山）]: https://yamap.com/landmarks/74318
 [鎌沢入口バス]: https://maps.app.goo.gl/zkiMqz9Nkyz35M8r5
