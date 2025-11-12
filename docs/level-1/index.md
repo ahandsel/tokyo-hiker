@@ -7,4 +7,3 @@ excludeFromSidebar: false
 # {{$frontmatter.title}}
 
 <!--@include: ../snippets/md-index-list.md-->
-<!--@include: ../snippets/footer.md-->

@@ -9,4 +9,3 @@ excludeFromSidebar: false
 {{$frontmatter.descriptions}}
 
 <!--@include: ../snippets/md-index-list.md-->
-<!--@include: ../snippets/footer.md-->
