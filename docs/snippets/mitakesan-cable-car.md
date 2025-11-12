@@ -18,6 +18,13 @@ Closest train station: [JR Mitake Station / 御嶽駅][]
 JR Mitake Station to Mitakesan Cable Car Station route map:  
 ![JR Mitake Station to Mitakesan Cable Car Station route map][img-mitake-mitakesan]
 
+```mermaid
+graph TD
+    A["JR Shinjuku station 🚉"] -->|"Okutama line 🚃"| B["JR Mitake station 🚉"]
+    B -->|"Nishi Tokyo Bus 🚌"| C["Takimoto cable car station 🚉"]
+    C -->|"Mitaketozan railway 🚠"| D["Mitakesan cable car station 🚠"]
+```
+
 Phone numbers:
 * Mitake Tozan Railway: 0428-78-8121
 * Nishi Tokyo Bus (Haigawa Office): 0428-83-2126
