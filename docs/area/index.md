@@ -1,6 +1,6 @@
 ---
-title: 'Challenging hikes'
-description: 'Level 3 hiking routes that are challenging with steep sections.'
+title: 'Area-based hiking options'
+description: 'Hiking options based on area rather than difficulty level'
 excludeFromSidebar: false
 ---
 

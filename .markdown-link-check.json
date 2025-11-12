@@ -9,9 +9,5 @@
       "replacement": "public/$1"
     }
   ],
-  "ignorePatterns": [
-    "^https?://",
-    "^mailto:",
-    "^#"
-  ]
+  "ignorePatterns": ["^https?://", "^mailto:", "^#"]
 }

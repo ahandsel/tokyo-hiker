@@ -1,5 +1,7 @@
 ---
-title: "Hinatawada Station to Mitakesan Cable Car via Mt. Hinode (日の出山)"
+title: 'Hinatawada Station to Mitakesan Cable Car via Mt. Hinode (日の出山)'
+description: 'Hiking route from Hinatawada Station (日向和田駅) to Mitakesan Cable Car Station (御岳山駅) via Mt. Hinode (日の出山)'
+excludeFromSidebar: false
 ---
 
 # Hinatawada Station to Mitakesan Cable Car via Mt. Hinode (日の出山) Route
@@ -11,15 +13,15 @@ title: "Hinatawada Station to Mitakesan Cable Car via Mt. Hinode (日の出山)"
 
 ## Metrics
 
-| Metric              | Value      |
-| ------------------- | ---------- |
-| Length of time      | 06:37      |
-| Distance            | 9.9km      |
-| Elevation - Gain    | 1031m      |
-| Elevation - Decline | 400m       |
-| YAMAP Strength      | 2 out of 5 |
-| Hiking Poles?       | Optional   |
-| Hiking Shoes?       | Optional   |
+| Metric               | Value      |
+| -------------------- | ---------- |
+| Length of time       | 06:37      |
+| Distance             | 9.9km      |
+| Elevation gain ↗️    | 1031m      |
+| Elevation decline ↘️ | 400m       |
+| YAMAP Strength       | 2 out of 5 |
+| Hiking Poles?        | Optional   |
+| Hiking Shoes?        | Optional   |
 
 
 ## Key Locations
@@ -40,7 +42,7 @@ Start Options:
 Goal (_End of Hike_):  
 [Mitakesan Cable Car Station (`御岳山駅`)](https://goo.gl/maps/W7baocnkbqSZ1iDZ7)
 
-Return to Tokyo:  
+Return to Tokyo:
 1. [Mitakesan Cable Car Station (`御岳山駅`)](https://goo.gl/maps/W7baocnkbqSZ1iDZ7)
 1. [Takimoto cable car Station for Mt. Mitake (`御岳登山鉄道 滝本駅`)](https://goo.gl/maps/4zphaC29SdhVR2it9)
 1. [Mitake Station Bus Stop (`御岳駅（バス）`)](https://goo.gl/maps/TF7zTatB9f8Skd937)
@@ -82,7 +84,7 @@ Toilets 🚽 (_in order_):
 YAMAP Plan:  
 [Hinatawada Station -> Mitakesan Cable Car - YAMAP](https://yamap.com/plans/code/GRLwFtW60TK04NY-nLeTZLeymIrU7qWER8WWBxkgJNhrvEKkKXXsCKbmncLQ2_2rMoI)
 
-Example YAMAP Trip:  
+Example YAMAP Trip:
 * [2023.05.05 - Hinatawada Station to Mitakesan Cable Car via Mt. Hinode (日の出山) - YAMAP](https://yamap.com/activities/24113052)
 
 YAMAP Route:  
@@ -92,29 +94,5 @@ Mt. Hinode - Umenoki Pass - Hinatawada Station Longitudinal Course
 Google Maps List:  
 [Hinatawada Station to Mitakesan Hike - Google Maps:](https://goo.gl/maps/faGvA5BdW2gki31bA)
 
-
-## Mitakesan Cable Car TimeTable
-
-* Mitakesan Cable [Car Station (`御岳山駅`)](https://goo.gl/maps/W7baocnkbqSZ1iDZ7)
-* [Timetable from 2023-05-01 from www.mitaketozan.co.jp](https://www.mitaketozan.co.jp/images/timetable__20230318.jpg)
-* [mitaketozan.co.jp/timetable.html](https://www.mitaketozan.co.jp/timetable.html)
-
-| Mitakesan Cable Car 🚠 -> JR Mitake Station 🚉 |
-| -------------------------------------------- |
-| 16:34 -> 17:00                               |
-| 17:06 -> 17:35                               |
-| 17:30 -> 18:03                               |
-| 18:00 -> 18:29                               |
-| 18:30 -> 18:59                               |
-
-
-### ⚠️ The last cable car down from Mt. Mitake is 18:30! ⚠️
-
-DO NOT MISS THE LAST CABLE CAR DOWN FROM MT. MITAKE!
-
-![Mitakesan Cable Car Timetable](/mitake-cablecar-timetable.png)
-
-
-## Notes on the Hiking Trail Options
-
-Following YAMAP routes are set to 1.4x speed for a slow, relaxing hike.
+<!--@include: ../snippets/mitakesan-cable-car.md-->
+<!--@include: ../snippets/footer.md-->

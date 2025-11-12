@@ -5,14 +5,14 @@
 
 version: 2
 updates:
-- package-ecosystem: "github-actions"
-  directory: "/" # Location of package manifests
-  schedule:
-    interval: "monthly"
-  cooldown:
-    default-days: 30
-    include:
-      - "*"
-  groups:
-    actions-dependencies:
-      patterns: ["*"]
+  - package-ecosystem: 'github-actions'
+    directory: '/' # Location of package manifests
+    schedule:
+      interval: 'monthly'
+    cooldown:
+      default-days: 30
+      include:
+        - '*'
+    groups:
+      actions-dependencies:
+        patterns: ['*']

@@ -4,11 +4,13 @@ title: About
 
 # Hello 👋
 
-Californian ex-pats living in Tokyo 🌉🌲🏖  
+I am a Californian ex-pat living in Tokyo 🌉🌲🏖  
 _東京に住んでいるカリフォルニア人です_
 
-This is a blog where I post my notes and itineraries in English.
+This blog is for fellow hikers wanting to explore hiking trails around Tokyo and Japan.
 
-Hope you find them helpful ~
+Hope you find it helpful ~
 
-YAMAP Profile: [Matsumoto.Nagano](https://yamap.com/users/988731?name=Matsumoto.Nagano)
+YAMAP Profile: [Tokyo.Hiker](https://yamap.com/users/988731)
+
+<!--@include: ../snippets/footer.md-->
