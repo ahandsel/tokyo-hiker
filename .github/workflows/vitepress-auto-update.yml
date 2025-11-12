@@ -87,4 +87,4 @@ jobs:
             dependencies
             vitepress
           delete-branch: true
-          excludeFromSidebar: false
+          draft: false
