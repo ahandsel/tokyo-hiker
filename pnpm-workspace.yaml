@@ -3,4 +3,4 @@
 # Delay installing published versions to reduce security risk
 # Compromised packages are typically removed within a few hours.
 # One day buffer allows for security updates.
-# minimumReleaseAge: 1440 # 1 day
+minimumReleaseAge: 1440 # 1 day

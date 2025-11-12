@@ -1,7 +1,7 @@
 ---
 mode: 'agent'
-model: GPT-4o
-tools: ['search/codebase', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'runCommands/terminalSelection', 'runCommands/terminalLastCommand', 'openSimpleBrowser', 'fetch','search/searchResults', 'githubRepo', 'extensions', 'edit/editFiles', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'ms-vscode.vscode-websearchforcopilot/websearch']
+model: GPT-5 mini
+tools: [ 'changes', 'edit', 'extensions', 'fetch', 'githubRepo', 'ms-vscode.vscode-websearchforcopilot/websearch', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runNotebooks', 'runTasks', 'search', 'testFailure', 'usages', 'vscodeAPI']
 description: 'Proofread and edit the provided English text for clarity, grammar, and style guide compliance.'
 ---
 
@@ -34,8 +34,8 @@ Also, ensure the following style guidelines are followed:
 * Use sentence case for headings and subheadings (capitalize only the first word and proper nouns).
 * Avoid using slang or idiomatic expressions.
 * Keep the wording simple and straightforward to ensure non-native English speakers easily understand the content.
-* Do not use ` – `. Use ` - ` instead.
-* Do not use ` → `. Use ` -> ` instead.
+* Do not use `–`. Use `-` instead.
+* Do not use `→`. Use `->` instead.
 
 Things to not change:
 * Do not swap numbers with words (e.g., "2" to "two").

@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Tokyo Hiker 🥾"
-  text: "Hiking options near Tokyo"
+  name: 'Tokyo Hiker 🥾'
+  text: 'Hiking options near Tokyo'
   tagline: Believe it or not but there are a lot of hiking options in Tokyo!
   image:
     src: /hiker.png
@@ -20,7 +20,7 @@ hero:
   #     link: /api-examples
 
 features:
-# add emojis for each feature
+  # add emojis for each feature
   - title: Easy hikes
     details: Great for first-time hikers or those looking for a relaxing stroll.
     link: /level-1/
@@ -33,54 +33,22 @@ features:
     details: Work up a sweat on trails with steep sections.
     link: /level-3/
     icon: 💪
+  - title: Hiking maps
+    details: Highly recommend using YAMAP for hiking in Japan.
+    link: /maps/
+    icon:
+      dark: /yamap-icon/yamap-icon-white.svg
+      light: /yamap-icon/yamap-icon-color.svg
+      src: /yamap-icon/yamap-icon-color.svg
+      alt: YAMAP logo
+      width: 32px
+      height: 32px
 ---
 
-<!-- markdownlint-disable MD033 MD041-->
+<!-- markdownlint-disable MD041 -->
 
-## Hiking Trail Difficulty Rating
+<!--@include: ./snippets/trail-difficulty.md-->
 
+---
 
-### Easy 👟
-
-* Great trails for first-time hikers or those looking for a relaxing stroll.
-* Trails are well-maintained and easy to follow.
-* Hiking footwear is not required.
-* Trekking poles are not required.
-* Water is recommended.
-
-
-### Intermediate 🥾
-
-* Trails are well maintained but may have some steep sections.
-* Hiking footwear is recommended.
-* Trekking poles are recommended.
-* Water is required.
-
-
-### Challenging 💪
-
-* Trails may be overgrown and/or have steep sections.
-* Hiking footwear is required.
-* Trekking poles are highly recommended.
-* Water is required.
-
-
-## Maps
-
-Can't read any Japanese? → Use AllTrails
-* Great App & hiking community
-* AllTrails lacks details (restrooms, lunch spots, etc.) for Japanese mountains.
-
-Able to read a little Japanese? → Use [YAMAP](https://yamap.com/)!
-* App settings can be set to English 💪 (for the most part)
-* Apps and community content are nearly all in Japanese 🥲
-* Amazing content as many hikers include trail conditions, transport information, and pictures in their hiking posts.
-* YAMAP maps contain vital info like restrooms, benches, and bus stops.
-
-Japanese native? → Still use [YAMAP](https://yamap.com/) 🤣
-
-Why use YAMAP?  
-[YAMAP / ヤマップ - 登山を安全に楽しむGPSアプリ - YouTube](https://www.youtube.com/watch?v=gypO_QTOXO8&t=1s)
-
-TRUST ME! YOU NEED IT!  
-Or you will really wished you had when you are crawling back to the train station way past your schedule after hiking in the dark...
+<!--@include: ./about.md-->
