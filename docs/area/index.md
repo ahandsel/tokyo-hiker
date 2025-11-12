@@ -1,11 +1,11 @@
 ---
 title: 'Area-based hiking options'
-descriptions: 'Hiking options based on area rather than difficulty level'
+description: 'Hiking options based on area rather than difficulty level'
 excludeFromSidebar: false
 ---
 
 # {{$frontmatter.title}}
 
-{{$frontmatter.descriptions}}
+{{$frontmatter.description}}
 
 <!--@include: ../snippets/md-index-list.md-->
