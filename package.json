@@ -16,7 +16,6 @@
     "@nolebase/vitepress-plugin-meta": "^2.18.2",
     "@vite-pwa/assets-generator": "^1.0.2",
     "@vite-pwa/vitepress": "^1.0.1",
-    "dotenv": "^17.2.3",
     "glob": "^11.0.3",
     "gray-matter": "^4.0.3",
     "init": "^0.1.2",
@@ -25,12 +24,10 @@
     "markdownlint-cli2": "^0.18.1",
     "openai": "^6.8.1",
     "prettier": "^3.6.2",
-    "sharp": "^0.34.5",
-    "sharp-ico": "^0.1.5",
     "vite-plugin-pwa": "^1.1.0",
-    "vitepress": "2.0.0-alpha.12",
     "vitepress-mermaid-renderer": "^1.1.5",
     "vitepress-sidebar": "^1.33.0",
+    "vitepress": "2.0.0-alpha.12",
     "vue": "^3.5.24"
   },
   "devEngines": {
