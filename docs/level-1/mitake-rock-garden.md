@@ -1,6 +1,6 @@
 ---
-title: "Mt. Mitake + Rock Garden"
-description: "Hiking route on Mitakesan (御岳山) Mononoke-vibes that are perfect for family outing
+title: 'Mt. Mitake + Rock Garden'
+description: 'Hiking route on Mitakesan (御岳山) Mononoke-vibes that are perfect for family outing'
 excludeFromSidebar: false
 ---
 
