@@ -47,7 +47,7 @@ jobs:
 
       # Step 4: Setup Node.js (required by pnpm and VitePress)
       - name: Setup Node.js
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # actions/setup-node@v5.0.0, pinned
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # actions/setup-node@v5.0.0, pinned
         with:
           node-version: 22 # Use Node.js v22 as specified by vitepress.dev
           cache: pnpm
