@@ -9,7 +9,7 @@ on:
 
 permissions: read-all # Default to minimal read-only permissions for all jobs
 
-# Ensures that only one deploy runs at a time for this project
+# Prevents concurrent lint runs for the same PR to avoid conflicts and wasted resources
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
