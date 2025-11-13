@@ -1,61 +1,82 @@
-name: Deploy VitePress site to Pages
+# .github/workflows/deploy.yml
+# Build and deploy a VitePress site to GitHub Pages
+# Triggered on pushes to the main branch or "Run workflow" button
+
+name: Deploy VitePress site to GitHub Pages
 
 on:
+  workflow_dispatch: {} # Allow manual execution from the GitHub Actions tab
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches: [main] # Run this workflow only for commits to `main`
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Ensures that only one deploy runs at a time for this project
 concurrency:
-  group: pages
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
+  # Build and upload job
   build:
+    name: Build and upload VitePress site
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      # Step 1: Checkout repository code
+      - name: Checkout repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # actions/checkout@v5.0.0, pinned
         with:
           fetch-depth: 0
+      # Step 2: Detect pnpm version from package.json
+      - name: Detect pnpm version
+        id: pnpm-version
+        run: |
+          version="$(jq -r '.packageManager' package.json | cut -d'@' -f2)"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+      # Step 3: Install pnpm package manager (use detected version)
+      - name: Install pnpm
+        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # pnpm/action-setup@v4.2.0, pinned
         with:
-          version: 9
+          version: ${{ steps.pnpm-version.outputs.version }}
 
-      - name: Setup Node
-        uses: actions/setup-node@v5
+      # Step 4: Setup Node.js (required by pnpm and VitePress)
+      - name: Setup Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # actions/setup-node@v5.0.0, pinned
         with:
-          node-version: 22
+          node-version: 22 # Use Node.js v22 as specified by vitepress.dev
           cache: pnpm
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
+      # Step 5: Install project dependencies
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build with VitePress
+      # Step 6: Build the VitePress site
+      - name: Build VitePress site
         run: pnpm build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      # Step 7: Prepare artifact for GitHub Pages
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # actions/configure-pages@v5.0.0, pinned
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # actions/upload-pages-artifact@v4.0.0, pinned
         with:
           path: docs/.vitepress/dist
 
   deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # actions/deploy-pages@v4.0.5, pinned
