@@ -19,7 +19,7 @@
     "glob": "^11.0.3",
     "gray-matter": "^4.0.3",
     "init": "^0.1.2",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "markdown-link-check": "^3.14.1",
     "markdownlint-cli2": "^0.18.1",
     "openai": "^6.8.1",
