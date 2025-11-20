@@ -9,6 +9,7 @@ excludeFromSidebar: false
 {{$frontmatter.description}}
 
 This trail minimizes walking on pavement while hiking up to Kawanori-Yama from a train station.
+
 * Total pavement walking: approximately 23 minutes.
 
 ⚠️ Note: It is recommended to hike in the opposite direction from the one taken here. The ascent from Hatonosu Station to Mt. Kawanori is steep, and it may be more enjoyable to climb from that side.

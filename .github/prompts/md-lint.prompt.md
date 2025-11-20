@@ -30,6 +30,7 @@ The content should be clear, concise, and engaging. Keep all changes minimal to 
 ## Style guidelines
 
 Follow these rules strictly:
+
 * Use straight quotes instead of curly quotes.
 * Avoid contractions (for example, use "do not" instead of "don't").
 * Use the Oxford comma.

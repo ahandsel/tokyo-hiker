@@ -54,6 +54,7 @@ Koburi Pass (`顔振峠`) - Agano Station to Higashi-Agano Station
 [Koburi Pass (顔振峠) - Agano Station to Higashi-Agano Station - Yamap][]
 
 YAMAP course:
+
 * Agano Station - Mt. Kojo - Mt. Chanodake - Yugate - Fukutokuji Trailhead - Higashi-Agano Station
 * `吾野駅 - 越上山 - 茶之岳山 - ユガテ - 福徳寺登山口 - 東吾野駅 縦走コース`
 * <https://yamap.com/model-courses/26793>

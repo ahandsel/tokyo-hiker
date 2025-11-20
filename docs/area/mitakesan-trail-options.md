@@ -42,76 +42,92 @@ Here are several hiking options to reach the Mitakesan Cable Car station from di
 ## Level 1 - Start from Futamatao Station
 
 Metrics:
+
 * Length of time: 6 hr 46 min
 * Distance: 9.5 km
 * Elevation gain ↗️: 1083 m
 * Elevation decline ↘️: 473 m
 
 Locations:
+
 * Start: [Futamatao Station / 二俣尾駅][Futamatao]
 
 Timeline:
+
 * Start: 10:00
 * End: 16:46
 
 **Route**:
+
 * [Futamatao Station -> Mitakesan Cable Car - YAMAP][Futamatao Station Route]
 
 
 ## Level 2 - Start from Hinatawada Station
 
 Metrics:
+
 * Length of time: 7 hr 10 min
 * Distance: 9.9 km
 * Elevation gain ↗️: 1031 m
 * Elevation decline ↘️: 400 m
 
 Locations:
+
 * Start: [Hinatawada Station / 日向和田駅][Hinatawada]
 
 Timeline:
+
 * Start: 10:00
 * End: 17:10
 
 **Route**:
+
 * [Hinatawada Station -> Mitakesan Cable Car - YAMAP][Hinatawada Station Route]
 
 
 ## Level 3 - Start from Musashi-Itsukaichi Station
 
 Metrics:
+
 * Length of time: 9 hr 13 min
 * Distance: 12.7 km
 * Elevation gain ↗️: 1246 m
 * Elevation decline ↘️: 588 m
 
 Locations:
+
 * Start: [Musashi-Itsukaichi Station / 武蔵五日市駅][Musashi-Itsukaichi]
 
 Timeline:
+
 * Start: 08:15
 * End: 17:28
 
 **Route**:
+
 * [Musashi-Itsukaichi Station -> Mitakesan Cable Car - YAMAP][Musashi-Itsukaichi Station Route]
 
 
 ## Level 4 - Start from Okutama Station
 
 Metrics:
+
 * Length of time: 9 hr 46 min
 * Distance: 11.6 km
 * Elevation gain ↗️: 1440 m
 * Elevation decline ↘️: 938 m
 
 Locations:
+
 * Start: [Okutama Station / 奥多摩駅][Okutama]
 
 Timeline:
+
 * Start: 08:00
 * End: 17:46
 
 **Route**:
+
 * [Okutama Station -> Mitakesan Cable Car - YAMAP][OkuTama Station Route]
 
 

@@ -20,10 +20,12 @@ excludeFromSidebar: false
 ## Getting there
 
 Train station 🚉:
+
 * Start: [Sagamiko Station / 相模湖駅][map-sagamiko]
 * Goal: [Jinbakōgenshita Bus Stop / 陣馬高原下（バス）][map-jinba]
 
 Travel from Shinjuku - **1 hr**
+
 * 08:50 -> Takao Station -> 10:06 via Keio Limited Express + Chuo Local
 * [Google Maps route][map-route-shinjuku]
 
@@ -37,6 +39,7 @@ Travel from Shinjuku - **1 hr**
 Sagamiko Station -> Hike 🥾 -> Jinbakōgenshita Bus Stop -> Sagamiko Station
 
 Specifications:
+
 * 10.7 km
 * 948 m up and 825 m down
 * [YAMAP activity][yamap-activity]
@@ -95,12 +98,14 @@ Specifications:
 * [Bus timetable (美32 route via Reien Main Gate to Takao Station North Exit) - Bus Navi][bus-timetable]
 
 `霊園３２ 高尾駅北口行` heading back to Takao Station:
+
 * 16:25 -> 17:03
 * 17:25 -> 18:03
 * 18:25 -> 19:03
 * [Google Maps route from bus stop to Takao Station][google-maps-route]
 
 Trailhead to Jinbakōgenshita Bus Stop
+
 * 1 hr
 * 3.5 km
 

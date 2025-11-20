@@ -18,6 +18,7 @@ Cable Car station 🚠:
 Mitakesan Station / 御岳山駅 / <https://goo.gl/maps/fUiVTkKLTc9JgUx59>
 
 Travel from Shinjuku? **2 hr**
+
 * 07:44 -> 09:04 {Mitake Station} + 09:12 bus -> 09:30 Cable Car -> 09:36
 * [Google Maps Route](https://goo.gl/maps/d1DcUD19ftQLvQN5A)
 

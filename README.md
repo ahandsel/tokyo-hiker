@@ -19,7 +19,7 @@ Built with [VitePress](https://vitepress.dev/).
 | [@nolebase/vitepress-plugin-enhanced-readabilities][] | Enhanced reading experience             |                               |
 | [@nolebase/vitepress-plugin-meta][]                   | Meta tags management                    |                               |
 | [@vite-pwa/assets-generator][]                        |                                         |                               |
-| [@vite-pwa/vitepress][]                               |  PWA support for VitePress               |                               |
+| [@vite-pwa/vitepress][]                               | PWA support for VitePress               |                               |
 | [markdownlint-cli2][]                                 | Markdown linting                        |                               |
 
 [.vitepress/config.mts]: ./docs/.vitepress/config.mts

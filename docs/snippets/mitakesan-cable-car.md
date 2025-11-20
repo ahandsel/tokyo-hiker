@@ -13,6 +13,7 @@ Mountain top station: [Mitakesan Cable Car Station / 御岳山駅][]
 Base station: [Takimoto Station / 滝本駅][]
 
 Closest train station: [JR Mitake Station / 御嶽駅][]
+
 * Take a bus from JR Mitake Station to Takimoto Station.
 
 JR Mitake Station to Mitakesan Cable Car Station route map:  
@@ -26,10 +27,12 @@ graph TD
 ```
 
 Phone numbers:
+
 * Mitake Tozan Railway: 0428-78-8121
 * Nishi Tokyo Bus (Haigawa Office): 0428-83-2126
 
 Cost:
+
 * 1,200 yen round trip (adult)
 * 600 yen one way (adult)
 
