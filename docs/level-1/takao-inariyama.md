@@ -15,6 +15,7 @@ Train station:
 Takaosanguchi Station / 高尾山口駅 / [Google Maps][]
 
 Travel from Shinjuku - approximately 1 hour
+
 * 09:00 -> 09:43 via Mt. Takao-Go 1 Rapid-Liner (seat reservation required; ¥800)
 * 09:01 -> 09:56 via Limited Express + Local (¥390)
 

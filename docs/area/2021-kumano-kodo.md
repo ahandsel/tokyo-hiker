@@ -66,20 +66,24 @@ excludeFromSidebar: false
 ## Plane tickets
 
 Tokyo to SHM
+
 * Monday, May 24, 16:30 to 17:40
 
 SHM to Tokyo
+
 * Monday, May 31, 09:20 to 10:25
 
 
 ## Day 1: Flying to Shirahama City
 
 Flight
+
 * Haneda to [Nanki-Shirahama (SHM) Airport / 南紀白浜空港][]
   * 1 hour 10 minutes
   * 23,000 yen per person
 
 Overnight
+
 * Option 1: [Asso Station / 朝来駅][]
 * Option 2: [Kii-Tanabe Station / 紀伊田辺駅][] area
   * [DJANGO][]
@@ -93,12 +97,14 @@ Overnight
 ## Day 2: Bus and hiking; Shirahama City to Takahara Village
 
 Bus
+
 * Nanki-Shirahama to [Takijiri / 滝尻 bus stop][]
 * 1.5 to 2 hour ride
 * 91 Rapid (Kumano Kodo) for Shingu Station
 * [Kumano Kodo Information Center / 熊野古道館][]
 
 Hiking: Takijiri-Oji to Takahara
+
 * Distance: approximately 4 km
 * Time: 2 to 3 hours
 * Elevation gain ↗️: approximately 430 m
@@ -109,6 +115,7 @@ Hiking: Takijiri-Oji to Takahara
 * The trail starts off steep, so set a slow, steady pace and watch your steps on rocks and roots.
 
 Overnight: Takahara Village
+
 * [Kiri-no-Sato Takahara Lodge "Organic Hotel" - Kumano Travel][]
 * [Kiri-no-Sato Takahara Lodge - Booking.com][]
 * [Kirinosato Takahara - Google Maps][]
@@ -124,6 +131,7 @@ Overnight: Takahara Village
 ## Day 3: Hiking; Takahara to Chikatsuyu
 
 Hiking: Takahara to Chikatsuyu
+
 * [Takahara][]
 * [Chikatsuyu][]
 * Distance: approximately 10 km
@@ -135,9 +143,11 @@ Hiking: Takahara to Chikatsuyu
 This walk continues into forested mountains east of Takahara, climbing ridges and descending into Chikatsuyu.
 
 Note: The [Michi-no-Eki][] rest area near signpost 23 sells drinks, snacks, and simple meals.
+
 * ![Takahara to Chikatsuyu map][img-chikatsuyu-map]
 
 Overnight: Chikatsuyu Village
+
 * Kumano Travel: [Minshuku Momiji-no-Sato][]
 * Google Maps: [Guest House Minshuku Momiji-no-Sato][]
 
@@ -159,6 +169,7 @@ Overnight: Chikatsuyu Village
 * [Bus timetable #1][]
 
 Overnight: Yunomine Onsen
+
 * Kumano Travel: [Minshuku Kuraya][]
 * Google Maps: [Minshuku Kuraya][]
 
@@ -180,6 +191,7 @@ Start early if attempting the full walk.
 ### Option 2: Challenging walk; 17 km
 
 Bus: Chikatsuyu to Doyukawa-Bashi
+
 * [Doyukawa-Bashi / 道湯川橋][] bus stop
 * Ryujin Bus
 * Depart: 7:23 Chikatsuyu-Oji
@@ -187,6 +199,7 @@ Bus: Chikatsuyu to Doyukawa-Bashi
 * Price: 280 yen
 
 Hike: Doyukawa-Bashi to Hongu Taisha
+
 * [Hongu Taisha][]
 * Distance: approximately 17 km
 * Time: 6 to 9 hours
@@ -200,6 +213,7 @@ Hike: Doyukawa-Bashi to Hongu Taisha
 ### Option 3: Highlight walk; 7.5 km
 
 Bus: Chikatsuyu to Hosshinmon-Oji
+
 * [Hosshinmon-Oji / 発心門王子][] bus stop
 * Ryujin Bus
 * Depart: 7:23 Chikatsuyu-Oji
@@ -207,6 +221,7 @@ Bus: Chikatsuyu to Hosshinmon-Oji
 * Price: 960 yen
 
 Hike part 1: Hosshinmon-Oji to Hongu Taisha
+
 * Distance: approximately 7.5 km
 * Time: 2 to 3 hours
 * Elevation gain ↗️: approximately 190 m
@@ -215,6 +230,7 @@ Hike part 1: Hosshinmon-Oji to Hongu Taisha
 This section from Hosshinmon-Oji to Hongu is popular, with forested trails and settlement scenery. It is a good option for those who want time to explore the shrines and sites in Hongu.
 
 Hike part 2: Hongu to Yunomine Onsen
+
 * Dainichi-goe route
 * Distance: approximately 2 km
 * Time: 1 to 2 hours
@@ -225,18 +241,21 @@ Hike part 2: Hongu to Yunomine Onsen
 ## Day 5: Boat tour and return to Shirahama City
 
 Bus: Yunomine Onsen to boat tour center
+
 * [Michi-no-Eki Kumanogawa / 道の駅熊野川][]
 * Depart: 8:31 Yunomine Onsen
 * Arrive: 9:08 Michi-no-Eki Kumano-gawa
 * Price: 950 yen
 
 Boat: traditional ride on the Kumano-Gawa River
+
 * [Kumano Hayatama Taisha / 熊野速玉大社][]
 * [Kumano traditional boat tour][]
 * 10:00 to 11:30
 * Arrive by 09:30 for boarding.
 
 Detour: [Nachi Falls / 那智の滝][]
+
 * 1.5-hour bus ride from Hayatama Taisha to Nachi Falls
 
 Overnight: Shirahama City
@@ -254,6 +273,7 @@ Overnight: Shirahama City
 Videos: [Trail logistics - how to plan and book the Kumano Kodo Trail][]
 
 Kumano Travel
+
 * Main site: <https://www.tb-kumano.jp/en/kumano-kodo/>
 * [Nakahechi route PDF map booklet][]
 * Reservation site: <https://www.kumano-travel.com/en>

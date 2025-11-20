@@ -8,6 +8,7 @@ description: 'Where to get maps for Japanese hiking trails'
 > [!TIP] Trail apps like YAMAP and AllTrails are must-haves! 🥾
 
 You may think you do not need a map for a well-marked trail, but you really do need one for the following reasons:
+
 * Restroom locations 💩
 * Time estimates ⏱️
 * Trail conditions (muddy, fallen trees, etc.) 🌲
@@ -21,6 +22,7 @@ You may think you do not need a map for a well-marked trail, but you really do n
 ## AllTrails
 
 [AllTrails][] is a popular hiking app in the United States and has some coverage of Japanese trails.
+
 * If you cannot read any Japanese, this is your best option.
 * Great app and hiking community.
 * AllTrails lacks details (restrooms, lunch spots, etc.) for Japanese mountains.
@@ -31,6 +33,7 @@ You may think you do not need a map for a well-marked trail, but you really do n
 ## YAMAP
 
 [YAMAP][] is one of the most popular Japanese hiking apps and the only one that has any English support.
+
 * Core features are free and have English support.
 * Premium features, such as multiple offline maps, require a paid subscription.
 * Apps and community content are nearly all in Japanese 🥲
@@ -47,6 +50,7 @@ Why use YAMAP?
 ## YamaReco
 
 [ヤマレコ][] is another popular Japanese hiking site.
+
 * The most powerful trail search functionality for Japanese trails and mountains.
 * The site is entirely in Japanese.
 

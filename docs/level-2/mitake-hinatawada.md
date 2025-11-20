@@ -27,6 +27,7 @@ excludeFromSidebar: false
 ## Key Locations
 
 Getting There:
+
 * 09:25 - Take the train from [Tachikawa Station](https://goo.gl/maps/ahTHBtaAz83m62LE9) to Ome Station
 * **09:55** - Arrive at [Ome Station `青梅駅`](https://goo.gl/maps/ybqDVsbAiSBhnpyT6)
   * Buy lunch at [7-11](https://goo.gl/maps/9txtDyhHaVFajn719) or [Origin Bento](https://goo.gl/maps/7zyHUgvDRyso3vRq7)
@@ -35,6 +36,7 @@ Getting There:
 * 10:24 - Arrive at Yoshino-Bairin Bus Stop
 
 Start Options:
+
 * Train 🚉 [Hinatawada Station (`日向和田駅`)](https://goo.gl/maps/ULv12ZWtcutLFZLc7)
 * Bus 🚌 [Yoshino-Bairin (`吉野梅林`)](https://goo.gl/maps/C8DyabhWTZdZZ3f96)
 * Trailhead 🥾 [(`日の出山 御岳山登山口`/`吉野梅郷登山口`)](https://goo.gl/maps/ivZNp39duM6zDenn9)
@@ -43,12 +45,14 @@ Goal (_End of Hike_):
 [Mitakesan Cable Car Station (`御岳山駅`)](https://goo.gl/maps/W7baocnkbqSZ1iDZ7)
 
 Return to Tokyo:
+
 1. [Mitakesan Cable Car Station (`御岳山駅`)](https://goo.gl/maps/W7baocnkbqSZ1iDZ7)
 1. [Takimoto cable car Station for Mt. Mitake (`御岳登山鉄道 滝本駅`)](https://goo.gl/maps/4zphaC29SdhVR2it9)
 1. [Mitake Station Bus Stop (`御岳駅（バス）`)](https://goo.gl/maps/TF7zTatB9f8Skd937)
 1. [Mitake Station (`御嶽駅`)](https://goo.gl/maps/DMhiun282BQ1sZGS9)
 
 Mountains & Views: (_in order_):
+
 1. [Mt. Mimuro (`三室山`)](https://goo.gl/maps/QaXLo7QQbqqPNjEF6)
 1. [Kotohira Shrine (`琴平神社`)](https://goo.gl/maps/Wq46y5Xrh5aFAnrA8)
 1. [Mt. Yogai (`要害山`)](https://goo.gl/maps/vMwWRodvgmKufL4U9)
@@ -61,6 +65,7 @@ Mountains & Views: (_in order_):
 1. [Mt. Mitake (`御岳山`)](https://goo.gl/maps/ppSjZLYbn3FqC115A)
 
 Toilets 🚽 (_in order_):
+
 1. [Umeno Park Public Toilet](https://goo.gl/maps/9FeoZK4XTtAZw1eF6)
 1. [Toilet by the Trailhead for Mt. Mimuro (`三室山`)](https://goo.gl/maps/tjkTTLp1wjAjzL4WA)
 1. [Hinodeyama Park Toilet (`日の出山園地トイレ`)](https://goo.gl/maps/NFjvPqZLtNyQMWoe7)
@@ -85,6 +90,7 @@ YAMAP Plan:
 [Hinatawada Station -> Mitakesan Cable Car - YAMAP](https://yamap.com/plans/code/GRLwFtW60TK04NY-nLeTZLeymIrU7qWER8WWBxkgJNhrvEKkKXXsCKbmncLQ2_2rMoI)
 
 Example YAMAP Trip:
+
 * [2023.05.05 - Hinatawada Station to Mitakesan Cable Car via Mt. Hinode (日の出山) - YAMAP](https://yamap.com/activities/24113052)
 
 YAMAP Route:  

@@ -25,6 +25,7 @@ Your task is to review and edit the provided English text for clarity, grammar, 
 3. Edit the text to ensure clarity, conciseness, and consistency.
 
 Also, ensure the following style guidelines are followed:
+
 * Use straight quotes instead of curly quotes.
 * Avoid using contractions (e.g., "don't" should be "do not").
 * Use the Oxford comma.

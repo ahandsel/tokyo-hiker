@@ -27,6 +27,7 @@ While I am open to adjustments, I would like to keep the changes to a minimum, p
 4. Keep changes minimal to preserve the original structure and message.
 
 Also, ensure the following style guidelines are followed:
+
 * Use straight quotes instead of curly quotes.
 * Avoid using contractions (e.g., "don't" should be "do not").
 * Use the Oxford comma.
@@ -38,6 +39,7 @@ Also, ensure the following style guidelines are followed:
 * Do not use `→`. Use `->` instead.
 
 Things to not change:
+
 * Do not swap numbers with words (e.g., "2" to "two").
 
 Finally, provide the edited Markdown file with all necessary corrections and suggestions for improvement.

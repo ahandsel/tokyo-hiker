@@ -31,6 +31,7 @@ These are the main options for spending the night in the Okutama area.
 My recommended ryokan on Mt. Mitake:
 
 Shukubo Komadori-sanso / `宿坊駒鳥山荘`
+
 * [Booking.com link][booking-komadori]
 * [Google Maps link][map-komadori]
 * Recommended for a Friday night stay before hiking on Saturday.
@@ -48,6 +49,7 @@ For those who want to stay overnight and hike the next day, [Mt. Odake / 大岳�
 ### Level 1
 
 Take the cable car up to the top of Mt. Mitake and hike around the Rock Garden area.
+
 * Start and goal: [Mitakesan Station (御岳山駅)][] 🚞
 * YAMAP route: [御岳山駅発着 - 御岳山・ロックガーデン周回コースの地図・登山ルート・登山口情報][]
 
