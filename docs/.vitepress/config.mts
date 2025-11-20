@@ -15,7 +15,46 @@ const vitePressOptions = {
         'Found it helpful? <a href="https://ko-fi.com/ahandsel" target="_blank">Consider buying me coffee ☕</a>',
       // showWithSidebar: true, // https://github.com/vuejs/vitepress/pull/4532
     },
-    search: { provider: 'local' },
+    search: {
+      provider: 'local',
+      options: {
+        async _render(src, env, md) {
+          // First pass: render to populate env.frontmatter and other metadata
+          await md.renderAsync(src, env);
+
+          // Use empty object as fallback if frontmatter is undefined
+          const fm = env.frontmatter ?? {};
+
+          // Honor per-page opt out: `search: false` in frontmatter
+          if (fm.search === false) {
+            return '';
+          }
+
+          let rewritten = src;
+
+          // Replace headings like "# {{ $frontmatter.title }}" with a concrete title
+          if (typeof fm.title === 'string' && fm.title.trim().length > 0) {
+            // Replace H1 that is exactly an interpolation of frontmatter.title
+            rewritten = rewritten.replace(
+              /^#\s*\{\{\s*\$frontmatter\.title\s*\}\}\s*$/m,
+              `# ${fm.title}`,
+            );
+
+            // Drop any other heading levels that interpolate frontmatter.title
+            rewritten = rewritten.replace(
+              /^#{2,6}\s*\{\{\s*\$frontmatter\.title\s*\}\}\s*$/gm,
+              '',
+            );
+          }
+
+          // Strip any remaining $frontmatter interpolations from indexable text
+          rewritten = rewritten.replace(/\{\{\s*\$frontmatter\.[^}]*\}\}/g, '');
+
+          // Final render used for indexing
+          return await md.renderAsync(rewritten, env);
+        },
+      },
+    }, // end of search options
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Easy', link: '/level-1/' },
