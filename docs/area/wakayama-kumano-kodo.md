@@ -1,6 +1,6 @@
 ---
-title: 'Kumano Kodo 2021 trip outline'
-description: 'Outline for Kumano Kodo hiking trip in May 2021'
+title: 'Kumano Kodo trip itinerary'
+description: '5 day hiking trip itinerary for Kumano Kodo trail in Wakayama'
 excludeFromSidebar: false
 ---
 
