@@ -1,5 +1,7 @@
 ---
-title: About
+title: 'About'
+description: 'Hi from Tokyo.Hiker'
+excludeFromSidebar: false
 ---
 
 # Hello 👋
