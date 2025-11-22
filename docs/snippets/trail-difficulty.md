@@ -1,6 +1,6 @@
 ---
 title: 'Hiking trail difficulty rating snippet'
-excludeFromSidebar: false
+excludeFromSidebar: true
 ---
 
 <!-- markdownlint-disable MD041-->
@@ -8,7 +8,7 @@ excludeFromSidebar: false
 ## Hiking trail difficulty rating
 
 
-### Easy 👟
+### Easy 👟 {#level1}
 
 * Great trails for first-time hikers or those looking for a relaxing stroll.
 * Trails are well maintained and easy to follow.
@@ -17,7 +17,7 @@ excludeFromSidebar: false
 * Water is recommended.
 
 
-### Intermediate 🥾
+### Intermediate 🥾 {#level2}
 
 * Trails are well maintained but may have some steep sections.
 * Hiking footwear is recommended.
@@ -25,7 +25,7 @@ excludeFromSidebar: false
 * Water is required.
 
 
-### Challenging 💪
+### Challenging 💪 {#level3}
 
 * Trails may be overgrown or have steep sections.
 * Hiking footwear is required.
