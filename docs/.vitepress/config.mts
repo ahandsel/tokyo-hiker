@@ -145,7 +145,7 @@ const vitePressSidebarOptions = {
   debugPrint: false,
   documentRootPath: 'docs',
   excludeByFolderDepth: null,
-  excludeByGlobPattern: ['README.md'],
+  excludeByGlobPattern: ['README.md', 'temp.md', 'temp-.*'],
   excludeFilesByFrontmatterFieldName: 'excludeFromSidebar',
   folderLinkNotIncludesFileName: false,
   followSymLinks: false,
