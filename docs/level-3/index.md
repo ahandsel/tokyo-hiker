@@ -1,5 +1,5 @@
 ---
-title: 'Challenging hikes'
+title: 'Challenging hikes 💪'
 description: 'Level 3 hiking routes that are challenging with steep sections.'
 excludeFromSidebar: false
 ---
