@@ -9,7 +9,7 @@ excludeFromSidebar: false
 {{$frontmatter.description}}
 
 
-## Getting there
+## Getting there 🚂
 
 Nearest train station: [Mitake Station / 御嶽駅][mitake-jr] (JR) 🚉
 
@@ -21,7 +21,7 @@ Travel from Shinjuku: **2 hr** ⏱️
 * [Shinjuku to Mitakesan route on Google Maps][shinjuku-to-mitakesan] 🗺️
 
 
-## Trail overview
+## Trail overview 🥾
 
 * Difficulty: Easy - great for beginners! 🟢
 * Drink: Vending machines at the cable car station and near Mitake Shrine. 🥤
@@ -48,6 +48,11 @@ Metrics:
 * Elevation gain ↗️: 597 m
 * Elevation decline ↘️: 597 m
 * Trail type: Loop
+
+
+## Map of the route 🗺️
+
+* ![Map showing the loop from Mitakesan cable car station past Mitake Shrine to the Rock Garden and Ayahiro Falls, returning via the same ridge](/mitake-rock-garden-route-map.png)
 
 
 ## Timeline ⏱️
@@ -91,14 +96,11 @@ Metrics:
 * [Tengu Cedar][tengu-cedar] 天狗の腰掛け杉 🌲  
 
 
-## Summary
-
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 <!--@include: ../snippets/footer.md-->
 
 [ayahiro-falls]: https://maps.app.goo.gl/aJqwv33Rsd8uGcDEA
 [chimotoya]: https://maps.app.goo.gl/e7vawkswyewydtsb6
-[food-section]: #food-
 [komadori]: https://goo.gl/maps/wyx6o7ctaepatwbv8
 [kotobukiya]: https://maps.app.goo.gl/zcfs4yaowm3ncjcba
 [mitake-jr]: https://goo.gl/maps/dmhiun282bq1szgs9
