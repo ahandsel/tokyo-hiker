@@ -1,5 +1,5 @@
 ---
-title: 'Hiking plan: Hinatawada Station to Mitakesan Cable Car Station'
+title: 'Hinatawada Station to Mitakesan Cable Car Station'
 description: 'Hiking route from Hinatawada Station (日向和田駅) to Mt. Mimuro (三室山), Mt. Yogai (要害山), Mt. Takamine (高峰山), Mt. Ryunohige (竜のヒゲ), Mt. Hinode (日の出山), and finishing at Mt. Mitake Cable Car Station (御岳山駅)'
 excludeFromSidebar: false
 ---

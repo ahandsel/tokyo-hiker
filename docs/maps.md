@@ -1,6 +1,7 @@
 ---
 title: 'Hiking maps in Japan'
 description: 'Where to get maps for Japanese hiking trails'
+excludeFromSidebar: false
 ---
 
 # {{$frontmatter.title}}

@@ -27,12 +27,18 @@ Travel from Shinjuku? **2 hr**
 
 Mitake Station -> Bus -> Rope way -> Hike 🥾 -> Rope way -> Bus -> Mitake Station
 
+YAMAP route:  
+[御岳山駅-御嶽神社-天狗の腰掛け杉 往復コースの地図・登山ルート・登山口情報 | YAMAP / ヤマップ](https://yamap.com/model-courses/39436)
+
 
 ## Food
 
 * Bring some snacks & water
 * Grab lunch at Mt. Mitake
-* [駒鳥売店](https://goo.gl/maps/wyx6o7ctAEpAtwbv8)
+* Restaurants on the mountain:
+  * [Komadori store / 駒鳥売店](https://goo.gl/maps/wyx6o7ctAEpAtwbv8)
+  * [Kotobukiya / 寿屋](https://maps.app.goo.gl/ZCFs4YAoWM3NcjCBA)
+  * [Chimotoya / 千本屋商店](https://maps.app.goo.gl/e7vaWKswyeWYdtSb6)
 
 
 ## Summary

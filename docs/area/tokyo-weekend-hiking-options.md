@@ -1,6 +1,6 @@
 ---
-title: 'Gold Week hiking options'
-date: 2023-05-01
+title: 'Great hiking options near Tokyo'
+descriptions: ''
 excludeFromSidebar: false
 ---
 
@@ -80,7 +80,7 @@ Timeline:
 
 ## Level 2 - Koburi Pass - Agano Station to Higashi-Agano Station
 
-Koburi Pass (顔振峠) - Agano Station to Higashi-Agano Station.
+Koburi Pass (`顔振峠`) - Agano Station to Higashi-Agano Station.
 
 Metrics:
 
@@ -115,7 +115,7 @@ Timeline:
 
 YAMAP course: Agano Station - Mt. Kojo - Mt. Chanodake - Yugate - Fukutokuji Trailhead - Higashi-Agano Station
 
-* 吾野駅-越上山-茶之岳山-ユガテ-福徳寺登山口-東吾野駅 縦走コース
+* `吾野駅-越上山-茶之岳山-ユガテ-福徳寺登山口-東吾野駅 縦走コース`
 * [YAMAP course link][]
 
 [Agano Station / 吾野駅]: https://goo.gl/maps/no8TWp5cECa1pooq8
@@ -135,7 +135,7 @@ YAMAP course: Agano Station - Mt. Kojo - Mt. Chanodake - Yugate - Fukutokuji Tra
 
 ## Challenge - OkuTama Station to Mitakesan via Odake
 
-OkuTama Station to Mitakesan Cable Car via Nokogiri, Odake, and Mitake (鋸山, 大岳山, 御岳山).
+OkuTama Station to Mitakesan Cable Car via Nokogiri (`鋸山`), Odake (`大岳山`), and Mitake (`御岳山`).
 
 Metrics:
 

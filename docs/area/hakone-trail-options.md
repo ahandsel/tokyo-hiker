@@ -1,6 +1,6 @@
 ---
-title: Hakone hiking trails
-description: Hiking trails around the Hakone area with various difficulty levels.
+title: 'Hakone hiking trails'
+description: 'Hiking trails around the Hakone area with various difficulty levels.'
 excludeFromSidebar: false
 ---
 
