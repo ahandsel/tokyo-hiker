@@ -17,8 +17,8 @@ Cable car station: [Mitakesan cable car station / 御岳山駅][mitakesan-cablec
 
 Travel from Shinjuku: **2 hr** ⏱️
 
-* 07:44 -> 09:04 {Mitake Station} + 09:12 bus -> 09:30 cable car -> 09:36 🚌🚠
-* [Shinjuku to Mitakesan route on Google Maps route][shinjuku-to-mitakesan] 🗺️
+* 07:44 train departs Shinjuku -> 09:04 arrive at Mitake Station -> 09:12 bus -> 09:30 cable car -> 09:36 arrive at Mitakesan Station. 🚌🚠
+* [Shinjuku to Mitakesan route on Google Maps][shinjuku-to-mitakesan] 🗺️
 
 
 ## Trail overview
@@ -36,15 +36,14 @@ Travel from Shinjuku: **2 hr** ⏱️
 
 ## Trail route 🥾
 
-* Mitake Station -> bus -> ropeway -> hike -> ropeway -> bus -> Mitake Station 🚶‍♂️🚌
+* Mitake Station -> bus -> cable car -> hike -> cable car -> bus -> Mitake Station. 🚶‍♂️🚌
 * YAMAP routes:
   * [Mitakesan Station - Mitake Shrine - Tengu cedar + Nagao-daira observation deck course][my-yamap-route] 🗻
-  * [Mitakesan Station - Mitake Shrine - Tengu cedar round-trip course / 御岳山駅-御嶽神社-天狗の腰掛け杉 往復コース][yamap route] 🗻
-
+  * [Mitakesan Station - Mitake Shrine - Tengu cedar round-trip course / 御岳山駅-御嶽神社-天狗の腰掛け杉 往復コース][yamap-route] 🗻
 
 Metrics:
 
-* Length of time: 04:00
+* Duration: 4:00
 * Distance: 6.4 km
 * Elevation gain ↗️: 597 m
 * Elevation decline ↘️: 597 m
@@ -53,26 +52,26 @@ Metrics:
 
 ## Timeline ⏱️
 
-* 10:00 - Arrive at [Mitake Station / 御嶽駅][mitake-jr] (JR) 🚉
-* 10:12 - Bus to the cable car station 🚌
-* 11:00 - [Mitakesan Station (Mitake cable car)][mitakesan-cablecar] / `御岳山駅（御岳山ケーブルカー）` - 🚠 
-* 11:33 - Lunch at a restaurant 🍱
-* 12:42 - [Mitake Shrine](https://maps.app.goo.gl/hrF5Z9aSsBToSzox5) / `御嶽神社` - ⛩️
-* 12:43 - [Mount Mitake](https://maps.app.goo.gl/Lw8iYKnFX3ddopVX6) / `御岳山` - ⛰️
-* 12:44 - [Nagao Teahouse](https://maps.app.goo.gl/fGRWUYZ28qBLj85K6) / `長尾茶屋` - 🍵
-* 13:04 - [Tengu Cedar](https://maps.app.goo.gl/Nw31XAtHV7Fh1c8a9) / `天狗の腰掛け杉` 📸
-* 14:14 - [Rock Garden](https://maps.app.goo.gl/ykaPTyaTGGwFGQ6o9) / `岩石園（ロックガーデン）` 🛖
-* 14:27 - [Ayahiro Falls](https://maps.app.goo.gl/aJqwv33Rsd8uGcDEA) / `綾広の滝` 📸
-* 15:06 - [Tengu Cedar](https://maps.app.goo.gl/Nw31XAtHV7Fh1c8a9) / `天狗の腰掛け杉` 📸
-* 15:20 - [Nagao-daira observation deck](https://maps.app.goo.gl/sdoYgxVnRQuHXRp38) / `長尾平展望台` 📸
-* 16:11 - [Mitakesan cable car station][mitakesan-cablecar] / `御岳山駅` 🚠
+* 10:00 - Arrive at [Mitake Station / 御嶽駅][mitake-jr] (JR). 🚉
+* 10:12 - Bus to the cable car station. 🚌
+* 11:00 - Arrive at [Mitakesan Station (Mitake cable car)][mitakesan-cablecar] / `御岳山駅（御岳山ケーブルカー）`. 🚠
+* 11:33 - Lunch at a restaurant. 🍱
+* 12:42 - Visit [Mitake Shrine][mitake-shrine] / `御嶽神社`. ⛩️
+* 12:43 - Stop at [Mount Mitake][mount-mitake] / `御岳山`. ⛰️
+* 12:44 - Rest at [Nagao Teahouse][nagao-teahouse] / `長尾茶屋`. 🍵
+* 13:04 - See [Tengu Cedar][tengu-cedar] / `天狗の腰掛け杉`. 📸
+* 14:14 - Explore [Rock Garden][rock-garden] / `岩石園（ロックガーデン）`. 🛖
+* 14:27 - Pause at [Ayahiro Falls][ayahiro-falls] / `綾広の滝`. 📸
+* 15:06 - Return past [Tengu Cedar][tengu-cedar] / `天狗の腰掛け杉`. 📸
+* 15:20 - View [Nagao-daira observation deck][nagao-daira-observation-deck] / `長尾平展望台`. 📸
+* 16:11 - Depart from [Mitakesan cable car station][mitakesan-cablecar] / `御岳山駅`. 🚠
 
 
 ## Food 🍱
 
 * Bring snacks and water. 🥤🍫
   * There are vending machines at the cable car station and near Mitake Shrine.
-* There are few restaurants on Mt. Mitake. 🍱
+* There are a few restaurants on Mt. Mitake. 🍱
   * [Komadori / 駒鳥売店][komadori] 🍜
   * [Kotobukiya / 寿屋][kotobukiya] 🍛
   * [Chimotoya / 千本屋商店][chimotoya] ☕️
@@ -80,20 +79,16 @@ Metrics:
 
 ## Key photo spots 📸
 
-* Mitake Shrine and stone stairway ⛩️  
-  A classic viewpoint with traditional architecture framed by tall cedar trees.
+* [Mitake Shrine][mitake-shrine] and stone stairway ⛩️  
 
-* Rock Garden mossy valley 🌿  
+* [Rock Garden][rock-garden] mossy valley 🌿  
   Soft green moss, flowing streams, and wooden bridges create a Ghibli-like scene.
 
-* Ayahiro waterfall 綾広の滝 💧  
-  A quiet waterfall that is especially photogenic after rainfall.
+* [Ayahiro waterfall][ayahiro-falls] 綾広の滝 💧  
 
 * Observation deck near the cable car station 🌄  
-  Offers wide views over the mountains and valleys.
 
-* [Tengu Cedar](https://maps.app.goo.gl/Nw31XAtHV7Fh1c8a9) 天狗の腰掛け杉 🌲  
-  A large ancient cedar tree with a unique shape.
+* [Tengu Cedar][tengu-cedar] 天狗の腰掛け杉 🌲  
 
 
 ## Summary
@@ -101,11 +96,19 @@ Metrics:
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 <!--@include: ../snippets/footer.md-->
 
+[ayahiro-falls]: https://maps.app.goo.gl/aJqwv33Rsd8uGcDEA
 [chimotoya]: https://maps.app.goo.gl/e7vawkswyewydtsb6
+[food-section]: #food-
 [komadori]: https://goo.gl/maps/wyx6o7ctaepatwbv8
 [kotobukiya]: https://maps.app.goo.gl/zcfs4yaowm3ncjcba
 [mitake-jr]: https://goo.gl/maps/dmhiun282bq1szgs9
+[mitake-shrine]: https://maps.app.goo.gl/hrF5Z9aSsBToSzox5
 [mitakesan-cablecar]: https://goo.gl/maps/fuivtkkltc9jgux59
-[my-yamap-route]: https://yamap.com/plans/code/lqcrrg3mh2fvkq_-p15c8wgoc46fid0zv_ypv6hyrpwykbmnbqx9uuf2ubr_7mkzt3c
+[mount-mitake]: https://maps.app.goo.gl/Lw8iYKnFX3ddopVX6
+[my-yamap-route]: https://yamap.com/plans/code/LqCRrg3mH2FVKQ_-p15c8wgoc46FID0Zv_YPV6hYrPWYKbMNBqX9uUF2Ubr_7MkzT3c
+[nagao-daira-observation-deck]: https://maps.app.goo.gl/sdoYgxVnRQuHXRp38
+[nagao-teahouse]: https://maps.app.goo.gl/fGRWUYZ28qBLj85K6
+[rock-garden]: https://maps.app.goo.gl/ykaPTyaTGGwFGQ6o9
 [shinjuku-to-mitakesan]: https://maps.app.goo.gl/swcwi7eyuxo2obb17
-[yamap route]: https://yamap.com/model-courses/39436
+[tengu-cedar]: https://maps.app.goo.gl/Nw31XAtHV7Fh1c8a9
+[yamap-route]: https://yamap.com/model-courses/39436
