@@ -28,8 +28,8 @@ graph TD
 
 Phone numbers:
 
-* Mitake Tozan Railway: 0428-78-8121
-* Nishi Tokyo Bus (Haigawa Office): 0428-83-2126
+* Mitake Tozan Railway: [0428-78-8121](tel:+810428788121)
+* Nishi Tokyo Bus (Haigawa Office): [0428-83-2126](tel:+810428832126)
 
 Cost:
 
