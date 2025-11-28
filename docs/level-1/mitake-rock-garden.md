@@ -38,8 +38,8 @@ Travel from Shinjuku: **2 hr** ⏱️
 
 * Mitake Station -> bus -> ropeway -> hike -> ropeway -> bus -> Mitake Station 🚶‍♂️🚌
 * YAMAP routes:
-  * [Mitakesan Station - Mitake Shrine - Tengu cedar seat + Nagao-daira observation deck course][my-yamap-route] 🗻
-  * [Mitakesan Station - Mitake Shrine - Tengu cedar seat round-trip course / 御岳山駅-御嶽神社-天狗の腰掛け杉 往復コース][yamap route] 🗻
+  * [Mitakesan Station - Mitake Shrine - Tengu cedar + Nagao-daira observation deck course][my-yamap-route] 🗻
+  * [Mitakesan Station - Mitake Shrine - Tengu cedar round-trip course / 御岳山駅-御嶽神社-天狗の腰掛け杉 往復コース][yamap route] 🗻
 
 
 Metrics:
@@ -54,18 +54,18 @@ Metrics:
 ## Timeline ⏱️
 
 * 10:00 - Arrive at [Mitake Station / 御嶽駅][mitake-jr] (JR) 🚉
-* 10:12 - Bus to [Mitakesan cable car station / 御岳山駅][mitakesan-cablecar] 🚠
-* 11:00 - Mitakesan Station (Mitake cable car) / `御岳山駅（御岳山ケーブルカー）`
+* 10:12 - Bus to the cable car station 🚌
+* 11:00 - [Mitakesan Station (Mitake cable car)][mitakesan-cablecar] / `御岳山駅（御岳山ケーブルカー）` - 🚠 
 * 11:33 - Lunch at a restaurant 🍱
-* 12:42 - Mitake Shrine / `御嶽神社` - ⛩️
-* 12:43 - Mount Mitake / `御岳山` - ⛰️
-* 12:44 - Mitake Shrine / `御嶽神社` - ⛩️
-* 13:04 - Tengu Cedar / `天狗の腰掛け杉` 📸
-* 14:14 - Rock Garden / `岩石園（ロックガーデン）` 🛖
-* 14:27 - Ayahiro Falls / `綾広の滝` 📸
-* 15:06 - Tengu Cedar / `天狗の腰掛け杉` 📸
-* 15:20 - Nagao-daira observation deck / `長尾平展望台` 📸
-* 16:11 - [Mitakesan cable car station / 御岳山駅][mitakesan-cablecar] 🚠
+* 12:42 - [Mitake Shrine](https://maps.app.goo.gl/hrF5Z9aSsBToSzox5) / `御嶽神社` - ⛩️
+* 12:43 - [Mount Mitake](https://maps.app.goo.gl/Lw8iYKnFX3ddopVX6) / `御岳山` - ⛰️
+* 12:44 - [Nagao Teahouse](https://maps.app.goo.gl/fGRWUYZ28qBLj85K6) / `長尾茶屋` - 🍵
+* 13:04 - [Tengu Cedar](https://maps.app.goo.gl/Nw31XAtHV7Fh1c8a9) / `天狗の腰掛け杉` 📸
+* 14:14 - [Rock Garden](https://maps.app.goo.gl/ykaPTyaTGGwFGQ6o9) / `岩石園（ロックガーデン）` 🛖
+* 14:27 - [Ayahiro Falls](https://maps.app.goo.gl/aJqwv33Rsd8uGcDEA) / `綾広の滝` 📸
+* 15:06 - [Tengu Cedar](https://maps.app.goo.gl/Nw31XAtHV7Fh1c8a9) / `天狗の腰掛け杉` 📸
+* 15:20 - [Nagao-daira observation deck](https://maps.app.goo.gl/sdoYgxVnRQuHXRp38) / `長尾平展望台` 📸
+* 16:11 - [Mitakesan cable car station][mitakesan-cablecar] / `御岳山駅` 🚠
 
 
 ## Food 🍱
@@ -92,7 +92,7 @@ Metrics:
 * Observation deck near the cable car station 🌄  
   Offers wide views over the mountains and valleys.
 
-* Tengu Cedar 天狗の腰掛け杉 🌲  
+* [Tengu Cedar](https://maps.app.goo.gl/Nw31XAtHV7Fh1c8a9) 天狗の腰掛け杉 🌲  
   A massive ancient cedar tree with a unique shape.
 
 
