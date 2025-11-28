@@ -1,6 +1,6 @@
 ---
 title: 'Mt. Mitake + Rock Garden'
-description: 'Hiking route on Mitakesan (御岳山) with a Mononoke Hime vibes that is perfect for beginners.'
+description: 'Hiking route on Mitakesan (御岳山) with a Mononoke Hime vibe that is perfect for beginners.'
 excludeFromSidebar: false
 ---
 
@@ -87,13 +87,13 @@ Metrics:
   Soft green moss, flowing streams, and wooden bridges create a Ghibli-like scene.
 
 * Ayahiro waterfall 綾広の滝 💧  
-  A serene waterfall that is especially photogenic after rainfall.
+  A quiet waterfall that is especially photogenic after rainfall.
 
 * Observation deck near the cable car station 🌄  
   Offers wide views over the mountains and valleys.
 
 * [Tengu Cedar](https://maps.app.goo.gl/Nw31XAtHV7Fh1c8a9) 天狗の腰掛け杉 🌲  
-  A massive ancient cedar tree with a unique shape.
+  A large ancient cedar tree with a unique shape.
 
 
 ## Summary
