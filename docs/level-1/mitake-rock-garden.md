@@ -1,6 +1,6 @@
 ---
 title: 'Mt. Mitake + Rock Garden'
-description: 'Hiking route on Mitakesan (御岳山) Mononoke-vibes that are perfect for family outing'
+description: 'Hiking route on Mitakesan (御岳山) with a Mononoke Hime vibes that is perfect for beginners.'
 excludeFromSidebar: false
 ---
 
@@ -9,45 +9,103 @@ excludeFromSidebar: false
 {{$frontmatter.description}}
 
 
-## Getting There
+## Getting there
 
-Train station 🚉:  
-Mitake Station / 御嶽駅 / <https://goo.gl/maps/DMhiun282BQ1sZGS9>
+Nearest train station: [Mitake Station / 御嶽駅][mitake-jr] (JR) 🚉
 
-Cable Car station 🚠:  
-Mitakesan Station / 御岳山駅 / <https://goo.gl/maps/fUiVTkKLTc9JgUx59>
+Cable car station: [Mitakesan cable car station / 御岳山駅][mitakesan-cablecar] 🚠
 
-Travel from Shinjuku? **2 hr**
+Travel from Shinjuku: **2 hr** ⏱️
 
-* 07:44 -> 09:04 {Mitake Station} + 09:12 bus -> 09:30 Cable Car -> 09:36
-* [Google Maps Route](https://goo.gl/maps/d1DcUD19ftQLvQN5A)
+* 07:44 -> 09:04 {Mitake Station} + 09:12 bus -> 09:30 cable car -> 09:36 🚌🚠
+* [Shinjuku to Mitakesan route on Google Maps route][shinjuku-to-mitakesan] 🗺️
 
 
-## Overview
+## Trail overview
 
-Mitake Station -> Bus -> Rope way -> Hike 🥾 -> Rope way -> Bus -> Mitake Station
+* Difficulty: Easy - great for beginners! 🟢
+* Drink: Vending machines at the cable car station and near Mitake Shrine. 🥤
+* Lunch: Several [restaurant options](#food-) on Mt. Mitake. 🍱
+* Hiking poles 🔧: 2.5 / 5
+  * Nice to have for the Rock Garden trail but not required.
+* Trail running 👟: 2 / 5
+  * The trail is steep and rocky, so it is not suitable for running.
+* Simple access from Shinjuku to Mitake Station on the express train in the morning. 🚆
+* ⚠️ MAKE SURE YOU KNOW THE CABLE CAR TIMETABLES! HAVE PLENTY OF TIME FOR THE CABLE CAR!!!
 
-YAMAP route:  
-[御岳山駅-御嶽神社-天狗の腰掛け杉 往復コースの地図・登山ルート・登山口情報 | YAMAP / ヤマップ](https://yamap.com/model-courses/39436)
+
+## Trail route 🥾
+
+* Mitake Station -> bus -> ropeway -> hike -> ropeway -> bus -> Mitake Station 🚶‍♂️🚌
+* YAMAP routes:
+  * [Mitakesan Station - Mitake Shrine - Tengu cedar seat + Nagao-daira observation deck course][my-yamap-route] 🗻
+  * [Mitakesan Station - Mitake Shrine - Tengu cedar seat round-trip course / 御岳山駅-御嶽神社-天狗の腰掛け杉 往復コース][yamap route] 🗻
 
 
-## Food
+Metrics:
 
-* Bring some snacks & water
-* Grab lunch at Mt. Mitake
-* Restaurants on the mountain:
-  * [Komadori store / 駒鳥売店](https://goo.gl/maps/wyx6o7ctAEpAtwbv8)
-  * [Kotobukiya / 寿屋](https://maps.app.goo.gl/ZCFs4YAoWM3NcjCBA)
-  * [Chimotoya / 千本屋商店](https://maps.app.goo.gl/e7vaWKswyeWYdtSb6)
+* Length of time: 04:00
+* Distance: 6.4 km
+* Elevation gain ↗️: 597 m
+* Elevation decline ↘️: 597 m
+* Trail type: Loop
+
+
+## Timeline ⏱️
+
+* 10:00 - Arrive at [Mitake Station / 御嶽駅][mitake-jr] (JR) 🚉
+* 10:12 - Bus to [Mitakesan cable car station / 御岳山駅][mitakesan-cablecar] 🚠
+* 11:00 - Mitakesan Station (Mitake cable car) / `御岳山駅（御岳山ケーブルカー）`
+* 11:33 - Lunch at a restaurant 🍱
+* 12:42 - Mitake Shrine / `御嶽神社` - ⛩️
+* 12:43 - Mount Mitake / `御岳山` - ⛰️
+* 12:44 - Mitake Shrine / `御嶽神社` - ⛩️
+* 13:04 - Tengu Cedar / `天狗の腰掛け杉` 📸
+* 14:14 - Rock Garden / `岩石園（ロックガーデン）` 🛖
+* 14:27 - Ayahiro Falls / `綾広の滝` 📸
+* 15:06 - Tengu Cedar / `天狗の腰掛け杉` 📸
+* 15:20 - Nagao-daira observation deck / `長尾平展望台` 📸
+* 16:11 - [Mitakesan cable car station / 御岳山駅][mitakesan-cablecar] 🚠
+
+
+## Food 🍱
+
+* Bring snacks and water. 🥤🍫
+  * There are vending machines at the cable car station and near Mitake Shrine.
+* There are few restaurants on Mt. Mitake. 🍱
+  * [Komadori / 駒鳥売店][komadori] 🍜
+  * [Kotobukiya / 寿屋][kotobukiya] 🍛
+  * [Chimotoya / 千本屋商店][chimotoya] ☕️
+
+
+## Key photo spots 📸
+
+* Mitake Shrine and stone stairway ⛩️  
+  A classic viewpoint with traditional architecture framed by tall cedar trees.
+
+* Rock Garden mossy valley 🌿  
+  Soft green moss, flowing streams, and wooden bridges create a Ghibli-like scene.
+
+* Ayahiro waterfall 綾広の滝 💧  
+  A serene waterfall that is especially photogenic after rainfall.
+
+* Observation deck near the cable car station 🌄  
+  Offers wide views over the mountains and valleys.
+
+* Tengu Cedar 天狗の腰掛け杉 🌲  
+  A massive ancient cedar tree with a unique shape.
 
 
 ## Summary
 
-* Easy & Pretty 🌳
-* Hiking Poles 🔧 = 2 ~ 3 / 5 ; Nice to have for the Rock Garden trail
-* Trail Running 👟 = 2/5 ; pretty steep & rocky so not good for running
-* Simple to get to Mitake station from Shinjuku on express trail (morning)
-* ⚠️ MAKE SURE YOU KNOW THE CABLE CAR TIMETABLES! HAVE PLENTY OF TIME FOR THE CABLE CAR!!!
-
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 <!--@include: ../snippets/footer.md-->
+
+[chimotoya]: https://maps.app.goo.gl/e7vawkswyewydtsb6
+[komadori]: https://goo.gl/maps/wyx6o7ctaepatwbv8
+[kotobukiya]: https://maps.app.goo.gl/zcfs4yaowm3ncjcba
+[mitake-jr]: https://goo.gl/maps/dmhiun282bq1szgs9
+[mitakesan-cablecar]: https://goo.gl/maps/fuivtkkltc9jgux59
+[my-yamap-route]: https://yamap.com/plans/code/lqcrrg3mh2fvkq_-p15c8wgoc46fid0zv_ypv6hyrpwykbmnbqx9uuf2ubr_7mkzt3c
+[shinjuku-to-mitakesan]: https://maps.app.goo.gl/swcwi7eyuxo2obb17
+[yamap route]: https://yamap.com/model-courses/39436
