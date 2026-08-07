@@ -9,13 +9,15 @@
 //   linked directory does not duplicate its target.
 //
 // Usage:
-//   node scripts/generate-site-structure.mjs   Regenerate notes/site-structure.md.
+//   node scripts/generate-site-structure.mjs   Regenerate docs/site-structure.md.
 //   node scripts/generate-site-structure.mjs --help   Show this help.
 //
 // Output:
-//   notes/site-structure.md
+//   docs/site-structure.md
 //
 // Version history:
+//   * v2.3 - 2026-08-08 - Write to docs/site-structure.md instead of notes/,
+//     now that the contents/ rename frees docs/ for repository documentation.
 //   * v2.2 - 2026-08-08 - Follow the docs/ to contents/ folder rename.
 //   * v2.1 - 2026-08-08 - Adapt for tokyo-hiker: scan docs/ instead of
 //     contents/, write to notes/site-structure.md, and replace the top-level
@@ -35,11 +37,11 @@ import { fileURLToPath } from 'node:url';
 const HELP = `Generate a tree view of the contents/ folder as a fenced Markdown code block.
 
 Usage:
-  node scripts/generate-site-structure.mjs          Regenerate notes/site-structure.md.
+  node scripts/generate-site-structure.mjs          Regenerate docs/site-structure.md.
   node scripts/generate-site-structure.mjs --help   Show this help.
 
 Output:
-  notes/site-structure.md`;
+  docs/site-structure.md`;
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -51,9 +53,9 @@ if (args.includes('--help') || args.includes('-h')) {
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
 
-// Write a generated tree snapshot into the notes/ folder, which keeps it out of
-// the published site that lives under contents/.
-const outputPath = resolve(repoRoot, 'notes', 'site-structure.md');
+// Write a generated tree snapshot into the docs/ folder, which holds repository
+// documentation and sits outside the published site under contents/.
+const outputPath = resolve(repoRoot, 'docs', 'site-structure.md');
 
 // Folder scanned for the tree, and the top-level entries dropped from it.
 const scanFolder = 'contents';
@@ -175,7 +177,7 @@ if (!body) {
 // Wrap the tree in a fenced code block so Markdown renders it verbatim.
 const codeBlock = `\`\`\`txt\n${body}\n\`\`\``;
 
-// Save the tree output as a Markdown file, creating the notes/ folder if needed.
+// Save the tree output as a Markdown file, creating the docs/ folder if needed.
 mkdirSync(dirname(outputPath), { recursive: true });
 writeFileSync(outputPath, `# Site structure\n\n${codeBlock}\n`, 'utf8');
 console.log('✅ Wrote %s', outputPath);

@@ -91,7 +91,7 @@ pnpm test
 Helper scripts live in [scripts/](./scripts/); see [scripts/README.md][] for the full index and the authoring rules they follow.
 
 ```shell
-# Regenerate notes/site-structure.md from the contents/ tree
+# Regenerate docs/site-structure.md from the contents/ tree
 pnpm tree
 
 # List and optionally delete temporary files
