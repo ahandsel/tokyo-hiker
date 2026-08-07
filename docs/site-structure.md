@@ -29,13 +29,18 @@
 │   │   ├───📄 yamap-icon-black.svg
 │   │   ├───📄 yamap-icon-color.svg
 │   │   └───📄 yamap-icon-white.svg
+│   ├───📄 apple-touch-icon-180x180.png
 │   ├───📄 cat-icon-profile.png
 │   ├───📄 favicon.ico
 │   ├───📄 favicon.png
 │   ├───📄 hiker.png
+│   ├───📄 maskable-icon-512x512.png
 │   ├───📄 mitake-cablecar-timetable.png
 │   ├───📄 mitake-rock-garden-route-map.png
 │   ├───📄 mitake-station-to-mitakesan.png
+│   ├───📄 pwa-192x192.png
+│   ├───📄 pwa-512x512.png
+│   ├───📄 pwa-64x64.png
 │   ├───📄 robots.txt
 │   └───📄 takahara-chikatsuyu-oji-map.png
 ├───📁 snippets/
