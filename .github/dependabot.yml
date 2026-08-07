@@ -16,3 +16,18 @@ updates:
     groups:
       actions-dependencies:
         patterns: ['*']
+
+  - package-ecosystem: 'npm'
+    directory: '/' # Location of package manifests
+    schedule:
+      interval: 'monthly'
+    cooldown:
+      default-days: 7 # Stays above the 3 day minimumReleaseAge in pnpm-workspace.yaml
+      include:
+        - '*'
+    ignore:
+      # VitePress is deliberately pinned to an exact prerelease; do not propose updates.
+      - dependency-name: 'vitepress'
+    groups:
+      npm-dependencies:
+        patterns: ['*']
