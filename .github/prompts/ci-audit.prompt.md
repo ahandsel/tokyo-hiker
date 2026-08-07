@@ -49,7 +49,7 @@ These facts were verified on 2026-08-08. Confirm each one is still true before y
 
 ## Scope
 
-Audit every file below. Do not change application content under `docs/`.
+Audit every file below. Do not change application content under `contents/`.
 
 * `.github/workflows/deploy.yml` - builds the VitePress site and deploys it to GitHub Pages on pushes to `main`.
 * `.github/workflows/pr-linter.yml` - runs `pnpm md-lint` and `pnpm code-format` on pull requests.

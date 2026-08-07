@@ -1,6 +1,6 @@
 // General notes:
 //   Guards the vendored plugin stylesheet in
-//   docs/.vitepress/theme/vitepress-mermaid-renderer.css against drift
+//   contents/.vitepress/theme/vitepress-mermaid-renderer.css against drift
 //   from the installed vitepress-mermaid-renderer package. The block above
 //   the "Local auto-fit and height-ceiling overrides" banner must stay a
 //   verbatim copy of the CSS the plugin ships: the stylesheet it injects at
@@ -22,7 +22,8 @@ import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
-const VENDORED_PATH = 'docs/.vitepress/theme/vitepress-mermaid-renderer.css';
+const VENDORED_PATH =
+  'contents/.vitepress/theme/vitepress-mermaid-renderer.css';
 const PLUGIN_DIST = 'node_modules/vitepress-mermaid-renderer/dist';
 const BANNER_TEXT = 'Local auto-fit and height-ceiling overrides';
 

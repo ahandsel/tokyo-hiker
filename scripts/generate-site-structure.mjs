@@ -1,5 +1,5 @@
 // General notes:
-//   Generates a tree view of the docs/ folder and saves it as a fenced
+//   Generates a tree view of the contents/ folder and saves it as a fenced
 //   Markdown code block. File enumeration uses `git ls-files --cached --others
 //   --exclude-standard`, which honors the repo .gitignore, the global excludes
 //   file (core.excludesFile), and .git/info/exclude, so gitignored files are
@@ -16,6 +16,7 @@
 //   notes/site-structure.md
 //
 // Version history:
+//   * v2.2 - 2026-08-08 - Follow the docs/ to contents/ folder rename.
 //   * v2.1 - 2026-08-08 - Adapt for tokyo-hiker: scan docs/ instead of
 //     contents/, write to notes/site-structure.md, and replace the top-level
 //     allowlist with a .vitepress denylist so new content folders and the
@@ -31,7 +32,7 @@ import { writeFileSync, mkdirSync, lstatSync } from 'node:fs';
 import { resolve, dirname, posix as pathPosix } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const HELP = `Generate a tree view of the docs/ folder as a fenced Markdown code block.
+const HELP = `Generate a tree view of the contents/ folder as a fenced Markdown code block.
 
 Usage:
   node scripts/generate-site-structure.mjs          Regenerate notes/site-structure.md.
@@ -51,11 +52,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
 
 // Write a generated tree snapshot into the notes/ folder, which keeps it out of
-// the published site that lives under docs/.
+// the published site that lives under contents/.
 const outputPath = resolve(repoRoot, 'notes', 'site-structure.md');
 
 // Folder scanned for the tree, and the top-level entries dropped from it.
-const scanFolder = 'docs';
+const scanFolder = 'contents';
 const topLevelIgnore = new Set(['.vitepress']);
 
 // Entries to ignore in the generated tree (matched against the basename).

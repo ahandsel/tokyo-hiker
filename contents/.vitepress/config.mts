@@ -74,7 +74,8 @@ const vitePressOptions = {
       },
     ],
     editLink: {
-      pattern: 'https://github.com/ahandsel/tokyo-hiker/edit/main/docs/:path',
+      pattern:
+        'https://github.com/ahandsel/tokyo-hiker/edit/main/contents/:path',
       text: 'Edit this page on GitHub',
     },
   },
@@ -143,7 +144,7 @@ const vitePressSidebarOptions = {
   collapsed: false,
   // collapseDepth: 1,
   debugPrint: false,
-  documentRootPath: 'docs',
+  documentRootPath: 'contents',
   excludeByFolderDepth: null,
   excludeByGlobPattern: ['README.md', 'temp.md', 'temp-.*'],
   excludeFilesByFrontmatterFieldName: 'excludeFromSidebar',

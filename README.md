@@ -22,11 +22,11 @@ Built with [VitePress](https://vitepress.dev/).
 | [@vite-pwa/vitepress][]                               | PWA support for VitePress               |                               |
 | [markdownlint-cli2][]                                 | Markdown linting                        |                               |
 
-[.vitepress/config.mts]: ./docs/.vitepress/config.mts
-[.vitepress/theme/index.ts]: ./docs/.vitepress/theme/index.ts
+[.vitepress/config.mts]: ./contents/.vitepress/config.mts
+[.vitepress/theme/index.ts]: ./contents/.vitepress/theme/index.ts
 [Brewfile]: ./Brewfile
 [scripts/README.md]: ./scripts/README.md
-[.vitepress/theme/vitepress-mermaid-renderer.css]: ./docs/.vitepress/theme/vitepress-mermaid-renderer.css
+[.vitepress/theme/vitepress-mermaid-renderer.css]: ./contents/.vitepress/theme/vitepress-mermaid-renderer.css
 [@nolebase/vitepress-plugin-enhanced-readabilities]: https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/
 [@nolebase/vitepress-plugin-meta]: https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-meta/
 [@vite-pwa/assets-generator]: https://vite-pwa-org.netlify.app/assets-generator/
@@ -77,7 +77,7 @@ pnpm index
 
 ```shell
 # Run markdown linting
-~/.scripts/md-lint.sh ./docs
+~/.scripts/md-lint.sh ./contents
 pnpm code-format
 pnpm md-lint
 
@@ -91,7 +91,7 @@ pnpm test
 Helper scripts live in [scripts/](./scripts/); see [scripts/README.md][] for the full index and the authoring rules they follow.
 
 ```shell
-# Regenerate notes/site-structure.md from the docs/ tree
+# Regenerate notes/site-structure.md from the contents/ tree
 pnpm tree
 
 # List and optionally delete temporary files

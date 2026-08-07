@@ -37,7 +37,7 @@ pnpm cleanup
 
 > Source: [generate-site-structure.mjs](generate-site-structure.mjs)
 
-Generate a `notes/site-structure.md` file containing a tree view of the `docs/` folder.
+Generate a `notes/site-structure.md` file containing a tree view of the `contents/` folder.
 File enumeration uses `git ls-files`, so gitignored files are never listed.
 The top-level `.vitepress` folder is dropped, because it holds the site configuration rather than published content.
 

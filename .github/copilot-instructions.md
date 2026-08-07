@@ -27,8 +27,8 @@
 ## Commands
 
 * Install: `pnpm install`
-* Dev: `pnpm dev` _(or `vitepress dev docs` if scripts missing)_
-* Build: `pnpm build` _(or `vitepress build docs`)_
+* Dev: `pnpm dev` _(or `vitepress dev contents` if scripts missing)_
+* Build: `pnpm build` _(or `vitepress build contents`)_
 * Preview build: `pnpm preview`
 * Lint Markdown: `pnpm lint`
 
@@ -38,9 +38,9 @@
 ```json
 {
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "preview": "vitepress preview docs",
+    "dev": "vitepress dev contents",
+    "build": "vitepress build contents",
+    "preview": "vitepress preview contents",
     "lint": "markdownlint-cli2"
   },
   "packageManager": "pnpm@^9"
