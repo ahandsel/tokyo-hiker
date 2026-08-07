@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 #===============================================================================
-:<<'DOC'
+: << 'DOC'
 Name:     cleanup-temp-files.sh
 Usage:    cleanup-temp-files.sh [-y|--yes]
 Purpose:  Search and list temporary files in a bullet point format. Delete empty ones, and optionally delete all matching files after confirmation.
 
 Version history:
+  - v4.3 - 2026-02-20 - Add: remove .pnpm-store directories and .DS_Store files.
   - v4.2 - 2025-08-18 - Change: list output switched to bullet point format with status icons; portability hardening; clearer errors; minor prompts and docs tweaks.
   - v4.1 - 2025-08-18 - Fix: include exact "temp.md" and other "temp.*" files in search.
   - v4.0 - 2025-08-18 - Major refactor; asks user for confirmation before deleting all matching files.
@@ -17,6 +18,7 @@ Notes:
   + are exactly "temp" or match "temp.*" (for example, "temp.md"),
   + are listed in ADDITIONAL_FILES,
   + and are not inside a "node_modules" directory.
+* Directories listed in ADDITIONAL_DIRS (for example, ".pnpm-store") are also removed.
 * Output paths are relative to the current working directory.
 * No third-party libraries are required; if a future change adds dependencies, add an "install_deps" function accordingly.
 DOC
@@ -26,10 +28,13 @@ set -Eeuo pipefail
 
 # Configuration
 SCRIPT_NAME="cleanup-temp-files.sh"
-VERSION="4.2"
+VERSION="4.3"
 
 # Files that deviate from "temp*" rules
-ADDITIONAL_FILES=("import.csv" "import.md")
+ADDITIONAL_FILES=("import.csv" "import.md" ".DS_Store")
+
+# Directories to remove
+ADDITIONAL_DIRS=(".pnpm-store")
 
 # ----------------------------
 # Utilities
@@ -43,7 +48,7 @@ on_error() {
 trap on_error ERR
 
 cmd_exists() {
-  command -v "$1" >/dev/null 2>&1
+  command -v "$1" > /dev/null 2>&1
 }
 
 short_path() {
@@ -63,9 +68,9 @@ short_path() {
 
 mod_date() {
   local f="${1:?file required}"
-  if stat -c '%y' "$f" >/dev/null 2>&1; then
+  if stat -c '%y' "$f" > /dev/null 2>&1; then
     stat -c '%y' "$f" | sed 's/\..*//'
-  elif stat -f '%Sm' -t '%Y-%m-%d %H:%M:%S' "$f" >/dev/null 2>&1; then
+  elif stat -f '%Sm' -t '%Y-%m-%d %H:%M:%S' "$f" > /dev/null 2>&1; then
     stat -f '%Sm' -t '%Y-%m-%d %H:%M:%S' "$f"
   else
     printf 'unknown'
@@ -82,12 +87,16 @@ file_status() {
 }
 
 safe_rm() {
-  local f="${1:?file required}"
+  local f="${1:?path required}"
   if [ ! -e "$f" ]; then
-    err "Skip: file does not exist: $(short_path "$f")"
+    err "Skip: path does not exist: $(short_path "$f")"
     return 0
   fi
-  if rm -f -- "$f"; then
+  local rm_cmd=(rm -f --)
+  if [ -d "$f" ]; then
+    rm_cmd=(rm -rf --)
+  fi
+  if "${rm_cmd[@]}" "$f"; then
     printf 'Deleted: %s\n' "$(short_path "$f")"
     return 0
   else
@@ -105,7 +114,7 @@ prompt_yes_no() {
   local answer=''
   read -r answer
   case "$answer" in
-    y|Y|yes|YES) return 0 ;;
+    y | Y | yes | YES) return 0 ;;
     *) return 1 ;;
   esac
 }
@@ -131,7 +140,24 @@ find_temp_targets() {
 
   find . \
     -type d -name 'node_modules' -prune -o \
-    -type f \( "${name_args[@]}" \) -print0 2>/dev/null
+    -type f \( "${name_args[@]}" \) -print0 2> /dev/null
+}
+
+find_temp_dir_targets() {
+  local name_args=()
+  local first=1
+  for d in "${ADDITIONAL_DIRS[@]}"; do
+    if [ "$first" -eq 1 ]; then
+      name_args+=(-name "$d")
+      first=0
+    else
+      name_args+=(-o -name "$d")
+    fi
+  done
+
+  find . \
+    -type d -name 'node_modules' -prune -o \
+    -type d \( "${name_args[@]}" \) -print0 2> /dev/null
 }
 
 # ----------------------------
@@ -157,6 +183,17 @@ list_temp_files() {
     printf '\n'
   done < <(find_temp_targets)
 
+  while IFS= read -r -d '' d; do
+    found=1
+    local sp dt
+    sp="$(short_path "$d")"
+    dt="$(mod_date "$d")"
+    printf '%s\n' "$sp"
+    printf '+ Modified: %s\n' "$dt"
+    printf '+ Directory 📁\n'
+    printf '\n'
+  done < <(find_temp_dir_targets)
+
   if [ "$found" -eq 0 ]; then
     printf 'No matching temporary files found.\n'
   fi
@@ -181,12 +218,15 @@ delete_empty_temp_files() {
 
 offer_delete_all() {
   local auto="${1:-no}"
-  local -a files=()
+  local -a targets=()
   while IFS= read -r -d '' f; do
-    files+=("$f")
+    targets+=("$f")
   done < <(find_temp_targets)
+  while IFS= read -r -d '' d; do
+    targets+=("$d")
+  done < <(find_temp_dir_targets)
 
-  if [ "${#files[@]}" -eq 0 ]; then
+  if [ "${#targets[@]}" -eq 0 ]; then
     printf 'No matching temporary files to delete.\n'
     return 0
   fi
@@ -194,15 +234,15 @@ offer_delete_all() {
   if prompt_yes_no "$auto"; then
     local del=0
     local fail=0
-    local f
-    for f in "${files[@]}"; do
-      if safe_rm "$f"; then
+    local t
+    for t in "${targets[@]}"; do
+      if safe_rm "$t"; then
         del=$((del + 1))
       else
         fail=$((fail + 1))
       fi
     done
-    printf '%d file(s) deleted, %d failed.\n' "$del" "$fail"
+    printf '%d item(s) deleted, %d failed.\n' "$del" "$fail"
   else
     printf 'Deletion canceled by user. No files were deleted.\n'
   fi
@@ -213,7 +253,7 @@ offer_delete_all() {
 # ----------------------------
 
 usage() {
-  cat <<EOF
+  cat << EOF
 $SCRIPT_NAME v$VERSION
 
 Usage:
@@ -233,9 +273,16 @@ main() {
 
   while [ $# -gt 0 ]; do
     case "$1" in
-      -h|--help) usage; exit 0 ;;
-      -y|--yes)  auto_confirm="yes" ;;
-      *) err "Unknown option: $1"; usage; exit 2 ;;
+      -h | --help)
+        usage
+        exit 0
+        ;;
+      -y | --yes) auto_confirm="yes" ;;
+      *)
+        err "Unknown option: $1"
+        usage
+        exit 2
+        ;;
     esac
     shift
   done

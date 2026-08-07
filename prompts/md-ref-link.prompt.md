@@ -1,8 +1,5 @@
 ---
-mode: 'agent'
-model: GPT-5 mini
-tools: [ 'changes', 'edit', 'extensions', 'fetch', 'githubRepo', 'ms-vscode.vscode-websearchforcopilot/websearch', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runNotebooks', 'runTasks', 'search', 'testFailure', 'usages', 'vscodeAPI']
-description: 'Convert inline links to reference-style links in Markdown. Use the exact link text as the label, and do not create slug labels unless required for uniqueness or when the text cannot be used as a label.'
+description: 'Convert inline Markdown links to reference-style links, using the exact link text as the label.'
 ---
 
 # Convert inline links to reference-style links in Markdown

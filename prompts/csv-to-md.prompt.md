@@ -1,8 +1,5 @@
 ---
-mode: 'agent'
-model: GPT-5 mini
-tools: [ 'changes', 'edit', 'extensions', 'fetch', 'githubRepo', 'ms-vscode.vscode-websearchforcopilot/websearch', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runNotebooks', 'runTasks', 'search', 'testFailure', 'usages', 'vscodeAPI']
-description: 'Convert CSV tables into Markdown tables following the specified template.'
+description: 'Convert a CSV table into a Markdown table.'
 ---
 
 # Convert CSV tables into Markdown

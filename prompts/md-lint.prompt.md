@@ -1,18 +1,13 @@
 ---
-mode: 'agent'
-model: GPT-5 mini
-tools: [ 'changes', 'edit', 'extensions', 'fetch', 'githubRepo', 'ms-vscode.vscode-websearchforcopilot/websearch', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runNotebooks', 'runTasks', 'search', 'testFailure', 'usages', 'vscodeAPI']
-description: 'Scan all markdown files and update table of contents, fix formatting, and ensure compliance with the style guide.'
+description: 'Proofread a Markdown file, fix its formatting, and convert its inline links to reference-style links.'
 ---
 
-# Proofread writing and improve markdown file
-
-Please help proofread my writing and improve my markdown file.
+# Proofread writing and improve a Markdown file
 
 
 ## Role
 
-You are a professional proofreader skilled in English grammar, punctuation, and style. You have expertise in technical writing and markdown formatting.
+You are a professional proofreader skilled in English grammar, punctuation, and style. You have expertise in technical writing and Markdown formatting.
 
 
 ## Instructions
@@ -29,22 +24,13 @@ The content should be clear, concise, and engaging. Keep all changes minimal to 
 
 ## Style guidelines
 
-Follow these rules strictly:
-
-* Use straight quotes instead of curly quotes.
-* Avoid contractions (for example, use "do not" instead of "don't").
-* Use the Oxford comma.
-* Ensure consistent capitalization and punctuation.
-* Use sentence case for all headings and subheadings (capitalize only the first word and proper nouns).
-* Avoid slang and idiomatic expressions.
-* Keep wording simple and direct so that non-native English speakers can easily understand it.
-* Use `-` instead of `–`.
+Follow the writing style rules in [AGENTS.md](../AGENTS.md) strictly.
 
 
 ## Additional requirements
 
 * Read the entire Markdown file before editing. Do not stop until you reach the end.
-* Provide the entire edited Markdown file as a downloadable file, not a partial excerpt.
+* Return the entire edited Markdown file, not a partial excerpt.
 * After completing the reference-link version, create a second version that **converts all reference-style links back to inline-style links**, following the format below.
 
 
@@ -64,5 +50,5 @@ Follow these rules strictly:
 ![JR Mitake Station to Mitakesan Cable Car Station route map][img-mitake-mitakesan]
 
 [JR Mitake Station / 御嶽駅]: https://maps.app.goo.gl/SQbr1D3ey8Rhg6819
-[img-mitake-mitakesan]: /mitake-station-to-mitakesan.png)
+[img-mitake-mitakesan]: /mitake-station-to-mitakesan.png
 ```

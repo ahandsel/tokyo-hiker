@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   lint-and-format:
-    name: Run md-lint and code-format
+    name: Run md-lint, code-format, and tests
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -59,3 +59,7 @@ jobs:
       # Step 7: Run code formatter in check-only mode, so problems fail the job
       - name: Run code-format
         run: pnpm code-format:check
+
+      # Step 8: Run the repo tests, including the vendored Mermaid CSS drift guard
+      - name: Run tests
+        run: pnpm test
