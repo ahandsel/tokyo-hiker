@@ -48,7 +48,7 @@ If the code is too long to process in one go, break it into smaller sections and
    * Scalability,
    * Security.
 5. Compare the code against best practices for the identified language and shell.
-6. Compare the code against the other scripts in the codebase for consistency. They are located in the `script/` directory.
+6. Compare the code against the other scripts in the codebase for consistency. They are located in the `scripts/` directory.
 7. Where applicable, ensure consistency with the other scripts in the codebase, unless this conflicts with minimal edits.
 8. List the recommended changes, ordered by impact and size. Mark changes you will apply vs. defer.
 9. Apply only the approved minimal changes. Do not exceed the edit budget.
