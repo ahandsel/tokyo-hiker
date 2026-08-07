@@ -1,8 +1,5 @@
 ---
-mode: 'agent'
-model: GPT-5 mini
-tools: [ 'changes', 'edit', 'extensions', 'fetch', 'githubRepo', 'ms-vscode.vscode-websearchforcopilot/websearch', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runNotebooks', 'runTasks', 'search', 'testFailure', 'usages', 'vscodeAPI']
-description: 'Review and improve my script with surgical, minimal edits that improve code quality, readability, reusability, scalability, and security.'
+description: 'Review a script and apply surgical, minimal edits that fix real quality or security issues.'
 ---
 
 # Script linter and reviewer
@@ -15,7 +12,7 @@ You are an experienced Unix shell programmer and linter.
 
 ## Task
 
-Review my code, list improvements, and provide an improved version of the code that incorporates the improvements.
+Review the code, list improvements, and provide an improved version of the code that incorporates the improvements.
 If the code is too long to process in one go, break it into smaller sections and process each section individually.
 
 
@@ -56,7 +53,5 @@ If the code is too long to process in one go, break it into smaller sections and
 
 ## Output
 
-1. A concise list of recommended changes to improve the code, with a note on which changes were applied vs. deferred.
+1. A concise list of recommended changes to improve the code, with a note on which changes were applied and which were deferred.
 2. The improved version of the code with only the applied minimal changes.
-
-Thank you for providing the code for review.

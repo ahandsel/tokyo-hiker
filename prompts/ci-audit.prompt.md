@@ -1,26 +1,5 @@
 ---
-mode: 'agent'
-model: GPT-5
-tools:
-  [
-    'changes',
-    'edit',
-    'extensions',
-    'fetch',
-    'githubRepo',
-    'ms-vscode.vscode-websearchforcopilot/websearch',
-    'new',
-    'openSimpleBrowser',
-    'problems',
-    'runCommands',
-    'runNotebooks',
-    'runTasks',
-    'search',
-    'testFailure',
-    'usages',
-    'vscodeAPI',
-  ]
-description: 'Audit every CI and automation file, then upgrade each pinned version to the newest release that is safe with Node.js v24.19.0 and the current toolchain.'
+description: 'Audit every CI and automation file, then upgrade each pinned version to the newest release that is safe with the current toolchain.'
 ---
 
 # Audit the CI setup and upgrade to the latest safe versions
@@ -44,7 +23,7 @@ These facts were verified on 2026-08-08. Confirm each one is still true before y
 | pnpm minimum Node  | >= 22.13                                    | `engines.node` of pnpm 11.20.0     |
 | Lockfile format    | `lockfileVersion: '9.0'`                    | `pnpm-lock.yaml`                   |
 | VitePress          | 2.0.0-alpha.12 (prerelease, pinned exactly) | `package.json`                     |
-| Supply chain delay | `minimumReleaseAge: 1440` (1 day)           | `pnpm-workspace.yaml`              |
+| Supply chain delay | `minimumReleaseAge: 4320` (3 days)          | `pnpm-workspace.yaml`              |
 
 
 ## Scope
@@ -193,12 +172,8 @@ State plainly what you verified, what you could not verify, and why.
 
 ## Style guidelines
 
-Follow these rules in the report, in commit messages, and in any comment you add to a workflow file.
+Follow the writing style rules in [AGENTS.md](../AGENTS.md) in the report, in commit messages, and in any comment you add to a workflow file.
 
-* Use straight quotes instead of curly quotes.
-* Use a plain hyphen (`-`). Never use an en-dash or an em-dash.
-* Avoid contractions (for example, use "do not" instead of "don't").
-* Use the Oxford comma.
-* Use sentence case for all headings and subheadings.
-* Keep wording simple and direct so that non-native English speakers can easily understand it.
+One rule is specific to this prompt:
+
 * Keep every existing explanatory comment in the workflow files, and update the comment whenever you change the line it describes.
