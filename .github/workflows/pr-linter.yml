@@ -27,7 +27,7 @@ jobs:
     steps:
       # Step 1: Checkout repository code
       - name: Checkout repository
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # actions/checkout@v5.0.0, pinned
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout@v7.0.1, pinned
 
       # Step 2: Detect pnpm version from package.json
       - name: Detect pnpm version
@@ -38,15 +38,15 @@ jobs:
 
       # Step 3: Install pnpm package manager (use detected version)
       - name: Install pnpm
-        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # pnpm/action-setup@v4.2.0, pinned
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # pnpm/action-setup@v6.0.10, pinned
         with:
           version: ${{ steps.pnpm-version.outputs.version }}
 
       # Step 4: Setup Node.js (required by pnpm and VitePress)
       - name: Setup Node.js
-        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # actions/setup-node@v5.0.0, pinned
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # actions/setup-node@v7.0.0, pinned
         with:
-          node-version: 22 # Use Node.js v22 as specified by vitepress.dev
+          node-version-file: .node-version # Single source of truth, keeps CI on the same Node.js as local
           cache: pnpm
 
       # Step 5: Install project dependencies
