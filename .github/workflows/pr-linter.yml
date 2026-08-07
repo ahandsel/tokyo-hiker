@@ -21,7 +21,6 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: read # Allows reading repo files
-      deployments: write # Allows creating deployment records in GitHub
     if: ${{ github.event.pull_request.draft == false }}
 
     steps:
@@ -49,14 +48,14 @@ jobs:
           node-version-file: .node-version # Single source of truth, keeps CI on the same Node.js as local
           cache: pnpm
 
-      # Step 5: Install project dependencies
+      # Step 5: Install project dependencies exactly as locked, for reproducible runs
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-      # Step 6: Run Markdown linter
+      # Step 6: Run Markdown linter in check-only mode, so problems fail the job
       - name: Run md-lint
-        run: pnpm md-lint
+        run: pnpm md-lint:check
 
-      # Step 7: Run code formatter
+      # Step 7: Run code formatter in check-only mode, so problems fail the job
       - name: Run code-format
-        run: pnpm code-format
+        run: pnpm code-format:check

@@ -7,7 +7,9 @@
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
     "code-format": "prettier --write .",
+    "code-format:check": "prettier --check .",
     "md-lint": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\" --fix",
+    "md-lint:check": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\"",
     "lint": "pnpm run code-format && pnpm run md-lint"
   },
   "packageManager": "pnpm@11.20.0",
