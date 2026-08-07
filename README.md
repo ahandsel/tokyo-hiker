@@ -24,6 +24,7 @@ Built with [VitePress](https://vitepress.dev/).
 
 [.vitepress/config.mts]: ./docs/.vitepress/config.mts
 [.vitepress/theme/index.ts]: ./docs/.vitepress/theme/index.ts
+[Brewfile]: ./Brewfile
 [@nolebase/vitepress-plugin-enhanced-readabilities]: https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/
 [@nolebase/vitepress-plugin-meta]: https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-meta/
 [@vite-pwa/assets-generator]: https://vite-pwa-org.netlify.app/assets-generator/
@@ -33,6 +34,24 @@ Built with [VitePress](https://vitepress.dev/).
 [VitePress Mermaid Renderer]: https://vitepress-mermaid-renderer.sametcc.me/
 [vitepress-sidebar]: https://vitepress-sidebar.cdget.com/
 [VitePress]: https://vitepress.dev/guide/what-is-vitepress
+
+
+### First-time setup
+
+`pnpm setup-full` runs the whole chain: Homebrew formulae from the [Brewfile][], the Node.js version pinned in `.node-version` via nodenv, `pnpm install`, and the pre-commit hook that runs `pnpm lint`.
+
+```shell
+# Full setup in one step
+pnpm setup-full
+
+# Or run the steps individually
+pnpm setup-brew         # Install formulae from ./Brewfile
+pnpm setup-node         # Install and activate the .node-version Node.js via nodenv
+pnpm setup-pre-commit   # Install the pre-commit hook that runs pnpm lint
+pnpm setup-takumi-guard # Point global pnpm at the Takumi Guard registry proxy
+```
+
+`package.json` declares `engines` (Node.js 24 or newer, pnpm 11 or newer), and `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain rather than half-installing.
 
 
 ### Local dev

@@ -3,16 +3,25 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs",
     "code-format": "prettier --write .",
     "code-format:check": "prettier --check .",
+    "dev": "vitepress dev docs",
+    "lint": "pnpm run code-format && pnpm run md-lint",
     "md-lint": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\" --fix",
     "md-lint:check": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\"",
-    "lint": "pnpm run code-format && pnpm run md-lint"
+    "preview": "vitepress preview docs",
+    "setup-brew": "./scripts/setup-brew.sh",
+    "setup-full": "zsh scripts/setup.sh",
+    "setup-node": "./scripts/setup-node.sh",
+    "setup-pre-commit": "./scripts/setup-pre-commit.sh",
+    "setup-takumi-guard": "./scripts/setup-takumi-guard.sh"
   },
   "packageManager": "pnpm@11.20.0",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=11"
+  },
   "devDependencies": {
     "@davidingplus/vitepress-image-viewer": "^1.1.5",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2",
