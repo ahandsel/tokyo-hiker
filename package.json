@@ -32,11 +32,5 @@
     "vitepress-mermaid-renderer": "^1.1.29",
     "vitepress-sidebar": "^1.38.0",
     "vue": "^3.5.41"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "onFail": "error"
-    }
   }
 }
