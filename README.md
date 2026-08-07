@@ -25,6 +25,7 @@ Built with [VitePress](https://vitepress.dev/).
 [.vitepress/config.mts]: ./docs/.vitepress/config.mts
 [.vitepress/theme/index.ts]: ./docs/.vitepress/theme/index.ts
 [Brewfile]: ./Brewfile
+[scripts/README.md]: ./scripts/README.md
 [@nolebase/vitepress-plugin-enhanced-readabilities]: https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/
 [@nolebase/vitepress-plugin-meta]: https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-meta/
 [@vite-pwa/assets-generator]: https://vite-pwa-org.netlify.app/assets-generator/
@@ -65,6 +66,9 @@ pnpm dev
 
 # Build the static site
 pnpm build
+
+# List every pnpm script with its command
+pnpm index
 ```
 
 
@@ -75,6 +79,19 @@ pnpm build
 ~/.scripts/md-lint.sh ./docs
 pnpm code-format
 pnpm md-lint
+```
+
+
+### Helper scripts
+
+Helper scripts live in [scripts/](./scripts/); see [scripts/README.md][] for the full index and the authoring rules they follow.
+
+```shell
+# Regenerate notes/site-structure.md from the docs/ tree
+pnpm tree
+
+# List and optionally delete temporary files
+pnpm cleanup
 ```
 
 

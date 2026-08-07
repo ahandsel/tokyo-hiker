@@ -4,9 +4,11 @@
   "type": "module",
   "scripts": {
     "build": "vitepress build docs",
+    "cleanup": "./scripts/cleanup-temp-files.sh",
     "code-format": "prettier --write .",
     "code-format:check": "prettier --check .",
     "dev": "vitepress dev docs",
+    "index": "zsh scripts/index.sh",
     "lint": "pnpm run code-format && pnpm run md-lint",
     "md-lint": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\" --fix",
     "md-lint:check": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\"",
@@ -15,7 +17,8 @@
     "setup-full": "zsh scripts/setup.sh",
     "setup-node": "./scripts/setup-node.sh",
     "setup-pre-commit": "./scripts/setup-pre-commit.sh",
-    "setup-takumi-guard": "./scripts/setup-takumi-guard.sh"
+    "setup-takumi-guard": "./scripts/setup-takumi-guard.sh",
+    "tree": "node scripts/generate-site-structure.mjs"
   },
   "packageManager": "pnpm@11.20.0",
   "engines": {
