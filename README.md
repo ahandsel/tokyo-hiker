@@ -26,6 +26,7 @@ Built with [VitePress](https://vitepress.dev/).
 [.vitepress/theme/index.ts]: ./docs/.vitepress/theme/index.ts
 [Brewfile]: ./Brewfile
 [scripts/README.md]: ./scripts/README.md
+[.vitepress/theme/vitepress-mermaid-renderer.css]: ./docs/.vitepress/theme/vitepress-mermaid-renderer.css
 [@nolebase/vitepress-plugin-enhanced-readabilities]: https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/
 [@nolebase/vitepress-plugin-meta]: https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-meta/
 [@vite-pwa/assets-generator]: https://vite-pwa-org.netlify.app/assets-generator/
@@ -79,6 +80,9 @@ pnpm index
 ~/.scripts/md-lint.sh ./docs
 pnpm code-format
 pnpm md-lint
+
+# Run the repo tests, including the vendored Mermaid CSS drift guard
+pnpm test
 ```
 
 
@@ -93,6 +97,46 @@ pnpm tree
 # List and optionally delete temporary files
 pnpm cleanup
 ```
+
+
+### Mermaid diagrams
+
+Write a diagram in a fenced `mermaid` code block.
+
+Diagrams render with the forest theme in light mode and the dark theme in dark mode, so a hardcoded color must never rely on a theme-picked partner:
+
+* Prefer the theme defaults and avoid `style` and `classDef` color overrides where you can.
+* When a `style` or `classDef` directive hardcodes a `fill`, also hardcode a readable label `color`, for example `style DIR fill:#FFFACD,stroke:#333,stroke-width:1px,color:#333`. Without it, the dark theme pairs its light label text with the hardcoded light fill, and the label becomes unreadable in dark mode.
+* Check every diagram in both color modes before shipping it.
+
+Each rendered diagram sits in a pan-and-zoom container with a height ceiling of `70vh`.
+To change the ceiling on a single page, set the `mermaidHeight` frontmatter field:
+
+```md
+---
+title: My page
+mermaidHeight: 40rem
+---
+```
+
+Rules on `mermaidHeight`:
+
+* The value is a maximum, not a fixed height. A short diagram keeps its natural height and never stretches to fill the ceiling.
+* Any value that is valid for the CSS `max-height` property works, such as `40rem`, `560px`, or `60vh`. A bare number, such as `560`, is read as pixels.
+* An invalid value logs a browser console warning and falls back to `70vh`.
+* The value applies to every diagram on the page, so pick a ceiling that suits the tallest one.
+* Fullscreen view ignores the ceiling, so a reader can always open a tall diagram at full size.
+
+On a device with a hover-capable pointer, the diagram controls (zoom in, zoom out, reset, copy, download, and fullscreen) stay hidden until the reader hovers the diagram or moves keyboard focus to a control button.
+On a touch-only device, the controls stay visible at all times.
+
+A testing note: diagrams render lazily.
+An IntersectionObserver renders a diagram only when it scrolls near the viewport, so a diagram far below the fold has no rendered container until then, and the plugin never retries a block it has already stamped as processed.
+When you test or screenshot a page, scroll each diagram into view before judging how it renders.
+
+[.vitepress/theme/vitepress-mermaid-renderer.css][] vendors the stylesheet that [VitePress Mermaid Renderer][] ships, then layers the local auto-fit, height-ceiling, and toolbar overrides below a banner comment.
+The vendored block above that banner must stay a verbatim copy of the installed plugin; `pnpm test` fails when it drifts.
+On a plugin upgrade, re-copy both parts as the banner comment describes, then re-run `pnpm test`.
 
 
 ### Image paths

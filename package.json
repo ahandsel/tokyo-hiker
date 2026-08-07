@@ -18,6 +18,7 @@
     "setup-node": "./scripts/setup-node.sh",
     "setup-pre-commit": "./scripts/setup-pre-commit.sh",
     "setup-takumi-guard": "./scripts/setup-takumi-guard.sh",
+    "test": "node --test \"tests/**/*.test.mjs\"",
     "tree": "node scripts/generate-site-structure.mjs"
   },
   "packageManager": "pnpm@11.20.0",
