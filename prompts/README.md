@@ -1,33 +1,35 @@
 # Prompts
 
-Reusable prompt files for this repository. This folder is the only place a prompt file is stored.
-
-Two symlinks point here, so every agent tool reads the same files:
-
-* `.claude/commands` -> `../prompts` - Claude Code slash commands.
-* `.github/prompts` -> `../prompts` - GitHub Copilot prompt files.
-
-Add and edit prompts here, never through a symlinked path.
+Reusable AI prompt files (`*.prompt.md`) for reviewing, linting, and maintaining the Markdown content, scripts, and repository setup in this project. Each file defines a task-specific instruction set to run with an AI assistant.
 
 
-## Index
+## Usage
 
-| Prompt                                                           | Purpose                                                                          |
-| ---------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [ci-audit.prompt.md](ci-audit.prompt.md)                         | Audit every CI and automation file, then upgrade each pinned version safely.     |
-| [csv-to-md.prompt.md](csv-to-md.prompt.md)                       | Convert a CSV table into a Markdown table.                                       |
-| [md-en-review.prompt.md](md-en-review.prompt.md)                 | Proofread a Markdown file, keeping the edits minimal.                            |
-| [md-lint.prompt.md](md-lint.prompt.md)                           | Proofread a Markdown file, fix formatting, and convert links to reference style. |
-| [md-ref-link.prompt.md](md-ref-link.prompt.md)                   | Convert inline Markdown links to reference-style links.                          |
-| [quick-en-review.prompt.md](quick-en-review.prompt.md)           | Proofread a short piece of English text.                                         |
-| [quick-ja-translation.prompt.md](quick-ja-translation.prompt.md) | Translate an English Markdown file into business Japanese.                       |
-| [script-review-min.prompt.md](script-review-min.prompt.md)       | Review a script and apply surgical, minimal edits.                               |
-| [script-review.prompt.md](script-review.prompt.md)               | Full review of a script for quality, readability, and security.                  |
+To use a prompt, reference the prompt's file path in the AI interface (VS Code extension, terminal prompt, or desktop app) with the appropriate prefix for the AI tool.
+
+| Tool           | Input                                    | Example                                                 |
+| -------------- | ---------------------------------------- | ------------------------------------------------------- |
+| Claude         | `Follow prompts/<prompt-file>.prompt.md` | `Follow prompts/md-ref-link.prompt.md for example.md`   |
+| Codex          | `Follow prompts/<prompt-file>.prompt.md` | `Follow prompts/md-ref-link.prompt.md for example.md`   |
+| GitHub Copilot | `#prompts/<prompt-file>.prompt.md`       | `#prompts/script-version-sync.prompt.md for example.md` |
 
 
-## Authoring rules
+## Contents
 
-* Name a file `<slug>.prompt.md`, using `lowercase-with-dashes`. GitHub Copilot only recognizes the `.prompt.md` suffix.
-* Keep the frontmatter minimal: a single `description` key, quoted, and nothing else. Both tools read it, and a tool-specific key such as `mode`, `model`, or `tools` only works in one of them.
-* Write the prompt body against the repository rules in [AGENTS.md](../AGENTS.md) rather than restating the writing style rules in each prompt.
-* Update the index above whenever a prompt is added, removed, or renamed.
+| Prompt                            | Description                                                                                       |
+| --------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [md-en-review.prompt.md][]        | Proofread and edit English text for clarity, grammar, and style guide compliance.                 |
+| [md-lint.prompt.md][]             | Scan Markdown files, update tables of contents, fix formatting, and enforce the style guide.      |
+| [md-map-link.prompt.md][]         | Link the first mention of every real-world location to a Google Maps search query.                |
+| [md-ref-link.prompt.md][]         | Convert inline Markdown links into reference-style links.                                         |
+| [repo-public-audit.prompt.md][]   | Audit a repository for personal, public use and flag terms or files that do not fit its purpose.  |
+| [script-version-sync.prompt.md][] | Auto-update changed scripts' version history and flag related documentation that is out of sync.  |
+| [setup-ja-font.prompt.md][]       | Set up a Japanese-friendly VS Code font so Markdown tables that mix English and Japanese line up. |
+
+[md-en-review.prompt.md]: md-en-review.prompt.md
+[md-lint.prompt.md]: md-lint.prompt.md
+[md-map-link.prompt.md]: md-map-link.prompt.md
+[md-ref-link.prompt.md]: md-ref-link.prompt.md
+[repo-public-audit.prompt.md]: repo-public-audit.prompt.md
+[script-version-sync.prompt.md]: script-version-sync.prompt.md
+[setup-ja-font.prompt.md]: setup-ja-font.prompt.md

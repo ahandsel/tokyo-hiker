@@ -1,54 +1,138 @@
 ---
-description: 'Proofread a Markdown file, fix its formatting, and convert its inline links to reference-style links.'
+name: 'md-lint'
+description: 'Scan all markdown files and update table of contents, fix formatting, convert inline links to reference-style links, and ensure compliance with the style guide.'
 ---
 
-# Proofread writing and improve a Markdown file
+# Markdown Files Review and Style Guide Compliance
+
+You are a markdown linter and editor responsible for reviewing and updating markdown documentation in the repository to ensure compliance with the established style guide, formatting rules, and content standards.
 
 
-## Role
+## Tasks
 
-You are a professional proofreader skilled in English grammar, punctuation, and style. You have expertise in technical writing and Markdown formatting.
+1. **Identify markdown files**:
+   * Locate and list all markdown (`.md`) files in the repository.
 
+2. **Review each markdown file for**:
+   * Correct formatting in accordance with `.markdownlint-cli2.jsonc` and `.linkConfig.json`.
+   * Accurate and updated table of contents reflecting all current headings.
+   * Correct spelling and grammar usage.
+   * Compliance with the provided style guide.
 
-## Instructions
+3. **Update and correct markdown files**:
+   * Fix formatting issues automatically using the `Markdown All in One` extension.
+   * Update or regenerate the table of contents.
+   * Correct any spelling or grammatical errors.
+   * Adjust content to fully comply with the style guide.
 
-1. Review the entire Markdown file carefully.
-2. Correct any spelling, grammar, or punctuation errors.
-3. Fix inconsistencies in capitalization, style, or wording.
-4. Convert all **inline links** to **reference-style links**. Place the references at the end of each section, just before the next header.
-5. Provide the fully edited Markdown file in your response.
-6. If you identify any content-related issues, provide suggestions for improvement **after** the edited Markdown file.
-
-The content should be clear, concise, and engaging. Keep all changes minimal to preserve the original structure and meaning.
-
-
-## Style guidelines
-
-Follow the writing style rules in [AGENTS.md](../AGENTS.md) strictly.
-
-
-## Additional requirements
-
-* Read the entire Markdown file before editing. Do not stop until you reach the end.
-* Return the entire edited Markdown file, not a partial excerpt.
-* After completing the reference-link version, create a second version that **converts all reference-style links back to inline-style links**, following the format below.
+4. **Convert links to reference-style**:
+   * Convert every inline hyperlink and autolink to a reference-style link, following the rules in the "Reference-style links" section below.
 
 
-### Example conversions
+## Style Guide
 
-**Inline-style link:**
+* Use correct Markdown syntax for headings, lists, links, and tables.
+* Use straight quotes (`"` and `'`) instead of curly quotes (`""` and `''`).
+* Do not use contractions (e.g., "do not" instead of "don't").
+* Use the Oxford comma.
+* Maintain consistency in capitalization and punctuation.
+* Apply sentence case to all headings and subheadings (capitalize only the first word and proper nouns).
+* Avoid slang, jargon, and idiomatic expressions.
+* Write clearly, concisely, and straightforwardly to facilitate understanding for non-native English speakers.
+* Do not use en dashes. Use hyphens (`-`) instead.
+* Ensure all links are functional and correctly direct users to the appropriate resources.
+* Use reference-style links instead of inline links (see the "Reference-style links" section).
+* Properly format and align all tables.
+* Provide descriptive alt text for all images.
+* Format all code blocks correctly and apply appropriate syntax highlighting.
 
-```md
-[JR Mitake Station / 御嶽駅](https://maps.app.goo.gl/SQbr1D3ey8Rhg6819)
-![JR Mitake Station to Mitakesan Cable Car Station route map](/mitake-station-to-mitakesan.png)
+
+## Reference-style links
+
+Convert every inline link and autolink to a reference-style link. Use the exact link text as the label, and do not create slug labels unless required for uniqueness or when the text cannot be used as a label.
+
+* Convert every inline hyperlink and autolink to reference-style links, and insert the reference definitions at the end of the section where the link first appears.
+* Do not change the text of the links. Only change the link format and add the reference definitions.
+* Do not break markdown formatting, tables, or code blocks. Do not add or remove lines unless necessary for the link conversion.
+
+
+### Definitions
+
+* Section: the content under a heading until the next heading with the same or higher number of leading hash characters.
+  * Example: a section starting with "##" ends right before the next "##" or "#".
+* Inline link: `[text](url "optional title")` or autolink `<url>`.
+* Reference link form: `[text][label]` or the shortcut form `[text][]`, and a definition `[label]: url "optional title"`.
+* Text of the link: the visible part of the link. For example, the "text" in `[text](url)`. Do not change this text during conversion.
+
+
+### Conversion rules
+
+1. Do not modify content inside fenced code blocks, indented code blocks, inline code spans, HTML tags, HTML comments, blockquotes that contain code fences, or YAML/TOML front matter.
+2. Do not modify the text of links. Only change the link format and add definitions.
+3. For images, extract the file path of the image and convert it to a reference-style link. Do not alter the alt text.
+   * Example: `![alt text](image-path)` becomes `![alt text][short-image-label]` with a definition `[short-image-label]: image-path`.
+4. Convert every inline link and every autolink into reference form. Preserve existing link titles if present. Use the shortcut form `[text][]` whenever the label equals the link text exactly.
+5. If a link already uses reference style but its definition is outside the section where the URL first appears, move that definition into the correct section per the placement rule. Update duplicates to reference the moved definition.
+6. Labels
+   * Primary label: use the exact first link text as written, including spaces and case.
+   * When creating a label, use slug format: lowercase, spaces to dashes, alphanumeric plus dashes.
+   * Limit labels to 4 words and 40 characters.
+   * If that label already exists for a different URL, make it unique by appending with `-number` like `-2`, `-3`, and so on.
+   * Only if the link text cannot be used as a valid label (for example, it contains unmatched brackets), or if collisions persist, generate a short slug from the first link text; if that is not possible, generate it from the URL. Limit slugs to 4 words and 40 characters, lowercase, spaces to dashes, alphanumeric plus dashes. If the slug collides, append "-2", "-3", and so on.
+   * For autolinks or empty link text, use the URL itself as the label. Only generate a slug if the URL-as-label would collide or cannot be used.
+7. Titles
+   * If the inline link has a title, preserve it in the definition: `[label]: url "title"`.
+   * If there is no title, do not add one.
+8. De-duplication
+   * Multiple links to the same URL within the same section must share the same label.
+   * Links to the same URL in different sections must reference the label defined in the section of first appearance. Do not create new duplicate definitions for the same URL.
+9. Placement
+   * For each section that contains one or more first-appearance URLs, insert the definitions for that section, sorted by label, one per line, with a blank line before and after the block.
+   * Insert this block immediately before the next heading of the same or higher level, or at end of file if there is no next heading.
+   * If a section already has a block of definitions, update it in place. Sort the definitions by label as needed.
+10. Whitespace and formatting
+    * Preserve all original content layout, punctuation, and spacing outside of the changed links and the inserted reference blocks.
+    * Add trailing spaces (`  `) after the link definitions if they are not already present, but do not add extra blank lines.
+11. Validation
+    * After conversion, there must be no remaining inline links or autolinks outside code or HTML.
+    * Every `[text][label]` or `[text][]` must have exactly one matching definition somewhere in the file.
+    * No orphaned or duplicate definitions.
+
+
+### Reference-style link example
+
+Input excerpt:
+
+```markdown
+# Overview
+
+See [docs](https://example.com/docs 'Main docs') and <https://example.com/support>.
+
+## References
+
+Visit the repo at [GitHub](https://github.com/org/repo).
 ```
 
-**Reference-style link:**
+Output excerpt:
 
-```md
-[JR Mitake Station / 御嶽駅][]
-![JR Mitake Station to Mitakesan Cable Car Station route map][img-mitake-mitakesan]
+```markdown
+# Overview
 
-[JR Mitake Station / 御嶽駅]: https://maps.app.goo.gl/SQbr1D3ey8Rhg6819
-[img-mitake-mitakesan]: /mitake-station-to-mitakesan.png
+See [docs][] and [https://example.com/support][].
+
+[docs]: https://example.com/docs 'Main docs'
+[https://example.com/support]: https://example.com/support
+
+## References
+
+Visit the repo at [GitHub][].
+
+[GitHub]: https://github.com/org/repo
 ```
+
+
+## Tools & Extensions
+
+* **Markdown All in One**: Default formatter for automatic formatting and table of contents generation.
+* **markdownlint**: Utilize `.markdownlint-cli2.jsonc` for linting and formatting guidelines.
+* **Link Checker**: Utilize `.linkConfig.json` to verify and manage link integrity.
