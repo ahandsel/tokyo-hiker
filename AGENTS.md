@@ -137,6 +137,19 @@ Prettier ignores `*.md` on purpose; [markdownlint-cli2](https://github.com/David
 Prettier owns everything else (`.mts`, `.ts`, `.mjs`, `.vue`, `.json`, `.yaml`): 2-space indent, single quotes.
 
 
+### Links
+
+Markdown files use reference-style links. [docs/markdown-style-guide.md](docs/markdown-style-guide.md) holds the full convention; the rules that matter most are:
+
+* Convert every inline link and autolink to a reference-style link, and collect the definitions at the end of the document.
+* Use kebab-case labels: lowercase letters, digits, and hyphens only, for example `[Shiromaru Dam][shiromaru-dam]`. Prefix image labels with `img-`.
+* Never use the collapsed form `[text][]`, because it forces the label to copy the visible link text, which is rarely kebab-case.
+* Keep the definitions sorted alphabetically by label, with no duplicate and no unused entries.
+* Group the definitions with the `<!-- Links -->`, `<!-- Internal links -->`, and `<!-- Image links -->` comment blocks, and include only the blocks a file needs.
+
+The `blog-md-linter` skill applies these rules, and markdownlint catches undefined references (MD052) and unused definitions (MD053).
+
+
 ## Writing style
 
 Apply these rules when creating or reviewing prose:
