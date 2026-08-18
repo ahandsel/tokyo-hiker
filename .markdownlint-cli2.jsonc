@@ -69,9 +69,9 @@
   // Respect .gitignore: node_modules/, VitePress dist and cache, temp files.
   "gitignore": true,
 
-  // .claude/commands and .github/prompts are symlinks to prompts/, so skip
-  // them to lint each prompt file once.
-  "ignores": [".claude/commands", ".github/prompts"],
+  // .claude/commands and .github/prompts are symlinks to prompts/, and
+  // .claude/skills is a symlink to skills/, so skip them to lint each file once.
+  "ignores": [".claude/commands", ".claude/skills", ".github/prompts"],
 
   // Optional CLI behavior
   "fix": true,

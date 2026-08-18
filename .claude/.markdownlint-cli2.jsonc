@@ -1,0 +1,15 @@
+// https://github.com/DavidAnson/markdownlint-cli2
+// Sub-config for Markdown under `.claude/`. The base config already ignores the
+// `commands/` and `skills/` symlinks, so each real file is linted once from its
+// own folder. This keeps `relative-links` off for anything still linted here,
+// because a file reached through a symlink resolves `../` against `.claude/`
+// instead of against its real folder.
+{
+  "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/main/schema/markdownlint-cli2-config-schema.json",
+
+  "config": {
+    // Inherit the base markdownlint rules, then override below.
+    "extends": "../.markdownlint-cli2.jsonc",
+    "relative-links": false,
+  },
+}

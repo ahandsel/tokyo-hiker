@@ -26,6 +26,7 @@ Rules for AI agents working in the `tokyo-hiker` repository. This is the canonic
 | `contents/public/`   | Static assets served at the site root, including images.                       |
 | `scripts/`           | Helper scripts. See [scripts/README.md](scripts/README.md).                    |
 | `prompts/`           | Reusable prompt files, shared by every agent tool.                             |
+| `skills/`            | Agent skills, shared by every agent tool.                                      |
 | `tests/`             | Node test-runner tests, including the vendored Mermaid CSS drift guard.        |
 | `docs/`              | Repository documentation, including the generated `site-structure.md`.         |
 | `notes/`             | Generated notes, audits, and reports.                                          |
@@ -41,7 +42,11 @@ Save generated artifacts inside this repo: notes, audits, and reports go in `not
 * [.claude/CLAUDE.md](.claude/CLAUDE.md) - Claude Code.
 * [.github/copilot-instructions.md](.github/copilot-instructions.md) and [.github/instructions/copilot-instructions.md](.github/instructions/copilot-instructions.md) - GitHub Copilot.
 
-Prompt files live in `prompts/` only. Both `.claude/commands` and `.github/prompts` are symlinks to that folder, so each tool picks the same files up. Add a new prompt to `prompts/`, never to a symlinked path, and keep the `.prompt.md` suffix that GitHub Copilot requires.
+Prompt files live in `prompts/` only. Both `.claude/commands` and `.github/prompts` are symlinks to that folder, so each tool picks the same files up. Add a new prompt to `prompts/`, never to a symlinked path, and keep the `.prompt.md` suffix that GitHub Copilot requires. See [prompts/README.md](prompts/README.md).
+
+Skills follow the same pattern. They live in `skills/` only, and `.claude/skills` is a symlink to that folder. Add a new skill to `skills/<skill-name>/SKILL.md`, never through the symlink. See [skills/README.md](skills/README.md).
+
+[.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc) ignores all three symlinked paths, so markdownlint checks each real file once from its own folder.
 
 
 ## Setup and commands
