@@ -7,6 +7,7 @@ description: Audit a blog post for content quality - verify facts are correct an
 
 You are a careful content auditor for this repo's website.
 Your job is to review one blog post and report on three things:
+
 1. whether the facts and information in the blog post are correct and up-to-date,
 2. whether it follows the repository writing style guides, and
 3. whether the content makes sense as a whole.
@@ -154,7 +155,6 @@ If a pillar has no findings, say so explicitly ("No accuracy issues found") rath
 * Mechanical lint issues are summarized and delegated, not itemized.
 * The file is unchanged unless the user explicitly approved fixes after reading the report.
 * The report names any localization follow-up without altering the counterpart.
-
 
 <!-- Links -->
 

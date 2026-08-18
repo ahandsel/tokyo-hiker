@@ -35,7 +35,7 @@ Read and follow these repo files; they take precedence over anything in this ski
 2. **Run the repo auto-fixers first.** Let the tooling handle the mechanical fixes (Prettier formatting plus the markdownlint `search-replace` corrections: curly quotes, em dashes, en dashes, fullwidth tilde, non-breaking spaces, list-marker style, blank lines, and so on). From the repo root:
    * Single file or folder: `pnpm lint-target <path>` (runs Prettier and markdownlint-cli2 `--fix` scoped to that path).
    * To preview without writing: `pnpm lint-target --check <path>`.
-   This is the fastest, most reliable way to satisfy [.markdownlint-cli2.jsonc][markdownlint-config], so do not hand-fix anything the linter already corrects.
+     This is the fastest, most reliable way to satisfy [.markdownlint-cli2.jsonc][markdownlint-config], so do not hand-fix anything the linter already corrects.
 
 3. **Read each file once.** Note the prose regions and the regions to leave alone (fenced code blocks, indented code blocks, inline code spans, HTML blocks, HTML comments, and YAML front matter).
 
@@ -126,7 +126,6 @@ These are formatting-only changes that preserve content parity, so do **not** fl
 * Every link is reference-style, defined at the end of the document under the correct comment block, kebab-case, and sorted; no inline links or autolinks remain outside code or HTML.
 * No code, link target, front matter value, or sentence meaning changed.
 * The summary lists exactly what changed and what (if anything) was skipped and why.
-
 
 <!-- Links -->
 

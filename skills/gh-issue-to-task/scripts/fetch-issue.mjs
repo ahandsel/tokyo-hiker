@@ -88,10 +88,7 @@ function parseArgs(argv) {
     } else if (a === '--repo') {
       args.repo = argv[++i];
       if (!args.repo)
-        fail(
-          2,
-          '--repo requires a value (e.g. --repo owner/example-repo).',
-        );
+        fail(2, '--repo requires a value (e.g. --repo owner/example-repo).');
     } else if (a === '--enrich') {
       args.enrich = true;
     } else if (a.startsWith('-')) {

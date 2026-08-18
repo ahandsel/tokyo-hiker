@@ -39,11 +39,11 @@ The output must read as natural, idiomatic prose in the target language that fol
 
 Each paired file declares a `localization` frontmatter key:
 
-| Value           | Meaning                                                                |
-| --------------- | --------------------------------------------------------------------- |
-| `sync`          | Default. The two versions are kept in parity and should match.        |
-| `TODO: drifted` | The two versions have diverged and need updating.                     |
-| `independent`   | The two versions are intentionally different; do not sync them.       |
+| Value           | Meaning                                                         |
+| --------------- | --------------------------------------------------------------- |
+| `sync`          | Default. The two versions are kept in parity and should match.  |
+| `TODO: drifted` | The two versions have diverged and need updating.               |
+| `independent`   | The two versions are intentionally different; do not sync them. |
 
 Rules this skill follows:
 
