@@ -13,23 +13,23 @@ excludeFromSidebar: false
 
 * Length of time: 08:58
 * Distance: 11.6 km
-* Elevation gain ↗️: 1,440 m
-* Elevation decline ↘️: 938 m
+* Elevation gain ↗: 1,440 m
+* Elevation decline ↘: 938 m
 
 
 ## Locations
 
-* Start: [Okutama Station / 奥多摩駅][]
-* Goal: [Mitakesan Cable Car Station / 御岳山駅][]
-* [Mt. Nokogiri (鋸山)][]
-* [Mt. Odake (大岳山)][]
-* [Mt. Mitake (御岳山)][]
+* Start: [Okutama Station / 奥多摩駅][okutama-sta]
+* Goal: [Mitakesan Cable Car Station / 御岳山駅][mitakesan-cable-car-sta]
+* [Mt. Nokogiri (鋸山)][mount-nokogiri]
+* [Mt. Odake (大岳山)][mount-odake]
+* [Mt. Mitake (御岳山)][mount-mitake]
 
-[Okutama Station / 奥多摩駅]: https://goo.gl/maps/vTKxxa1TxdbqkVJz9
-[Mitakesan Cable Car Station / 御岳山駅]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7
-[Mt. Nokogiri (鋸山)]: https://goo.gl/maps/iKCSZobAK1cV1GUZ8
-[Mt. Odake (大岳山)]: https://goo.gl/maps/2UeiRkAJdaiW63f26
-[Mt. Mitake (御岳山)]: https://goo.gl/maps/dpASYpiTsH7KomtB8
+[mitakesan-cable-car-sta]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7
+[mount-mitake]: https://goo.gl/maps/dpASYpiTsH7KomtB8
+[mount-nokogiri]: https://goo.gl/maps/iKCSZobAK1cV1GUZ8
+[mount-odake]: https://goo.gl/maps/2UeiRkAJdaiW63f26
+[okutama-sta]: https://maps.app.goo.gl/QUhUboTJjk4wL8Gi7
 
 
 ## Timeline
@@ -40,9 +40,9 @@ excludeFromSidebar: false
 
 ## Route
 
-* [OkuTama Station -> Mitakesan Cable Car - YAMAP][]
+* [OkuTama Station -> Mitakesan Cable Car - YAMAP][yamap-okutama-to-mitakesan]
 
-[OkuTama Station -> Mitakesan Cable Car - YAMAP]: https://yamap.com/plans/code/AZYgi_IhPKWedLy9cQwZpD9TeOf2hngnn-Y-k-ZckKQ88yiFDNFw5OKyJpsJ8cXl0Gg
+[yamap-okutama-to-mitakesan]: https://yamap.com/plans/code/AZYgi_IhPKWedLy9cQwZpD9TeOf2hngnn-Y-k-ZckKQ88yiFDNFw5OKyJpsJ8cXl0Gg
 
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 <!--@include: ../snippets/footer.md-->

@@ -4,7 +4,6 @@ description: 'Nice, cool, easy hike along the Tama River in OkuTama, with a few 
 excludeFromSidebar: false
 ---
 
-
 # {{$frontmatter.title}}
 
 {{$frontmatter.description}}
@@ -12,9 +11,9 @@ excludeFromSidebar: false
 
 ## Getting there 🚂
 
-Start station: [Kori Station / 古里駅][kori-station] (JR Ome Line) 🚉
+Start station: [Kori Station / 古里駅][kori-sta] (JR Ome Line) 🚉
 
-Finish station: [OkuTama Station / 奥多摩駅][okutama-station] (JR Ome Line) 🚉
+Finish station: [OkuTama Station / 奥多摩駅][okutama-sta] (JR Ome Line) 🚉
 
 Travel from Shinjuku: **about 1 hr 30 min** ⏱️ <!-- TODO: verify the travel time from Shinjuku to Kori Station -->
 
@@ -34,7 +33,7 @@ Travel from Shinjuku: **about 1 hr 30 min** ⏱️ <!-- TODO: verify the travel 
 * Trail running 👟: 2 / 5
   * The walkway sections are runnable, but the rocky parts of Hatonosu Valley are narrow and slippery.
 * Best season: Spring to autumn; the shaded river path stays cool even on hot summer days. 🍃
-* Bail-out point: [Hatonosu Station / 鳩ノ巣駅][hatonosu-station] sits partway along the route, so you can stop there early or use it as a shorter start. 🚉
+* Bail-out point: [Hatonosu Station / 鳩ノ巣駅][hatonosu-sta] sits partway along the route, so you can stop there early or use it as a shorter start. 🚉
 * ⚠️ The stretch between Kori Station and Hatonosu Station includes long paved-road sections, so watch for cars.
 * ⚠️ The rocks in Hatonosu Valley are very slippery when wet, so wear shoes with good grip.
 * ⚠️ Bears live around Shiromaru Lake, so carry a bear bell or make noise as you walk.
@@ -52,8 +51,8 @@ Metrics:
 
 * Duration: 4:35 to 6:15
 * Distance: 9.4 km to 9.7 km
-* Elevation gain ↗️: 601 m to 624 m
-* Elevation decline ↘️: 544 m to 571 m
+* Elevation gain ↗: 601 m to 624 m
+* Elevation decline ↘: 544 m to 571 m
 * Trail type: Point to point (one way)
 
 The [June 2024 hike][my-yamap-2024] recorded 6:15, 9.7 km, 601 m of gain, and 544 m of decline. The [August 2025 hike][my-yamap-2025] recorded 4:35, 9.4 km, 624 m of gain, and 571 m of decline; its GPS track ends at Shiromaru Station / `白丸駅`, one station before OkuTama Station.
@@ -68,7 +67,6 @@ The [June 2024 hike][my-yamap-2024] recorded 6:15, 9.7 km, 601 m of gain, and 54
 <!-- TODO: add route map image once exported -->
 <!-- * ![Map of the Otama Walking Trail from Kori Station to OkuTama Station](/otama-walking-trail-route-map.png) -->
 
-
 ## Shorter version: skip the paved road 🚶
 
 Start at Hatonosu Station instead of Kori Station to skip most of the paved-road walking.
@@ -81,8 +79,8 @@ Metrics:
 
 * Duration: 3:45
 * Distance: 7.2 km
-* Elevation gain ↗️: 290 m
-* Elevation decline ↘️: 261 m
+* Elevation gain ↗: 290 m
+* Elevation decline ↘: 261 m
 * Trail type: Point to point (one way)
 
 
@@ -90,14 +88,14 @@ Metrics:
 
 The times below come from [my June 2024 hike][my-yamap-2024].
 
-* 10:09 - Depart [Kori Station][kori-station] / `古里駅`. 🚉
+* 10:09 - Depart [Kori Station][kori-sta] / `古里駅`. 🚉
 * 10:26 - Pass the [Kotaba tourist parking lot][kotaba-parking] / `小丹波観光駐車場`. 🅿️
-* 11:45 - Pass [Hatonosu Station][hatonosu-station] / `鳩ノ巣駅`, the bail-out point. 🚉
+* 11:45 - Pass [Hatonosu Station][hatonosu-sta] / `鳩ノ巣駅`, the bail-out point. 🚉
 * 11:53 - Explore [Hatonosu Valley][hatonosu-valley] / `鳩ノ巣渓谷` and its suspension bridge. 📸
 * 12:58 - Reach [Shiromaru Dam][shiromaru-dam] / `白丸ダム`. 💧
 * 13:38 - Leave the dam and follow the walkway along [Shiromaru Lake][shiromaru-lake] / `白丸湖`. 🚶
 * 15:52 - Pass the [OkuTama Junior High School bus stop][okutama-bus-stop] / `奥多摩中学校バス停` at the edge of town. 🚏
-* 16:22 - Arrive at [OkuTama Station][okutama-station] / `奥多摩駅`. 🚉
+* 16:22 - Arrive at [OkuTama Station][okutama-sta] / `奥多摩駅`. 🚉
 
 
 ## Food 🍱
@@ -129,15 +127,14 @@ Food options along this trail are few, so bring lunch and snacks with you. 🍙
 * [Shiromaru Dam][shiromaru-dam] / `白丸ダム` and [Shiromaru Lake][shiromaru-lake] / `白丸湖` 💧  
   The dam has a fish ladder, and a calm walkway follows the lake behind it.
 
-
 <!--@include: ../snippets/footer.md-->
 
 [harashima-shokudo]: https://maps.app.goo.gl/3kAH8Y5KbwLjxQCx5
 [hatonosu-bridge]: https://www.google.com/maps/search/?api=1&query=%E9%B3%A9%E3%83%8E%E5%B7%A3%E5%B0%8F%E6%A9%8B
 [hatonosu-so]: https://maps.app.goo.gl/MFbNBT7seF6oNg2Z8
-[hatonosu-station]: https://maps.app.goo.gl/Bk3z2x6k5SXz31C18
+[hatonosu-sta]: https://maps.app.goo.gl/Bk3z2x6k5SXz31C18
 [hatonosu-valley]: https://www.google.com/maps?ll=35.813472,139.126558&z=16&t=m&mapclient=embed
-[kori-station]: https://maps.app.goo.gl/Ljc1MXA6PMSrp8Ni7
+[kori-sta]: https://maps.app.goo.gl/Ljc1MXA6PMSrp8Ni7
 [kotaba-parking]: https://maps.app.goo.gl/s3yB9tw3er2qs7kB8
 [moegi-no-yu]: https://maps.app.goo.gl/QEGxtHFRKmEsmHyX6
 [my-yamap-2024]: https://yamap.com/activities/32420117
@@ -145,7 +142,7 @@ Food options along this trail are few, so bring lunch and snacks with you. 🍙
 [my-yamap-short]: https://yamap.com/activities/42916532
 [okutama-bus-stop]: https://www.google.com/maps/search/?api=1&query=%E5%A5%A5%E5%A4%9A%E6%91%A9%E4%B8%AD%E5%AD%A6%E6%A0%A1%E3%83%90%E3%82%B9%E5%81%9C
 [okutama-map-pdf]: https://www.okutama.gr.jp/site/map/pdf/ohtama.pdf
-[okutama-station]: https://www.google.com/maps/search/?api=1&query=Okutama+Station
+[okutama-sta]: https://maps.app.goo.gl/QUhUboTJjk4wL8Gi7
 [shiromaru-dam]: https://maps.app.goo.gl/PP121w4gYts2iHDV9
 [shiromaru-lake]: https://maps.app.goo.gl/QGHCxs96iet88fpo9
 [soryu-falls]: https://maps.app.goo.gl/Ea7nDzvU9hdNGrfCA

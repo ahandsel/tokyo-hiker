@@ -45,8 +45,8 @@ Metrics:
 
 * Duration: 4:00
 * Distance: 6.4 km
-* Elevation gain ↗️: 597 m
-* Elevation decline ↘️: 597 m
+* Elevation gain ↗: 597 m
+* Elevation decline ↘: 597 m
 * Trail type: Loop
 
 
@@ -84,17 +84,16 @@ Metrics:
 
 ## Key photo spots 📸
 
-* [Mitake Shrine][mitake-shrine] and stone stairway ⛩️  
+* [Mitake Shrine][mitake-shrine] and stone stairway ⛩️
 
 * [Rock Garden][rock-garden] mossy valley 🌿  
   Soft green moss, flowing streams, and wooden bridges create a Ghibli-like scene.
 
-* [Ayahiro waterfall][ayahiro-falls] 綾広の滝 💧  
+* [Ayahiro waterfall][ayahiro-falls] 綾広の滝 💧
 
-* Observation deck near the cable car station 🌄  
+* Observation deck near the cable car station 🌄
 
-* [Tengu Cedar][tengu-cedar] 天狗の腰掛け杉 🌲  
-
+* [Tengu Cedar][tengu-cedar] 天狗の腰掛け杉 🌲
 
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 <!--@include: ../snippets/footer.md-->

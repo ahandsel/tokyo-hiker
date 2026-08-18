@@ -8,11 +8,11 @@ excludeFromSidebar: true
 
 ## Mitakesan cable car
 
-Mountain top station: [Mitakesan Cable Car Station / 御岳山駅][]
+Mountain top station: [Mitakesan Cable Car Station / 御岳山駅][mitakesan-cable-car-sta]
 
-Base station: [Takimoto Station / 滝本駅][]
+Base station: [Takimoto Station / 滝本駅][takimoto-sta]
 
-Closest train station: [JR Mitake Station / 御嶽駅][]
+Closest train station: [JR Mitake Station / 御嶽駅][mitake-sta]
 
 * Take a bus from JR Mitake Station to Takimoto Station.
 
@@ -57,10 +57,10 @@ Cost:
 |   18 | 00, 30     | 00, 30                |
 
 * Timetable as of 2025-10-11.
-* For more details, see [mitaketozan.co.jp/timetable.html][].
+* For more details, see [mitaketozan.co.jp/timetable.html][mitaketozan-timetable].
 
 [img-mitake-mitakesan]: /mitake-station-to-mitakesan.png
-[JR Mitake Station / 御嶽駅]: https://maps.app.goo.gl/SQbr1D3ey8Rhg6819
-[Mitakesan Cable Car Station / 御岳山駅]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7
-[mitaketozan.co.jp/timetable.html]: https://www.mitaketozan.co.jp/timetable.html
-[Takimoto Station / 滝本駅]: https://maps.app.goo.gl/om1N7HyGpp6Y71pE8
+[mitake-sta]: https://maps.app.goo.gl/SQbr1D3ey8Rhg6819
+[mitakesan-cable-car-sta]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7
+[mitaketozan-timetable]: https://www.mitaketozan.co.jp/timetable.html
+[takimoto-sta]: https://maps.app.goo.gl/om1N7HyGpp6Y71pE8

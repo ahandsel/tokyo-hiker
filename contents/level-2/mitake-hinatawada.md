@@ -13,15 +13,15 @@ excludeFromSidebar: false
 
 ## Metrics
 
-| Metric               | Value      |
-| -------------------- | ---------- |
-| Length of time       | 06:37      |
-| Distance             | 9.9km      |
-| Elevation gain ↗️    | 1031m      |
-| Elevation decline ↘️ | 400m       |
-| YAMAP Strength       | 2 out of 5 |
-| Hiking Poles?        | Optional   |
-| Hiking Shoes?        | Optional   |
+| Metric              | Value      |
+| ------------------- | ---------- |
+| Length of time      | 06:37      |
+| Distance            | 9.9km      |
+| Elevation gain ↗    | 1031m      |
+| Elevation decline ↘ | 400m       |
+| YAMAP Strength      | 2 out of 5 |
+| Hiking Poles?       | Optional   |
+| Hiking Shoes?       | Optional   |
 
 
 ## Key Locations
@@ -47,30 +47,30 @@ Goal (_End of Hike_):
 Return to Tokyo:
 
 1. [Mitakesan Cable Car Station (`御岳山駅`)](https://goo.gl/maps/W7baocnkbqSZ1iDZ7)
-1. [Takimoto cable car Station for Mt. Mitake (`御岳登山鉄道 滝本駅`)](https://goo.gl/maps/4zphaC29SdhVR2it9)
-1. [Mitake Station Bus Stop (`御岳駅（バス）`)](https://goo.gl/maps/TF7zTatB9f8Skd937)
-1. [Mitake Station (`御嶽駅`)](https://goo.gl/maps/DMhiun282BQ1sZGS9)
+2. [Takimoto cable car Station for Mt. Mitake (`御岳登山鉄道 滝本駅`)](https://goo.gl/maps/4zphaC29SdhVR2it9)
+3. [Mitake Station Bus Stop (`御岳駅（バス）`)](https://goo.gl/maps/TF7zTatB9f8Skd937)
+4. [Mitake Station (`御嶽駅`)](https://goo.gl/maps/DMhiun282BQ1sZGS9)
 
 Mountains & Views: (_in order_):
 
 1. [Mt. Mimuro (`三室山`)](https://goo.gl/maps/QaXLo7QQbqqPNjEF6)
-1. [Kotohira Shrine (`琴平神社`)](https://goo.gl/maps/Wq46y5Xrh5aFAnrA8)
-1. [Mt. Yogai (`要害山`)](https://goo.gl/maps/vMwWRodvgmKufL4U9)
-1. [Umenoki Pass (`梅野木峠`)](https://goo.gl/maps/YHgarXZk3xF5eeHx7)
-1. [Fork in the Road](https://goo.gl/maps/Vjbf861mWZU9HKSM7)
-1. [Mt. Takamine (`高峰山`)](https://goo.gl/maps/2sEXB7YLxGNLNidc9)
-1. [Mt. Ryunohige (`竜のヒゲ`)](https://goo.gl/maps/XS5H5eWTA7oRg2U17)
-1. [Mt. Hinode (`日の出山`)](https://goo.gl/maps/HcM9K3b7XTGBVeee7)
-1. [Musashi Mitake Shrine's Torii Gate (`武藏御嶽神社 鳥居`)](https://goo.gl/maps/U6rGPipAh3TLE15F6)
-1. [Mt. Mitake (`御岳山`)](https://goo.gl/maps/ppSjZLYbn3FqC115A)
+2. [Kotohira Shrine (`琴平神社`)](https://goo.gl/maps/Wq46y5Xrh5aFAnrA8)
+3. [Mt. Yogai (`要害山`)](https://goo.gl/maps/vMwWRodvgmKufL4U9)
+4. [Umenoki Pass (`梅野木峠`)](https://goo.gl/maps/YHgarXZk3xF5eeHx7)
+5. [Fork in the Road](https://goo.gl/maps/Vjbf861mWZU9HKSM7)
+6. [Mt. Takamine (`高峰山`)](https://goo.gl/maps/2sEXB7YLxGNLNidc9)
+7. [Mt. Ryunohige (`竜のヒゲ`)](https://goo.gl/maps/XS5H5eWTA7oRg2U17)
+8. [Mt. Hinode (`日の出山`)](https://goo.gl/maps/HcM9K3b7XTGBVeee7)
+9. [Musashi Mitake Shrine's Torii Gate (`武藏御嶽神社 鳥居`)](https://goo.gl/maps/U6rGPipAh3TLE15F6)
+10. [Mt. Mitake (`御岳山`)](https://goo.gl/maps/ppSjZLYbn3FqC115A)
 
 Toilets 🚽 (_in order_):
 
 1. [Umeno Park Public Toilet](https://goo.gl/maps/9FeoZK4XTtAZw1eF6)
-1. [Toilet by the Trailhead for Mt. Mimuro (`三室山`)](https://goo.gl/maps/tjkTTLp1wjAjzL4WA)
-1. [Hinodeyama Park Toilet (`日の出山園地トイレ`)](https://goo.gl/maps/NFjvPqZLtNyQMWoe7)
-1. [Mitakesan Public Restroom (`御岳丸山園地便所`)](https://goo.gl/maps/Pdy81hDH8jQYzF3D8)
-1. [Mitakedaira Park Toilet (`御岳平園地便所`)](https://goo.gl/maps/3VjMgPAaUBXJC9da6)
+2. [Toilet by the Trailhead for Mt. Mimuro (`三室山`)](https://goo.gl/maps/tjkTTLp1wjAjzL4WA)
+3. [Hinodeyama Park Toilet (`日の出山園地トイレ`)](https://goo.gl/maps/NFjvPqZLtNyQMWoe7)
+4. [Mitakesan Public Restroom (`御岳丸山園地便所`)](https://goo.gl/maps/Pdy81hDH8jQYzF3D8)
+5. [Mitakedaira Park Toilet (`御岳平園地便所`)](https://goo.gl/maps/3VjMgPAaUBXJC9da6)
 
 
 ## Timeline / Check-in Points

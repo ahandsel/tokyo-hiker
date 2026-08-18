@@ -12,14 +12,14 @@ excludeFromSidebar: false
 ## Getting there
 
 Train station:  
-Takaosanguchi Station / 高尾山口駅 / [Google Maps][]
+Takaosanguchi Station / 高尾山口駅 / [Google Maps][takaosanguchi-sta]
 
 Travel from Shinjuku - approximately 1 hour
 
 * 09:00 -> 09:43 via Mt. Takao-Go 1 Rapid-Liner (seat reservation required; ¥800)
 * 09:01 -> 09:56 via Limited Express + Local (¥390)
 
-[Google Maps]: https://goo.gl/maps/RZAncG96KWGftEGEA
+[takaosanguchi-sta]: https://goo.gl/maps/RZAncG96KWGftEGEA
 
 
 ## Overview
@@ -31,9 +31,9 @@ Takaosanguchi Station -> Hike 🥾 -> Takaosanguchi Station
 
 * Bring water
 * Cafes and convenience stores at the station and on the mountain
-* [Yamabiko Chaya / やまびこ茶屋][] - soba shop on the trail
+* [Yamabiko Chaya / やまびこ茶屋][yamabiko-chaya] - soba shop on the trail
 
-[Yamabiko Chaya / やまびこ茶屋]: https://maps.app.goo.gl/DY7v3xXZDyviK1uD6
+[yamabiko-chaya]: https://maps.app.goo.gl/DY7v3xXZDyviK1uD6
 
 
 ## Summary

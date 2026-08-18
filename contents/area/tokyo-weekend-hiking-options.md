@@ -26,19 +26,19 @@ The following YAMAP routes are set to 1.4x speed for a slow, relaxing hike.
 
 ### Compare
 
-| Metrics              | Level 1        | Level 2   | Level 3     |
-| -------------------- | -------------- | --------- | ----------- |
-| Start station        | [Hinatawada][] | [Agano][] | [Okutama][] |
-| Start time           | 10:00          | 10:00     | 09:00       |
-| Length of time       | 06:37          | 07:37     | 08:58       |
-| Distance             | 9.9 km         | 11.3 km   | 11.6 km     |
-| Elevation gain ↗️    | 1031 m         | 746 m     | 1440 m      |
-| Elevation decline ↘️ | 400 m          | 791 m     | 938 m       |
-| End time             | 16:37          | 17:37     | 17:58       |
+| Metrics             | Level 1                      | Level 2            | Level 3                |
+| ------------------- | ---------------------------- | ------------------ | ---------------------- |
+| Start station       | [Hinatawada][hinatawada-sta] | [Agano][agano-sta] | [Okutama][okutama-sta] |
+| Start time          | 10:00                        | 10:00              | 09:00                  |
+| Length of time      | 06:37                        | 07:37              | 08:58                  |
+| Distance            | 9.9 km                       | 11.3 km            | 11.6 km                |
+| Elevation gain ↗    | 1031 m                       | 746 m              | 1440 m                 |
+| Elevation decline ↘ | 400 m                        | 791 m              | 938 m                  |
+| End time            | 16:37                        | 17:37              | 17:58                  |
 
-[Hinatawada]: https://goo.gl/maps/ULv12ZWtcutLFZLc7
-[Agano]: https://goo.gl/maps/no8TWp5cECa1pooq8
-[Okutama]: https://goo.gl/maps/vTKxxa1TxdbqkVJz9
+[agano-sta]: https://goo.gl/maps/no8TWp5cECa1pooq8
+[hinatawada-sta]: https://goo.gl/maps/ULv12ZWtcutLFZLc7
+[okutama-sta]: https://maps.app.goo.gl/QUhUboTJjk4wL8Gi7
 
 ---
 
@@ -51,14 +51,14 @@ Metrics:
 
 * Length of time: 06:37
 * Distance: 9.9 km
-* Elevation gain ↗️: 1031 m
-* Elevation decline ↘️: 400 m
+* Elevation gain ↗: 1031 m
+* Elevation decline ↘: 400 m
 
 Locations:
 
-* Start: [Hinatawada Station / 日向和田駅][]
-* End: [Mitakesan Cable Car Station / 御岳山駅][]
-* [Mt. Hinode (日の出山)][]
+* Start: [Hinatawada Station / 日向和田駅][hinatawada-sta]
+* End: [Mitakesan Cable Car Station / 御岳山駅][mitakesan-cable-car-sta]
+* [Mt. Hinode (日の出山)][mount-hinode]
 
 Timeline:
 
@@ -68,12 +68,11 @@ Timeline:
 
 ### Route
 
-* [Hinatawada Station -> Mitakesan Cable Car - YAMAP][]
+* [Hinatawada Station -> Mitakesan Cable Car - YAMAP][yamap-hinatawada-to-mitakesan]
 
-[Hinatawada Station / 日向和田駅]: https://goo.gl/maps/ULv12ZWtcutLFZLc7
-[Mitakesan Cable Car Station / 御岳山駅]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7
-[Mt. Hinode (日の出山)]: https://goo.gl/maps/HcM9K3b7XTGBVeee7
-[Hinatawada Station -> Mitakesan Cable Car - YAMAP]: https://yamap.com/plans/code/GRLwFtW60TK04NY-nLeTZLeymIrU7qWER8WWBxkgJNhrvEKkKXXsCKbmncLQ2_2rMoI
+[mitakesan-cable-car-sta]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7
+[mount-hinode]: https://goo.gl/maps/HcM9K3b7XTGBVeee7
+[yamap-hinatawada-to-mitakesan]: https://yamap.com/plans/code/GRLwFtW60TK04NY-nLeTZLeymIrU7qWER8WWBxkgJNhrvEKkKXXsCKbmncLQ2_2rMoI
 
 ---
 
@@ -86,49 +85,48 @@ Metrics:
 
 * Length of time: 07:37
 * Distance: 11.3 km
-* Elevation gain ↗️: 746 m
-* Elevation decline ↘️: 791 m
+* Elevation gain ↗: 746 m
+* Elevation decline ↘: 791 m
 
 Locations:
 
-* Start: [Agano Station / 吾野駅][]
-* Goal: [Higashi-Agano Station / 東吾野駅][]
+* Start: [Agano Station / 吾野駅][agano-sta]
+* Goal: [Higashi-Agano Station / 東吾野駅][higashi-agano-sta]
 * Lunch options:
-  * [Koburi Tea House / 顔振茶屋][]
-  * [Bella Vista][]
-  * [Heikuro Tea House / 平九郎茶屋][]
+  * [Koburi Tea House / 顔振茶屋][koburi-tea-house]
+  * [Bella Vista][bella-vista]
+  * [Heikuro Tea House / 平九郎茶屋][heikuro-tea-house]
 * Toilets:
-  * [阿寺観光公衆トイレ][]
-  * [福徳寺観光公衆トイレ][]
-  * [東吾野駅トイレ][]
+  * [阿寺観光公衆トイレ][atera-toilet]
+  * [福徳寺観光公衆トイレ][fukutokuji-toilet]
+  * [東吾野駅トイレ][higashi-agano-station-toilet]
 
 Timeline:
 
 * 10:00 - Start at Agano Station
-* 12:21 - Lunch near [Koburitoge / 顔振峠][]
+* 12:21 - Lunch near [Koburitoge / 顔振峠][koburi-pass]
 * 17:37 - Finish at Higashi-Agano Station
 
 
 ### Route
 
-[Koburi Pass (顔振峠) - Agano Station to Higashi-Agano Station - YAMAP][]
+[Koburi Pass (顔振峠) - Agano Station to Higashi-Agano Station - YAMAP][yamap-koburi-pass-plan]
 
 YAMAP course: Agano Station - Mt. Kojo - Mt. Chanodake - Yugate - Fukutokuji Trailhead - Higashi-Agano Station
 
 * `吾野駅-越上山-茶之岳山-ユガテ-福徳寺登山口-東吾野駅 縦走コース`
-* [YAMAP course link][]
+* [YAMAP course link][yamap-koburi-course]
 
-[Agano Station / 吾野駅]: https://goo.gl/maps/no8TWp5cECa1pooq8
-[Higashi-Agano Station / 東吾野駅]: https://goo.gl/maps/fbJEYqd2ZHARiu2n9
-[Koburi Tea House / 顔振茶屋]: https://goo.gl/maps/BxKr2onbtr7REtVQ8
-[Bella Vista]: https://goo.gl/maps/PTj6wH1HedmX2GgZ7
-[Heikuro Tea House / 平九郎茶屋]: https://goo.gl/maps/ijtXVvDVVXCUtSWo9
-[阿寺観光公衆トイレ]: https://goo.gl/maps/g6z5AxjiHLG4XJxy
-[福徳寺観光公衆トイレ]: https://goo.gl/maps/Zh2eHU8GiGY1aDXy
-[東吾野駅トイレ]: https://goo.gl/maps/JtsBNanVjBKkyHM4
-[Koburitoge / 顔振峠]: https://goo.gl/maps/YZLsY8XqkQNsdEUs7
-[Koburi Pass (顔振峠) - Agano Station to Higashi-Agano Station - YAMAP]: https://yamap.com/plans/code/Beui5qhC09Jjg0ZJzYlux4vQLBRQz2vZurXnHqIgNkk67ToNXURT3TwaRQyf7G67StE
-[YAMAP course link]: https://yamap.com/model-courses/26793
+[atera-toilet]: https://goo.gl/maps/g6z5AxjiHLG4XJxy
+[bella-vista]: https://goo.gl/maps/PTj6wH1HedmX2GgZ7
+[fukutokuji-toilet]: https://goo.gl/maps/Zh2eHU8GiGY1aDXy
+[heikuro-tea-house]: https://goo.gl/maps/ijtXVvDVVXCUtSWo9
+[higashi-agano-station-toilet]: https://goo.gl/maps/JtsBNanVjBKkyHM4
+[higashi-agano-sta]: https://goo.gl/maps/fbJEYqd2ZHARiu2n9
+[koburi-pass]: https://goo.gl/maps/YZLsY8XqkQNsdEUs7
+[koburi-tea-house]: https://goo.gl/maps/BxKr2onbtr7REtVQ8
+[yamap-koburi-course]: https://yamap.com/model-courses/26793
+[yamap-koburi-pass-plan]: https://yamap.com/plans/code/Beui5qhC09Jjg0ZJzYlux4vQLBRQz2vZurXnHqIgNkk67ToNXURT3TwaRQyf7G67StE
 
 ---
 
@@ -141,16 +139,16 @@ Metrics:
 
 * Length of time: 08:58
 * Distance: 11.6 km
-* Elevation gain ↗️: 1440 m
-* Elevation decline ↘️: 938 m
+* Elevation gain ↗: 1440 m
+* Elevation decline ↘: 938 m
 
 Locations:
 
-* Start: [Okutama Station / 奥多摩駅][]
-* Goal: [Mitakesan Cable Car Station / 御岳山駅][]
-* [Mt. Nokogiri (鋸山)][]
-* [Mt. Odake (大岳山)][]
-* [Mt. Mitake (御岳山)][]
+* Start: [Okutama Station / 奥多摩駅][okutama-sta]
+* Goal: [Mitakesan Cable Car Station / 御岳山駅][mitakesan-cable-car-sta]
+* [Mt. Nokogiri (鋸山)][mount-nokogiri]
+* [Mt. Odake (大岳山)][mount-odake]
+* [Mt. Mitake (御岳山)][mount-mitake]
 
 Timeline:
 
@@ -160,13 +158,12 @@ Timeline:
 
 ### Route
 
-* [OkuTama Station -> Mitakesan Cable Car - YAMAP][]
+* [OkuTama Station -> Mitakesan Cable Car - YAMAP][yamap-okutama-to-mitakesan]
 
-[Okutama Station / 奥多摩駅]: https://goo.gl/maps/vTKxxa1TxdbqkVJz9
-[Mt. Nokogiri (鋸山)]: https://goo.gl/maps/iKCSZobAK1cV1GUZ8
-[Mt. Odake (大岳山)]: https://goo.gl/maps/2UeiRkAJdaiW63f26
-[Mt. Mitake (御岳山)]: https://goo.gl/maps/dpASYpiTsH7KomtB8
-[OkuTama Station -> Mitakesan Cable Car - YAMAP]: https://yamap.com/plans/code/AZYgi_IhPKWedLy9cQwZpD9TeOf2hngnn-Y-k-ZckKQ88yiFDNFw5OKyJpsJ8cXl0Gg
+[mount-mitake]: https://goo.gl/maps/dpASYpiTsH7KomtB8
+[mount-nokogiri]: https://goo.gl/maps/iKCSZobAK1cV1GUZ8
+[mount-odake]: https://goo.gl/maps/2UeiRkAJdaiW63f26
+[yamap-okutama-to-mitakesan]: https://yamap.com/plans/code/AZYgi_IhPKWedLy9cQwZpD9TeOf2hngnn-Y-k-ZckKQ88yiFDNFw5OKyJpsJ8cXl0Gg
 
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 <!--@include: ../snippets/footer.md-->
