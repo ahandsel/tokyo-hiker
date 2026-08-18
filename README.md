@@ -79,7 +79,7 @@ pnpm index
 # Run markdown linting
 ~/.scripts/md-lint.sh ./contents
 pnpm code-format
-pnpm md-lint
+pnpm lint-md
 
 # Run the repo tests, including the vendored Mermaid CSS drift guard
 pnpm test
