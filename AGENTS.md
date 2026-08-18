@@ -53,6 +53,8 @@ Skills follow the same pattern. They live in `skills/` only, and `.claude/skills
 
 Node.js 24 or newer and pnpm 11 or newer are required. `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain.
 
+Two Homebrew formulae sit outside the Node.js toolchain: `poppler` and `webp`, which [scripts/pdf-to-images.mjs](scripts/pdf-to-images.mjs) needs. Both are in the [Brewfile](Brewfile), so `pnpm setup-brew` installs them. Nothing else depends on them.
+
 **pnpm only.** Never suggest or run `npm` or `yarn`; the repo ships shims in `.aliases/` that forward both to pnpm.
 
 | Command                  | What it does                                                                                   |
@@ -68,6 +70,7 @@ Node.js 24 or newer and pnpm 11 or newer are required. `pnpm-workspace.yaml` set
 | `pnpm tree`              | Regenerate `docs/site-structure.md` from the `contents/` tree.                                 |
 | `pnpm index`             | List every pnpm script with its command.                                                       |
 | `pnpm cleanup`           | List and optionally delete temporary files.                                                    |
+| `pnpm pdf-to-images`     | Convert a PDF into web-ready page images. Requires `poppler` and `webp`.                       |
 
 Run `pnpm tree` after adding, moving, or renaming content, then `pnpm lint` and `pnpm test` before finishing.
 
@@ -101,6 +104,7 @@ Other conventions:
 * Each content folder has an `index.md` that supplies the folder title and link. The landing pages list their pages through the `md-index-list` snippet, which applies the same exclusions as the sidebar: `index.md`, pages with `excludeFromSidebar: true`, and the glob-excluded file names. Keep the snippet's filter in sync with `excludeByGlobPattern` when the config changes.
 * Reuse shared blocks from `contents/snippets/` with an include directive, for example `<!--@include: ../snippets/md-index-list.md-->`.
 * Images live in `contents/public/` and are referenced from the site root, for example `/images/foo.png`. `.markdown-link-check.json` rewrites those paths to `public/...` when checking links.
+* Never embed a PDF with an `<iframe>`. Mobile browsers refuse to render one inline, and MD033 allows only `<br>`, `<pre>`, `<ul>`, `<li>`, and `<ol>`. Run `pnpm pdf-to-images <pdf> --width 2200 --quality 88` to convert the pages to WebP, store the images beside the source PDF in `contents/public/`, and keep a link to the PDF itself for readers who want to print it or read it offline. Name each image after what it covers rather than its page number, and describe the contents in the alt text. [contents/level-1/otama-walking-trail.md](contents/level-1/otama-walking-trail.md) is the worked example.
 * Add Japanese place names and other repo-specific vocabulary to the `words` list in [.cspell.json](.cspell.json) rather than leaving them flagged.
 
 

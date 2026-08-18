@@ -9,6 +9,7 @@ Utility scripts for the tokyo-hiker repository.
 * [generate-site-structure.mjs](#generate-site-structuremjs)
 * [index.sh](#indexsh)
 * [md-lint.sh](#md-lintsh)
+* [pdf-to-images.mjs](#pdf-to-imagesmjs)
 * [replace-curly-quotes.sh](#replace-curly-quotessh)
 * [setup.sh](#setupsh)
 * [setup-brew.sh](#setup-brewsh)
@@ -83,6 +84,42 @@ For everyday linting, prefer `pnpm lint-md`, which runs `markdownlint-cli2` acro
 
 * `directory` - where to search for Markdown files (default: the current working directory)
 * `config_file` - markdownlint configuration file (optional, defaults to `.markdownlint-cli2.jsonc`)
+
+
+## pdf-to-images.mjs
+
+> Source: [pdf-to-images.mjs](pdf-to-images.mjs)
+
+Convert each page of a PDF into a web-ready image for use in content pages.
+Mobile browsers refuse to render a PDF inside an iframe, so a map or timetable PDF is shipped as an image and the PDF itself stays available as a download link.
+Images are written next to the source PDF by default, so a file in `contents/public/` produces siblings served from the same site-root path.
+Requires [poppler](https://poppler.freedesktop.org/) for `pdftoppm` and `pdfinfo`, and [libwebp](https://developers.google.com/speed/webp) for `cwebp`; both are in the [Brewfile](../Brewfile) and are installed by `pnpm setup-brew`.
+
+```shell
+node scripts/pdf-to-images.mjs [options] < pdf > [ < pdf > ...]
+# or
+pnpm pdf-to-images [options] < pdf > [ < pdf > ...]
+```
+
+* `--out <dir>` - output folder (default: the folder holding the PDF)
+* `--format <fmt>` - `webp`, `png`, or `jpeg` (default: `webp`)
+* `--dpi <number>` - render resolution (default: `150`)
+* `--width <px>` - scale to this pixel width instead, keeping the aspect ratio
+* `--quality <1-100>` - encoder quality for `webp` and `jpeg` (default: `85`)
+* `--pages <spec>` - page or range to convert, such as `2` or `1-3` (default: every page)
+* `--prefix <name>` - output basename (default: the PDF basename)
+* `--force` - overwrite existing output files
+* `--dry-run` - report the planned work without writing anything
+* `-h`, `--help` - show the help message and exit
+
+A single converted page is written as `<prefix>.<ext>`, and several pages are written as `<prefix>-1.<ext>`, `<prefix>-2.<ext>`, and so on.
+Around 2200 px wide at quality 88 keeps the small print on a tourist map readable while holding each page well under half a megabyte.
+
+```shell
+# Convert both sides of a trail map, naming each side after what it covers
+pnpm pdf-to-images contents/public/hatonosu-valley/ohtama.pdf --pages 1 --prefix otama-trail-map-west --width 2200 --quality 88
+pnpm pdf-to-images contents/public/hatonosu-valley/ohtama.pdf --pages 2 --prefix otama-trail-map-east --width 2200 --quality 88
+```
 
 
 ## replace-curly-quotes.sh

@@ -32,7 +32,9 @@ Built with [VitePress](https://vitepress.dev/).
 [@vite-pwa/assets-generator]: https://vite-pwa-org.netlify.app/assets-generator/
 [@vite-pwa/vitepress]: https://vite-pwa-org.netlify.app/frameworks/vitepress.html
 [DavidingPlus/vitepress-image-viewer]: https://github.com/davidingplus/vitepress-image-viewer
+[libwebp]: https://developers.google.com/speed/webp
 [markdownlint-cli2]: https://github.com/DavidAnson/markdownlint-cli2
+[poppler]: https://poppler.freedesktop.org/
 [VitePress Mermaid Renderer]: https://vitepress-mermaid-renderer.sametcc.me/
 [vitepress-sidebar]: https://vitepress-sidebar.cdget.com/
 [VitePress]: https://vitepress.dev/guide/what-is-vitepress
@@ -52,6 +54,8 @@ pnpm setup-node         # Install and activate the .node-version Node.js via nod
 pnpm setup-pre-commit   # Install the pre-commit hook that runs pnpm lint
 pnpm setup-takumi-guard # Point global pnpm at the Takumi Guard registry proxy
 ```
+
+The Brewfile also installs [poppler][] and [libwebp][], which [scripts/pdf-to-images.mjs](./scripts/pdf-to-images.mjs) needs to turn a PDF into page images. Nothing else in the repo depends on them, so a machine that only edits prose can skip them.
 
 `package.json` declares `engines` (Node.js 24 or newer, pnpm 11 or newer), and `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain rather than half-installing.
 
@@ -96,6 +100,9 @@ pnpm tree
 
 # List and optionally delete temporary files
 pnpm cleanup
+
+# Convert a PDF into web-ready page images
+pnpm pdf-to-images < pdf > [options]
 ```
 
 
@@ -137,6 +144,27 @@ When you test or screenshot a page, scroll each diagram into view before judging
 [.vitepress/theme/vitepress-mermaid-renderer.css][] vendors the stylesheet that [VitePress Mermaid Renderer][] ships, then layers the local auto-fit, height-ceiling, and toolbar overrides below a banner comment.
 The vendored block above that banner must stay a verbatim copy of the installed plugin; `pnpm test` fails when it drifts.
 On a plugin upgrade, re-copy both parts as the banner comment describes, then re-run `pnpm test`.
+
+
+### PDF handouts and maps
+
+Do not embed a PDF with an `<iframe>`.
+iOS Safari and Chrome on Android refuse to render a PDF inline and show a blank box or a download prompt instead, and [.markdownlint-cli2.jsonc](./.markdownlint-cli2.jsonc) allows only `br`, `pre`, `ul`, `li`, and `ol` as inline HTML.
+
+Convert the PDF to images instead, and keep the PDF next to them as a download link:
+
+```shell
+pnpm pdf-to-images contents/public/ --width 2200 --quality 88 < folder > / < file > .pdf
+```
+
+This approach wins on three counts:
+
+* Readers get click-to-zoom and pan for free, because [DavidingPlus/vitepress-image-viewer][] already handles every image on the site.
+* A WebP page image is a fraction of the size of the source PDF, which matters on trail-side mobile data.
+* It works in every browser, with no new dependency, no inline HTML, and no client-side rendering.
+
+Store the images beside the source PDF under `contents/public/`, name each one after what it covers rather than its page number, and describe the map contents in the image alt text.
+[contents/level-1/otama-walking-trail.md](./contents/level-1/otama-walking-trail.md) is the worked example.
 
 
 ### Image paths
