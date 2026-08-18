@@ -8,18 +8,24 @@ excludeFromSidebar: true
 
 <script setup>
 /**
- * Generate a list of markdown pages in the same folder, excluding index.md.
+ * Generate a list of markdown pages in the same folder, excluding the pages the sidebar hides.
  * Each entry includes metadata (title and description) parsed from frontmatter.
+ * Version 2.1 - Excluded pages hidden by excludeFromSidebar and by the sidebar glob patterns.
  * Version 2.0 - Added description support.
  */
 
 // Load raw Markdown using the updated Vitepress import options
 const markdownFiles = import.meta.glob('./*.md', { query: '?raw', import: 'default', eager: true })
 
-/** Extract metadata (title and description) from YAML frontmatter. */
+// Mirror excludeByGlobPattern in .vitepress/config.mts. The sidebar reads those
+// entries as glob patterns, so 'temp-.*' means 'temp-.' plus any suffix.
+const excludedFileNames = /^\.\/(README\.md|temp\.md|temp-\..*)$/
+
+/** Extract metadata (title, description, and the sidebar exclusion flag) from YAML frontmatter. */
 function parseFrontmatter(fileName, fileContent) {
   let title = ''
   let description = ''
+  let excludeFromSidebar = false
 
   // Match YAML frontmatter block
   const frontmatterBlock = fileContent.match(/^---\n([\s\S]*?)\n---/m)
@@ -31,6 +37,9 @@ function parseFrontmatter(fileName, fileContent) {
         title = line.replace(/^title:\s*/i, '').trim().replace(/^["']|["']$/g, '')
       } else if (normalizedLine.startsWith('description:')) {
         description = line.replace(/^description:\s*/i, '').trim().replace(/^["']|["']$/g, '')
+      } else if (normalizedLine.startsWith('excludefromsidebar:')) {
+        const value = line.replace(/^excludeFromSidebar:\s*/i, '').trim().replace(/^["']|["']$/g, '')
+        excludeFromSidebar = value.toLowerCase() === 'true'
       }
     }
   }
@@ -44,18 +53,19 @@ function parseFrontmatter(fileName, fileContent) {
   // Fallback to filename if still missing
   if (!title) title = fileName.replace(/\.md$/i, '')
 
-  return { title, description }
+  return { title, description, excludeFromSidebar }
 }
 
 /** Build structured link data for rendering. */
 const pageList = Object.entries(markdownFiles)
-  .filter(([path]) => !/\/?index\.md$/i.test(path))
+  .filter(([path]) => !/\/?index\.md$/i.test(path) && !excludedFileNames.test(path))
   .map(([path, fileContent]) => {
     const fileName = path.replace('./', '')
-    const { title, description } = parseFrontmatter(fileName, fileContent)
+    const { title, description, excludeFromSidebar } = parseFrontmatter(fileName, fileContent)
     const basePath = fileName.replace(/\.md$/i, '')
-    return { title, description, href: `./${basePath}` }
+    return { title, description, excludeFromSidebar, href: `./${basePath}` }
   })
+  .filter((page) => !page.excludeFromSidebar)
   .sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }))
 </script>
 
