@@ -1,0 +1,17 @@
+# EN-JA glossary: the official English-to-Japanese translations for terms used across this repository.
+# Read this file before translating content or when you need the approved Japanese rendering of a term.
+# Each entry lists the English term (en), its Japanese translation (ja), and usage context (context), grouped by category.
+
+- group: 'UI text'
+  terms:
+    - en: 'learn more about...'
+      ja: '...について詳しく知る'
+      context: 'standard phrase; link text; default wording'
+
+    - en: 'options button (⋮)'
+      ja: 'オプションボタン（⋮）'
+      context: 'noun; the kebab button (three dots) that allows users to view more options'
+
+    - en: 'special characters'
+      ja: '特殊記号'
+      context: 'noun; user input'
