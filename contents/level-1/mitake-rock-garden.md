@@ -36,7 +36,7 @@ Travel from Shinjuku: **2 hr** ⏱️
 
 ## Trail route 🥾
 
-* Mitake Station -> bus -> cable car -> hike -> cable car -> bus -> Mitake Station. 🚶‍♂️🚌
+* Mitake Station -> bus -> cable car -> hike -> cable car -> bus -> Mitake Station. 🚌
 * YAMAP routes:
   * [Mitakesan Station - Mitake Shrine - Tengu cedar + Nagao-daira observation deck course][my-yamap-route] 🗻
   * [Mitakesan Station - Mitake Shrine - Tengu cedar round-trip course / 御岳山駅-御嶽神社-天狗の腰掛け杉 往復コース][yamap-route] 🗻

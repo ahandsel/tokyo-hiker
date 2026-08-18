@@ -17,7 +17,7 @@ Start station: [Kori Station / 古里駅][kori-sta] (JR Ome Line) 🚉
 
 Finish station: [OkuTama Station / 奥多摩駅][okutama-sta] (JR Ome Line) 🚉
 
-* The walking course starts a 5-minute walk from Kori Station. 🚶
+* The walking course starts a 5-minute walk from Kori Station.
 * Kori Station is unstaffed, but it has automatic ticket gates and accepts Suica, so entry and exit are simple. 🎫
 * By car: about 20 minutes along the Ome Kaido from the Ome interchange of the Ken-O Expressway. 🚗
 
@@ -28,7 +28,7 @@ Finish station: [OkuTama Station / 奥多摩駅][okutama-sta] (JR Ome Line) 🚉
 * Distance: about 10 km 📏
 * Duration: about 3 hr 30 min ⏱️
 * Best season: spring to autumn 🍃
-* Toilets: Kori Station is unstaffed, so use the toilet there before you start. 🚻
+* Toilets: Kori Station's restroom 🚻
 * Drink: Bring plenty of water. 🥤
 * Lunch: Food options along the course are few, so pack your own. 🍱
 * Bail-out point: [Hatonosu Station / 鳩ノ巣駅][hatonosu-sta] sits partway along the course, so you can stop there early or use it as a shorter start. 🚉
@@ -37,7 +37,7 @@ Finish station: [OkuTama Station / 奥多摩駅][okutama-sta] (JR Ome Line) 🚉
 
 ## Trail route 🥾
 
-* Kori Station -> Tansoin -> Kotaba Kumano Shrine -> Kori-tsuki no Inugusu -> Suniwa Bridge -> Upper Falls -> Soryu Falls -> Hatonosu Valley -> Shiromaru Dam -> OkuTama Station. 🚶
+* Kori Station -> Tansoin -> Kotaba Kumano Shrine -> Kori-tsuki no Inugusu -> Suniwa Bridge -> Upper Falls -> Soryu Falls -> Hatonosu Valley -> Shiromaru Dam -> OkuTama Station.
 
 Walking time between each point:
 
@@ -64,7 +64,7 @@ Walking time between each point:
 The walking times add up to about 2 hr 30 min, so the stated 3 hr 30 min leaves about an hour for photos, rests, and side trips.
 
 
-## Along the trail 🚶
+## Along the trail
 
 
 ### Kori Station to the giant inugusu 🌳
@@ -110,6 +110,7 @@ Food options along this course are few, so bring lunch and snacks with you. 🍙
 
 * [Moegi no Yu][moegi-no-yu] / `もえぎの湯` - a hot spring facility just before OkuTama Station. ♨️
 * See the [Otama Walking Trail page](./otama-walking-trail.md) for more places to eat near Kori Station and Hatonosu Valley. 🍜
+* [7-Eleven][7-eleven] near Kori station
 
 
 ## Key photo spots 📸
@@ -171,3 +172,4 @@ Source: [Hatonosu Valley walking guide on Tachikawa Online][tachikawa-hatonosu] 
 [tachikawa-hatonosu]: https://www.tachikawaonline.jp/walk/hatonosu.htm
 [tansoin]: https://www.google.com/maps/search/?api=1&query=%E4%B8%B9%E5%8F%9F%E9%99%A2
 [upper-falls]: https://www.google.com/maps/search/?api=1&query=%E5%A5%A5%E5%A4%9A%E6%91%A9%20%E4%B8%8A%E3%81%AE%E6%BB%9D
+[7-eleven]: https://maps.app.goo.gl/d8Z9wica9ezPqGLW8
