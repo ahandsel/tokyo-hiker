@@ -12,6 +12,7 @@
 │   ├───📄 index.md
 │   ├───📄 jinba-sagamiko.md
 │   ├───📄 mitake-rock-garden.md
+│   ├───📄 otama-walking-trail.md
 │   ├───📄 takao-inariyama.ja.md
 │   └───📄 takao-inariyama.md
 ├───📁 level-2/
