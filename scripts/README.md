@@ -73,16 +73,16 @@ pnpm index
 
 > Source: [md-lint.sh](md-lint.sh)
 
-Lint the Markdown files in a directory with markdownlint, writing results to a log file.
+Lint the Markdown files in a directory with markdownlint-cli2, writing results to a log file.
 Predates the authoring rules below, so it has no `--help` flag and uses a plain comment header instead of a notes block.
-For everyday linting, prefer `pnpm md-lint`, which runs `markdownlint-cli2` across the repo with the shared config.
+For everyday linting, prefer `pnpm lint-md`, which runs `markdownlint-cli2` across the repo with the shared config.
 
 ```shell
 ./scripts/md-lint.sh [directory] [config_file]
 ```
 
 * `directory` - where to search for Markdown files (default: the current working directory)
-* `config_file` - markdownlint configuration file (optional, defaults to `.markdownlint.json`)
+* `config_file` - markdownlint configuration file (optional, defaults to `.markdownlint-cli2.jsonc`)
 
 
 ## replace-curly-quotes.sh

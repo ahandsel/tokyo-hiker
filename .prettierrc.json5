@@ -3,4 +3,17 @@
   tabWidth: 2,
   useTabs: false,
   singleQuote: true,
+  plugins: [
+    '@prettier/plugin-xml',
+    'prettier-plugin-packagejson',
+    'prettier-plugin-sh',
+    'prettier-plugin-sql',
+    'prettier-plugin-toml',
+  ],
+  overrides: [
+    { files: '**/*.svg', options: { parser: 'xml' } },
+    { files: '**/*.sh', options: { parser: 'sh' } },
+    { files: '**/*.sql', options: { parser: 'sql' } },
+    { files: '**/*.toml', options: { parser: 'toml' } },
+  ],
 }

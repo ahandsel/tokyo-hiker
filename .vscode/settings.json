@@ -28,6 +28,5 @@
   "markdown.updateLinksOnFileMove.enabled": "prompt",
   "markdown.validate.ignoredLinks": ["**/*.mp4", "**/*.png"],
   "markdown.validate.referenceLinks.enabled": "ignore",
-  "markdownlint.configFile": ".markdownlint.json",
   "markdownlint.run": "onSave"
 }

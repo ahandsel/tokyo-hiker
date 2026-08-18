@@ -57,8 +57,7 @@ Node.js 24 or newer and pnpm 11 or newer are required. `pnpm-workspace.yaml` set
 | `pnpm dev`               | `vitepress dev contents` - start the dev server.                                               |
 | `pnpm build`             | `vitepress build contents`.                                                                    |
 | `pnpm preview`           | Preview the production build.                                                                  |
-| `pnpm lint`              | `code-format` then `md-lint`. Run this before finishing any change.                            |
-| `pnpm md-lint:check`     | Markdown lint in check-only mode, as CI runs it.                                               |
+| `pnpm lint`              | `lint-code` then `lint-md`. Run this before finishing any change.                              |
 | `pnpm code-format:check` | Prettier in check-only mode, as CI runs it.                                                    |
 | `pnpm test`              | `node --test tests/**/*.test.mjs`, including the Mermaid CSS drift guard.                      |
 | `pnpm tree`              | Regenerate `docs/site-structure.md` from the `contents/` tree.                                 |
@@ -117,7 +116,7 @@ See [README.md](README.md) for the longer explanation.
 
 ## Markdown formatting
 
-Prettier ignores `*.md` on purpose; [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) owns Markdown style. Follow [.markdownlint.json](.markdownlint.json):
+Prettier ignores `*.md` on purpose; [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) owns Markdown style. Follow [.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc):
 
 * Use `*` for unordered list items, never `-` or `+`.
 * Use 2-space indentation for nested lists.
@@ -165,7 +164,7 @@ Update `scripts/README.md` whenever a script is added, removed, or changed.
 
 ## CI and deployment
 
-* [.github/workflows/pr-linter.yml](.github/workflows/pr-linter.yml) runs `md-lint:check`, `code-format:check`, and `test` on every non-draft pull request.
+* [.github/workflows/pr-linter.yml](.github/workflows/pr-linter.yml) runs `code-format:check` and `test` on every non-draft pull request.
 * [.github/workflows/deploy.yml](.github/workflows/deploy.yml) builds and deploys to GitHub Pages on pushes to `main`.
 * Both workflows read the pnpm version from `packageManager` in `package.json` and the Node.js version from `.node-version`. Keep those two files as the single source of truth instead of hardcoding versions in a workflow.
 * Every GitHub Action is pinned to a commit SHA with a trailing version comment, for example `uses: actions/checkout@3d3c... # actions/checkout@v7.0.1, pinned`. Preserve that pattern when adding or bumping an action.

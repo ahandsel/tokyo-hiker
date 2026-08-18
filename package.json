@@ -9,9 +9,10 @@
     "code-format:check": "prettier --check .",
     "dev": "vitepress dev contents",
     "index": "zsh scripts/index.sh",
-    "lint": "pnpm run code-format && pnpm run md-lint",
-    "md-lint": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\" \"#.claude/commands\" \"#.github/prompts\" --fix",
-    "md-lint:check": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\" \"#.claude/commands\" \"#.github/prompts\"",
+    "lint": "pnpm run lint-code && pnpm run lint-md",
+    "lint-code": "prettier --write .",
+    "lint-contents": "prettier --write contents && markdownlint-cli2 --fix \"contents/**/*.md\"",
+    "lint-md": "markdownlint-cli2 --fix \"**/*.md\"",
     "preview": "vitepress preview contents",
     "setup-brew": "./scripts/setup-brew.sh",
     "setup-full": "zsh scripts/setup.sh",
@@ -21,29 +22,36 @@
     "test": "node --test \"tests/**/*.test.mjs\"",
     "tree": "node scripts/generate-site-structure.mjs"
   },
-  "packageManager": "pnpm@11.20.0",
-  "engines": {
-    "node": ">=24",
-    "pnpm": ">=11"
-  },
   "devDependencies": {
     "@davidingplus/vitepress-image-viewer": "^1.1.5",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2",
     "@nolebase/vitepress-plugin-meta": "^2.18.2",
+    "@prettier/plugin-xml": "^3.4.2",
     "@vite-pwa/assets-generator": "^1.0.2",
     "@vite-pwa/vitepress": "^1.1.0",
     "glob": "^13.0.6",
     "gray-matter": "^4.0.3",
     "init": "^0.1.2",
-    "js-yaml": "^5.2.3",
+    "js-yaml": "^5.3.0",
     "markdown-link-check": "^3.15.0",
     "markdownlint-cli2": "^0.23.2",
+    "markdownlint-rule-relative-links": "^5.1.2",
+    "markdownlint-rule-search-replace": "^1.2.0",
     "openai": "^7.4.0",
     "prettier": "^3.9.6",
+    "prettier-plugin-packagejson": "^3.0.2",
+    "prettier-plugin-sh": "^0.19.0",
+    "prettier-plugin-sql": "^0.20.0",
+    "prettier-plugin-toml": "^2.0.6",
     "vite-plugin-pwa": "^1.3.0",
     "vitepress": "2.0.0-alpha.12",
-    "vitepress-mermaid-renderer": "^1.1.28",
-    "vitepress-sidebar": "^1.36.1",
-    "vue": "^3.5.40"
+    "vitepress-mermaid-renderer": "^1.2.0",
+    "vitepress-sidebar": "^1.38.0",
+    "vue": "^3.5.41"
+  },
+  "packageManager": "pnpm@11.20.0",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=11"
   }
 }

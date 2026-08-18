@@ -1,0 +1,80 @@
+// https://github.com/DavidAnson/markdownlint-cli2
+
+{
+  "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/main/schema/markdownlint-cli2-config-schema.json",
+
+  // Base markdownlint rule config
+  "config": {
+    "blanks-around-fences": true,
+    "MD004": { "style": "asterisk" },
+    "MD007": { "indent": 2 },
+    "MD009": { "br_spaces": 2 },
+    "MD012": { "maximum": 2 },
+    "MD013": false,
+    "MD014": false,
+    "MD022": { "lines_above": 2, "lines_below": 1 },
+    "MD024": false,
+    "MD025": { "front_matter_title": "{{$frontmatter.title}}" },
+    "MD026": false,
+    "MD029": { "style": "ordered" },
+    "MD032": false,
+    "MD033": { "allowed_elements": ["br", "pre", "ul", "li", "ol"] },
+    "MD036": false,
+    "search-replace": {
+      "rules": [
+        {
+          "name": "curly-double-quotes",
+          "message": "Do not use curly double quotes.",
+          "searchPattern": "/\u201c|\u201d/g",
+          "replace": "\"",
+        },
+        {
+          "name": "curly-single-quotes",
+          "message": "Do not use curly single quotes.",
+          "searchPattern": "/\u2018|\u2019/g",
+          "replace": "'",
+        },
+        {
+          "name": "em-dash",
+          "message": "Do not use em dashes.",
+          "searchPattern": "/\u2014/g",
+          "replace": "-",
+        },
+        {
+          "name": "en-dash",
+          "message": "Do not use en dashes. Use a hyphen instead.",
+          "searchPattern": "/\u2013/g",
+          "replace": "-",
+        },
+        {
+          "name": "non-breaking-space",
+          "message": "Do not use non-breaking spaces. Use a regular space instead.",
+          "searchPattern": "/\u00a0/g",
+          "replace": " ",
+        },
+        {
+          "name": "object-replacement-character",
+          "message": "Do not use the object replacement character. Use a regular space instead.",
+          "searchPattern": "/\ufffc/g",
+          "replace": " ",
+        },
+      ],
+    },
+  },
+  "customRules": [
+    "markdownlint-rule-search-replace",
+    "markdownlint-rule-relative-links",
+  ],
+
+  // Respect .gitignore: node_modules/, VitePress dist and cache, temp files.
+  "gitignore": true,
+
+  // .claude/commands and .github/prompts are symlinks to prompts/, so skip
+  // them to lint each prompt file once.
+  "ignores": [".claude/commands", ".github/prompts"],
+
+  // Optional CLI behavior
+  "fix": true,
+  "noProgress": false,
+  "showFound": true,
+}

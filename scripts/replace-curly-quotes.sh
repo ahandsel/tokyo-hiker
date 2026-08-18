@@ -29,7 +29,7 @@ process_files() {
   local temp_file=$(mktemp)
 
   # Use sed to replace curly single and double quotes with straight ones
-  if sed -E 's/[“”]/"/g; s/[‘’]/'\''/g' "$file" >"$temp_file"; then
+  if sed -E 's/[“”]/"/g; s/[‘’]/'\''/g' "$file" > "$temp_file"; then
     # Check if changes were made
     if ! cmp -s "$file" "$temp_file"; then
       mv "$temp_file" "$file"

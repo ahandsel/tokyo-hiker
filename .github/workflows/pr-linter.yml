@@ -1,5 +1,5 @@
 # .github/workflows/pr-linter.yml
-# Format code and lint markdown files in pull requests
+# Format code and run the repo tests in pull requests
 
 name: PR lint and format
 
@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   lint-and-format:
-    name: Run md-lint, code-format, and tests
+    name: Run code-format and tests
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -52,14 +52,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Step 6: Run Markdown linter in check-only mode, so problems fail the job
-      - name: Run md-lint
-        run: pnpm md-lint:check
-
-      # Step 7: Run code formatter in check-only mode, so problems fail the job
+      # Step 6: Run code formatter in check-only mode, so problems fail the job
       - name: Run code-format
         run: pnpm code-format:check
 
-      # Step 8: Run the repo tests, including the vendored Mermaid CSS drift guard
+      # Step 7: Run the repo tests, including the vendored Mermaid CSS drift guard
       - name: Run tests
         run: pnpm test

@@ -6,7 +6,7 @@ engineStrict: true
 
 allowBuilds:
   esbuild: false
-  sharp: false # Prebuilt binaries are used; the build scripts have never run here
+  sharp: false
   workerd: false
 
 # Delay installing published versions to reduce security risk.
