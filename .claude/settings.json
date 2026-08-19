@@ -5,7 +5,6 @@
       "Bash(git commit *)",
       "WebFetch(domain:vitepress.dev)",
       "Bash(node skills/file-folder-name-linter/scripts/lint-names.mjs:*)",
-      "Bash(node skills/gh-issue-to-task/scripts/fetch-issue.mjs:*)",
       "Bash(node skills/gh-pr-reporter/scripts/get-pr-comments.mjs:*)",
       "Bash(node skills/script-auditor/scripts/audit-helper-scripts.mjs:*)",
       "Bash(node skills/skill-allowlist-syncer/scripts/check-skill-allowlist.mjs:*)",
@@ -17,10 +16,8 @@
       "Skill(folder-readme-maintainer)",
       "Skill(general-en-polisher)",
       "Skill(gh-cli)",
-      "Skill(gh-issue-to-task)",
       "Skill(gh-pr-reporter)",
       "Skill(link-polisher)",
-      "Skill(readme-maintainer)",
       "Skill(script-auditor)",
       "Skill(skill-allowlist-syncer)"
     ],
