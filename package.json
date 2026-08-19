@@ -13,6 +13,8 @@
     "lint-code": "prettier --write .",
     "lint-contents": "prettier --write contents && markdownlint-cli2 --fix \"contents/**/*.md\"",
     "lint-md": "markdownlint-cli2 --fix \"**/*.md\"",
+    "lint-naming": "node skills/file-folder-name-linter/scripts/lint-names.mjs",
+    "lint-target": "node scripts/lint-target.mjs",
     "pdf-to-images": "node scripts/pdf-to-images.mjs",
     "preview": "pnpm run build && pnpm vitepress-preview",
     "setup-brew": "./scripts/setup-brew.sh",
