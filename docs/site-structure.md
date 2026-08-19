@@ -29,22 +29,22 @@
 │   └───📄 kawanori-akakuna.md
 ├───📁 public/
 │   ├───📁 hatonosu-valley/
-│   │   ├───📁 tachikawa-hatonosu/
-│   │   │   ├───📄 README.md
-│   │   │   ├───📄 genji-firefly-habitat-sign.jpg
-│   │   │   ├───📄 hatonosu-valley-gorge.jpg
-│   │   │   ├───📄 hatonosu-valley-overview.jpg
-│   │   │   ├───📄 kori-station.jpg
-│   │   │   ├───📄 kori-tsuki-no-inugusu.jpg
-│   │   │   ├───📄 kotaba-kumano-shrine-gate.jpg
-│   │   │   ├───📄 shiromaru-dam.jpg
-│   │   │   ├───📄 soryu-falls.jpg
-│   │   │   ├───📄 suniwa-bridge.jpg
-│   │   │   ├───📄 tama-river-angler.jpg
-│   │   │   ├───📄 tama-river-rock-faces.jpg
-│   │   │   ├───📄 tansoin.jpg
-│   │   │   ├───📄 upper-falls.jpg
-│   │   │   └───📄 yama-ajisai.jpg
+│   │   ├───📄 README.md
+│   │   ├───📄 genji-firefly-habitat-sign.jpg
+│   │   ├───📄 hatonosu-valley-gorge.jpg
+│   │   ├───📄 hatonosu-valley-overview.jpg
+│   │   ├───📄 kori-station.jpg
+│   │   ├───📄 kori-tsuki-no-inugusu.jpg
+│   │   ├───📄 kotaba-kumano-shrine-gate.jpg
+│   │   ├───📄 shiromaru-dam.jpg
+│   │   ├───📄 soryu-falls.jpg
+│   │   ├───📄 suniwa-bridge.jpg
+│   │   ├───📄 tama-river-angler.jpg
+│   │   ├───📄 tama-river-rock-faces.jpg
+│   │   ├───📄 tansoin.jpg
+│   │   ├───📄 upper-falls.jpg
+│   │   └───📄 yama-ajisai.jpg
+│   ├───📁 otama-walking-trail/
 │   │   ├───📄 README.md
 │   │   ├───📄 ohtama.pdf
 │   │   ├───📄 otama-trail-map-east.webp
