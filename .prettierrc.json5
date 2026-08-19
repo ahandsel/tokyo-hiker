@@ -11,6 +11,10 @@
     'prettier-plugin-toml',
   ],
   overrides: [
+    // Markdown code fences are documentation, not code to reformat. Without this,
+    // prettier-plugin-sh runs shfmt over every ```shell block and rewrites a
+    // <placeholder> into a `< placeholder >` redirection.
+    { files: '**/*.md', options: { embeddedLanguageFormatting: 'off' } },
     { files: '**/*.svg', options: { parser: 'xml' } },
     { files: '**/*.sh', options: { parser: 'sh' } },
     { files: '**/*.sql', options: { parser: 'sql' } },
