@@ -74,7 +74,6 @@
   "ignores": [".claude/commands", ".claude/skills", ".github/prompts"],
 
   // Optional CLI behavior
-  "fix": true,
   "noProgress": false,
   "showFound": true,
 }

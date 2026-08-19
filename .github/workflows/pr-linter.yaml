@@ -1,5 +1,7 @@
-# .github/workflows/pr-linter.yml
-# Format code and run the repo tests in pull requests
+# .github/workflows/pr-linter.yaml
+# Apply the repo lint fixes and run the tests in pull requests.
+# This job fixes rather than gates: `pnpm lint` runs Prettier first and
+# markdownlint-cli2 second, and the result is committed back to the PR branch.
 
 name: PR lint and format
 
@@ -7,7 +9,9 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
-permissions: read-all # Default to minimal read-only permissions for all jobs
+# Needs write access because the job commits the lint fixes back to the PR branch.
+permissions:
+  contents: write
 
 # Prevents concurrent lint runs for the same PR to avoid conflicts and wasted resources
 concurrency:
@@ -16,17 +20,22 @@ concurrency:
 
 jobs:
   lint-and-format:
-    name: Run code-format and tests
+    name: Apply lint fixes and run tests
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
-      contents: read # Allows reading repo files
+      contents: write # Allows pushing the lint fixes back to the PR branch
     if: ${{ github.event.pull_request.draft == false }}
 
     steps:
       # Step 1: Checkout repository code
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout@v7.0.1, pinned
+        with:
+          # The default pull-request checkout is a detached merge commit that cannot
+          # be pushed, so check out the PR branch itself.
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
 
       # Step 2: Detect pnpm version from package.json
       - name: Detect pnpm version
@@ -52,10 +61,23 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Step 6: Run code formatter in check-only mode, so problems fail the job
-      - name: Run code-format
-        run: pnpm code-format:check
+      # Step 6: Apply the two-stage lint pipeline: Prettier writes, markdownlint polishes
+      - name: Apply lint fixes
+        run: pnpm lint
 
-      # Step 7: Run the repo tests, including the vendored Mermaid CSS drift guard
+      # Step 7: Commit the result back to the PR branch.
+      # `git add -u` stages tracked files only, so nothing a tool dropped is swept in.
+      # Pushes made with GITHUB_TOKEN do not trigger a new workflow run, so this cannot loop.
+      # The push has no write access on a fork, so the step is skipped for fork pull requests.
+      - name: Commit lint fixes
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -u
+          git diff --staged --quiet || git commit -m '🎨 Apply lint fixes'
+          git push
+
+      # Step 8: Run the repo tests, including the vendored Mermaid CSS drift guard
       - name: Run tests
         run: pnpm test
