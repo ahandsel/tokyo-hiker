@@ -17,12 +17,12 @@ Here are several hiking options to reach the Mitakesan Cable Car station from di
 
 ## Table of contents <!-- omit in toc -->
 
-* [Compare](#compare)
-* [Level 1 - Start from Futamatao Station](#level-1---start-from-futamatao-station)
-* [Level 2 - Start from Hinatawada Station](#level-2---start-from-hinatawada-station)
-* [Level 3 - Start from Musashi-Itsukaichi Station](#level-3---start-from-musashi-itsukaichi-station)
-* [Level 4 - Start from Okutama Station](#level-4---start-from-okutama-station)
-* [Goal: Mitakesan cable car](#goal-mitakesan-cable-car)
+* [Compare][compare]
+* [Level 1 - Start from Futamatao Station][level-1-start-from-futamatao-station]
+* [Level 2 - Start from Hinatawada Station][level-2-start-from-hinatawada-station]
+* [Level 3 - Start from Musashi-Itsukaichi Station][level-3-start-from-musashi-itsukaichi-station]
+* [Level 4 - Start from Okutama Station][level-4-start-from-okutama-station]
+* [Goal: Mitakesan cable car][goal-mitakesan-cable-car]
 
 
 ## Compare
@@ -147,3 +147,12 @@ From the bottom station, you can take a bus to return to the JR Ome Line at **Mi
 
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 <!--@include: ../snippets/footer.md-->
+
+<!-- Internal links -->
+
+[compare]: #compare
+[goal-mitakesan-cable-car]: #goal-mitakesan-cable-car
+[level-1-start-from-futamatao-station]: #level-1---start-from-futamatao-station
+[level-2-start-from-hinatawada-station]: #level-2---start-from-hinatawada-station
+[level-3-start-from-musashi-itsukaichi-station]: #level-3---start-from-musashi-itsukaichi-station
+[level-4-start-from-okutama-station]: #level-4---start-from-okutama-station

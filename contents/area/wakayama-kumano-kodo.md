@@ -11,19 +11,19 @@ excludeFromSidebar: false
 
 ## Table of contents <!-- omit in toc -->
 
-* [Overview](#overview)
-* [YAMAP model courses](#yamap-model-courses)
-* [Plane tickets](#plane-tickets)
-* [Day 1: Flying to Shirahama City](#day-1-flying-to-shirahama-city)
-* [Day 2: Bus and hiking; Shirahama City to Takahara Village](#day-2-bus-and-hiking-shirahama-city-to-takahara-village)
-* [Day 3: Hiking; Takahara to Chikatsuyu](#day-3-hiking-takahara-to-chikatsuyu)
-* [Day 4: Hiking and bus; Chikatsuyu to Hongu Taisha](#day-4-hiking-and-bus-chikatsuyu-to-hongu-taisha)
-* [Hike: Chikatsuyu to Kumano Hongu Taisha](#hike-chikatsuyu-to-kumano-hongu-taisha)
-  * [Option 1: Full walk; 25 km](#option-1-full-walk-25-km)
-  * [Option 2: Challenging walk; 17 km](#option-2-challenging-walk-17-km)
-  * [Option 3: Highlight walk; 7.5 km](#option-3-highlight-walk-75-km)
-* [Day 5: Boat tour and return to Shirahama City](#day-5-boat-tour-and-return-to-shirahama-city)
-* [Resources](#resources)
+* [Overview][overview]
+* [YAMAP model courses][yamap-model-courses]
+* [Plane tickets][plane-tickets]
+* [Day 1: Flying to Shirahama City][day-1-flying-to-shirahama-city]
+* [Day 2: Bus and hiking; Shirahama City to Takahara Village][day-2-bus-and-hiking-shirahama-city-to-takahara-village]
+* [Day 3: Hiking; Takahara to Chikatsuyu][day-3-hiking-takahara-to-chikatsuyu]
+* [Day 4: Hiking and bus; Chikatsuyu to Hongu Taisha][day-4-hiking-and-bus-chikatsuyu-to-hongu-taisha]
+* [Hike: Chikatsuyu to Kumano Hongu Taisha][hike-chikatsuyu-to-kumano-hongu-taisha]
+  * [Option 1: Full walk; 25 km][option-1-full-walk-25-km]
+  * [Option 2: Challenging walk; 17 km][option-2-challenging-walk-17-km]
+  * [Option 3: Highlight walk; 7.5 km][option-3-highlight-walk-7-5-km]
+* [Day 5: Boat tour and return to Shirahama City][day-5-boat-tour-and-return-to-shirahama-city]
+* [Resources][resources]
 
 
 ## Overview
@@ -287,3 +287,19 @@ Kumano Travel
 [trail-logistics-video]: https://youtu.be/k6zpmkpG1RU
 
 <!--@include: ../snippets/footer.md-->
+
+<!-- Internal links -->
+
+[day-1-flying-to-shirahama-city]: #day-1-flying-to-shirahama-city
+[day-2-bus-and-hiking-shirahama-city-to-takahara-village]: #day-2-bus-and-hiking-shirahama-city-to-takahara-village
+[day-3-hiking-takahara-to-chikatsuyu]: #day-3-hiking-takahara-to-chikatsuyu
+[day-4-hiking-and-bus-chikatsuyu-to-hongu-taisha]: #day-4-hiking-and-bus-chikatsuyu-to-hongu-taisha
+[day-5-boat-tour-and-return-to-shirahama-city]: #day-5-boat-tour-and-return-to-shirahama-city
+[hike-chikatsuyu-to-kumano-hongu-taisha]: #hike-chikatsuyu-to-kumano-hongu-taisha
+[option-1-full-walk-25-km]: #option-1-full-walk-25-km
+[option-2-challenging-walk-17-km]: #option-2-challenging-walk-17-km
+[option-3-highlight-walk-7-5-km]: #option-3-highlight-walk-75-km
+[overview]: #overview
+[plane-tickets]: #plane-tickets
+[resources]: #resources
+[yamap-model-courses]: #yamap-model-courses

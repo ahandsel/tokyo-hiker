@@ -15,12 +15,12 @@ excludeFromSidebar: true
 
 {{$frontmatter.description}}
 
-![緑の木々の間をゴツゴツとした岩を縫って流れる鳩ノ巣渓谷の多摩川](/hatonosu-valley/tachikawa-hatonosu/hatonosu-valley-overview.jpg)
+![緑の木々の間をゴツゴツとした岩を縫って流れる鳩ノ巣渓谷の多摩川][img-hatonosu-valley-overview]
 
 > [!NOTE] 掲載当時の情報です
 > このページはタチカワオンラインのアーカイブです。情報は掲載当時のものです。記事中に登場しているお店や施設、公園などの情報はすべて掲載当時のものです。現在と異なっている可能性がありますのでご了承の上、ご覧下さい。
 
-英語版は [Hatonosu Valley](./hatonosu-valley.md) をご覧ください。
+英語版は [Hatonosu Valley][hatonosu-valley-2] をご覧ください。
 
 
 ## コースデータ
@@ -71,7 +71,7 @@ excludeFromSidebar: true
 
 線路を越えて青梅街道沿いに奥多摩駅方面へ進むと、「[古里附のイヌグス][inugusu]」と呼ばれる巨樹が見えてきます。青梅線の線路と国道に挟まれ、振動や排気ガスなどに脅かされる、植物としては過酷な環境ながら、その巨大さは同種の中では国内4番目というから驚き。
 
-![茅葺屋根の巨大な木造の楼門](/hatonosu-valley/tachikawa-hatonosu/kotaba-kumano-shrine-gate.jpg)
+![茅葺屋根の巨大な木造の楼門][img-kotaba-kumano-shrine-gate]
 
 小丹波熊野神社
 
@@ -79,15 +79,15 @@ excludeFromSidebar: true
 
 * 東京都西多摩郡奥多摩町小丹波473
 
-![時計の付いた木造の古里駅の駅舎](/hatonosu-valley/tachikawa-hatonosu/kori-station.jpg)
+![時計の付いた木造の古里駅の駅舎][img-kori-station]
 
 スタート地点の古里駅は無人駅。お手洗いはこちらで済ませておきましょう。
 
-![石垣の間を上る丹叟院の石段と石碑](/hatonosu-valley/tachikawa-hatonosu/tansoin.jpg)
+![石垣の間を上る丹叟院の石段と石碑][img-tansoin]
 
 古里駅の北側に位置する丹叟院。西のお隣には熊野神社の楼門がそびえています
 
-![太い枝を広げた巨大なイヌグスの老木](/hatonosu-valley/tachikawa-hatonosu/kori-tsuki-no-inugusu.jpg)
+![太い枝を広げた巨大なイヌグスの老木][img-kori-tsuki-no-inugusu]
 
 国内4番目の巨大なイヌグス。電車の振動や車の排気ガスに耐えながら、大きな姿を見せてくれます。
 
@@ -98,7 +98,7 @@ excludeFromSidebar: true
 
 青梅街道の南側には多摩川が流れています。[寸庭橋][suniwa-bridge]を渡ると、川に沿って野道を進めるようになっており、川辺に下りて釣りを楽しむ人も。イワナやヤマメ、ニジマスが釣れるそうです。川に沿って進むと、[上の滝][upper-falls]からの絶景を楽しめます。山道を歩くので、視線が足元にいきがちですが、カメラをお持ちの際はシャッターを切るのもお忘れなく。
 
-![多摩川に架かる赤いアーチの寸庭橋を河原から見上げた様子](/hatonosu-valley/tachikawa-hatonosu/suniwa-bridge.jpg)
+![多摩川に架かる赤いアーチの寸庭橋を河原から見上げた様子][img-suniwa-bridge]
 
 寸庭橋
 
@@ -106,11 +106,11 @@ excludeFromSidebar: true
 
 * 東京都西多摩郡奥多摩町棚沢
 
-![なめらかな岩肌を流れ落ちる小さな滝](/hatonosu-valley/tachikawa-hatonosu/upper-falls.jpg)
+![なめらかな岩肌を流れ落ちる小さな滝][img-upper-falls]
 
 寸庭橋の先には、小さな「上の滝」が
 
-![森の中に立つ源氏ホタル生息地の木製の看板](/hatonosu-valley/tachikawa-hatonosu/genji-firefly-habitat-sign.jpg)
+![森の中に立つ源氏ホタル生息地の木製の看板][img-genji-firefly-habitat-sign]
 
 上の滝の先には源氏ホタル生息地も
 
@@ -127,7 +127,7 @@ excludeFromSidebar: true
 
 川辺では、釣竿を構える人の数も見えます。こちらで釣れるのも、やはりイワナやヤマメ、ニジマスなど。清流にしか生息しない、これらの魚が釣れるというのは、このあたりの多摩川が、地元の人たちによって大切にされてきた証拠でもあります。ウォーキングや釣りにお出掛けの際も、必ずゴミは持ち帰りましょうね。
 
-![切り立った岩壁の間の狭い渓谷を流れる多摩川](/hatonosu-valley/tachikawa-hatonosu/hatonosu-valley-gorge.jpg)
+![切り立った岩壁の間の狭い渓谷を流れる多摩川][img-hatonosu-valley-gorge]
 
 小丹波熊野神社
 
@@ -135,15 +135,15 @@ excludeFromSidebar: true
 
 * 東京都 西多摩郡奥多摩町棚沢
 
-![暗い岩壁を細い筋になって落ちる滝](/hatonosu-valley/tachikawa-hatonosu/soryu-falls.jpg)
+![暗い岩壁を細い筋になって落ちる滝][img-soryu-falls]
 
 2筋の水が流れ落ちる双流の滝。ひんやりとした空気に包まれて、しばし休憩しましょう。
 
-![白い急流のそばで長い竿を構える釣り人](/hatonosu-valley/tachikawa-hatonosu/tama-river-angler.jpg)
+![白い急流のそばで長い竿を構える釣り人][img-tama-river-angler]
 
 激流の中へ釣竿を伸ばす方の姿も。流れが急なので、転倒しないように気を付けましょう。
 
-![大きな岩肌のそばを流れる澄んだ緑色の川の水と、その奥の木々に覆われた崖](/hatonosu-valley/tachikawa-hatonosu/tama-river-rock-faces.jpg)
+![大きな岩肌のそばを流れる澄んだ緑色の川の水と、その奥の木々に覆われた崖][img-tama-river-rock-faces]
 
 川の水の鮮やかさと、岩肌の輝き。シャッターチャンスがたくさんあります！
 
@@ -158,7 +158,7 @@ excludeFromSidebar: true
 
 白丸湖を過ぎると[数馬峡遊歩道][kazuma-gorge]に入ります。数馬は、昔から奥多摩きっての難所と言われた地で、アップダウンが激しい。鳩ノ巣渓谷ウォーキング、最後のひと踏ん張りをして、奥多摩駅方面へ向かいましょう。駅の手前には、「[奥多摩温泉 もえぎの湯][moegi-no-yu]」もあるので、こちらで旅の疲れを癒してから帰路に着くのも良いかもしれませんね。
 
-![緑の葉に縁取られた白丸湖の静かな水面の向こうに見える白丸ダム](/hatonosu-valley/tachikawa-hatonosu/shiromaru-dam.jpg)
+![緑の葉に縁取られた白丸湖の静かな水面の向こうに見える白丸ダム][img-shiromaru-dam]
 
 白丸湖
 
@@ -169,7 +169,7 @@ excludeFromSidebar: true
 
 ## 【取材後記】　　　〜こぐまのウォーキング日記〜
 
-![白い装飾花に囲まれた青い小さなつぼみを付けたヤマアジサイの花](/hatonosu-valley/tachikawa-hatonosu/yama-ajisai.jpg)
+![白い装飾花に囲まれた青い小さなつぼみを付けたヤマアジサイの花][img-yama-ajisai]
 
 鳩ノ巣渓谷に咲くヤマアジサイ
 
@@ -188,9 +188,12 @@ excludeFromSidebar: true
 
 <!--@include: ../snippets/footer.md-->
 
+<!-- Links -->
+
 [hatonosu-bridge]: https://www.google.com/maps/search/?api=1&query=%E9%B3%A9%E3%83%8E%E5%B7%A3%E5%B0%8F%E6%A9%8B
 [hatonosu-sta]: https://maps.app.goo.gl/Bk3z2x6k5SXz31C18
 [hatonosu-valley]: https://www.google.com/maps?ll=35.813472,139.126558&z=16&t=m&mapclient=embed
+[hatonosu-valley-2]: ./hatonosu-valley.md
 [inugusu]: https://www.google.com/maps/search/?api=1&query=%E5%8F%A4%E9%87%8C%E9%99%84%E3%81%AE%E3%82%A4%E3%83%8C%E3%82%B0%E3%82%B9
 [kazuma-gorge]: https://www.google.com/maps/search/?api=1&query=%E6%95%B0%E9%A6%AC%E5%B3%A1%E9%81%8A%E6%AD%A9%E9%81%93
 [kori-sta]: https://maps.app.goo.gl/Ljc1MXA6PMSrp8Ni7
@@ -204,3 +207,20 @@ excludeFromSidebar: true
 [tachikawa-hatonosu]: https://www.tachikawaonline.jp/walk/hatonosu.htm
 [tansoin]: https://www.google.com/maps/search/?api=1&query=%E4%B8%B9%E5%8F%9F%E9%99%A2
 [upper-falls]: https://www.google.com/maps/search/?api=1&query=%E5%A5%A5%E5%A4%9A%E6%91%A9%20%E4%B8%8A%E3%81%AE%E6%BB%9D
+
+<!-- Image links -->
+
+[img-genji-firefly-habitat-sign]: /hatonosu-valley/genji-firefly-habitat-sign.jpg
+[img-hatonosu-valley-gorge]: /hatonosu-valley/hatonosu-valley-gorge.jpg
+[img-hatonosu-valley-overview]: /hatonosu-valley/hatonosu-valley-overview.jpg
+[img-kori-station]: /hatonosu-valley/kori-station.jpg
+[img-kori-tsuki-no-inugusu]: /hatonosu-valley/kori-tsuki-no-inugusu.jpg
+[img-kotaba-kumano-shrine-gate]: /hatonosu-valley/kotaba-kumano-shrine-gate.jpg
+[img-shiromaru-dam]: /hatonosu-valley/shiromaru-dam.jpg
+[img-soryu-falls]: /hatonosu-valley/soryu-falls.jpg
+[img-suniwa-bridge]: /hatonosu-valley/suniwa-bridge.jpg
+[img-tama-river-angler]: /hatonosu-valley/tama-river-angler.jpg
+[img-tama-river-rock-faces]: /hatonosu-valley/tama-river-rock-faces.jpg
+[img-tansoin]: /hatonosu-valley/tansoin.jpg
+[img-upper-falls]: /hatonosu-valley/upper-falls.jpg
+[img-yama-ajisai]: /hatonosu-valley/yama-ajisai.jpg

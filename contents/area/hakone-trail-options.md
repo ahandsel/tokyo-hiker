@@ -11,14 +11,14 @@ excludeFromSidebar: false
 
 ## Table of contents <!-- omit in toc -->
 
-* [Transport](#transport)
-* [Hotel options](#hotel-options)
-* [Pack list](#pack-list)
-* [Hiking trails](#hiking-trails)
-  * [Safe option](#safe-option)
-  * [Challenge option](#challenge-option)
-  * [Super challenge option](#super-challenge-option)
-* [Additional notes](#additional-notes)
+* [Transport][transport]
+* [Hotel options][hotel-options]
+* [Pack list][pack-list]
+* [Hiking trails][hiking-trails]
+  * [Safe option][safe-option]
+  * [Challenge option][challenge-option]
+  * [Super challenge option][super-challenge-option]
+* [Additional notes][additional-notes]
 
 
 ## Transport
@@ -205,3 +205,14 @@ Return trip: `Ｔ桃源台線` bus
 Google Maps list: <https://www.google.com/maps/placelists/list/fWHKlZi6SQ6z011WW0fUOQ?token=02R25AgZU6Y>
 
 <!--@include: ../snippets/footer.md-->
+
+<!-- Internal links -->
+
+[additional-notes]: #additional-notes
+[challenge-option]: #challenge-option
+[hiking-trails]: #hiking-trails
+[hotel-options]: #hotel-options
+[pack-list]: #pack-list
+[safe-option]: #safe-option
+[super-challenge-option]: #super-challenge-option
+[transport]: #transport

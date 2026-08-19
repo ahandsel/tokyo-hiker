@@ -11,13 +11,13 @@ excludeFromSidebar: false
 
 ## Table of contents <!-- omit in toc -->
 
-* [How to get there 🛫](#how-to-get-there-)
-* [How to get home 🛬](#how-to-get-home-)
-* [Trail metrics](#trail-metrics)
-* [Mountains ⛰](#mountains-)
-* [Toilets 🚽](#toilets-)
-* [Timeline](#timeline)
-* [Past similar hikes](#past-similar-hikes)
+* [How to get there 🛫][how-to-get-there]
+* [How to get home 🛬][how-to-get-home]
+* [Trail metrics][trail-metrics]
+* [Mountains ⛰][mountains]
+* [Toilets 🚽][toilets]
+* [Timeline][timeline]
+* [Past similar hikes][past-similar-hikes]
 
 
 ## How to get there 🛫
@@ -109,3 +109,13 @@ excludeFromSidebar: false
 [past-hike]: https://yamap.com/activities/19661513
 
 <!--@include: ../snippets/footer.md-->
+
+<!-- Internal links -->
+
+[how-to-get-home]: #how-to-get-home-
+[how-to-get-there]: #how-to-get-there-
+[mountains]: #mountains-
+[past-similar-hikes]: #past-similar-hikes
+[timeline]: #timeline
+[toilets]: #toilets-
+[trail-metrics]: #trail-metrics

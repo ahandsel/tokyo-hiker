@@ -28,8 +28,8 @@ graph TD
 
 Phone numbers:
 
-* Mitake Tozan Railway: [0428-78-8121](tel:+810428788121)
-* Nishi Tokyo Bus (Haigawa Office): [0428-83-2126](tel:+810428832126)
+* Mitake Tozan Railway: [0428-78-8121][0428-78-8121]
+* Nishi Tokyo Bus (Haigawa Office): [0428-83-2126][0428-83-2126]
 
 Cost:
 
@@ -59,8 +59,15 @@ Cost:
 * Timetable as of 2025-10-11.
 * For more details, see [mitaketozan.co.jp/timetable.html][mitaketozan-timetable].
 
-[img-mitake-mitakesan]: /mitake-station-to-mitakesan.png
+<!-- Links -->
+
+[0428-78-8121]: tel:+810428788121
+[0428-83-2126]: tel:+810428832126
 [mitake-sta]: https://maps.app.goo.gl/SQbr1D3ey8Rhg6819
 [mitakesan-cable-car-sta]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7
 [mitaketozan-timetable]: https://www.mitaketozan.co.jp/timetable.html
 [takimoto-sta]: https://maps.app.goo.gl/om1N7HyGpp6Y71pE8
+
+<!-- Image links -->
+
+[img-mitake-mitakesan]: /mitake-station-to-mitakesan.png

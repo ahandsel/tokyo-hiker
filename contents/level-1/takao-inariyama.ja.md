@@ -1,7 +1,7 @@
 ---
 title: '高尾山 稲荷山コース（土道）ルート'
 description: '高尾山口駅から稲荷山コース（土道）を経由して高尾山へ向かう登山ルート。'
-excludeFromSidebar: false
+excludeFromSidebar: true
 ---
 
 # {{$frontmatter.title}}

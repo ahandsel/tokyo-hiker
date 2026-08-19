@@ -21,7 +21,7 @@ Travel from Shinjuku: about 1 hr 40 min ⏱️
 * The walking route starts a 5-minute walk from Kori Station.
 
 > [!TIP]
-> Try take the Holiday Rapid Okutama (休日快速 おくたま) train to get to Ome station faster from Shinjuku!
+> Try taking the Holiday Rapid Okutama (休日快速 おくたま) train to get to Ome station faster from Shinjuku!
 
 
 ## Trail overview 🥾
@@ -30,7 +30,7 @@ Travel from Shinjuku: about 1 hr 40 min ⏱️
 * Toilets: Use the toilet at Kori Station before you start; [Ecotto Shiromaru][ecotto-shiromaru] at Shiromaru Dam has another one later on. 🚻
 * Drink: Bring plenty of water but there are a few cafes and stores along the way.
 * Convenience store: [7-Eleven][7-eleven] near Kori station
-* Lunch: Few [food options](#food-) along the trail, so pack your own. 🍱
+* Lunch: Few [food options][food-options] along the trail, so pack your own. 🍱
 * Hiking poles 🔧: 2 / 5
   * Not needed; the route is a riverside walkway with steps, not a mountain trail.
 * Trail running 👟: 3 / 5
@@ -73,7 +73,7 @@ Click a map to open a larger view that you can zoom and pan.
 
 How to read the map:
 
-* Each sheet places the downstream end on the left, so walking from Kori Station to OkuTama Station means reading each sheet from right to left, starting with the eastern half above.
+* Each sheet places the downstream end on the right, so walking upstream from Kori Station to OkuTama Station means reading each sheet from right to left, starting with the eastern half above.
 * The circled numbers match the numbers printed on the trail signposts.
 * The map gives 3.4 km from Kori Station to Hatonosu, 2.2 km from Hatonosu to Shiromaru, and 2.6 km from Shiromaru to OkuTama Station, for 8.2 km and about 3 hours in total. This covers the signposted trail only, which is shorter than the full walk recorded above.
 
@@ -157,6 +157,8 @@ Food options along this trail are few, so bring lunch and snacks with you. 🍙
 
 <!--@include: ../snippets/footer.md-->
 
+<!-- Links -->
+
 [7-eleven]: https://maps.app.goo.gl/d8Z9wica9ezPqGLW8
 [ecotto-shiromaru]: https://maps.app.goo.gl/h8terJw55j26c8QL9
 [giant-inugusu-tree]: https://maps.app.goo.gl/zpaBniR9Fbe7ekTj6
@@ -166,8 +168,6 @@ Food options along this trail are few, so bring lunch and snacks with you. 🍙
 [hatonosu-so-onsen]: https://www.okutamas.co.jp/hatonosu/
 [hatonosu-sta]: https://maps.app.goo.gl/Bk3z2x6k5SXz31C18
 [hatonosu-valley]: https://www.google.com/maps?ll=35.813472,139.126558&z=16&t=m&mapclient=embed
-[img-otama-map-east]: /hatonosu-valley/otama-trail-map-east.webp
-[img-otama-map-west]: /hatonosu-valley/otama-trail-map-west.webp
 [kori-sta]: https://maps.app.goo.gl/Ljc1MXA6PMSrp8Ni7
 [kotaba-parking]: https://maps.app.goo.gl/s3yB9tw3er2qs7kB8
 [moegi-no-yu]: https://maps.app.goo.gl/QEGxtHFRKmEsmHyX6
@@ -175,7 +175,7 @@ Food options along this trail are few, so bring lunch and snacks with you. 🍙
 [my-yamap-2025]: https://yamap.com/activities/42550192
 [my-yamap-short]: https://yamap.com/activities/42916532
 [okutama-bus-stop]: https://www.google.com/maps/search/?api=1&query=%E5%A5%A5%E5%A4%9A%E6%91%A9%E4%B8%AD%E5%AD%A6%E6%A0%A1%E3%83%90%E3%82%B9%E5%81%9C
-[okutama-map-pdf]: /hatonosu-valley/ohtama.pdf
+[okutama-map-pdf]: /otama-walking-trail/ohtama.pdf
 [okutama-map-pdf-link]: https://www.okutama.gr.jp/site/map/pdf/ohtama.pdf
 [okutama-sta]: https://maps.app.goo.gl/QUhUboTJjk4wL8Gi7
 [otama-google-map]: https://www.google.com/maps/d/viewer?mid=1rbreYaRjK7jpHMDPMjJIA32Fla0&ll=35.81425591733774%2C139.12080780711676&z=15
@@ -186,3 +186,12 @@ Food options along this trail are few, so bring lunch and snacks with you. 🍙
 [suniwa-bridge]: https://www.google.com/maps/search/?api=1&query=%E5%AF%B8%E5%BA%AD%E6%A9%8B
 [tachikawa-hatonosu]: https://www.tachikawaonline.jp/walk/hatonosu.htm
 [vellut-blog]: https://blog.vellut.com/2014/09/otama-walking-trail-hike-from-kori-to-okutama/
+
+<!-- Internal links -->
+
+[food-options]: #food-
+
+<!-- Image links -->
+
+[img-otama-map-east]: /otama-walking-trail/otama-trail-map-east.webp
+[img-otama-map-west]: /otama-walking-trail/otama-trail-map-west.webp

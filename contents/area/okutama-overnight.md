@@ -11,11 +11,11 @@ excludeFromSidebar: false
 
 ## Table of contents <!-- omit in toc -->
 
-* [Accommodations](#accommodations)
-* [Hiking courses](#hiking-courses)
-  * [Level 1](#level-1)
-  * [Level 2](#level-2)
-  * [Level 3](#level-3)
+* [Accommodations][accommodations]
+* [Hiking courses][hiking-courses]
+  * [Level 1][level-1]
+  * [Level 2][level-2]
+  * [Level 3][level-3]
 
 
 ## Accommodations
@@ -83,3 +83,11 @@ Take the cable car up to the top of Mt. Mitake and hike around the Rock Garden a
 [yamap-okutama-to-hinatawada]: https://yamap.com/plans/code/zjaEaqtBjetpO58sqdxvyLgyDLeEIAXhQXw_z_ORGt6ou_h0lJz-Nprsu4Nsa1tykL4
 
 <!--@include: ../snippets/footer.md-->
+
+<!-- Internal links -->
+
+[accommodations]: #accommodations
+[hiking-courses]: #hiking-courses
+[level-1]: #level-1
+[level-2]: #level-2
+[level-3]: #level-3

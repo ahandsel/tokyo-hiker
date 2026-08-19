@@ -9,14 +9,14 @@ excludeFromSidebar: false
 
 ## Table of contents <!-- omit in toc -->
 
-* [Notes on the hiking trail options](#notes-on-the-hiking-trail-options)
-  * [Compare](#compare)
-* [Level 1 - Hinatawada Station to Mitakesan via Mt. Hinode](#level-1---hinatawada-station-to-mitakesan-via-mt-hinode)
-  * [Route](#route)
-* [Level 2 - Koburi Pass - Agano Station to Higashi-Agano Station](#level-2---koburi-pass---agano-station-to-higashi-agano-station)
-  * [Route](#route-1)
-* [Challenge - OkuTama Station to Mitakesan via Odake](#challenge---okutama-station-to-mitakesan-via-odake)
-  * [Route](#route-2)
+* [Notes on the hiking trail options][notes-on-the-hiking-trail-options]
+  * [Compare][compare]
+* [Level 1 - Hinatawada Station to Mitakesan via Mt. Hinode][level-1-hinatawada-station-to-mitakesan-via-mt-hinode]
+  * [Route][route]
+* [Level 2 - Koburi Pass - Agano Station to Higashi-Agano Station][level-2-koburi-pass-agano-station-to-higashi-agano-station]
+  * [Route][route-2]
+* [Challenge - OkuTama Station to Mitakesan via Odake][challenge-okutama-station-to-mitakesan-via-odake]
+  * [Route][route-3]
 
 
 ## Notes on the hiking trail options
@@ -167,3 +167,14 @@ Timeline:
 
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 <!--@include: ../snippets/footer.md-->
+
+<!-- Internal links -->
+
+[challenge-okutama-station-to-mitakesan-via-odake]: #challenge---okutama-station-to-mitakesan-via-odake
+[compare]: #compare
+[level-1-hinatawada-station-to-mitakesan-via-mt-hinode]: #level-1---hinatawada-station-to-mitakesan-via-mt-hinode
+[level-2-koburi-pass-agano-station-to-higashi-agano-station]: #level-2---koburi-pass---agano-station-to-higashi-agano-station
+[notes-on-the-hiking-trail-options]: #notes-on-the-hiking-trail-options
+[route]: #route
+[route-2]: #route-1
+[route-3]: #route-2

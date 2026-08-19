@@ -8,7 +8,7 @@ excludeFromSidebar: false
 
 {{$frontmatter.description}}
 
-This page is an English version of a Japanese walking guide from Tachikawa Online. The [original Japanese article](./hatonosu-valley.ja.md) is preserved word for word, and it keeps all of the photos from the archived page. 🇯🇵
+This page is an English version of a Japanese walking guide from Tachikawa Online. The [original Japanese article][original-japanese-article] is preserved word for word, and it keeps all of the photos from the archived page. 🇯🇵
 
 
 ## Getting there 🚂
@@ -109,7 +109,7 @@ The Tama River runs on the south side of the Ome Kaido.
 Food options along this course are few, so bring lunch and snacks with you. 🍙
 
 * [Moegi no Yu][moegi-no-yu] / `もえぎの湯` - a hot spring facility just before OkuTama Station. ♨️
-* See the [Otama Walking Trail page](./otama-walking-trail.md) for more places to eat near Kori Station and Hatonosu Valley. 🍜
+* See the [Otama Walking Trail page][otama-walking-trail-page] for more places to eat near Kori Station and Hatonosu Valley. 🍜
 * [7-Eleven][7-eleven] near Kori station
 
 
@@ -151,11 +151,14 @@ Source: [Hatonosu Valley walking guide on Tachikawa Online][tachikawa-hatonosu] 
 
 ## Related page 🔗
 
-* [鳩ノ巣渓谷（奥多摩町）](./hatonosu-valley.ja.md) is the original Japanese article, preserved word for word. 🇯🇵
-* [Otama Walking Trail](./otama-walking-trail.md) covers the same stretch of the Tama River with my own recorded times, GPS tracks, and a shorter version that starts at Hatonosu Station. 🗺️
+* [鳩ノ巣渓谷（奥多摩町）][original-japanese-article] is the original Japanese article, preserved word for word. 🇯🇵
+* [Otama Walking Trail][otama-walking-trail-page] covers the same stretch of the Tama River with my own recorded times, GPS tracks, and a shorter version that starts at Hatonosu Station. 🗺️
 
 <!--@include: ../snippets/footer.md-->
 
+<!-- Links -->
+
+[7-eleven]: https://maps.app.goo.gl/d8Z9wica9ezPqGLW8
 [hatonosu-bridge]: https://www.google.com/maps/search/?api=1&query=%E9%B3%A9%E3%83%8E%E5%B7%A3%E5%B0%8F%E6%A9%8B
 [hatonosu-sta]: https://maps.app.goo.gl/Bk3z2x6k5SXz31C18
 [hatonosu-valley]: https://www.google.com/maps?ll=35.813472,139.126558&z=16&t=m&mapclient=embed
@@ -165,6 +168,8 @@ Source: [Hatonosu Valley walking guide on Tachikawa Online][tachikawa-hatonosu] 
 [kotaba-kumano-shrine]: https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E4%B8%B9%E6%B3%A2%E7%86%8A%E9%87%8E%E7%A5%9E%E7%A4%BE
 [moegi-no-yu]: https://maps.app.goo.gl/QEGxtHFRKmEsmHyX6
 [okutama-sta]: https://maps.app.goo.gl/QUhUboTJjk4wL8Gi7
+[original-japanese-article]: ./hatonosu-valley.ja.md
+[otama-walking-trail-page]: ./otama-walking-trail.md
 [shiromaru-dam]: https://maps.app.goo.gl/PP121w4gYts2iHDV9
 [shiromaru-lake]: https://maps.app.goo.gl/QGHCxs96iet88fpo9
 [soryu-falls]: https://maps.app.goo.gl/Ea7nDzvU9hdNGrfCA
@@ -172,4 +177,3 @@ Source: [Hatonosu Valley walking guide on Tachikawa Online][tachikawa-hatonosu] 
 [tachikawa-hatonosu]: https://www.tachikawaonline.jp/walk/hatonosu.htm
 [tansoin]: https://www.google.com/maps/search/?api=1&query=%E4%B8%B9%E5%8F%9F%E9%99%A2
 [upper-falls]: https://www.google.com/maps/search/?api=1&query=%E5%A5%A5%E5%A4%9A%E6%91%A9%20%E4%B8%8A%E3%81%AE%E6%BB%9D
-[7-eleven]: https://maps.app.goo.gl/d8Z9wica9ezPqGLW8
