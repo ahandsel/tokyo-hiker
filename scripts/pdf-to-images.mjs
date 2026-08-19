@@ -31,6 +31,10 @@
 //   and a closing summary lists the totals.
 //
 // Version history:
+//   * v1.1 - 2026-08-19 - Name output by the PDF page count rather than the
+//     requested page count, so a single-page selection keeps its page number.
+//     Report external command failures through fail() instead of throwing.
+//     Export the pure helpers for tests and only run main when executed directly.
 //   * v1.0 - 2026-08-18 - Initial version.
 
 import { execFileSync } from 'node:child_process';
@@ -90,7 +94,7 @@ const DEFAULTS = { format: 'webp', dpi: 150, quality: 85 };
 // Parse argv into a list of PDF paths plus an options object.
 // An unknown flag, a missing value, or an out-of-range number is a fatal error,
 // because silently ignoring one would produce output the caller did not ask for.
-function parseArgs(argv) {
+export function parseArgs(argv) {
   const pdfs = [];
   const options = {
     ...DEFAULTS,
@@ -180,7 +184,7 @@ function parseArgs(argv) {
 }
 
 // Accept a single page number such as 2, or an inclusive range such as 1-3.
-function parsePages(spec) {
+export function parsePages(spec) {
   const match = /^(\d+)(?:-(\d+))?$/.exec(spec.trim());
   if (!match)
     fail(
@@ -219,14 +223,34 @@ function hasCommand(name) {
   });
 }
 
+// execFileSync throws on a non-zero exit, which would surface as a Node stack
+// trace. Route it through fail() instead, carrying the tool's own stderr, so a
+// corrupt or encrypted PDF reports the same way as every other error here.
 function run(command, args) {
-  return execFileSync(command, args, {
-    encoding: 'utf8',
-    stdio: ['ignore', 'pipe', 'pipe'],
-  });
+  try {
+    return execFileSync(command, args, {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+  } catch (error) {
+    const detail = String(error.stderr ?? error.message ?? '').trim();
+    fail(
+      `${command} failed.${detail ? `\n   ${detail.split('\n').join('\n   ')}` : ''}`,
+    );
+  }
 }
 
-function formatBytes(bytes) {
+// A one-page PDF keys off pageCount, not the number of pages requested, so a
+// bare prefix means "this document has one page" rather than "one page was asked
+// for". Keying off the request would make `--pages 1` and `--pages 2` of the same
+// PDF collide on a single output name, and --force would overwrite silently.
+export function outputNameFor(prefix, extension, pageNumber, pageCount) {
+  return pageCount === 1
+    ? `${prefix}.${extension}`
+    : `${prefix}-${pageNumber}.${extension}`;
+}
+
+export function formatBytes(bytes) {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
@@ -271,16 +295,12 @@ function convertPdf(pdfPath, options, repoRoot) {
   const extension = options.format === 'jpeg' ? 'jpg' : options.format;
   const pageTotal = last - first + 1;
 
-  // A single rendered page keeps the bare prefix, because a -1 suffix on a
-  // one-page document only adds noise to the content path.
-  const outputNameFor = (pageNumber) =>
-    pageTotal === 1
-      ? `${prefix}.${extension}`
-      : `${prefix}-${pageNumber}.${extension}`;
-
   const planned = [];
   for (let page = first; page <= last; page += 1) {
-    const target = join(outDir, outputNameFor(page));
+    const target = join(
+      outDir,
+      outputNameFor(prefix, extension, page, pageCount),
+    );
     if (existsSync(target) && !options.force) {
       fail(
         `${relative(repoRoot, target)} already exists. Pass --force to overwrite it.`,
@@ -368,50 +388,55 @@ function convertPdf(pdfPath, options, repoRoot) {
 // Main
 //-----------------------------------------------------------------------------
 
-const argv = process.argv.slice(2);
-if (argv.includes('--help') || argv.includes('-h')) {
-  console.log(HELP);
-  process.exit(0);
-}
+// Only run the CLI when executed directly. Tests import the pure helpers above.
+if (import.meta.main) main();
 
-const { pdfs, options } = parseArgs(argv);
+function main() {
+  const argv = process.argv.slice(2);
+  if (argv.includes('--help') || argv.includes('-h')) {
+    console.log(HELP);
+    process.exit(0);
+  }
 
-if (pdfs.length === 0) {
-  console.error('❌ No PDF given.\n');
-  console.error(HELP);
-  process.exit(1);
-}
+  const { pdfs, options } = parseArgs(argv);
 
-// Preflight the external tools, so a missing formula is reported once up front
-// rather than midway through a batch.
-const missing = ['pdftoppm', 'pdfinfo'].filter((tool) => !hasCommand(tool));
-if (options.format === 'webp' && !hasCommand('cwebp')) missing.push('cwebp');
-if (missing.length > 0) {
-  console.error(
-    `❌ Missing required command${missing.length === 1 ? '' : 's'}: ${missing.join(', ')}`,
-  );
-  console.error('   Install the dependencies with: pnpm setup-brew');
-  console.error('   Or directly with: brew install poppler webp');
-  process.exit(1);
-}
+  if (pdfs.length === 0) {
+    console.error('❌ No PDF given.\n');
+    console.error(HELP);
+    process.exit(1);
+  }
 
-const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+  // Preflight the external tools, so a missing formula is reported once up front
+  // rather than midway through a batch.
+  const missing = ['pdftoppm', 'pdfinfo'].filter((tool) => !hasCommand(tool));
+  if (options.format === 'webp' && !hasCommand('cwebp')) missing.push('cwebp');
+  if (missing.length > 0) {
+    console.error(
+      `❌ Missing required command${missing.length === 1 ? '' : 's'}: ${missing.join(', ')}`,
+    );
+    console.error('   Install the dependencies with: pnpm setup-brew');
+    console.error('   Or directly with: brew install poppler webp');
+    process.exit(1);
+  }
 
-let totalWritten = 0;
-let totalBytes = 0;
-for (const pdf of pdfs) {
-  const result = convertPdf(pdf, options, repoRoot);
-  totalWritten += result.written;
-  totalBytes += result.bytes;
-}
+  const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
-if (options.dryRun) {
-  console.log('\n⚠️  Dry run finished, no files were written.');
-} else {
-  console.log(
-    `\n✅ Wrote ${totalWritten} image${totalWritten === 1 ? '' : 's'} totalling ${formatBytes(totalBytes)}.`,
-  );
-  console.log(
-    '   Reference them from content with a site-root path, for example /folder/name.webp',
-  );
+  let totalWritten = 0;
+  let totalBytes = 0;
+  for (const pdf of pdfs) {
+    const result = convertPdf(pdf, options, repoRoot);
+    totalWritten += result.written;
+    totalBytes += result.bytes;
+  }
+
+  if (options.dryRun) {
+    console.log('\n⚠️  Dry run finished, no files were written.');
+  } else {
+    console.log(
+      `\n✅ Wrote ${totalWritten} image${totalWritten === 1 ? '' : 's'} totalling ${formatBytes(totalBytes)}.`,
+    );
+    console.log(
+      '   Reference them from content with a site-root path, for example /folder/name.webp',
+    );
+  }
 }
