@@ -9,6 +9,12 @@ Usage:   ./scripts/setup-pre-commit.sh [-h|--help] [-u|--uninstall] [-s|--status
 Purpose: Install (or uninstall) the pre-commit hook that runs pnpm lint
          before every commit.
 
+Output:
+  - The resolved hook path and the action taken (installed, uninstalled, or
+    left alone), plus the current status with --status.
+  - ✅ on success, ⚠️ when an existing hook is present, ❌ when the hooks
+    directory cannot be found.
+
 Notes:
   - The hook runs pnpm lint (prettier + markdownlint).
   - Prefers corepack pnpm when available; falls back to plain pnpm.

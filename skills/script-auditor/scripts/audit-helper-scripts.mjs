@@ -15,10 +15,13 @@
 // Output:
 // * Human-readable per-script report with a ✅ / ⚠️ / ❌ verdict per check, or `--json` for a
 //   machine-readable array of findings.
-// * Final status line: `result:ok`, `result:findings`, or via exit code on configuration error.
-// * Exit codes: 0 = all scripts pass, 1 = at least one warning or failure, 2 = configuration error.
+// * Final status line: `result:ok`, `result:warnings`, `result:findings`, or via exit code on configuration error.
+// * Exit codes: 0 = no failures, 1 = at least one failure, 2 = configuration error.
+//   Warnings are advisory and do not change the exit code; pass --strict to fail on them too.
 //
 // Version history:
+// * v1.2 - 2026-08-19 - Exit non-zero on failures only, so advisory warnings do
+//   not block using the audit as a gate. Add --strict to fail on warnings too.
 // * v1.1 - 2026-06-04 - Add a version history check to the notes section audit.
 // * v1.0 - 2026-06-04 - Initial release: language, --help, notes, and emoji checks.
 
@@ -68,7 +71,7 @@ function printUsage() {
       '',
       'Exit codes:',
       '  0  all audited scripts pass',
-      '  1  at least one warning or failure',
+      '  1  at least one failure (warnings are advisory unless --strict)',
       '  2  configuration error',
     ].join('\n'),
   );
@@ -80,12 +83,15 @@ function usageError(message) {
 }
 
 function parseArgs(argv) {
-  const args = { repoRoot: null, json: false, files: [] };
+  const args = { repoRoot: null, json: false, strict: false, files: [] };
   let i = 0;
   while (i < argv.length) {
     const arg = argv[i];
     if (arg === '--json') {
       args.json = true;
+      i += 1;
+    } else if (arg === '--strict') {
+      args.strict = true;
       i += 1;
     } else if (arg === '--repo-root') {
       i += 1;
@@ -348,8 +354,15 @@ function main() {
     );
   }
 
-  if (counts.warn === 0 && counts.fail === 0) {
-    if (!args.json) console.log('result:ok');
+  // Only a ❌ failure sets a non-zero exit. A ⚠️ warning is advisory, such as a
+  // bash script that cannot reasonably become zsh, so warnings must not stop the
+  // audit being used as a gate in `pnpm test`. Pass --strict to fail on both.
+  const blocking = args.strict ? counts.fail + counts.warn : counts.fail;
+
+  if (blocking === 0) {
+    if (!args.json) {
+      console.log(counts.warn > 0 ? 'result:warnings' : 'result:ok');
+    }
     process.exit(0);
   }
   if (!args.json) console.log('result:findings');

@@ -9,6 +9,11 @@ Usage:   ./scripts/setup-takumi-guard.sh [-h|--help] [-i|--install] [-e|--edit]
 Purpose: Add Takumi Guard (a security-focused npm registry proxy) to your
          global pnpm config.
 
+Output:
+  - The registry and scope values written to the global pnpm config, with the
+    API token masked.
+  - ✅ on success, ❌ when pnpm is missing or the config write fails.
+
 Notes:
   - Requires pnpm to be installed.
   - Prompts for your Takumi Guard API token interactively.

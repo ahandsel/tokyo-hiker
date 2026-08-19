@@ -9,6 +9,12 @@ Usage:   ./scripts/setup-node.sh [-h|--help] [-i|--install]
 Purpose: Install and activate the Node.js version specified in .node-version
          using nodenv.
 
+Output:
+  - The detected target version, then a line per step as nodenv installs and
+    activates it, ending with the active `node -v`.
+  - ✅ on success, ⚠️ when the version was already present, ❌ when nodenv is
+    missing or the install fails.
+
 Notes:
   - Reads the target version from .node-version in the project root.
   - Requires nodenv to be installed (https://github.com/nodenv/nodenv).
