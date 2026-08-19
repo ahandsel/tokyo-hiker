@@ -8,7 +8,7 @@ Utility scripts for the tokyo-hiker repository.
 * [cleanup-temp-files.sh](#cleanup-temp-filessh)
 * [generate-site-structure.mjs](#generate-site-structuremjs)
 * [index.sh](#indexsh)
-* [md-lint.sh](#md-lintsh)
+* [lint-target.mjs](#lint-targetmjs)
 * [pdf-to-images.mjs](#pdf-to-imagesmjs)
 * [replace-curly-quotes.sh](#replace-curly-quotessh)
 * [setup.sh](#setupsh)
@@ -70,20 +70,37 @@ pnpm index
 * `-V`, `--version` - print the script version and exit
 
 
-## md-lint.sh
+## lint-target.mjs
 
-> Source: [md-lint.sh](md-lint.sh)
+> Source: [lint-target.mjs](lint-target.mjs)
 
-Lint the Markdown files in a directory with markdownlint-cli2, writing results to a log file.
-Predates the authoring rules below, so it has no `--help` flag and uses a plain comment header instead of a notes block.
-For everyday linting, prefer `pnpm lint-md`, which runs `markdownlint-cli2` across the repo with the shared config.
+Run the repository lint pipeline against specific paths instead of the whole tree.
+The pipeline is two stages and the order matters: Prettier makes the bulk automatic edits, then `markdownlint-cli2` polishes the result into the house style and has the last word.
+Use this when a task touches a handful of files and a whole-repo format run would bury the real diff.
 
 ```shell
-./scripts/md-lint.sh [directory] [config_file]
+node scripts/lint-target.mjs <path> [<path>...] [options]
+# or
+pnpm lint-target <path> [<path>...] [options]
 ```
 
-* `directory` - where to search for Markdown files (default: the current working directory)
-* `config_file` - markdownlint configuration file (optional, defaults to `.markdownlint-cli2.jsonc`)
+* `--check` - report what would change without writing anything
+* `-h`, `--help` - show the help message and exit
+
+A path may be a file or a folder, and folders are scanned recursively.
+Markdown files go through both stages; every other file type goes through Prettier only.
+
+`--check` asks whether the pipeline would change a file, not whether the file is in Prettier's output state.
+The two differ here: the second stage has the last word, so a committed Markdown file is deliberately not in Prettier's output state, and a plain `prettier --check` would report every one of them as out of date.
+The check therefore snapshots the files, runs both stages, compares, and restores the snapshot.
+
+```shell
+# Lint one page after editing it
+pnpm lint-target contents/level-1/otama-walking-trail.md
+
+# Confirm a folder already matches the pipeline output
+pnpm lint-target --check contents/
+```
 
 
 ## pdf-to-images.mjs
@@ -96,9 +113,9 @@ Images are written next to the source PDF by default, so a file in `contents/pub
 Requires [poppler](https://poppler.freedesktop.org/) for `pdftoppm` and `pdfinfo`, and [libwebp](https://developers.google.com/speed/webp) for `cwebp`; both are in the [Brewfile](../Brewfile) and are installed by `pnpm setup-brew`.
 
 ```shell
-node scripts/pdf-to-images.mjs [options] < pdf > [ < pdf > ...]
+node scripts/pdf-to-images.mjs <pdf> [<pdf>...] [options]
 # or
-pnpm pdf-to-images [options] < pdf > [ < pdf > ...]
+pnpm pdf-to-images <pdf> [<pdf>...] [options]
 ```
 
 * `--out <dir>` - output folder (default: the folder holding the PDF)
@@ -112,13 +129,15 @@ pnpm pdf-to-images [options] < pdf > [ < pdf > ...]
 * `--dry-run` - report the planned work without writing anything
 * `-h`, `--help` - show the help message and exit
 
-A single converted page is written as `<prefix>.<ext>`, and several pages are written as `<prefix>-1.<ext>`, `<prefix>-2.<ext>`, and so on.
+A one-page PDF is written as `<prefix>.<ext>`. A PDF with several pages is written as `<prefix>-1.<ext>`, `<prefix>-2.<ext>`, and so on, and it keeps the page number even when `--pages` selects a single page, so two single-page runs can never collide on one filename.
 Around 2200 px wide at quality 88 keeps the small print on a tourist map readable while holding each page well under half a megabyte.
 
 ```shell
-# Convert both sides of a trail map, naming each side after what it covers
-pnpm pdf-to-images contents/public/hatonosu-valley/ohtama.pdf --pages 1 --prefix otama-trail-map-west --width 2200 --quality 88
-pnpm pdf-to-images contents/public/hatonosu-valley/ohtama.pdf --pages 2 --prefix otama-trail-map-east --width 2200 --quality 88
+# Convert both sides of a trail map in one run, then rename each page after
+# what it covers rather than its page number, as the content rules require.
+pnpm pdf-to-images contents/public/otama-walking-trail/ohtama.pdf --width 2200 --quality 88 --force
+mv contents/public/otama-walking-trail/ohtama-1.webp contents/public/otama-walking-trail/otama-trail-map-west.webp
+mv contents/public/otama-walking-trail/ohtama-2.webp contents/public/otama-walking-trail/otama-trail-map-east.webp
 ```
 
 

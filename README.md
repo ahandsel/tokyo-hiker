@@ -80,10 +80,12 @@ pnpm index
 ### Linting
 
 ```shell
-# Run markdown linting
-~/.scripts/md-lint.sh ./contents
-pnpm code-format
-pnpm lint-md
+# Run the two-stage lint pipeline across the repo
+pnpm lint
+
+# Or scope it to the paths you touched
+pnpm lint-target contents/level-1/otama-walking-trail.md
+pnpm lint-target --check contents/
 
 # Run the repo tests, including the vendored Mermaid CSS drift guard
 pnpm test
@@ -102,7 +104,7 @@ pnpm tree
 pnpm cleanup
 
 # Convert a PDF into web-ready page images
-pnpm pdf-to-images < pdf > [options]
+pnpm pdf-to-images <pdf> [options]
 ```
 
 
@@ -154,7 +156,7 @@ iOS Safari and Chrome on Android refuse to render a PDF inline and show a blank 
 Convert the PDF to images instead, and keep the PDF next to them as a download link:
 
 ```shell
-pnpm pdf-to-images contents/public/ --width 2200 --quality 88 < folder > / < file > .pdf
+pnpm pdf-to-images contents/public/<folder>/<file>.pdf --width 2200 --quality 88
 ```
 
 This approach wins on three counts:

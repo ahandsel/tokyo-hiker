@@ -6,7 +6,7 @@
 * 50 characters or fewer, including the emoji.
 * Start with exactly 1 emoji from the commit type emoji guide.
 * Do not end with a period.
-* If scripts or tools are edited, include the script name and version number in the title when possible. For example `✨ phrase-push.sh v1.2.3: add new feature`.
+* If scripts or tools are edited, include the script name and version number in the title when possible. For example `✨ pdf-to-images.mjs v1.1: name output by PDF page count`.
 
 
 ## Body format
