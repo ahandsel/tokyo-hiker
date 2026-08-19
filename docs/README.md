@@ -54,7 +54,7 @@ docs/
 ├── repo-commit-style-guide.md .......... Git commit title and body conventions
 ├── technical-doc-overview.md ........... Overview of help document types
 ├── glossary.yaml ....................... EN-JA translation glossary
-├── words-to-avoid.txt .................. cspell trigger list for terms to flag
+├── words-to-avoid.txt .................. Reference list of terms to flag in review
 ├── site-structure.md ................... Auto-generated tree snapshot of contents/
 └── templates/ .......................... Document structure templates
     ├── README.md
@@ -99,7 +99,7 @@ Help documentation writing falls under the technical style guides. These contain
 ## Terminology and glossary
 
 * [EN-JA translation glossary][glossary] - English-to-Japanese term translations organized by topic. Each entry includes the English term, Japanese translation, and usage context.
-* [Words to avoid][words-to-avoid] - cspell trigger list of words that should be flagged for review during spell checks.
+* [Words to avoid][words-to-avoid] - a reference list of words to question during a manual or agent review. It is written in cspell's `!word` forbid syntax so it can be wired into a spell check later, but nothing enforces it today: cspell is not a dependency, `.cspell.json` leaves `flagWords` and `dictionaryDefinitions` unset, and no script or CI job runs it.
 
 
 ## Document templates

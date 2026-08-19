@@ -1,4 +1,9 @@
-# Word list to trigger cspell flags
+# Word list to trigger cspell flags.
+#
+# Not enforced by tooling. cspell is not a dependency, .cspell.json leaves
+# flagWords and dictionaryDefinitions unset, and no script or CI job reads this
+# file. It is a reference list for manual and agent review, kept in cspell's
+# `!word` forbid syntax so it can be wired into a spell check later.
 
 # Time
 !later

@@ -1,17 +1,138 @@
 # EN-JA glossary: the official English-to-Japanese translations for terms used across this repository.
 # Read this file before translating content or when you need the approved Japanese rendering of a term.
 # Each entry lists the English term (en), its Japanese translation (ja), and usage context (context), grouped by category.
+#
+# The entries below cover the vocabulary that actually repeats across the hiking
+# pages: the metric labels every route page carries, the trail features that
+# recur, and the place names shared by a page and its Japanese counterpart.
+# Add a term here the first time it appears on a second page.
 
-- group: 'UI text'
+- group: 'Route metrics'
   terms:
-    - en: 'learn more about...'
-      ja: '...について詳しく知る'
-      context: 'standard phrase; link text; default wording'
+    - en: 'Difficulty'
+      ja: '難易度'
+      context: 'label; trail overview list on every route page'
 
-    - en: 'options button (⋮)'
-      ja: 'オプションボタン（⋮）'
-      context: 'noun; the kebab button (three dots) that allows users to view more options'
+    - en: 'Distance'
+      ja: '距離'
+      context: 'label; metrics list; the value keeps km as the unit'
 
-    - en: 'special characters'
-      ja: '特殊記号'
-      context: 'noun; user input'
+    - en: 'Duration'
+      ja: '所要時間'
+      context: 'label; metrics list; attested in takao-inariyama.ja.md'
+
+    - en: 'Elevation gain'
+      ja: '累積標高（上り）'
+      context: 'label; metrics list; paired with the ↗ arrow in English'
+
+    - en: 'Elevation decline'
+      ja: '累積標高（下り）'
+      context: 'label; metrics list; paired with the ↘ arrow in English'
+
+    - en: 'Best season'
+      ja: 'おすすめシーズン'
+      context: 'label; trail overview list; attested in hatonosu-valley.ja.md'
+
+    - en: 'Bail-out point'
+      ja: 'エスケープポイント'
+      context: 'label; a station partway along the route where a walk can be cut short'
+
+    - en: 'Trail type'
+      ja: 'コース形態'
+      context: 'label; the value is point to point or round trip'
+
+    - en: 'Point to point (one way)'
+      ja: '縦走（片道）'
+      context: 'value for Trail type; the route starts and ends at different places'
+
+    - en: 'Round trip'
+      ja: '往復'
+      context: 'value for Trail type; the route returns to its start'
+
+- group: 'Trail features'
+  terms:
+    - en: 'hiking route'
+      ja: '登山ルート'
+      context: 'noun; used in the page description; attested in takao-inariyama.ja.md'
+
+    - en: 'trailhead'
+      ja: '登山口'
+      context: 'noun; where a trail leaves the road; attested in takao-inariyama.ja.md'
+
+    - en: 'walking course'
+      ja: 'ウォーキングコース'
+      context: 'noun; a riverside or town route rather than a mountain climb'
+
+    - en: 'cable car'
+      ja: 'ケーブルカー'
+      context: 'noun; the Mitakesan and Takaosan lines; attested in takao-inariyama.ja.md'
+
+    - en: 'suspension bridge'
+      ja: '吊り橋'
+      context: 'noun; trail feature'
+
+    - en: 'observation deck'
+      ja: '展望台'
+      context: 'noun; trail feature'
+
+    - en: 'hot spring'
+      ja: '温泉'
+      context: 'noun; a facility near the finish, such as Moegi no Yu'
+
+    - en: 'promenade'
+      ja: '遊歩道'
+      context: 'noun; a made-up riverside or lakeside path, as at Kazuma Gorge'
+
+    - en: 'gorge'
+      ja: '渓谷'
+      context: 'noun; use for a named valley such as Hatonosu Valley'
+
+- group: 'Place names'
+  terms:
+    - en: 'Tama River'
+      ja: '多摩川'
+      context: 'proper noun; the river the OkuTama routes follow'
+
+    - en: 'Ome Kaido'
+      ja: '青梅街道'
+      context: 'proper noun; the national road along the Tama River'
+
+    - en: 'Kori Station'
+      ja: '古里駅'
+      context: 'proper noun; JR Ome Line; start of the Otama and Hatonosu routes'
+
+    - en: 'Hatonosu Station'
+      ja: '鳩ノ巣駅'
+      context: 'proper noun; JR Ome Line; the bail-out point on both OkuTama routes'
+
+    - en: 'OkuTama Station'
+      ja: '奥多摩駅'
+      context: 'proper noun; JR Ome Line; keep the capital T in OkuTama'
+
+    - en: 'Hatonosu Valley'
+      ja: '鳩ノ巣渓谷'
+      context: 'proper noun; one of the 30 selected views of the Tama River'
+
+    - en: 'Shiromaru Dam'
+      ja: '白丸ダム'
+      context: 'proper noun; holds back Shiromaru Lake and carries a fish ladder'
+
+    - en: 'Shiromaru Lake'
+      ja: '白丸湖'
+      context: 'proper noun; the reservoir behind Shiromaru Dam'
+
+    - en: 'Soryu Falls'
+      ja: '双竜の滝'
+      context: 'proper noun; the two-stream waterfall behind Hatonosu Station'
+
+    - en: 'Suniwa Bridge'
+      ja: '寸庭橋'
+      context: 'proper noun; the red arch bridge onto the riverside path'
+
+    - en: 'Kazuma Gorge'
+      ja: '数馬峡'
+      context: 'proper noun; the last stretch before OkuTama Station'
+
+    - en: 'Moegi no Yu'
+      ja: 'もえぎの湯'
+      context: 'proper noun; hot spring just before OkuTama Station; keep the romanized form in English'
