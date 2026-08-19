@@ -18,7 +18,7 @@
 // Output:
 // * Human-readable report grouped by rule, then an informational list of
 //   style guides discovered in the repo for reviewer reference.
-// * With --json: { violations: [...], styleGuides: [...] } on stdout.
+// * With --json: { violations: [...], fixed: [...], styleGuides: [...] } on stdout.
 // * Exit codes: 0 = clean, 1 = violations found, 2 = configuration error.
 // Version history:
 // * v1.0 - 2026-06-05 - Initial release.

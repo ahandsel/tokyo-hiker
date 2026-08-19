@@ -1,4 +1,4 @@
-# .github/workflows/deploy.yml
+# .github/workflows/deploy.yaml
 # Build and deploy a VitePress site to GitHub Pages
 # Triggered on pushes to the main branch or "Run workflow" button
 

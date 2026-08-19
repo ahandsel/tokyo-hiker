@@ -3,11 +3,11 @@ name: file-folder-name-linter
 description: Lint repository file and folder names for format compliance. Use when users ask to check naming conventions, enforce file extensions, or validate notes naming patterns; applies a fixed set of rules from the skill and reports any discovered repository style guides for reviewer reference.
 ---
 
-# File and folder name linter
+# File and folder name linter skill
 
 Sweep the repository for file and folder names that drift from the project's naming conventions. Use this skill when the user asks to check naming, enforce file extensions, validate `notes/` naming, or sweep the repo for non-compliant paths.
 
-The skill enforces a fixed set of rules from this `SKILL.md` and surfaces every discovered repository style guide (`AGENTS.md`, `your-style-guide/*`, etc.) at the end of the report so the reviewer can sanity-check intent on gray-area findings.
+The skill enforces a fixed set of rules from this `SKILL.md` and surfaces every discovered repository style guide (`AGENTS.md`, `README.md`, `docs/`, `markdown-style-guide.md`, etc.) at the end of the report so the reviewer can sanity-check intent on gray-area findings.
 
 
 ## Rules
@@ -29,7 +29,8 @@ In scope:
 Out of scope (the linter skips these):
 
 * Anything excluded by `.gitignore` (handled implicitly because the linter uses `git ls-files` to enumerate paths).
-* Standard repo docs anywhere in the tree: `README.md`, `AGENTS.md`, `MEMORY.md`, `ONBOARDING.md`, `LICENSE` (with or without an extension), `CHANGELOG.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `AUTHORS`, `NOTICE`.
+* Standard repo docs and skill definitions anywhere in the tree: `README.md`, `README.txt`, `AGENTS.md`, `MEMORY.md`, `ONBOARDING.md`, `SKILL.md`, `LICENSE` (with or without a `.md` or `.txt` extension), `CHANGELOG.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `AUTHORS` (with or without `.md`), `NOTICE` (with or without `.md`).
+* Fixed-name toolchain files: `Brewfile`, `Makefile`, `Dockerfile`, `Procfile`, `Gemfile`, `Rakefile`, `Caddyfile`, `Justfile`, `Vagrantfile`.
 * Dotfiles and dot-folders: any path segment that starts with `.` (`.gitignore`, `.editorconfig`, `.claude/`, `.github/`, `.vscode/`, and so on).
 * Package manager files: `package.json`, `pnpm-lock.yaml`, `pnpm-workspace.yaml`, `tsconfig*.json`.
 * Vendored Figma skills under `skills/figma-*/` (these are imported from the official `figma@claude-plugins-official` plugin and follow upstream naming).
