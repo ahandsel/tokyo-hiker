@@ -60,4 +60,4 @@ App download: [Yamareco - GPS map app for mountain climbing and hiking][yamareco
 [yamareco-map-app]: https://www.yamareco.com/yamarecomap/
 [yamareco]: https://www.yamareco.com/
 
-<!--@include: ../snippets/footer.md-->
+<!--@include: ./snippets/footer.md-->

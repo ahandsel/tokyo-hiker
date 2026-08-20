@@ -15,7 +15,7 @@ Hope you find it helpful ~
 
 YAMAP Profile: [Tokyo.Hiker][tokyo-hiker]
 
-<!--@include: ../snippets/footer.md-->
+<!--@include: ./snippets/footer.md-->
 
 <!-- Links -->
 
