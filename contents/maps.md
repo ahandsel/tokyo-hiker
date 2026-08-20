@@ -22,18 +22,18 @@ You may think you do not need a map for a well-marked trail, but you really do n
 
 ## AllTrails
 
-[AllTrails][] is a popular hiking app in the United States and has some coverage of Japanese trails.
+[AllTrails][alltrails] is a popular hiking app in the United States and has some coverage of Japanese trails.
 
 * If you cannot read any Japanese, this is your best option.
 * Great app and hiking community.
 * AllTrails lacks details (restrooms, lunch spots, etc.) for Japanese mountains.
 
-[AllTrails]: https://www.alltrails.com/
+[alltrails]: https://www.alltrails.com/
 
 
 ## YAMAP
 
-[YAMAP][] is one of the most popular Japanese hiking apps and the only one that has any English support.
+[YAMAP][yamap] is one of the most popular Japanese hiking apps and the only one that has any English support.
 
 * Core features are free and have English support.
 * Premium features, such as multiple offline maps, require a paid subscription.
@@ -42,22 +42,22 @@ You may think you do not need a map for a well-marked trail, but you really do n
 * YAMAP maps contain vital information such as restrooms, benches, and bus stops.
 
 Why use YAMAP?  
-[YAMAP / ヤマップ - 登山を安全に楽しむGPSアプリ - YouTube][]
+[YAMAP / ヤマップ - 登山を安全に楽しむGPSアプリ - YouTube][yamap-youtube]
 
-[YAMAP]: https://yamap.com/
-[YAMAP / ヤマップ - 登山を安全に楽しむGPSアプリ - YouTube]: https://www.youtube.com/watch?v=gypO_QTOXO8&t=1s
+[yamap-youtube]: https://www.youtube.com/watch?v=gypO_QTOXO8&t=1s
+[yamap]: https://yamap.com/
 
 
 ## YamaReco
 
-[ヤマレコ][] is another popular Japanese hiking site.
+[ヤマレコ][yamareco] is another popular Japanese hiking site.
 
 * The most powerful trail search functionality for Japanese trails and mountains.
 * The site is entirely in Japanese.
 
-App download: [Yamareco - GPS map app for mountain climbing and hiking][]
+App download: [Yamareco - GPS map app for mountain climbing and hiking][yamareco-map-app]
 
-[ヤマレコ]: https://www.yamareco.com/
-[Yamareco - GPS map app for mountain climbing and hiking]: https://www.yamareco.com/yamarecomap/
+[yamareco-map-app]: https://www.yamareco.com/yamarecomap/
+[yamareco]: https://www.yamareco.com/
 
 <!--@include: ../snippets/footer.md-->

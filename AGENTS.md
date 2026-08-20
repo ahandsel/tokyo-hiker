@@ -26,6 +26,7 @@ Rules for AI agents working in the `tokyo-hiker` repository. This is the canonic
 | `contents/public/`   | Static assets served at the site root, including images.                       |
 | `scripts/`           | Helper scripts. See [scripts/README.md](scripts/README.md).                    |
 | `prompts/`           | Reusable prompt files, shared by every agent tool.                             |
+| `skills/`            | Agent skills, shared by every agent tool.                                      |
 | `tests/`             | Node test-runner tests, including the vendored Mermaid CSS drift guard.        |
 | `docs/`              | Repository documentation, including the generated `site-structure.md`.         |
 | `notes/`             | Generated notes, audits, and reports.                                          |
@@ -41,29 +42,37 @@ Save generated artifacts inside this repo: notes, audits, and reports go in `not
 * [.claude/CLAUDE.md](.claude/CLAUDE.md) - Claude Code.
 * [.github/copilot-instructions.md](.github/copilot-instructions.md) and [.github/instructions/copilot-instructions.md](.github/instructions/copilot-instructions.md) - GitHub Copilot.
 
-Prompt files live in `prompts/` only. Both `.claude/commands` and `.github/prompts` are symlinks to that folder, so each tool picks the same files up. Add a new prompt to `prompts/`, never to a symlinked path, and keep the `.prompt.md` suffix that GitHub Copilot requires.
+Prompt files live in `prompts/` only. Both `.claude/commands` and `.github/prompts` are symlinks to that folder, so each tool picks the same files up. Add a new prompt to `prompts/`, never to a symlinked path, and keep the `.prompt.md` suffix that GitHub Copilot requires. See [prompts/README.md](prompts/README.md).
+
+Skills follow the same pattern. They live in `skills/` only, and `.claude/skills` is a symlink to that folder. Add a new skill to `skills/<skill-name>/SKILL.md`, never through the symlink. See [skills/README.md](skills/README.md).
+
+[.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc) ignores all three symlinked paths, so markdownlint checks each real file once from its own folder.
 
 
 ## Setup and commands
 
 Node.js 24 or newer and pnpm 11 or newer are required. `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain.
 
+Two Homebrew formulae sit outside the Node.js toolchain: `poppler` and `webp`, which [scripts/pdf-to-images.mjs](scripts/pdf-to-images.mjs) needs. Both are in the [Brewfile](Brewfile), so `pnpm setup-brew` installs them. Nothing else depends on them.
+
 **pnpm only.** Never suggest or run `npm` or `yarn`; the repo ships shims in `.aliases/` that forward both to pnpm.
 
-| Command                  | What it does                                                                                   |
-| ------------------------ | ---------------------------------------------------------------------------------------------- |
-| `pnpm setup-full`        | Full first-time setup: Brewfile, `.node-version` via nodenv, install, and the pre-commit hook. |
-| `pnpm install`           | Install dependencies.                                                                          |
-| `pnpm dev`               | `vitepress dev contents` - start the dev server.                                               |
-| `pnpm build`             | `vitepress build contents`.                                                                    |
-| `pnpm preview`           | Preview the production build.                                                                  |
-| `pnpm lint`              | `code-format` then `md-lint`. Run this before finishing any change.                            |
-| `pnpm md-lint:check`     | Markdown lint in check-only mode, as CI runs it.                                               |
-| `pnpm code-format:check` | Prettier in check-only mode, as CI runs it.                                                    |
-| `pnpm test`              | `node --test tests/**/*.test.mjs`, including the Mermaid CSS drift guard.                      |
-| `pnpm tree`              | Regenerate `docs/site-structure.md` from the `contents/` tree.                                 |
-| `pnpm index`             | List every pnpm script with its command.                                                       |
-| `pnpm cleanup`           | List and optionally delete temporary files.                                                    |
+| Command                  | What it does                                                                                                                       |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `pnpm setup-full`        | Full first-time setup: Brewfile, `.node-version` via nodenv, install, and the pre-commit hook.                                     |
+| `pnpm install`           | Install dependencies.                                                                                                              |
+| `pnpm dev`               | `vitepress dev contents` - start the dev server.                                                                                   |
+| `pnpm build`             | `vitepress build contents`.                                                                                                        |
+| `pnpm preview`           | Preview the production build.                                                                                                      |
+| `pnpm lint`              | `lint-code` then `lint-md`. Run this before finishing any change.                                                                  |
+| `pnpm lint-target`       | The same two stages, scoped to given paths. `--check` reports without writing.                                                     |
+| `pnpm lint-naming`       | Lint file and folder names against the repo naming rules.                                                                          |
+| `pnpm code-format:check` | Prettier in check-only mode, as CI runs it.                                                                                        |
+| `pnpm test`              | `node --test tests/**/*.test.mjs`: the Mermaid CSS drift guard, the `pdf-to-images` helpers, and the repository convention guards. |
+| `pnpm tree`              | Regenerate `docs/site-structure.md` from the `contents/` tree.                                                                     |
+| `pnpm index`             | List every pnpm script with its command.                                                                                           |
+| `pnpm cleanup`           | List and optionally delete temporary files.                                                                                        |
+| `pnpm pdf-to-images`     | Convert a PDF into web-ready page images. Requires `poppler` and `webp`.                                                           |
 
 Run `pnpm tree` after adding, moving, or renaming content, then `pnpm lint` and `pnpm test` before finishing.
 
@@ -88,15 +97,17 @@ excludeFromSidebar: false
 
 * `title` - the page title, also used as the sidebar label.
 * `description` - one sentence describing the route, also rendered as the opening line.
-* `excludeFromSidebar` - set to `true` to hide the page from the sidebar.
+* `excludeFromSidebar` - set to `true` to hide the page from the sidebar and from the folder landing list.
+  Always set it to `true` on a Japanese page (`*.ja.md`). The sidebar and the folder landing lists are English, so a Japanese page belongs in them only through the link on its English counterpart.
 * Do not hardcode the H1 or the opening line; keep the `{{$frontmatter.*}}` interpolations so the two stay in sync.
 
 Other conventions:
 
-* The sidebar is generated by `vitepress-sidebar` from frontmatter, so no manual sidebar entries exist. Files named `README.md`, `temp.md`, or `temp-*` are excluded by glob.
-* Each content folder has an `index.md` that supplies the folder title and link.
+* The sidebar is generated by `vitepress-sidebar` from frontmatter, so no manual sidebar entries exist. Files matching the `excludeByGlobPattern` entries in [contents/.vitepress/config.mts](contents/.vitepress/config.mts) are excluded. The entries are globs, not regexes, so the `temp-.*` entry matches `temp-.` plus any suffix, not every `temp-` file.
+* Each content folder has an `index.md` that supplies the folder title and link. The landing pages list their pages through the `md-index-list` snippet, which applies the same exclusions as the sidebar: `index.md`, pages with `excludeFromSidebar: true`, and the glob-excluded file names. Keep the snippet's filter in sync with `excludeByGlobPattern` when the config changes.
 * Reuse shared blocks from `contents/snippets/` with an include directive, for example `<!--@include: ../snippets/md-index-list.md-->`.
 * Images live in `contents/public/` and are referenced from the site root, for example `/images/foo.png`. `.markdown-link-check.json` rewrites those paths to `public/...` when checking links.
+* Never embed a PDF with an `<iframe>`. Mobile browsers refuse to render one inline, and MD033 allows only `<br>`, `<pre>`, `<ul>`, `<li>`, and `<ol>`. Run `pnpm pdf-to-images <pdf> --width 2200 --quality 88` to convert the pages to WebP, store the images beside the source PDF in `contents/public/`, and keep a link to the PDF itself for readers who want to print it or read it offline. The script names its output after the source PDF, so rename each image after what it covers rather than its page number as a second step, and describe the contents in the alt text. Give each page its own folder under `contents/public/`, named after the page that uses it, so a site-root path says which page an asset belongs to. [contents/level-1/otama-walking-trail.md](contents/level-1/otama-walking-trail.md) is the worked example, and [contents/public/otama-walking-trail/README.md](contents/public/otama-walking-trail/README.md) records the exact regeneration commands.
 * Add Japanese place names and other repo-specific vocabulary to the `words` list in [.cspell.json](.cspell.json) rather than leaving them flagged.
 
 
@@ -117,7 +128,7 @@ See [README.md](README.md) for the longer explanation.
 
 ## Markdown formatting
 
-Prettier ignores `*.md` on purpose; [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) owns Markdown style. Follow [.markdownlint.json](.markdownlint.json):
+Prettier ignores `*.md` on purpose; [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) owns Markdown style. Follow [.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc):
 
 * Use `*` for unordered list items, never `-` or `+`.
 * Use 2-space indentation for nested lists.
@@ -127,6 +138,19 @@ Prettier ignores `*.md` on purpose; [markdownlint-cli2](https://github.com/David
 * Line length is unrestricted, so do not hard-wrap for width.
 
 Prettier owns everything else (`.mts`, `.ts`, `.mjs`, `.vue`, `.json`, `.yaml`): 2-space indent, single quotes.
+
+
+### Links
+
+Markdown files use reference-style links. [docs/markdown-style-guide.md](docs/markdown-style-guide.md) holds the full convention; the rules that matter most are:
+
+* Convert every inline link and autolink to a reference-style link, and collect the definitions at the end of the document.
+* Use kebab-case labels: lowercase letters, digits, and hyphens only, for example `[Shiromaru Dam][shiromaru-dam]`. Prefix image labels with `img-`.
+* Never use the collapsed form `[text][]`, because it forces the label to copy the visible link text, which is rarely kebab-case.
+* Keep the definitions sorted alphabetically by label, with no duplicate and no unused entries.
+* Group the definitions with the `<!-- Links -->`, `<!-- Internal links -->`, and `<!-- Image links -->` comment blocks, and include only the blocks a file needs.
+
+The `blog-md-linter` skill applies these rules, and markdownlint catches undefined references (MD052) and unused definitions (MD053).
 
 
 ## Writing style
@@ -165,8 +189,8 @@ Update `scripts/README.md` whenever a script is added, removed, or changed.
 
 ## CI and deployment
 
-* [.github/workflows/pr-linter.yml](.github/workflows/pr-linter.yml) runs `md-lint:check`, `code-format:check`, and `test` on every non-draft pull request.
-* [.github/workflows/deploy.yml](.github/workflows/deploy.yml) builds and deploys to GitHub Pages on pushes to `main`.
+* [.github/workflows/pr-linter.yaml](.github/workflows/pr-linter.yaml) runs `pnpm lint` on every non-draft pull request and commits the result back to the branch, then runs `test`. The lint step fixes rather than gates, because the repository lint pipeline is two stages and its terminal state is markdownlint's output, not Prettier's.
+* [.github/workflows/deploy.yaml](.github/workflows/deploy.yaml) builds and deploys to GitHub Pages on pushes to `main`.
 * Both workflows read the pnpm version from `packageManager` in `package.json` and the Node.js version from `.node-version`. Keep those two files as the single source of truth instead of hardcoding versions in a workflow.
 * Every GitHub Action is pinned to a commit SHA with a trailing version comment, for example `uses: actions/checkout@3d3c... # actions/checkout@v7.0.1, pinned`. Preserve that pattern when adding or bumping an action.
 

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "WebFetch(domain:vitepress.dev)",
+      "Bash(node skills/file-folder-name-linter/scripts/lint-names.mjs:*)",
+      "Bash(node skills/gh-pr-reporter/scripts/get-pr-comments.mjs:*)",
+      "Bash(node skills/script-auditor/scripts/audit-helper-scripts.mjs:*)",
+      "Bash(node skills/skill-allowlist-syncer/scripts/check-skill-allowlist.mjs:*)",
+      "Skill(ai-commit)",
+      "Skill(blog-content-auditor)",
+      "Skill(blog-md-linter)",
+      "Skill(blog-translator)",
+      "Skill(file-folder-name-linter)",
+      "Skill(folder-readme-maintainer)",
+      "Skill(general-en-polisher)",
+      "Skill(gh-cli)",
+      "Skill(gh-pr-reporter)",
+      "Skill(link-polisher)",
+      "Skill(script-auditor)",
+      "Skill(skill-allowlist-syncer)"
+    ],
+    "deny": ["Bash(git push *)", "Bash(git -C * push *)"],
+    "ask": ["Bash(gh pr create *)"]
+  }
+}

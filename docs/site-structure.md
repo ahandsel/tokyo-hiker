@@ -9,9 +9,12 @@
 │   ├───📄 tokyo-weekend-hiking-options.md
 │   └───📄 wakayama-kumano-kodo.md
 ├───📁 level-1/
+│   ├───📄 hatonosu-valley.ja.md
+│   ├───📄 hatonosu-valley.md
 │   ├───📄 index.md
 │   ├───📄 jinba-sagamiko.md
 │   ├───📄 mitake-rock-garden.md
+│   ├───📄 otama-walking-trail.md
 │   ├───📄 takao-inariyama.ja.md
 │   └───📄 takao-inariyama.md
 ├───📁 level-2/
@@ -25,6 +28,27 @@
 │   ├───📄 index.md
 │   └───📄 kawanori-akakuna.md
 ├───📁 public/
+│   ├───📁 hatonosu-valley/
+│   │   ├───📄 README.md
+│   │   ├───📄 genji-firefly-habitat-sign.jpg
+│   │   ├───📄 hatonosu-valley-gorge.jpg
+│   │   ├───📄 hatonosu-valley-overview.jpg
+│   │   ├───📄 kori-station.jpg
+│   │   ├───📄 kori-tsuki-no-inugusu.jpg
+│   │   ├───📄 kotaba-kumano-shrine-gate.jpg
+│   │   ├───📄 shiromaru-dam.jpg
+│   │   ├───📄 soryu-falls.jpg
+│   │   ├───📄 suniwa-bridge.jpg
+│   │   ├───📄 tama-river-angler.jpg
+│   │   ├───📄 tama-river-rock-faces.jpg
+│   │   ├───📄 tansoin.jpg
+│   │   ├───📄 upper-falls.jpg
+│   │   └───📄 yama-ajisai.jpg
+│   ├───📁 otama-walking-trail/
+│   │   ├───📄 README.md
+│   │   ├───📄 ohtama.pdf
+│   │   ├───📄 otama-trail-map-east.webp
+│   │   └───📄 otama-trail-map-west.webp
 │   ├───📁 yamap-icon/
 │   │   ├───📄 yamap-icon-black.svg
 │   │   ├───📄 yamap-icon-color.svg

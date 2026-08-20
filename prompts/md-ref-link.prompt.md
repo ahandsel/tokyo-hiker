@@ -1,5 +1,6 @@
 ---
-description: 'Convert inline Markdown links to reference-style links, using the exact link text as the label.'
+name: 'md-ref-link'
+description: 'Convert inline links to reference-style links in Markdown. Use the exact link text as the label, and do not create slug labels unless required for uniqueness or when the text cannot be used as a label.'
 ---
 
 # Convert inline links to reference-style links in Markdown
@@ -92,7 +93,7 @@ You are detail-oriented and precise, ensuring that all links are correctly conve
 
 See [docs](https://example.com/docs 'Main docs') and <https://example.com/support>.
 
-## Phrase Strings projects
+## References
 
 Visit the repo at [GitHub](https://github.com/org/repo).
 ```
@@ -108,9 +109,24 @@ See [docs][] and [https://example.com/support][].
 [docs]: https://example.com/docs 'Main docs'
 [https://example.com/support]: https://example.com/support
 
-## Phrase Strings projects
+## References
 
 Visit the repo at [GitHub][].
 
 [GitHub]: https://github.com/org/repo
+```
+
+
+## Good example of a full document conversion
+
+```markdown
+| Project           | Identifier | Purpose                | Project ID |
+| ----------------- | ---------- | ---------------------- | ---------- |
+| [Example One][]   | `one`      | First example project  | `aaa-111`  |
+| [Example Two][]   | `two`      | Second example project | `bbb-222`  |
+| [Example Three][] | `three`    | Third example project  | `ccc-333`  |
+
+[Example One]: https://example.com/projects/one/
+[Example Two]: https://example.com/projects/two/
+[Example Three]: https://example.com/projects/three/
 ```

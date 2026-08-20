@@ -25,7 +25,7 @@ Travel from Shinjuku: **2 hr** ⏱️
 
 * Difficulty: Easy - great for beginners! 🟢
 * Drink: Vending machines at the cable car station and near Mitake Shrine. 🥤
-* Lunch: Several [restaurant options](#food-) on Mt. Mitake. 🍱
+* Lunch: Several [restaurant options][restaurant-options] on Mt. Mitake. 🍱
 * Hiking poles 🔧: 2.5 / 5
   * Nice to have for the Rock Garden trail but not required.
 * Trail running 👟: 2 / 5
@@ -36,7 +36,7 @@ Travel from Shinjuku: **2 hr** ⏱️
 
 ## Trail route 🥾
 
-* Mitake Station -> bus -> cable car -> hike -> cable car -> bus -> Mitake Station. 🚶‍♂️🚌
+* Mitake Station -> bus -> cable car -> hike -> cable car -> bus -> Mitake Station. 🚌
 * YAMAP routes:
   * [Mitakesan Station - Mitake Shrine - Tengu cedar + Nagao-daira observation deck course][my-yamap-route] 🗻
   * [Mitakesan Station - Mitake Shrine - Tengu cedar round-trip course / 御岳山駅-御嶽神社-天狗の腰掛け杉 往復コース][yamap-route] 🗻
@@ -45,14 +45,14 @@ Metrics:
 
 * Duration: 4:00
 * Distance: 6.4 km
-* Elevation gain ↗️: 597 m
-* Elevation decline ↘️: 597 m
+* Elevation gain ↗: 597 m
+* Elevation decline ↘: 597 m
 * Trail type: Loop
 
 
 ## Map of the route 🗺️
 
-* ![Map showing the loop from Mitakesan cable car station past Mitake Shrine to the Rock Garden and Ayahiro Falls, returning via the same ridge](/mitake-rock-garden-route-map.png)
+* ![Map showing the loop from Mitakesan cable car station past Mitake Shrine to the Rock Garden and Ayahiro Falls, returning via the same ridge][img-map-showing-the-loop-from-mitakesan-cable-car-station-past-mitake-shrine-to-the-rock-garden-and-ayahiro-falls-returning-via-the-same-ridge]
 
 
 ## Timeline ⏱️
@@ -84,20 +84,21 @@ Metrics:
 
 ## Key photo spots 📸
 
-* [Mitake Shrine][mitake-shrine] and stone stairway ⛩️  
+* [Mitake Shrine][mitake-shrine] and stone stairway ⛩️
 
 * [Rock Garden][rock-garden] mossy valley 🌿  
   Soft green moss, flowing streams, and wooden bridges create a Ghibli-like scene.
 
-* [Ayahiro waterfall][ayahiro-falls] 綾広の滝 💧  
+* [Ayahiro waterfall][ayahiro-falls] 綾広の滝 💧
 
-* Observation deck near the cable car station 🌄  
+* Observation deck near the cable car station 🌄
 
-* [Tengu Cedar][tengu-cedar] 天狗の腰掛け杉 🌲  
-
+* [Tengu Cedar][tengu-cedar] 天狗の腰掛け杉 🌲
 
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 <!--@include: ../snippets/footer.md-->
+
+<!-- Links -->
 
 [ayahiro-falls]: https://maps.app.goo.gl/aJqwv33Rsd8uGcDEA
 [chimotoya]: https://maps.app.goo.gl/e7vawkswyewydtsb6
@@ -114,3 +115,11 @@ Metrics:
 [shinjuku-to-mitakesan]: https://maps.app.goo.gl/swcwi7eyuxo2obb17
 [tengu-cedar]: https://maps.app.goo.gl/Nw31XAtHV7Fh1c8a9
 [yamap-route]: https://yamap.com/model-courses/39436
+
+<!-- Internal links -->
+
+[restaurant-options]: #food-
+
+<!-- Image links -->
+
+[img-map-showing-the-loop-from-mitakesan-cable-car-station-past-mitake-shrine-to-the-rock-garden-and-ayahiro-falls-returning-via-the-same-ridge]: /mitake-rock-garden-route-map.png

@@ -12,6 +12,10 @@ Version history:
 - v1.1, 2026-03-24; Remove jq dependency; parse JSON with pure zsh.
 - v1.0, 2026-03-24; Initial version.
 
+Output:
+* One aligned line per pnpm script: the script name and the command it runs.
+* Exits 1 with an error message when no package.json is found.
+
 Notes:
 * Reads nearest package.json and prints each script name & its command.
 * Parses JSON with pure zsh pattern matching.

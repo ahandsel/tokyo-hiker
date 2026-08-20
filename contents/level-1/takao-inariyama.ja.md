@@ -1,7 +1,7 @@
 ---
 title: '高尾山 稲荷山コース（土道）ルート'
 description: '高尾山口駅から稲荷山コース（土道）を経由して高尾山へ向かう登山ルート。'
-excludeFromSidebar: false
+excludeFromSidebar: true
 ---
 
 # {{$frontmatter.title}}
@@ -11,14 +11,14 @@ excludeFromSidebar: false
 
 ## アクセス方法
 
-最寄り駅： [高尾山口駅][]
+最寄り駅： [高尾山口駅][takaosanguchi-sta]
 
 新宿からのアクセス - 所要時間 約1時間
 
 * 09:00 -> 09:43 高尾山号1号（快速ライナー、座席指定制、料金800円）
 * 09:01 -> 09:56 特急 + 各駅停車（料金390円）
 
-[高尾山口駅]: https://goo.gl/maps/RZAncG96KWGftEGEA
+[takaosanguchi-sta]: https://goo.gl/maps/RZAncG96KWGftEGEA
 
 
 ## 概要
@@ -30,9 +30,9 @@ excludeFromSidebar: false
 
 * 水を持参することを推奨
 * 駅および山中にカフェ・コンビニあり
-* [やまびこ茶屋][] - 登山道沿いのそば店
+* [やまびこ茶屋][yamabiko-chaya] - 登山道沿いのそば店
 
-[やまびこ茶屋]: https://maps.app.goo.gl/DY7v3xXZDyviK1uD6
+[yamabiko-chaya]: https://maps.app.goo.gl/DY7v3xXZDyviK1uD6
 
 
 ## まとめ

@@ -5,8 +5,7 @@ import DefaultTheme from 'vitepress/theme';
 import { useData } from 'vitepress';
 import './style.css';
 import { createMermaidRenderer } from 'vitepress-mermaid-renderer';
-// import 'vitepress-mermaid-renderer/dist/style.css';
-import './vitepress-mermaid-renderer.css';
+import './vitepress-mermaid-renderer.css'; // Import manually so the local overrides load site-wide.
 
 import ImageViewerP from '@davidingplus/vitepress-image-viewer'; //[!code ++]
 import '@davidingplus/vitepress-image-viewer/style.css'; //[!code ++]
@@ -60,12 +59,14 @@ export default {
   Layout: () => {
     const { isDark } = useData();
 
+    // Mermaid initialization lives in Layout so it can react to theme changes.
     const initMermaid = () => {
-      const mermaidRenderer = createMermaidRenderer({
+      createMermaidRenderer({
         // https://mermaid.js.org/config/schema-docs/config.html
-        theme: isDark.value ? 'dark' : 'forest', // 'default', 'dark', 'forest', 'neutral'
-        // Default to 'handDrawn' but use 'default' in dark mode
-        look: isDark.value ? 'default' : 'handDrawn', // 'default', 'handDrawn', 'simple'
+        // Theme options are 'default', 'forest', 'dark', and 'neutral'.
+        theme: isDark.value ? 'dark' : 'forest',
+        // Look options are 'default', 'handDrawn', and 'simple'.
+        look: isDark.value ? 'default' : 'handDrawn',
         layout: 'dagre', // 'default', 'dagre', 'elk'
         flowchart: {
           useMaxWidth: false,
@@ -73,19 +74,19 @@ export default {
         markdownAutoWrap: true,
       });
 
-      // Optional toolbar configuration
+      // Optional toolbar customization example:
       // mermaidRenderer.setToolbar({ ... });
     };
 
     if (typeof window !== 'undefined') {
-      // initial mermaid setup
+      // Initial Mermaid setup after the first render.
       nextTick(() => initMermaid());
 
-      // re-run when the theme (dark / light) changes
+      // Re-run Mermaid after the color mode and DOM have updated.
       watch(
         () => isDark.value,
         () => {
-          initMermaid();
+          nextTick(() => initMermaid());
         },
       );
     }

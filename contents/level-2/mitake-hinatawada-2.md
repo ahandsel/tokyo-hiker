@@ -11,13 +11,13 @@ excludeFromSidebar: false
 
 ## Table of contents <!-- omit in toc -->
 
-* [How to get there 🛫](#how-to-get-there-)
-* [How to get home 🛬](#how-to-get-home-)
-* [Trail metrics](#trail-metrics)
-* [Mountains ⛰](#mountains-)
-* [Toilets 🚽](#toilets-)
-* [Timeline](#timeline)
-* [Past similar hikes](#past-similar-hikes)
+* [How to get there 🛫][how-to-get-there]
+* [How to get home 🛬][how-to-get-home]
+* [Trail metrics][trail-metrics]
+* [Mountains ⛰][mountains]
+* [Toilets 🚽][toilets]
+* [Timeline][timeline]
+* [Past similar hikes][past-similar-hikes]
 
 
 ## How to get there 🛫
@@ -28,25 +28,25 @@ excludeFromSidebar: false
 
 ⚡ Note:
 
-* [Hinatawada Station / 日向和田駅][hinatawada-station] is the closest station to the trailhead.
+* [Hinatawada Station / 日向和田駅][hinatawada-sta] is the closest station to the trailhead.
 * However, getting to [Yoshino-Bairin Bus Stop 🚌][yoshino-bus-stop] saves approximately 10 minutes of walking on pavement and is a faster route to the trailhead (according to Google Maps).
 
 [yoshino-bus-stop]: https://maps.app.goo.gl/ApG6xrEF2mQHBxfq5?g_st=ic
 [mimuro-trailhead]: https://goo.gl/maps/3yUErwSRSJMDfp3x6
-[hinatawada-station]: https://goo.gl/maps/ULv12ZWtcutLFZLc7
+[hinatawada-sta]: https://goo.gl/maps/ULv12ZWtcutLFZLc7
 
 
 ## How to get home 🛬
 
 1. Hike to [Mt. Mitake Cable Car Station (御岳山駅) 🚠][mitake-cablecar].
-2. Take the cable car down to [Takimoto Cable Car Station for Mt. Mitake / 御岳登山鉄道 滝本駅][takimoto-station].
-3. Take a bus to [Mitake Station (御嶽駅) 🚉][mitake-station].
+2. Take the cable car down to [Takimoto Cable Car Station for Mt. Mitake / 御岳登山鉄道 滝本駅][takimoto-sta].
+3. Take a bus to [Mitake Station (御嶽駅) 🚉][mitake-sta].
 
 <!--@include: ../snippets/mitakesan-cable-car.md-->
 
 [mitake-cablecar]: https://goo.gl/maps/W7baocnkbqSZ1iDZ7
-[takimoto-station]: https://goo.gl/maps/mQjdHBmAgoYpKZEW8
-[mitake-station]: https://goo.gl/maps/MSMb7ZwEUuQZe7PT8
+[takimoto-sta]: https://goo.gl/maps/mQjdHBmAgoYpKZEW8
+[mitake-sta]: https://goo.gl/maps/MSMb7ZwEUuQZe7PT8
 
 
 ## Trail metrics
@@ -54,8 +54,8 @@ excludeFromSidebar: false
 * Length of time: 07:10
   * _Speed is set to 1.5x for a slow, relaxing hike._
 * Distance: 9.9 km
-* Elevation gain ↗️: 1031 m
-* Elevation decline ↘️: 400 m
+* Elevation gain ↗: 1031 m
+* Elevation decline ↘: 400 m
 
 
 ## Mountains ⛰
@@ -109,3 +109,13 @@ excludeFromSidebar: false
 [past-hike]: https://yamap.com/activities/19661513
 
 <!--@include: ../snippets/footer.md-->
+
+<!-- Internal links -->
+
+[how-to-get-home]: #how-to-get-home-
+[how-to-get-there]: #how-to-get-there-
+[mountains]: #mountains-
+[past-similar-hikes]: #past-similar-hikes
+[timeline]: #timeline
+[toilets]: #toilets-
+[trail-metrics]: #trail-metrics

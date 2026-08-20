@@ -1,6 +1,5 @@
 # pnpm
 pnpm-lock.yaml
 
-# Markdown is owned by markdownlint-cli2; Prettier defaults (dash bullets,
-# single blank line above headings) conflict with .markdownlint.json.
-*.md
+# Ignore generated documentation structure file
+docs/site-structure.md

@@ -17,6 +17,12 @@
   position: relative;
   overflow: hidden !important;
 }
+.static-mermaid-container {
+  min-height: 0;
+  max-height: none;
+  background: 0 0 !important;
+  overflow: visible !important;
+}
 .mermaid-container.dialog-fullscreen-active {
   z-index: 1002;
   border: 1px solid var(--vp-c-border);
@@ -195,11 +201,17 @@ body.mermaid-dialog-open {
 }
 .diagram-wrapper {
   z-index: 1;
-  width: 100%;
-  height: 100%;
-  min-height: 20rem;
-  position: relative;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
+}
+.static-mermaid-container .diagram-wrapper {
+  height: auto;
+  min-height: 0;
+  position: relative;
+  inset: auto;
+  overflow: visible;
+  background: 0 0 !important;
 }
 .mermaid-container:fullscreen .diagram-wrapper {
   background: var(--vp-c-bg);
@@ -233,9 +245,28 @@ body.mermaid-dialog-open {
   }
 }
 .mermaid {
-  transform-origin: 50%;
   transition: opacity 0.3s ease-in-out;
+}
+.mermaid-viewport {
+  transform-origin: 50%;
   display: inline-block;
+}
+.mermaid-zooming {
+  transition: transform 0.3s;
+}
+.static-mermaid-container .mermaid {
+  display: block;
+  background: 0 0 !important;
+}
+.static-mermaid-container .mermaid-viewport {
+  display: block;
+}
+.static-mermaid-container .mermaid svg {
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+  display: block;
+  background: 0 0 !important;
 }
 .mermaid-rendering {
   opacity: 0.5;
@@ -450,7 +481,7 @@ body.mermaid-dialog-open {
 /* ---------------------------------------------------------------------------
    Local auto-fit and height-ceiling overrides (tokyo-hiker).
 
-   Everything above this banner is a verbatim copy of the CSS that vitepress-mermaid-renderer 1.1.28 ships, reformatted by prettier: first the stylesheet the plugin injects at runtime (the textContent string in dist/vitepress-mermaid-renderer.js), then the scoped error-component styles (dist/index.css).
+   Everything above this banner is a verbatim copy of the CSS that vitepress-mermaid-renderer 1.2.0 ships, reformatted by prettier: first the stylesheet the plugin injects at runtime (the textContent string in dist/vitepress-mermaid-renderer.js), then the scoped error-component styles (dist/index.css).
    Keep it unedited, and re-copy both parts in that order on a plugin upgrade; tests/vendored-mermaid-css.test.mjs fails when this block drifts from the installed plugin.
    All local intent lives below.
 
@@ -461,6 +492,11 @@ body.mermaid-dialog-open {
    The fallback default is 70vh.
 
    The :not(:fullscreen):not(.dialog-fullscreen-active) guards keep the plugin's own fullscreen layout untouched.
+
+   1.2.0 changed two things these overrides depend on, so the rules below differ from the 1.1.28 set.
+   The plugin took .diagram-wrapper out of the flow (position: absolute; inset: 0), which leaves the container's own min-height: 20rem as the only thing giving it height; the ceiling rule zeroes that out, so the wrapper has to go back into the flow or the container collapses to nothing.
+   The plugin also moved the zoom transform off .mermaid onto a new .mermaid-viewport span (display: inline-block) that sits between .mermaid and the svg.
+   The plugin's own static-render mode solves both the same way, so the rules below mirror its .static-mermaid-container layout while leaving the interactive toolbar and zoom in place.
 --------------------------------------------------------------------------- */
 .mermaid-container.mermaid-container:not(:fullscreen):not(
     .dialog-fullscreen-active
@@ -468,18 +504,26 @@ body.mermaid-dialog-open {
   min-height: 0;
   max-height: var(--mermaid-max-height, 70vh);
 }
+/* Put the wrapper back in the flow so the container takes its height from the diagram, capped by the ceiling above. */
 .mermaid-container.mermaid-container:not(:fullscreen):not(
     .dialog-fullscreen-active
   )
   .diagram-wrapper {
+  position: relative;
+  inset: auto;
+  height: auto;
   min-height: 0;
 }
+/* Both of these have to be blocks. .mermaid-viewport ships as inline-block, which pads the container with a baseline gap under the diagram and stops the svg's margin-inline: auto from centering it. */
 .mermaid-container.mermaid-container:not(:fullscreen):not(
     .dialog-fullscreen-active
   )
-  .mermaid {
+  .mermaid,
+.mermaid-container.mermaid-container:not(:fullscreen):not(
+    .dialog-fullscreen-active
+  )
+  .mermaid-viewport {
   display: block;
-  width: 100%;
 }
 /* Auto-fit exception: for c4 and gitgraph diagrams the plugin sets inline width, height, and max-width styles on the svg element, and inline styles beat the non-!important rule below, so those two diagram types keep the plugin's full-width sizing under the height ceiling. */
 .mermaid-container.mermaid-container:not(:fullscreen):not(

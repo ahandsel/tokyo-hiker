@@ -8,5 +8,9 @@ brew "nodenv"
 brew "node-build"
 brew "pnpm"
 
+# PDF and image conversion for content assets (scripts/pdf-to-images.mjs)
+brew "poppler"
+brew "webp"
+
 # AI-assisted writing and review
 brew "claude-code"
