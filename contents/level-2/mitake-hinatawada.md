@@ -64,7 +64,7 @@ Mountains & Views: (_in order_):
 9. [Musashi Mitake Shrine's Torii Gate (`武藏御嶽神社 鳥居`)][musashi-mitake-shrine-s-torii-gate]
 10. [Mt. Mitake (`御岳山`)][mt-mitake]
 
-Toilets 🚽 (_in order_):
+Toilets 🚻 (_in order_):
 
 1. [Umeno Park Public Toilet][umeno-park-public-toilet]
 2. [Toilet by the Trailhead for Mt. Mimuro (`三室山`)][toilet-by-the-trailhead-for-mt-mimuro]

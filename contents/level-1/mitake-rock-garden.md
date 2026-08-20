@@ -21,7 +21,7 @@ Travel from Shinjuku: **2 hr** ⏱️
 * [Shinjuku to Mitakesan route on Google Maps][shinjuku-to-mitakesan] 🗺️
 
 
-## Trail overview 🥾
+## Trail overview 📋
 
 * Difficulty: Easy - great for beginners! 🟢
 * Drink: Vending machines at the cable car station and near Mitake Shrine. 🥤

@@ -22,7 +22,7 @@ Finish station: [OkuTama Station / 奥多摩駅][okutama-sta] (JR Ome Line) 🚉
 * By car: about 20 minutes along the Ome Kaido from the Ome interchange of the Ken-O Expressway. 🚗
 
 
-## Trail overview 🥾
+## Trail overview 📋
 
 * Difficulty: Easy - great for beginners! 🟢
 * Distance: about 10 km 📏
@@ -36,8 +36,6 @@ Finish station: [OkuTama Station / 奥多摩駅][okutama-sta] (JR Ome Line) 🚉
 
 
 ## Trail route 🥾
-
-* Kori Station -> Tansoin -> Kotaba Kumano Shrine -> Kori-tsuki no Inugusu -> Suniwa Bridge -> Upper Falls -> Soryu Falls -> Hatonosu Valley -> Shiromaru Dam -> OkuTama Station.
 
 Walking time between each point:
 
@@ -61,10 +59,10 @@ Walking time between each point:
   * 30 minutes.
 * [OkuTama Station][okutama-sta] / `奥多摩駅` 🚉
 
-The walking times add up to about 2 hr 30 min, so the stated 3 hr 30 min leaves about an hour for photos, rests, and side trips.
+_The walking times add up to about 2 hr 30 min, so the stated 3 hr 30 min leaves about an hour for photos, rests, and side trips._
 
 
-## Along the trail
+## Along the trail 🌲
 
 
 ### Kori Station to the giant inugusu 🌳

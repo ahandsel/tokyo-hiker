@@ -21,7 +21,7 @@ JR Mitake Station to Mitakesan Cable Car Station route map:
 
 ```mermaid
 graph TD
-    A["JR Shinjuku station 🚉"] -->|"Okutama line 🚃"| B["JR Mitake station 🚉"]
+    A["JR Shinjuku station 🚉"] -->|"Okutama line 🚆"| B["JR Mitake station 🚉"]
     B -->|"Nishi Tokyo Bus 🚌"| C["Takimoto cable car station 🚉"]
     C -->|"Mitaketozan railway 🚠"| D["Mitakesan cable car station 🚠"]
 ```

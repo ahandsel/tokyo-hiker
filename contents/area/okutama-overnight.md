@@ -50,14 +50,14 @@ For those who want to stay overnight and hike the next day, [Mt. Odake / 大岳�
 
 Take the cable car up to the top of Mt. Mitake and hike around the Rock Garden area.
 
-* Start and goal: [Mitakesan Station (御岳山駅)][mitakesan-sta] 🚞
+* Start and goal: [Mitakesan Station (御岳山駅)][mitakesan-sta] 🚠
 * YAMAP route: [御岳山駅発着 - 御岳山・ロックガーデン周回コースの地図・登山ルート・登山口情報][yamap-mitakesan-rock-garden-loop]
 
 
 ### Level 2
 
 * Route: Mitake Station - Mt. Mitake - Mt. Odake - Mt. Nokogiri - Okutama Station
-* Start: [Mitakesan Station (御岳山駅)][mitakesan-sta] 🚞
+* Start: [Mitakesan Station (御岳山駅)][mitakesan-sta] 🚠
 * Goal: [Okutama Station / 奥多摩駅][okutama-sta] 🚂
 * YAMAP example: [Mitakesan Cable Car station -> Okutama station via Mt. Odake][yamap-mitakesan-to-okutama]
 * YAMAP route: [御岳山駅-御岳山-大岳山-鋸山-奥多摩駅 縦走コースの地図・登山ルート・登山口情報][yamap-mitakesan-okutama-traverse]

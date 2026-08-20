@@ -14,8 +14,8 @@ excludeFromSidebar: false
 * [How to get there 🛫][how-to-get-there]
 * [How to get home 🛬][how-to-get-home]
 * [Trail metrics][trail-metrics]
-* [Mountains ⛰][mountains]
-* [Toilets 🚽][toilets]
+* [Mountains ⛰️][mountains]
+* [Toilets 🚻][toilets]
 * [Timeline][timeline]
 * [Past similar hikes][past-similar-hikes]
 
@@ -58,7 +58,7 @@ excludeFromSidebar: false
 * Elevation decline ↘: 400 m
 
 
-## Mountains ⛰
+## Mountains ⛰️ {#mountains}
 
 * [Mt. Mimuro (三室山)][mt-mimuro]
 * [Mt. Yogai (要害山)][mt-yogai]
@@ -75,7 +75,7 @@ excludeFromSidebar: false
 [mt-mitake]: https://maps.app.goo.gl/GVeks6MKQTLTd6KN7?g_st=ic
 
 
-## Toilets 🚽
+## Toilets 🚻
 
 * [Umeno Park Toilet][umeno-toilet]
 * [Toilet by the trailhead for Mt. Mimuro 三室山][mimuro-toilet]
@@ -114,7 +114,7 @@ excludeFromSidebar: false
 
 [how-to-get-home]: #how-to-get-home-
 [how-to-get-there]: #how-to-get-there-
-[mountains]: #mountains-
+[mountains]: #mountains
 [past-similar-hikes]: #past-similar-hikes
 [timeline]: #timeline
 [toilets]: #toilets-

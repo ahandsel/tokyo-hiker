@@ -18,6 +18,7 @@ Published site content lives in `contents/`, not here.
 * [General style guides](#general-style-guides)
 * [Technical style guides](#technical-style-guides)
 * [Markdown style guide](#markdown-style-guide)
+* [Hiking blog style guide](#hiking-blog-style-guide)
 * [Frontmatter style guide](#frontmatter-style-guide)
 * [Commit style guide](#commit-style-guide)
 * [Terminology and glossary](#terminology-and-glossary)
@@ -35,6 +36,7 @@ This folder includes the following style guides:
 * The general style guides define baseline writing rules such as language, grammar, capitalization, and punctuation.
 * The technical style guides define documentation-specific writing rules such as sentence structure, lists, procedural steps, and alert banners.
 * The Markdown style guide defines how Markdown documents in this repository should be formatted, such as note banners and reference-style links.
+* The hiking blog style guide defines the conventions specific to the hiking pages under `contents/`, such as the standard emoji vocabulary and how to give a place its Japanese name.
 * The frontmatter and commit style guides define the repository-specific conventions for content frontmatter and Git commit messages.
 
 The repository rules that sit above all of these live in [AGENTS.md][repo-agents].
@@ -50,6 +52,7 @@ docs/
 ├── technical-style-guide-english.md .... Documentation-specific rules (English)
 ├── technical-style-guide-japanese.md ... Documentation-specific rules (Japanese)
 ├── markdown-style-guide.md ............. Markdown formatting conventions (banners and links)
+├── hiking-blog-style-guide.md .......... Conventions for the hiking pages (emoji, Japanese names)
 ├── frontmatter-style-guide.md .......... YAML frontmatter keys for content files
 ├── repo-commit-style-guide.md .......... Git commit title and body conventions
 ├── technical-doc-overview.md ........... Overview of help document types
@@ -84,6 +87,11 @@ Help documentation writing falls under the technical style guides. These contain
 ## Markdown style guide
 
 * [Markdown style guide][markdown-style-guide] - How Markdown documents in this repository should be formatted, including the markdownlint rules that `pnpm lint` enforces, banners that highlight important notes, and link styling within documents.
+
+
+## Hiking blog style guide
+
+* [Hiking blog style guide][hiking-blog-style-guide] - Conventions for the hiking pages under [`contents/`][contents-folder], on top of the general and Markdown style guides. It defines the standard emoji vocabulary: where an emoji belongs, the fixed emoji for each standard section heading, the inline emoji for transport, trail data, places, and food, and the anchor change that a heading emoji causes. It also defines how to give a place its Japanese name, as a backticked code span inside the link text.
 
 
 ## Frontmatter style guide
@@ -135,6 +143,7 @@ Run it after adding, moving, or renaming content, then run `pnpm lint` before fi
 [general-style-guide-japanese]: general-style-guide-japanese.md
 [generate-site-structure]: ../scripts/generate-site-structure.mjs
 [glossary]: glossary.yaml
+[hiking-blog-style-guide]: hiking-blog-style-guide.md
 [markdown-style-guide]: markdown-style-guide.md
 [notes-readme]: ../notes/README.md
 [prompts-readme]: ../prompts/README.md
