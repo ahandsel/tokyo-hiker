@@ -36,8 +36,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       js-yaml:
-        specifier: ^5.3.0
-        version: 5.3.0
+        specifier: ^5.4.0
+        version: 5.4.0
       markdown-link-check:
         specifier: ^3.15.0
         version: 3.15.0
@@ -51,8 +51,8 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       openai:
-        specifier: ^7.4.0
-        version: 7.4.0
+        specifier: ^7.5.0
+        version: 7.5.0
       prettier:
         specifier: ^3.9.6
         version: 3.9.6
@@ -78,8 +78,8 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0(@babel/core@7.29.7)(@babel/template@7.29.7)(mermaid@11.16.1)(tailwindcss@4.3.3)(vue@3.5.41)
       vitepress-sidebar:
-        specifier: ^1.38.0
-        version: 1.38.0
+        specifier: ^1.39.0
+        version: 1.39.0
       vue:
         specifier: ^3.5.41
         version: 3.5.41
@@ -3063,8 +3063,8 @@ packages:
     resolution: {integrity: sha512-dayzUzKkJ1MkuUtZglSebU43utNXH0OWQByK9rKOOuYIO8M5TV1y+n8ALMdG0rdzBnfNkOmZEqrURepb0ejqBw==}
     hasBin: true
 
-  js-yaml@5.3.0:
-    resolution: {integrity: sha512-muutsYr+e2+d3rTgUGslq5rxbBlUy3cJ61IsHag2QNDQV+7zXWjkUpmALIajhrlLlrgRUiymj6U3zUr/TMK84Q==}
+  js-yaml@5.4.0:
+    resolution: {integrity: sha512-jE7vUJIebKzYQI5xu4co5CRBDlDEYnHrdzsxs4O2giCz4v2SbVMYKpmt1D9L38OKQAeCWmrOTRiCV93u0UkaJA==}
     hasBin: true
 
   jsesc@3.1.0:
@@ -3475,8 +3475,8 @@ packages:
   oniguruma-to-es@4.3.6:
     resolution: {integrity: sha512-csuQ9x3Yr0cEIs/Zgx/OEt9iBw9vqIunAPQkx19R/fiMq2oGVTgcMqO/V3Ybqefr1TBvosI6jU539ksaBULJyA==}
 
-  openai@7.4.0:
-    resolution: {integrity: sha512-+C9Muit5x8j9R8ej8ZzVgKcrVDtqFqTy9gxFdov0EItLgU68zrJtF9ZeT0cyqJQW9S3PCJkdFgADtRGquRBtew==}
+  openai@7.5.0:
+    resolution: {integrity: sha512-ZbDBz8FSB8Mv8fFYIUvzTFMdV5vl93/octp1MdtK2lfYepSpfv/ewmeugpKz/cwGtFSx+YuUM4NwpZ2P55YiPA==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@aws-sdk/credential-provider-node': '>=3.972.0 <4'
@@ -4228,8 +4228,8 @@ packages:
       mermaid: ^11.0.0
       vue: ^3.0.0
 
-  vitepress-sidebar@1.38.0:
-    resolution: {integrity: sha512-0TojAa2MOIBYRMrssLd1j0exJnUOgD9JWebnBrly7rrOcwt0S8HQo7MXylI0vauzG6N6gSFTNnq5ubChwQvXew==}
+  vitepress-sidebar@1.39.0:
+    resolution: {integrity: sha512-GgHYtvF0ctYODmHv1CpJOMCfvUOvq0RSG+ZfUwvykmBBFpM1sos1YMt6L292UuOGr9UhROspCv8YLNC4H0glZg==}
     engines: {node: '>=20.0.0'}
 
   vitepress@2.0.0-alpha.19:
@@ -7383,7 +7383,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  js-yaml@5.3.0:
+  js-yaml@5.4.0:
     dependencies:
       argparse: 2.0.1
 
@@ -7913,7 +7913,7 @@ snapshots:
       regex: 6.1.0
       regex-recursion: 6.0.2
 
-  openai@7.4.0: {}
+  openai@7.5.0: {}
 
   own-keys@1.0.2:
     dependencies:
@@ -8826,7 +8826,7 @@ snapshots:
       - playwright-core
       - tailwindcss
 
-  vitepress-sidebar@1.38.0:
+  vitepress-sidebar@1.39.0:
     dependencies:
       glob: 13.0.6
       gray-matter: 4.0.3
