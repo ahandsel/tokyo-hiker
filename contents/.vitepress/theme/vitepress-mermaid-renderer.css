@@ -1,11 +1,16 @@
 .mermaid-container {
   --mermaid-control-bg: var(--vp-c-bg);
   --mermaid-control-text: var(--vp-c-text-1);
-  --mermaid-control-border: var(--vp-c-border);
+  --mermaid-control-text-active: var(--vp-c-brand);
+  --mermaid-control-border: transparent;
   --mermaid-control-shadow: 0 2px 4px #0000001a;
   --mermaid-control-radius: 0.375rem;
   --mermaid-control-padding: 0.375rem;
-  --mermaid-control-gap: 0.25rem;
+  --mermaid-control-gap: 0.375rem;
+  --mermaid-control-button-radius: 0.25rem;
+  --mermaid-control-button-padding: 0.375rem;
+  --mermaid-control-button-min-size: auto;
+  --mermaid-control-icon-size: 18px;
   --mermaid-spinner-duration: 0.8s;
   --mermaid-notification-duration: 2s;
   --mermaid-error-bg: var(--vp-c-bg-soft);
@@ -54,6 +59,9 @@ body.mermaid-dialog-open {
 }
 .controls {
   z-index: 20;
+  align-items: center;
+  gap: var(--mermaid-control-gap);
+  max-width: calc(100% - 1.5rem);
   padding: var(--mermaid-control-padding);
   border-radius: var(--mermaid-control-radius);
   box-shadow: var(--mermaid-control-shadow);
@@ -61,7 +69,10 @@ body.mermaid-dialog-open {
   visibility: visible;
   pointer-events: auto;
   background: var(--mermaid-control-bg);
+  color: var(--mermaid-control-text);
+  flex-wrap: wrap;
   transition: all 0.2s;
+  display: inline-flex;
   position: absolute;
   inset: auto 0.75rem 0.75rem auto;
 }
@@ -81,105 +92,79 @@ body.mermaid-dialog-open {
   left: auto;
   right: 0.75rem;
 }
-.desktop-controls {
+.controls .toolbar-items {
   align-items: center;
-  gap: 0.375rem;
+  gap: var(--mermaid-control-gap);
+  flex-wrap: wrap;
   display: inline-flex;
 }
-.desktop-controls button {
+.mobile-utility-controls {
+  align-items: center;
+  gap: var(--mermaid-control-gap);
+  flex-wrap: wrap;
+  display: flex;
+}
+.controls button {
+  min-width: var(--mermaid-control-button-min-size);
+  min-height: var(--mermaid-control-button-min-size);
+  padding: var(--mermaid-control-button-padding);
+  border: 1px solid var(--mermaid-control-border);
+  border-radius: var(--mermaid-control-button-radius);
   background: var(--mermaid-control-bg);
+  color: inherit;
   cursor: pointer;
-  color: var(--mermaid-control-text);
-  border: none;
-  border-radius: 0.25rem;
   place-items: center;
-  padding: 0.375rem;
   transition: all 0.2s;
   display: grid;
   position: relative;
 }
-.desktop-controls button:hover {
+.controls button:hover {
   background: var(--vp-c-bg-soft);
-  color: var(--vp-c-brand);
+  color: var(--mermaid-control-text-active);
   transform: translateY(-1px);
 }
-.desktop-controls button:active {
+.controls button:active {
   transform: translateY(0);
 }
-.desktop-controls button svg {
-  width: 18px;
-  height: 18px;
+.controls button svg {
+  width: var(--mermaid-control-icon-size);
+  height: var(--mermaid-control-icon-size);
   transition: transform 0.2s;
 }
-.desktop-controls button:hover svg {
+.controls button:hover svg {
   transform: scale(1.1);
 }
+.controls.is-collapsed .toolbar-toggle svg {
+  transform: rotate(180deg);
+}
+.controls.is-collapsed .toolbar-toggle:hover svg {
+  transform: rotate(180deg) scale(1.1);
+}
 .mobile-controls {
-  z-index: 8;
-  flex-direction: row;
-  justify-content: center;
-  gap: 0.5rem;
-  width: auto;
-  padding: 0.75rem;
+  --mermaid-control-padding: 0.5rem;
+  --mermaid-control-gap: 0.5rem;
+  --mermaid-control-button-min-size: 2.75rem;
+  --mermaid-control-icon-size: 20px;
   display: none;
-}
-.mobile-utility-controls {
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  display: flex;
-}
-.mobile-controls button {
-  background: var(--mermaid-control-bg);
-  border: 1px solid var(--mermaid-control-border);
-  cursor: pointer;
-  border-radius: 0.25rem;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  transition:
-    background 0.2s,
-    transform 0.2s;
-  display: flex;
-  position: relative;
-}
-.mobile-controls button:hover {
-  background: var(--vp-c-bg-soft);
-  transform: translateY(-1px);
-}
-.mobile-controls button:active {
-  transform: translateY(0);
-}
-.mobile-controls button svg {
-  width: 20px;
-  height: 20px;
-  stroke: var(--vp-c-text-1);
 }
 .zoom-level {
   text-align: center;
   min-width: 3.25rem;
   color: var(--vp-c-text-2);
+  -webkit-user-select: none;
   user-select: none;
   background: var(--mermaid-control-bg);
-  border-radius: 0.25rem;
+  border-radius: var(--mermaid-control-button-radius);
   padding: 0.25rem 0.375rem;
   font-size: 0.75rem;
   font-weight: 500;
-}
-.mobile-controls .zoom-level {
-  min-width: 3rem;
-  margin-right: 0.5rem;
-}
-.mobile-controls .mobile-zoom-level {
-  order: -1;
 }
 @media (width<=768px) {
   .desktop-controls {
     display: none;
   }
   .mobile-controls {
-    display: flex;
+    display: inline-flex;
   }
 }
 @media (width>=769px) {
@@ -189,10 +174,6 @@ body.mermaid-dialog-open {
   .desktop-controls {
     display: inline-flex;
   }
-}
-.mermaid-container:hover .controls:not(.force-show) {
-  opacity: 1;
-  transform: translateY(0);
 }
 .mermaid-container:fullscreen .controls,
 .mermaid-container.dialog-fullscreen-active .controls {
@@ -330,21 +311,6 @@ body.mermaid-dialog-open {
   visibility: visible !important;
   pointer-events: auto !important;
 }
-.mobile-only {
-  display: none !important;
-}
-@media (width<=768px) {
-  .mobile-only {
-    display: grid !important;
-  }
-  .controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .zoom-level {
-    text-align: center;
-  }
-}
 .diagram-error {
   background: var(--mermaid-error-bg);
   border: 1px solid var(--mermaid-error-border);
@@ -426,8 +392,8 @@ body.mermaid-dialog-open {
     animation: none !important;
   }
   .controls,
-  .desktop-controls button,
-  .mobile-controls button {
+  .controls button,
+  .controls button svg {
     transition: none !important;
   }
 }
@@ -481,7 +447,7 @@ body.mermaid-dialog-open {
 /* ---------------------------------------------------------------------------
    Local auto-fit and height-ceiling overrides (tokyo-hiker).
 
-   Everything above this banner is a verbatim copy of the CSS that vitepress-mermaid-renderer 1.2.0 ships, reformatted by prettier: first the stylesheet the plugin injects at runtime (the textContent string in dist/vitepress-mermaid-renderer.js), then the scoped error-component styles (dist/index.css).
+   Everything above this banner is a verbatim copy of the CSS that vitepress-mermaid-renderer 1.2.2 ships, reformatted by prettier: first the stylesheet the plugin injects at runtime (the textContent string in dist/vitepress-mermaid-renderer.js), then the scoped error-component styles (dist/index.css).
    Keep it unedited, and re-copy both parts in that order on a plugin upgrade; tests/vendored-mermaid-css.test.mjs fails when this block drifts from the installed plugin.
    All local intent lives below.
 
