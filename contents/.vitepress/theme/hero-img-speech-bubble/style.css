@@ -1,0 +1,60 @@
+/**
+ * hero-img-speech-bubble
+ *
+ * Styles for the speech bubble that pops out of the home page hero image.
+ * Imported automatically by index.ts, so you do not need to import this file
+ * yourself. Colors use VitePress theme variables, so it follows light/dark mode.
+ * -------------------------------------------------------------------------- */
+
+/* Hint that the hero image is interactive. */
+.VPHero .image-src {
+  cursor: pointer;
+}
+
+.hero-speech-bubble {
+  position: absolute;
+  top: 20%;
+  left: calc(80% - 70px);
+  z-index: 10;
+  padding: 8px 16px;
+  border-radius: 16px;
+  background: var(--vp-c-bg-elv);
+  color: var(--vp-c-text-1);
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: var(--vp-shadow-3);
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 6px)) scale(0.85);
+  transform-origin: bottom left;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Bubble tail pointing down toward the hero image. */
+.hero-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 18px;
+  width: 14px;
+  height: 14px;
+  background: inherit;
+  border-right: 1px solid var(--vp-c-divider);
+  border-bottom: 1px solid var(--vp-c-divider);
+  transform: rotate(45deg);
+}
+
+.hero-speech-bubble.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-speech-bubble {
+    transition: none;
+  }
+}

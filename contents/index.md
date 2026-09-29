@@ -37,6 +37,7 @@ features:
     details: Highly recommend using YAMAP for hiking in Japan.
     link: /maps/
     icon:
+      class: no-viewer
       dark: /yamap-icon/yamap-icon-white.svg
       light: /yamap-icon/yamap-icon-color.svg
       src: /yamap-icon/yamap-icon-color.svg
