@@ -6,6 +6,8 @@ Run them all with `pnpm test`, which invokes `node --test "tests/**/*.test.mjs"`
 
 ## Contents
 
+* [Imported helper checks][imported-helpers] - PNG trimming, include validation, Playwright argument forwarding, and cleanup confirmation behavior.
+
 * [vendored-mermaid-css.test.mjs][] - asserts that the vendored plugin stylesheet in [vitepress-mermaid-renderer.css][] is still a verbatim copy of the CSS the installed `vitepress-mermaid-renderer` package ships.
 
 
@@ -36,3 +38,7 @@ The comparison ignores formatting, so a Prettier reformat of the vendored copy a
 [scripts/README.md]: ../scripts/README.md
 [vendored-mermaid-css.test.mjs]: vendored-mermaid-css.test.mjs
 [vitepress-mermaid-renderer.css]: ../contents/.vitepress/theme/vitepress-mermaid-renderer.css
+
+<!-- Internal links -->
+
+[imported-helpers]: imported-helpers.test.mjs
