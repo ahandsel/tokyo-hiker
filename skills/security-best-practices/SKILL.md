@@ -1,5 +1,5 @@
 ---
-name: 'security-best-practices'
+name: security-best-practices
 description: 'Review JavaScript, TypeScript, Vue, and browser code for security best practices when explicitly asked for a security review or secure coding guidance. Use the bundled frontend references for this static site.'
 ---
 
