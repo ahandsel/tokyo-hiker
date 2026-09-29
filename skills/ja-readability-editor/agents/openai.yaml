@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Japanese Readability Editor'
+  short_description: 'Improve readability and scannability of Japanese Markdown docs'
+  default_prompt: 'Edit this Japanese Markdown document for readability and scannability while preserving technical accuracy and repository terminology.'

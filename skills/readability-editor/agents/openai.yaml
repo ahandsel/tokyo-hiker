@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Readability Editor'
+  short_description: 'Improve readability and scannability of Markdown docs'
+  default_prompt: 'Edit this Markdown file to improve readability and scannability using plain language while preserving technical accuracy.'

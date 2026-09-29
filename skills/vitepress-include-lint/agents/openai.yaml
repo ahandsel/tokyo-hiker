@@ -1,0 +1,4 @@
+interface:
+  display_name: 'VitePress Include Lint'
+  short_description: 'Validate @include formatting and file paths'
+  default_prompt: 'Verify all VitePress @include directives for strict comment formatting and valid target file paths.'

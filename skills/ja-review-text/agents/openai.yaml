@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Japanese Reviewer'
+  short_description: 'Rewrite AI-like Japanese into natural human-sounding Japanese'
+  default_prompt: 'Use $ja-review-text to rewrite this Japanese draft so it reads naturally human while preserving all meaning and facts.'
