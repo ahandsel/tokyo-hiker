@@ -44,9 +44,9 @@ Save generated artifacts inside this repo: notes, audits, and reports go in `not
 
 Prompt files live in `prompts/` only. Both `.claude/commands` and `.github/prompts` are symlinks to that folder, so each tool picks the same files up. Add a new prompt to `prompts/`, never to a symlinked path, and keep the `.prompt.md` suffix that GitHub Copilot requires. See [prompts/README.md](prompts/README.md).
 
-Skills follow the same pattern. They live in `skills/` only, and `.claude/skills` is a symlink to that folder. Add a new skill to `skills/<skill-name>/SKILL.md`, never through the symlink. See [skills/README.md](skills/README.md).
+Skills follow the same pattern. They live in `skills/` only, and both `.claude/skills` and `.codex/skills` are symlinks to that folder. Add a new skill to `skills/<skill-name>/SKILL.md`, never through the symlink. See [skills/README.md](skills/README.md).
 
-[.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc) ignores all three symlinked paths, so markdownlint checks each real file once from its own folder.
+[.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc) ignores all four symlinked paths, so markdownlint checks each real file once from its own folder.
 
 
 ## Setup and commands

@@ -14,3 +14,4 @@ brew "webp"
 
 # AI-assisted writing and review
 brew "claude-code"
+cask "codex"
