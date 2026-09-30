@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "vitepress build contents",
+    "check-sitemap": "node scripts/check-sitemap.mjs",
     "cleanup": "zsh scripts/cleanup-temp-files.sh",
     "code-format": "prettier --write .",
     "code-format:check": "prettier --check .",
