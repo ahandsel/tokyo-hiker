@@ -21,6 +21,7 @@
 // * With --json: { violations: [...], fixed: [...], styleGuides: [...] } on stdout.
 // * Exit codes: 0 = clean, 1 = violations found, 2 = configuration error.
 // Version history:
+// * v1.1 - 2026-09-29 - Import the NOTICE.txt basename exception from ahandsel.github.io for bundled license notices.
 // * v1.0 - 2026-06-05 - Initial release.
 
 import { spawnSync } from 'node:child_process';
@@ -54,6 +55,7 @@ const STANDARD_DOC_BASENAMES = new Set([
   'AUTHORS.md',
   'NOTICE',
   'NOTICE.md',
+  'NOTICE.txt',
   'SKILL.md',
   'Brewfile',
   'Makefile',

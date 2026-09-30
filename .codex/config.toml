@@ -1,0 +1,8 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+# Codex project defaults for the tokyo-hiker repo.
+# This file lives in .codex/ so the CLI and IDE extension pick it up automatically.
+
+model = 'gpt-6-sol'
+model_reasoning_effort = 'medium'
+sandbox_mode = 'workspace-write'
+approval_policy = 'on-request'

@@ -2,8 +2,9 @@
 import { defineComponent, h, nextTick, onMounted, watch } from 'vue';
 import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
-import { useData } from 'vitepress';
+import { useData, withBase } from 'vitepress';
 import './style.css';
+import { wireHeroSpeechBubble } from './hero-img-speech-bubble';
 import { createMermaidRenderer } from 'vitepress-mermaid-renderer';
 import './vitepress-mermaid-renderer.css'; // Import manually so the local overrides load site-wide.
 
@@ -57,7 +58,7 @@ const MermaidHeightController = defineComponent({
 export default {
   extends: DefaultTheme,
   Layout: () => {
-    const { isDark } = useData();
+    const { isDark, frontmatter } = useData();
 
     // Mermaid initialization lives in Layout so it can react to theme changes.
     const initMermaid = () => {
@@ -94,9 +95,24 @@ export default {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
       'layout-top': () => h(MermaidHeightController), // Apply the per-page Mermaid height ceiling.
+      // Exclude the home hero from the image viewer while retaining its styling.
+      'home-hero-image': () => {
+        const image = frontmatter.value.hero?.image;
+        return image
+          ? h('img', {
+              ...image,
+              src: withBase(image.src),
+              class: 'VPImage image-src no-viewer',
+              role: 'button',
+              tabindex: 0,
+              'aria-label': 'Show hiking message',
+            })
+          : null;
+      },
     });
   },
   enhanceApp({ app }) {
+    wireHeroSpeechBubble("Let's go hiking!");
     // Initialize the image viewer plugin
     ImageViewerP(app); //[!code ++]
   },

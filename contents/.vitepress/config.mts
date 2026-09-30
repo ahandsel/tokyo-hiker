@@ -102,7 +102,8 @@ const vitePressOptions = {
   },
   base: '/tokyo-hiker/',
   sitemap: {
-    hostname: 'https://ahandsel.github.io',
+    // Include the project base so sitemap URLs resolve under the deployed site.
+    hostname: 'https://ahandsel.github.io/tokyo-hiker/',
   },
   ignoreDeadLinks: true,
 

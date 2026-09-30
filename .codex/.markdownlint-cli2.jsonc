@@ -1,0 +1,13 @@
+// https://github.com/DavidAnson/markdownlint-cli2
+// Sub-config for Markdown under `.codex/`. The `skills/` symlink is ignored by
+// the root config, so nothing under `.codex/` currently matches this config.
+// Kept for Markdown added here later; skill files are linted at `skills/`.
+{
+  "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/main/schema/markdownlint-cli2-config-schema.json",
+
+  "config": {
+    // Inherit the base markdownlint rules, then override below.
+    "extends": "../.markdownlint-cli2.jsonc",
+    "relative-links": false,
+  },
+}

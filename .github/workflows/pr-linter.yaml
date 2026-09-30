@@ -78,6 +78,11 @@ jobs:
           git diff --staged --quiet || git commit -m '🎨 Apply lint fixes'
           git push
 
-      # Step 8: Run the repo tests, including the vendored Mermaid CSS drift guard
+      # Step 8: Install zsh, which the runner image lacks.
+      # The helper-script tests spawn zsh, and a missing binary fails them with status null.
+      - name: Install zsh
+        run: sudo apt-get update && sudo apt-get install -y zsh
+
+      # Step 9: Run the repo tests, including the vendored Mermaid CSS drift guard
       - name: Run tests
         run: pnpm test

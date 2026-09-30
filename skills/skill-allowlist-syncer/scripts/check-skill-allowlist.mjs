@@ -1,31 +1,44 @@
 // check-skill-allowlist.mjs notes
+//
+// General notes:
+// * Purpose: Reconcile two managed groups of `permissions.allow` entries in `.claude/settings.json`
+//   against the repo's `skills/` folder:
+//     1. Skills  - one `Skill(<name>)` entry per `skills/*/SKILL.md`.
+//     2. Scripts - one `Bash(<runner> <path>:*)` entry per runnable script inside a skill folder.
+// * Runner map: `.mjs` -> `node`, `.sh` and `.zsh` -> `zsh`. Shell scripts run under `zsh` because
+//   the skill shell helpers use zsh. Plain .js files are ignored because they
+//   are not declared standalone helpers by this runner map.
+// * Entries in neither managed group (other `Bash(...)`, `Read(...)`, `WebFetch(...)`, etc.) are never
+//   reordered, rewritten, or removed.
+// * Skill names come from the `name:` frontmatter field in each `SKILL.md`, falling back to the
+//   directory name when that field is missing or empty.
+//
 // Usage:
 //   node skills/skill-allowlist-syncer/scripts/check-skill-allowlist.mjs
 //   node skills/skill-allowlist-syncer/scripts/check-skill-allowlist.mjs --write
 //   node skills/skill-allowlist-syncer/scripts/check-skill-allowlist.mjs --repo-root /path/to/repo
+//   node skills/skill-allowlist-syncer/scripts/check-skill-allowlist.mjs --repo-root=/path/to/repo
+//   node skills/skill-allowlist-syncer/scripts/check-skill-allowlist.mjs --help
 //
 // Output:
-// * Human-readable report listing, for both managed groups (skills and scripts), the entries
-//   already in sync, the entries to add, and the stale entries to remove.
+// * A header, then a `== Skills ==` section and a `== Scripts ==` section. Each section lists the
+//   entries already in sync, the entries to add, the stale entries to remove, and any duplicate
+//   entries to collapse.
 // * Final status line: `result:ok`, `result:drift`, or `result:written`.
-// * Exit codes: 0 = in sync (or successful write), 1 = drift detected in check mode, 2 = configuration error.
-//
-// Description:
-// * Purpose: Reconcile two managed entry groups in `.claude/settings.json` `permissions.allow`:
-//     1. `Skill(<name>)` entries - one per `skills/*/SKILL.md`.
-//     2. Script `Bash(<runner> <path>:*)` entries - one per runnable script stored inside a skill folder.
-//        Runnable scripts are mapped by extension: `.mjs` -> `node`, `.zsh` -> `zsh`. Plain `.js`
-//        files (for example Figma Plugin API snippets) are intentionally ignored: they are not run via Bash.
-// * Default mode prints a report and exits 1 when drift is detected so it can be wired into `pnpm test`.
-// * With `--write`, edits `.claude/settings.json`: appends missing entries and removes stale ones for both groups.
-// * Entries that belong to neither managed group (other `Bash(...)`, `Read(...)`, `WebSearch`, etc.) are
-//   never reordered, rewritten, or removed.
-// * Skill names come from the `name:` frontmatter field in each `SKILL.md`, falling back to the directory name if missing.
+// * Exit codes: 0 = in sync (or successful write), 1 = drift detected in check mode,
+//   2 = configuration error.
 //
 // Version history:
-// * v2.0 - 2026-06-24 - Also reconcile script `Bash(<runner> <path>:*)` allow entries for runnable scripts
-//                       (`.mjs` -> node, `.zsh` -> zsh) stored within skill folders.
-// * v1.0 - 2026-06-08 - Reconcile `Skill(<name>)` allow entries against the `skills/` folder.
+// * v2.2 - 2026-09-30 - Import shell discovery and duplicate handling into Tokyo Hiker; document the local runner scope.
+// * v2.1 - 2026-08-18 - Map `.sh` to `zsh` so shell scripts named the way this repo names them are
+//                       covered, derive the managed-entry pattern from the runner map instead of
+//                       hardcoding it, report duplicate managed entries as drift, and document the
+//                       `--repo-root=<dir>` form.
+// * v2.0 - 2026-08-18 - Also reconcile script `Bash(<runner> <path>:*)` entries for the runnable
+//                       scripts (`.mjs` -> node, `.zsh` -> zsh) stored inside skill folders, split
+//                       the report into `== Skills ==` and `== Scripts ==` sections, and expand
+//                       `--help` into a full options list.
+// * v1.0 - 2026-06-08 - Initial release: reconcile `Skill(<name>)` entries against the `skills/` folder.
 
 import { spawnSync } from 'node:child_process';
 import {
@@ -40,23 +53,37 @@ import { extname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 const SKILL_ENTRY_RE = /^Skill\(([^)]+)\)$/;
 const FRONTMATTER_NAME_RE = /^name:\s*(.+?)\s*$/m;
 
-// Map a runnable script's file extension to the command used to run it from the repo root.
-// Plain `.js` is deliberately absent: those files (for example Figma Plugin API snippets) are
-// not invoked via Bash, so they must not gain a Bash allow entry.
-const SCRIPT_RUNNERS = { '.mjs': 'node', '.zsh': 'zsh' };
-const SCRIPT_EXTENSIONS = Object.keys(SCRIPT_RUNNERS);
+// File extensions that count as runnable scripts, mapped to their Bash runner.
+// `.js` is deliberately absent - see the notes block above.
+const RUNNER_BY_EXT = { '.mjs': 'node', '.sh': 'zsh', '.zsh': 'zsh' };
 
-// Directories never descended into while hunting for scripts inside a skill folder.
+// Built from the runner map so a new runner cannot fall out of the managed group: an entry the
+// script generates but does not recognize would be re-appended on every write.
+const RUNNERS = [...new Set(Object.values(RUNNER_BY_EXT))].join('|');
+const SCRIPT_ENTRY_RE = new RegExp(`^Bash\\((${RUNNERS}) (\\S.*):\\*\\)$`);
+
+// Directories never scanned for scripts.
 const SKIP_DIRS = new Set(['node_modules', '.git']);
 
 // Raised when input is invalid; surfaces as exit code 2.
 class ConfigError extends Error {}
 
-const byInsensitive = (a, b) => a.toLowerCase().localeCompare(b.toLowerCase());
-
 function printUsage() {
   console.log(
-    'Usage: node check-skill-allowlist.mjs [--write] [--repo-root <dir>]',
+    [
+      'Usage: node check-skill-allowlist.mjs [--write] [--repo-root <dir>]',
+      '',
+      'Reconciles the managed `Skill(<name>)` and `Bash(<runner> <path>:*)` entries in',
+      '.claude/settings.json against the repo skills/ folder.',
+      '',
+      'Options:',
+      '  --write             Apply the reconciled allowlist to .claude/settings.json.',
+      '  --repo-root <dir>   Override repo root detection (default: git rev-parse --show-toplevel).',
+      '                      The --repo-root=<dir> form is also accepted.',
+      '  -h, --help          Show this message.',
+      '',
+      'Exit codes: 0 = in sync or written, 1 = drift detected, 2 = configuration error.',
+    ].join('\n'),
   );
 }
 
@@ -147,6 +174,11 @@ function resolveSkillsDir(repoRoot, settings) {
   return abs;
 }
 
+// Repo-root-relative path with forward slashes, used to build script entries.
+function toRelPosix(repoRoot, abs) {
+  return relative(repoRoot, abs).split(sep).join('/');
+}
+
 // Read the `name:` value from the first YAML frontmatter block of a SKILL.md.
 // Falls back to the directory name when the file or field is missing.
 function readSkillName(skillMdPath, fallbackDirName) {
@@ -172,122 +204,131 @@ function readSkillName(skillMdPath, fallbackDirName) {
   return name.length > 0 ? name : fallbackDirName;
 }
 
-// Every immediate `skills/*/` directory that contains a `SKILL.md` is a skill.
-function listSkillDirs(skillsDir) {
-  const dirs = [];
-  for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const dir = join(skillsDir, entry.name);
-    if (!existsSync(join(dir, 'SKILL.md'))) continue;
-    dirs.push({ name: entry.name, dir });
-  }
-  return dirs;
-}
-
-// Desired `Skill(<name>)` allow entries, one per skill folder.
+// Every immediate `skills/*/SKILL.md` yields one desired `Skill(<name>)` entry.
+// Subdirectories without a SKILL.md are skipped.
 function collectSkillEntries(skillsDir) {
   const entries = new Set();
-  for (const { name, dir } of listSkillDirs(skillsDir)) {
-    entries.add(`Skill(${readSkillName(join(dir, 'SKILL.md'), name)})`);
+  for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const skillMd = join(skillsDir, entry.name, 'SKILL.md');
+    if (!existsSync(skillMd)) continue;
+    entries.add(`Skill(${readSkillName(skillMd, entry.name)})`);
   }
   return entries;
 }
 
-// Recursively collect runnable script files (by extension) anywhere under `dir`.
-function collectScriptFiles(dir) {
-  const files = [];
+// Recursively collect runnable scripts under `dir`, adding one
+// `Bash(<runner> <path>:*)` entry per match.
+function walkScripts(dir, repoRoot, out) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     if (entry.name.startsWith('.')) continue;
-    const full = join(dir, entry.name);
+    const abs = join(dir, entry.name);
     if (entry.isDirectory()) {
       if (SKIP_DIRS.has(entry.name)) continue;
-      files.push(...collectScriptFiles(full));
-    } else if (
-      entry.isFile() &&
-      SCRIPT_EXTENSIONS.includes(extname(entry.name))
-    ) {
-      files.push(full);
+      walkScripts(abs, repoRoot, out);
+      continue;
     }
+    if (!entry.isFile()) continue;
+    const runner = RUNNER_BY_EXT[extname(entry.name)];
+    if (!runner) continue;
+    out.add(`Bash(${runner} ${toRelPosix(repoRoot, abs)}:*)`);
   }
-  return files;
 }
 
-// Desired script `Bash(<runner> <relpath>:*)` allow entries, one per runnable
-// script stored within any skill folder. Paths are relative to the repo root,
-// because that is the directory the agent runs the scripts from.
+// Desired script entries, gathered from every skill folder that has a SKILL.md.
 function collectScriptEntries(skillsDir, repoRoot) {
   const entries = new Set();
-  for (const { dir } of listSkillDirs(skillsDir)) {
-    for (const file of collectScriptFiles(dir)) {
-      const rel = relative(repoRoot, file).split(sep).join('/');
-      const runner = SCRIPT_RUNNERS[extname(file)];
-      entries.add(`Bash(${runner} ${rel}:*)`);
-    }
+  for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const skillDir = join(skillsDir, entry.name);
+    if (!existsSync(join(skillDir, 'SKILL.md'))) continue;
+    walkScripts(skillDir, repoRoot, entries);
   }
   return entries;
 }
 
-// Regex matching any managed script entry: `Bash(<runner> <skillsRel>/<...>.<ext>:*)`.
-// Used to recognise (and so reconcile) entries the syncer owns, including stale ones
-// whose script has been deleted.
-function buildScriptEntryRe(skillsRel) {
-  const runners = Object.values(SCRIPT_RUNNERS).join('|');
-  const exts = SCRIPT_EXTENSIONS.map((e) => e.slice(1)).join('|');
-  const prefix = skillsRel.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp(
-    `^Bash\\((?:${runners}) ${prefix}/.+\\.(?:${exts}):\\*\\)$`,
-  );
+const isSkillEntry = (entry) =>
+  typeof entry === 'string' && SKILL_ENTRY_RE.test(entry);
+
+// A managed script entry is a `Bash(<runner> <path>:*)` entry whose path sits under the
+// skills directory and whose extension matches the declared runner. Anything else - including
+// `Bash(node scripts/other.mjs:*)` outside the skills folder - stays unmanaged.
+function makeScriptEntryMatcher(skillsRelDir) {
+  const prefix = `${skillsRelDir}/`;
+  return (entry) => {
+    if (typeof entry !== 'string') return false;
+    const match = entry.match(SCRIPT_ENTRY_RE);
+    if (!match) return false;
+    const [, runner, path] = match;
+    if (!path.startsWith(prefix)) return false;
+    return RUNNER_BY_EXT[extname(path)] === runner;
+  };
 }
 
-// Bucket the allow entries that match `matchRe` against the `desired` entry set.
-function bucketEntries(allowlist, desired, matchRe) {
+// Split the allowlist for one managed group into entries already in sync, entries to add, stale
+// entries to remove, and duplicate entries to collapse. Duplicates are counted as drift because
+// the writer rebuilds the group from a Set and would silently drop the extra copies otherwise.
+function bucketGroup(allowlist, desired, isManaged) {
   const inSync = [];
   const toRemove = [];
-  const present = new Set();
+  const duplicates = [];
+  const seen = new Set();
   for (const entry of allowlist) {
-    if (typeof entry !== 'string' || !matchRe.test(entry)) continue;
-    present.add(entry);
+    if (!isManaged(entry)) continue;
+    if (seen.has(entry)) {
+      duplicates.push(entry);
+      continue;
+    }
+    seen.add(entry);
     if (desired.has(entry)) inSync.push(entry);
     else toRemove.push(entry);
   }
   const toAdd = [];
-  for (const want of desired) {
-    if (!present.has(want)) toAdd.push(want);
+  for (const entry of desired) {
+    if (!seen.has(entry)) toAdd.push(entry);
   }
-  return { inSync, toAdd, toRemove };
+  return { inSync, toAdd, toRemove, duplicates };
 }
 
-// Rebuild the allowlist: keep every unmanaged entry in its original position, then
-// append the desired script entries and the desired Skill entries, each sorted
-// case-insensitively. Both managed groups are dropped from their old positions first
-// so stale entries disappear and surviving entries cluster predictably.
+// Rebuild the allowlist: keep every unmanaged entry in its original position, then append
+// the desired script entries and the desired Skill() entries, each sorted case-insensitively.
 function reconcileAllowlist(
   allowlist,
-  desiredScripts,
   desiredSkills,
-  scriptRe,
+  desiredScripts,
+  isManagedScript,
 ) {
-  const other = [];
-  for (const entry of allowlist) {
-    if (typeof entry !== 'string') {
-      other.push(entry);
-      continue;
-    }
-    if (SKILL_ENTRY_RE.test(entry) || scriptRe.test(entry)) continue;
-    other.push(entry);
-  }
-  const scriptEntries = Array.from(desiredScripts).sort(byInsensitive);
-  const skillEntries = Array.from(desiredSkills).sort(byInsensitive);
-  return [...other, ...scriptEntries, ...skillEntries];
+  const unmanaged = allowlist.filter(
+    (entry) => !isSkillEntry(entry) && !isManagedScript(entry),
+  );
+  return [
+    ...unmanaged,
+    ...sortInsensitive(desiredScripts),
+    ...sortInsensitive(desiredSkills),
+  ];
 }
 
-function printEntries(label, entries, emoji) {
+const byNameInsensitive = (a, b) =>
+  a.toLowerCase().localeCompare(b.toLowerCase());
+
+const sortInsensitive = (entries) =>
+  Array.from(entries).sort(byNameInsensitive);
+
+function printList(label, entries, emoji) {
   if (entries.length === 0) return;
   console.log(`${emoji} ${label} (${entries.length}):`);
-  for (const entry of entries.slice().sort(byInsensitive)) {
+  for (const entry of sortInsensitive(entries)) {
     console.log(`  - ${entry}`);
   }
   console.log('');
+}
+
+function printGroup(title, buckets, staleLabel) {
+  console.log(`== ${title} ==`);
+  printList('Already in sync', buckets.inSync, '✅');
+  printList('To add', buckets.toAdd, '➕');
+  printList(staleLabel, buckets.toRemove, '➖');
+  printList('To remove (duplicate entry)', buckets.duplicates, '➖');
 }
 
 function main() {
@@ -309,8 +350,8 @@ function main() {
     throw err;
   }
 
-  const skillsRel = relative(repoRoot, skillsDir).split(sep).join('/') || '.';
-  const scriptRe = buildScriptEntryRe(skillsRel);
+  const skillsRelDir = toRelPosix(repoRoot, skillsDir);
+  const isManagedScript = makeScriptEntryMatcher(skillsRelDir);
 
   const desiredSkills = collectSkillEntries(skillsDir);
   const desiredScripts = collectScriptEntries(skillsDir, repoRoot);
@@ -321,12 +362,12 @@ function main() {
   const otherCount = allowlist.filter(
     (entry) =>
       typeof entry === 'string' &&
-      !SKILL_ENTRY_RE.test(entry) &&
-      !scriptRe.test(entry),
+      !isSkillEntry(entry) &&
+      !isManagedScript(entry),
   ).length;
 
-  const skills = bucketEntries(allowlist, desiredSkills, SKILL_ENTRY_RE);
-  const scripts = bucketEntries(allowlist, desiredScripts, scriptRe);
+  const skills = bucketGroup(allowlist, desiredSkills, isSkillEntry);
+  const scripts = bucketGroup(allowlist, desiredScripts, isManagedScript);
 
   console.log(`🔍 settings:           ${settingsPath}`);
   console.log(`🔍 skills_dir:         ${skillsDir}`);
@@ -335,33 +376,28 @@ function main() {
   console.log(`🔍 other_entries:      ${otherCount}`);
   console.log('');
 
-  console.log('== Skills ==');
-  printEntries('Already in sync', skills.inSync, '✅');
-  printEntries('To add', skills.toAdd, '➕');
-  printEntries(
-    'To remove (skill folder no longer exists)',
-    skills.toRemove,
-    '➖',
-  );
+  printGroup('Skills', skills, 'To remove (skill folder no longer exists)');
+  printGroup('Scripts', scripts, 'To remove (script no longer exists)');
 
-  console.log('== Scripts ==');
-  printEntries('Already in sync', scripts.inSync, '✅');
-  printEntries('To add', scripts.toAdd, '➕');
-  printEntries('To remove (script no longer exists)', scripts.toRemove, '➖');
+  const toAddCount = skills.toAdd.length + scripts.toAdd.length;
+  const toRemoveCount =
+    skills.toRemove.length +
+    skills.duplicates.length +
+    scripts.toRemove.length +
+    scripts.duplicates.length;
 
-  const toAdd = skills.toAdd.length + scripts.toAdd.length;
-  const toRemove = skills.toRemove.length + scripts.toRemove.length;
-
-  if (toAdd + toRemove === 0) {
+  if (toAddCount + toRemoveCount === 0) {
     console.log(
-      `✅ Allowlist already in sync. ${desiredSkills.size} skill(s), ${desiredScripts.size} script(s) checked.`,
+      `✅ Allowlist already in sync. ${desiredSkills.size} skill(s) and ${desiredScripts.size} script(s) checked.`,
     );
     console.log('result:ok');
     process.exit(0);
   }
 
   if (!args.write) {
-    console.log(`⚠️  Drift detected: ${toAdd} to add, ${toRemove} to remove.`);
+    console.log(
+      `⚠️  Drift detected: ${toAddCount} to add, ${toRemoveCount} to remove.`,
+    );
     console.log('Re-run with --write to apply the changes.');
     console.log('result:drift');
     process.exit(1);
@@ -372,12 +408,13 @@ function main() {
   }
   settings.permissions.allow = reconcileAllowlist(
     allowlist,
-    desiredScripts,
     desiredSkills,
-    scriptRe,
+    desiredScripts,
+    isManagedScript,
   );
   writeFileSync(settingsPath, JSON.stringify(settings, null, 2) + '\n');
-  console.log(`✅ Written: added ${toAdd}, removed ${toRemove}.`);
+  console.log(`✅ Written: added ${toAddCount}, removed ${toRemoveCount}.`);
+  console.log(`   ${settingsPath}`);
   console.log(`result:written`);
   process.exit(0);
 }

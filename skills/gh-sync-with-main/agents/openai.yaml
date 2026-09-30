@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Sync branch with main'
+  short_description: 'Bring the current branch up to date from main'
+  default_prompt: 'Use $gh-sync-with-main to bring my current branch up to date with main.'

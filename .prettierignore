@@ -3,3 +3,11 @@ pnpm-lock.yaml
 
 # Ignore generated documentation structure file
 docs/site-structure.md
+
+# Symlinked directories - format the real files at their source path instead.
+# `.claude/commands` and `.github/prompts` -> `prompts/`,
+# `.claude/skills` and `.codex/skills` -> `skills/`.
+.claude/commands
+.claude/skills
+.codex/skills
+.github/prompts
