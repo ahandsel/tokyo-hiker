@@ -30,6 +30,11 @@ To use a skill, enter the skill's name in the AI interface (VS Code extension, t
 | [`blog-content-auditor`][blog-content-auditor] | Audits one content Markdown file for content quality: verifies facts are correct and up-to-date, checks style-guide compliance, and confirms the content is logically sound and complete, then reports findings grouped by accuracy, style, and sense.         | 2026-06-26 00:00   |
 
 
+### Translation skill
+
+* [`blog-translator`][blog-translator] - Translates paired English and Japanese content while preserving Markdown structure and reconciling localization frontmatter. Its current workflow assumes `contents/en/` and `contents/ja/` folders, which this repository does not use.
+
+
 ### Repository maintenance skills
 
 | Skill                                                  | Description                                                                                                                                                                                    | Last updated (UTC) |
@@ -71,11 +76,31 @@ Existing customized skills remain the source of truth for overlapping workflows.
 | [`security-threat-model`][security-threat-model]     | Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the user explicitly asks to threat model a codebase or path, enumerate threats/abuse paths, or perform AppSec threat modeling. Do not trigger for general architecture summaries, code review, or non-security design work.                                                                           |
 | [`vitepress-include-lint`][vitepress-include-lint]   | Verify VitePress markdown include directives (`@include:`) for strict comment formatting and valid target file paths. Use when users ask to check, lint, or validate `<!--@include: ...-->` usage across docs.                                                                                                                                                                                                                                                                                         |
 
+
+## Tokyo Geek imports
+
+Imported on 2026-09-30. The existing `gh-sync-with-main` now supports `--verify`; `skill-allowlist-syncer` discovers zsh helpers named `.sh` and removes duplicate managed entries.
+
+| Skill                                          | Purpose                                                                        |
+| ---------------------------------------------- | ------------------------------------------------------------------------------ |
+| [`audit-gh-branches`][audit-gh-branches]       | Inventory local and remote branches and extract unique work into review notes. |
+| [`audit-pr-comments`][audit-pr-comments]       | Annotate a local PR review file with evidence-backed verdicts on its findings. |
+| [`grill-me`][grill-me]                         | Explicit command alias for the grilling interview.                             |
+| [`grilling`][grilling]                         | Stress-test a plan through questions asked one at a time.                      |
+| [`handoff`][handoff]                           | Write a dated handoff note for another agent or session.                       |
+| [`writing-great-skills`][writing-great-skills] | Reference on skill structure, scope, and progressive disclosure.               |
+
+The `grill-me`, `handoff`, and `writing-great-skills` skills retain their source explicit-invocation metadata.
+The four productivity skills retain the MIT license from Matt Pocock.
+
 <!-- Internal links -->
 
 [ai-commit]: ./ai-commit/SKILL.md
+[audit-gh-branches]: audit-gh-branches/SKILL.md
+[audit-pr-comments]: audit-pr-comments/SKILL.md
 [blog-content-auditor]: ./blog-content-auditor/SKILL.md
 [blog-md-linter]: ./blog-md-linter/SKILL.md
+[blog-translator]: ./blog-translator/SKILL.md
 [code-review]: code-review/SKILL.md
 [file-folder-name-linter]: ./file-folder-name-linter/SKILL.md
 [folder-readme-maintainer]: ./folder-readme-maintainer/SKILL.md
@@ -87,6 +112,9 @@ Existing customized skills remain the source of truth for overlapping workflows.
 [gh-pr-generator]: gh-pr-generator/SKILL.md
 [gh-pr-reporter]: ./gh-pr-reporter/SKILL.md
 [gh-sync-with-main]: gh-sync-with-main/SKILL.md
+[grill-me]: grill-me/SKILL.md
+[grilling]: grilling/SKILL.md
+[handoff]: handoff/SKILL.md
 [ja-readability-editor]: ja-readability-editor/SKILL.md
 [ja-review-text]: ja-review-text/SKILL.md
 [link-polisher]: ./link-polisher/SKILL.md
@@ -98,3 +126,4 @@ Existing customized skills remain the source of truth for overlapping workflows.
 [security-threat-model]: security-threat-model/SKILL.md
 [skill-allowlist-syncer]: ./skill-allowlist-syncer/SKILL.md
 [vitepress-include-lint]: vitepress-include-lint/SKILL.md
+[writing-great-skills]: writing-great-skills/SKILL.md

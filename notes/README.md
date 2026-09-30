@@ -21,9 +21,12 @@ Each file captures a point in time and is not kept up to date after it is writte
 
 * [Script and skill import - 2026-09-29][script-skill-import] - scope, adaptations, and deliberate exclusions.
 
+* [Tokyo Geek import - 2026-09-30][tokyo-geek-import] - imported tools, adaptations, and exclusions.
+
 <!-- Internal links -->
 
 [2026-08-08-ci-audit-md]: 2026-08-08-ci-audit.md
 [docs-readme-md]: ../docs/README.md
 [prompts-readme-md]: ../prompts/README.md
 [script-skill-import]: 2026-09-29-script-skill-import.md
+[tokyo-geek-import]: 2026-09-30-tokyo-geek-import.md

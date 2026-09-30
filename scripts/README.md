@@ -5,19 +5,20 @@ Utility scripts for the tokyo-hiker repository.
 
 ## Table of contents <!-- omit in toc -->
 
-* [cleanup-temp-files.sh][cleanup-temp-files-sh]
-* [generate-site-structure.mjs][generate-site-structure-mjs]
-* [index.sh][index-sh]
-* [lint-target.mjs][lint-target-mjs]
-* [pdf-to-images.mjs][pdf-to-images-mjs]
-* [replace-curly-quotes.sh][replace-curly-quotes-sh]
-* [setup.sh][setup-sh]
-* [setup-brew.sh][setup-brew-sh]
-* [setup-node.sh][setup-node-sh]
-* [setup-pre-commit.sh][setup-pre-commit-sh]
-* [setup-takumi-guard.sh][setup-takumi-guard-sh]
-* [trim-png.mjs][trim-png-mjs]
-* [Skill helpers][skill-helpers]
+* [cleanup-temp-files.sh](#cleanup-temp-filessh)
+* [generate-site-structure.mjs](#generate-site-structuremjs)
+* [index.sh](#indexsh)
+* [lint-target.mjs](#lint-targetmjs)
+* [pdf-to-images.mjs](#pdf-to-imagesmjs)
+* [replace-curly-quotes.sh](#replace-curly-quotessh)
+* [setup.sh](#setupsh)
+* [setup-brew.sh](#setup-brewsh)
+* [setup-node.sh](#setup-nodesh)
+* [setup-pre-commit.sh](#setup-pre-commitsh)
+* [setup-takumi-guard.sh](#setup-takumi-guardsh)
+* [trim-png.mjs](#trim-pngmjs)
+* [Skill helpers](#skill-helpers)
+* [Authoring rules](#authoring-rules)
 
 
 ## cleanup-temp-files.sh
@@ -149,7 +150,7 @@ mv contents/public/otama-walking-trail/ohtama-2.webp contents/public/otama-walki
 > Source: [replace-curly-quotes.sh][replace-curly-quotes-sh-2]
 
 Replace curly quotes with straight quotes across the Markdown files in a directory, enforcing the repo writing style.
-Predates the authoring rules below, so it has no `--help` flag.
+Supports `-h` and `--help` to show usage.
 
 ```shell
 ./scripts/replace-curly-quotes.sh [directory]
@@ -283,6 +284,16 @@ The existing `skills/file-folder-name-linter/scripts/lint-names.mjs` is updated 
 * Use status emojis in output: ✅ for success, ⚠️ for warnings, and ❌ for errors.
 * Do not split a sentence across a line break. When wrapping text, break only at sentence boundaries so each line contains whole sentences.
 
+| Script                                                 | Version | Purpose                                                                                                                     |
+| ------------------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------- |
+| [check-sitemap.mjs][check-sitemap]                     | 1.1     | Run `pnpm check-sitemap` after `pnpm build` to check the Tokyo Hiker base path and reject an empty sitemap or doubled base. |
+| [collect-branches.mjs][collect-branches]               | 1.3     | Inventory branches; use `--no-fetch` for a local snapshot and `--help` for options.                                         |
+| [extract-branch-notes.mjs][extract-branch-notes]       | 1.3     | Extract branch commits as notes and a patch; refuses an existing summary unless `--force` is supplied.                      |
+| [update-branch-from-main.mjs][update-branch-from-main] | 1.2     | Adds `--verify` to fetch the base and assess ahead/behind counts and conflicts without changing the working branch.         |
+| [check-skill-allowlist.mjs][check-skill-allowlist]     | 2.2     | Imports `.sh` discovery and duplicate-entry reporting while retaining unmanaged permissions.                                |
+
+Each helper supports `--help`. Branch operations require Git; fetching requires remote access. The sitemap checker uses only Node.js built-ins.
+
 <!-- Links -->
 
 [homebrew]: https://brew.sh
@@ -294,27 +305,19 @@ The existing `skills/file-folder-name-linter/scripts/lint-names.mjs` is updated 
 <!-- Internal links -->
 
 [brewfile]: ../Brewfile
-[cleanup-temp-files-sh]: #cleanup-temp-filessh
+[check-sitemap]: check-sitemap.mjs
+[check-skill-allowlist]: ../skills/skill-allowlist-syncer/scripts/check-skill-allowlist.mjs
 [cleanup-temp-files-sh-2]: cleanup-temp-files.sh
-[generate-site-structure-mjs]: #generate-site-structuremjs
+[collect-branches]: ../skills/audit-gh-branches/scripts/collect-branches.mjs
+[extract-branch-notes]: ../skills/audit-gh-branches/scripts/extract-branch-notes.mjs
 [generate-site-structure-mjs-2]: generate-site-structure.mjs
-[index-sh]: #indexsh
 [index-sh-2]: index.sh
-[lint-target-mjs]: #lint-targetmjs
 [lint-target-mjs-2]: lint-target.mjs
-[pdf-to-images-mjs]: #pdf-to-imagesmjs
 [pdf-to-images-mjs-2]: pdf-to-images.mjs
-[replace-curly-quotes-sh]: #replace-curly-quotessh
 [replace-curly-quotes-sh-2]: replace-curly-quotes.sh
-[setup-brew-sh]: #setup-brewsh
 [setup-brew-sh-2]: setup-brew.sh
-[setup-node-sh]: #setup-nodesh
 [setup-node-sh-2]: setup-node.sh
-[setup-pre-commit-sh]: #setup-pre-commitsh
 [setup-pre-commit-sh-2]: setup-pre-commit.sh
-[setup-sh]: #setupsh
 [setup-sh-2]: setup.sh
-[setup-takumi-guard-sh]: #setup-takumi-guardsh
 [setup-takumi-guard-sh-2]: setup-takumi-guard.sh
-[skill-helpers]: #skill-helpers
-[trim-png-mjs]: #trim-pngmjs
+[update-branch-from-main]: ../skills/gh-sync-with-main/scripts/update-branch-from-main.mjs
