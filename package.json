@@ -41,6 +41,7 @@
     "gray-matter": "^4.0.3",
     "init": "^0.1.2",
     "js-yaml": "^5.5.0",
+    "magicast": "^0.5.5",
     "markdown-link-check": "^3.15.0",
     "markdownlint-cli2": "^0.24.1",
     "markdownlint-rule-relative-links": "^5.1.4",

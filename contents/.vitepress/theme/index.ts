@@ -5,6 +5,7 @@ import DefaultTheme from 'vitepress/theme';
 import { useData, withBase } from 'vitepress';
 import './style.css';
 import { wireHeroSpeechBubble } from './hero-img-speech-bubble';
+import { registerServiceWorker } from './pwa-update';
 import { createMermaidRenderer } from 'vitepress-mermaid-renderer';
 import './vitepress-mermaid-renderer.css'; // Import manually so the local overrides load site-wide.
 
@@ -113,6 +114,7 @@ export default {
   },
   enhanceApp({ app }) {
     wireHeroSpeechBubble("Let's go hiking!");
+    registerServiceWorker();
     // Initialize the image viewer plugin
     ImageViewerP(app); //[!code ++]
   },
