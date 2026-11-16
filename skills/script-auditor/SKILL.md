@@ -31,7 +31,7 @@ Out of scope (the auditor skips these):
 
 ## Quick start
 
-Run the bundled auditor from anywhere inside the repo (requires Node.js 24+):
+Run the bundled auditor from anywhere inside the repo (requires Node.js 26+):
 
 ```bash
 # Sweep all tracked helper scripts and print a per-script report.

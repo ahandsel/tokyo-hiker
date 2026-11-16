@@ -57,7 +57,7 @@ pnpm setup-takumi-guard # Point global pnpm at the Takumi Guard registry proxy
 
 The Brewfile also installs [poppler][] and [libwebp][], which [scripts/pdf-to-images.mjs](./scripts/pdf-to-images.mjs) needs to turn a PDF into page images. Nothing else in the repo depends on them, so a machine that only edits prose can skip them.
 
-`package.json` declares `engines` (Node.js 24 or newer, pnpm 11 or newer), and `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain rather than half-installing.
+`package.json` declares `engines` (Node.js 26 or newer, pnpm 11 or newer), and `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain rather than half-installing.
 
 
 ### Local dev

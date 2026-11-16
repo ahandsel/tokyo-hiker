@@ -51,7 +51,7 @@ Skills follow the same pattern. They live in `skills/` only, and both `.claude/s
 
 ## Setup and commands
 
-Node.js 24 or newer and pnpm 11 or newer are required. `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain.
+Node.js 26 or newer and pnpm 11 or newer are required. `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain.
 
 Two Homebrew formulae sit outside the Node.js toolchain: `poppler` and `webp`, which [scripts/pdf-to-images.mjs](scripts/pdf-to-images.mjs) needs. Both are in the [Brewfile](Brewfile), so `pnpm setup-brew` installs them. Nothing else depends on them.
 

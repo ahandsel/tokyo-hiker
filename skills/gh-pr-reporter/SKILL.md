@@ -31,7 +31,7 @@ If the user gives a bare number while the current directory is not a clone of th
 
 * `gh` CLI installed and authenticated (`gh auth status` succeeds).
 * Read access to the target repo.
-* Node.js 24+ for running the helper.
+* Node.js 26+ for running the helper.
 
 
 ## Quick start
