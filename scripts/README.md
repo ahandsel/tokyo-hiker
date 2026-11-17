@@ -5,6 +5,7 @@ Utility scripts for the tokyo-hiker repository.
 
 ## Table of contents <!-- omit in toc -->
 
+* [check.mjs](#checkmjs)
 * [cleanup-temp-files.sh](#cleanup-temp-filessh)
 * [generate-site-structure.mjs](#generate-site-structuremjs)
 * [index.sh](#indexsh)
@@ -19,6 +20,36 @@ Utility scripts for the tokyo-hiker repository.
 * [trim-png.mjs](#trim-pngmjs)
 * [Skill helpers](#skill-helpers)
 * [Authoring rules](#authoring-rules)
+
+
+## check.mjs
+
+> Source: [check.mjs][check-mjs]
+
+Run every check a change must pass before it merges into `main`, in one command.
+Each stage calls an existing pnpm script, in this order:
+
+1. Lint and format - `pnpm lint`, which applies the fixes in place
+2. File and folder names - `pnpm lint-naming`
+3. Include directives - `pnpm lint-includes`
+4. Tests - `pnpm test`
+5. Site build - `pnpm build`
+6. Sitemap - `pnpm check-sitemap`, skipped when the build fails
+
+Every stage runs even when an earlier one fails, so one run reports every problem.
+The lint stage edits files in place, so the later stages check the fixed files, and the closing summary lists every file the check edited so you can review and commit the fixes.
+Edits alone do not fail the check.
+The build writes only to the gitignored `contents/.vitepress/dist` and `contents/.vitepress/cache` folders.
+A failed stage prints the last 40 lines of its output, where each tool puts its verdict, so run that stage command on its own to see the rest.
+The check also warns when the working tree has uncommitted changes, because the stages then check files that are not part of the branch yet.
+
+```shell
+node scripts/check.mjs [-h | --help]
+# or
+pnpm check
+```
+
+* `-h`, `--help` - show the help message and exit
 
 
 ## cleanup-temp-files.sh
@@ -97,6 +128,7 @@ Markdown files go through both stages; every other file type goes through Pretti
 `--check` asks whether the pipeline would change a file, not whether the file is in Prettier's output state.
 The two differ here: the second stage has the last word, so a committed Markdown file is deliberately not in Prettier's output state, and a plain `prettier --check` would report every one of them as out of date.
 The check therefore snapshots the files, runs both stages, compares, and restores the snapshot.
+It skips symlinks, so `--check .` covers the whole repository, and it also fails when a tool reports a finding it could not fix, as the write mode does.
 
 ```shell
 # Lint one page after editing it
@@ -305,6 +337,7 @@ Each helper supports `--help`. Branch operations require Git; fetching requires 
 <!-- Internal links -->
 
 [brewfile]: ../Brewfile
+[check-mjs]: check.mjs
 [check-sitemap]: check-sitemap.mjs
 [check-skill-allowlist]: ../skills/skill-allowlist-syncer/scripts/check-skill-allowlist.mjs
 [cleanup-temp-files-sh-2]: cleanup-temp-files.sh

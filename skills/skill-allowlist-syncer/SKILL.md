@@ -32,7 +32,7 @@ A "runnable script" is a file inside a skill folder whose extension maps to a co
 
 ## Quick start
 
-Run the bundled script from anywhere inside the repo (requires Node.js 24+):
+Run the bundled script from anywhere inside the repo (requires Node.js 26+):
 
 ```bash
 # Check mode: report drift and exit non-zero if any is found.

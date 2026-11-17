@@ -24,6 +24,7 @@ Built with [VitePress](https://vitepress.dev/).
 
 [.vitepress/config.mts]: ./contents/.vitepress/config.mts
 [.vitepress/theme/index.ts]: ./contents/.vitepress/theme/index.ts
+[.vitepress/theme/pwa-update.ts]: ./contents/.vitepress/theme/pwa-update.ts
 [Brewfile]: ./Brewfile
 [scripts/README.md]: ./scripts/README.md
 [.vitepress/theme/vitepress-mermaid-renderer.css]: ./contents/.vitepress/theme/vitepress-mermaid-renderer.css
@@ -57,7 +58,7 @@ pnpm setup-takumi-guard # Point global pnpm at the Takumi Guard registry proxy
 
 The Brewfile also installs [poppler][] and [libwebp][], which [scripts/pdf-to-images.mjs](./scripts/pdf-to-images.mjs) needs to turn a PDF into page images. Nothing else in the repo depends on them, so a machine that only edits prose can skip them.
 
-`package.json` declares `engines` (Node.js 24 or newer, pnpm 11 or newer), and `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain rather than half-installing.
+`package.json` declares `engines` (Node.js 26 or newer, pnpm 11 or newer), and `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain rather than half-installing.
 
 
 ### Local dev
@@ -89,6 +90,9 @@ pnpm lint-target --check contents/
 
 # Run the repo tests, including the vendored Mermaid CSS drift guard
 pnpm test
+
+# Before merging into main, run every check: lint with fixes, names, includes, tests, build, and sitemap
+pnpm check
 ```
 
 
@@ -172,3 +176,28 @@ Store the images beside the source PDF under `contents/public/`, name each one a
 ### Image paths
 
 The markdown link checker assumes image paths (for example `/images/foo.png` or `images/foo.png`) point into the repository `public/` folder. A config file `.markdown-link-check.json` is provided which rewrites common image path patterns to `public/...` before checking.
+
+
+### Offline support
+
+The site is a PWA built with [@vite-pwa/vitepress][], configured in [.vitepress/config.mts][].
+After the first visit, the service worker holds every page, script, style, font, and image, so the whole site works offline, including search.
+A page opens from that cache instantly, even on a weak mountain signal.
+
+When the device is online, [.vitepress/theme/pwa-update.ts][] keeps the site current.
+It checks for a new deploy when the page loads, when the app returns to the foreground, when the device reconnects, and once an hour.
+A new deploy downloads in the background, and the page then reloads once to show it.
+The reload keeps the reader's scroll position.
+
+Keep these rules in mind when adding content:
+
+* Only `png`, `jpg`, `jpeg`, `webp`, `gif`, `svg`, and `ico` images are cached. Add any new image format to `generateSW.globPatterns`, or pages that use it lose their images offline.
+* A cached file must be 2 MiB or smaller, and `pnpm build` fails on a larger one. The largest image today is `mitake-rock-garden-route-map.png` at about 1.9 MiB. Resize or compress an image before raising `maximumFileSizeToCacheInBytes`. The pull request checks do not run a build, so run `pnpm check` before merging, or this failure first shows up in the deploy workflow.
+* PDFs are not cached, to keep the first download small. Each PDF has page images that are cached, as described in the PDF handouts section above.
+* JSON is not cached on purpose. After a deploy, VitePress fetches `hashmap.json` from the network to find renamed page files.
+
+The service worker build needs `magicast`, an optional peer dependency of the PWA plugin, so it stays in `devDependencies`.
+
+To test offline behavior, run `pnpm preview`, open the site once, then switch the browser to offline mode.
+To test an update, rebuild and then restart the preview server.
+The preview server records each file's version when it starts, so without a restart it tells the browser that nothing changed.

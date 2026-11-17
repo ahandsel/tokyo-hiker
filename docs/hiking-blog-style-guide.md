@@ -16,6 +16,7 @@ It covers emoji use and Japanese place names. Add further hiking-page convention
   * [Trail data](#trail-data)
   * [Places and nature](#places-and-nature)
   * [Food and drink](#food-and-drink)
+  * [Gear and clothing](#gear-and-clothing)
   * [Page and source notes](#page-and-source-notes)
 * [Headings with emoji change the anchor](#headings-with-emoji-change-the-anchor)
 * [Emoji on Japanese pages](#emoji-on-japanese-pages)
@@ -74,10 +75,14 @@ These are the standard H2 sections of a route page, in the usual order. Use the 
 | `Trail overview`                  | 📋    | Difficulty, toilets, water, season, and warnings.   |
 | `Trail route`                     | 🥾    | The ordered list of points and the route metrics.   |
 | `Map of the route`                | 🗺️    | Trail maps, map images, and map PDFs.               |
+| `Trails on other maps`            | 🗺️    | The same route on YAMAP, AllTrails, and other apps. |
 | `Shortcuts`                       | ✂️    | Ways to skip a section of the route.                |
 | `Along the trail`                 | 🌲    | The section-by-section walkthrough of the route.    |
 | `Timeline`                        | ⏱️    | A recorded hike, point by point, with clock times.  |
+| `Suggested schedule`              | 📅    | A planned day with train, hike, and bus times.      |
+| `Mountain weather`                | ⛅    | Forecast links and seasonal conditions.             |
 | `Food`                            | 🍱    | Restaurants, shops, and what to pack.               |
+| `What to bring`                   | 🎒    | The packing checklist.                              |
 | `Key photo spots`                 | 📸    | The views worth stopping for.                       |
 | `Notes from the original article` | 📝    | Notes carried over from a reproduced source.        |
 | `References`                      | 📚    | Sources and other write-ups of the same route.      |
@@ -154,6 +159,24 @@ H3 headings inside `Along the trail` are named after the stretch they cover, for
 | 🍦    | Ice cream.                           |
 
 
+### Gear and clothing
+
+| Emoji | Meaning                          |
+| ----- | -------------------------------- |
+| 🥾    | Hiking shoes.                    |
+| 👖    | Pants.                           |
+| 👕    | Shirt.                           |
+| 🧥    | Sweater, fleece, or warm jacket. |
+| 🧤    | Gloves.                          |
+| 🧢    | Cap or hat.                      |
+| 🧺    | Towel.                           |
+| 🔦    | Headlamp or flashlight.          |
+| ☔    | Rain gear.                       |
+| 🔔    | Bear bell.                       |
+
+Hiking poles take `🔧`, water takes `🥤`, and snacks take `🍙`, the same as in the tables above.
+
+
 ### Page and source notes
 
 | Emoji | Meaning                                       |
@@ -168,10 +191,14 @@ H3 headings inside `Along the trail` are named after the stretch they cover, for
 
 ## Headings with emoji change the anchor
 
-VitePress builds a heading anchor from the heading text, and an emoji at the end leaves a trailing hyphen. `## Food 🍱` becomes `#food-`, not `#food`.
+The site builds a heading anchor the way GitHub does: it lowercases the heading text, drops emoji and punctuation, and turns each space into a hyphen. An emoji at the end therefore leaves a trailing hyphen, so `## Food 🍱` becomes `#food-`, not `#food`.
 
 * Keep the trailing hyphen in same-page links, for example `[food-options]: #food-`.
-* Check every same-page link after adding, removing, or changing a heading emoji. `pnpm lint` does not catch a broken same-page anchor.
+* A spaced hyphen in a heading becomes three hyphens, so `## Level 1 - Start from Futamatao Station` becomes `#level-1---start-from-futamatao-station`.
+* Some emoji, such as 🗺️, ⏱️, ✂️, and ⛰️, end in an invisible variation selector that stays in the anchor. To link to one of those headings, give it an explicit id, for example `## Mountains ⛰️ {#mountains}`.
+* Run `pnpm lint` after adding, removing, or changing a heading emoji. Its markdownlint rule MD051 checks every same-page link against these anchors.
+
+[contents/.vitepress/slugify.ts](../contents/.vitepress/slugify.ts) holds the rule. It is a copy of the one MD051 uses, so the site, the linter, and the GitHub preview all build the same anchor, and [tests/heading-anchors.test.mjs](../tests/heading-anchors.test.mjs) fails if they drift apart.
 
 
 ## Emoji on Japanese pages

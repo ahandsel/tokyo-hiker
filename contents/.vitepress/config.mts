@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitepress';
 import { withSidebar } from 'vitepress-sidebar';
 import { withPwa } from '@vite-pwa/vitepress';
+import { slugify } from './slugify.ts';
 
 // This file's own folder, contents/.vitepress, used to anchor the PWA asset paths below.
 const configDir = dirname(fileURLToPath(import.meta.url));
@@ -106,6 +107,11 @@ const vitePressOptions = {
     hostname: 'https://ahandsel.github.io/tokyo-hiker/',
   },
   ignoreDeadLinks: true,
+  markdown: {
+    // GitHub-style heading ids, so `## Food 🍱` is `#food-` on the site, in
+    // markdownlint MD051, and on GitHub alike. See slugify.ts.
+    anchor: { slugify },
+  },
 
   // PWA options handled by @vite-pwa/vitepress
   pwa: {
@@ -117,10 +123,11 @@ const vitePressOptions = {
     // .vitepress/contents/public/ at the repository root instead of the build.
     outDir: resolve(configDir, 'dist'),
     strategies: 'generateSW',
-    mode: 'development',
+    // A new deploy installs in the background and the page reloads once it takes
+    // over. The theme registers the service worker itself, see theme/pwa-update.ts,
+    // so the plugin must not inject a second register script.
     registerType: 'autoUpdate',
-    injectRegister: 'script-defer',
-    includeAssets: ['favicon.ico', 'pwa-192x192.png'],
+    injectRegister: false,
     manifest: {
       name: 'Tokyo Hiker',
       short_name: 'tokyo-hiker',
@@ -139,14 +146,40 @@ const vitePressOptions = {
       // A named preset implies its own HTML link preset; an inline preset object
       // does not, so '2023' is set explicitly to keep the same head links.
       htmlPreset: '2023',
-      image: 'public/favicon.png',
+      // Absolute for the same reason as `pwa.outDir` above. The generator resolves
+      // this against process.cwd(), not the VitePress root, so a relative
+      // 'public/favicon.png' points at a repository-root folder that does not exist.
+      image: resolve(configDir, '../public/favicon.png'),
       // Do not set `integration` here. @vite-pwa/vitepress overwrites the whole
       // object, so `pwa.outDir` and `vite.publicDir` drive those paths instead.
     },
-    workbox: {
-      globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
+    generateSW: {
+      // Precache every page, script, style, font, and image, so the whole site works
+      // offline after the first visit. JSON stays out on purpose: after a deploy,
+      // VitePress fetches hashmap.json from the network to find renamed page chunks,
+      // and a cached copy would defeat that. PDFs stay out to keep the first download
+      // small, since each one has precached WebP page images.
+      globPatterns: [
+        '**/*.{css,js,html,svg,png,jpg,jpeg,webp,gif,ico,txt,woff2}',
+      ],
+      // Precached pages never reach this route. It catches a navigation to any other
+      // URL, such as a mistyped or removed page, and shows the site 404 page when the
+      // device is offline instead of the browser error page. This replaces
+      // `experimental.includeAllowlist`, which @vite-pwa/vitepress 2.0.3 accepts but
+      // no longer writes into the service worker.
+      runtimeCaching: [
+        {
+          urlPattern: ({ request, sameOrigin }) =>
+            sameOrigin && request.mode === 'navigate',
+          handler: 'NetworkOnly',
+          options: {
+            plugins: [
+              { handlerDidError: async () => Response.redirect('404', 302) },
+            ],
+          },
+        },
+      ],
     },
-    experimental: { includeAllowlist: true },
     devOptions: {
       enabled: false,
       suppressWarnings: true,

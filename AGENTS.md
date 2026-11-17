@@ -51,7 +51,7 @@ Skills follow the same pattern. They live in `skills/` only, and both `.claude/s
 
 ## Setup and commands
 
-Node.js 24 or newer and pnpm 11 or newer are required. `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain.
+Node.js 26 or newer and pnpm 11 or newer are required. `pnpm-workspace.yaml` sets `engineStrict: true`, so `pnpm install` fails fast on a mismatched toolchain.
 
 Two Homebrew formulae sit outside the Node.js toolchain: `poppler` and `webp`, which [scripts/pdf-to-images.mjs](scripts/pdf-to-images.mjs) needs. Both are in the [Brewfile](Brewfile), so `pnpm setup-brew` installs them. Nothing else depends on them.
 
@@ -69,12 +69,14 @@ Two Homebrew formulae sit outside the Node.js toolchain: `poppler` and `webp`, w
 | `pnpm lint-naming`       | Lint file and folder names against the repo naming rules.                                                                          |
 | `pnpm code-format:check` | Prettier in check-only mode, as CI runs it.                                                                                        |
 | `pnpm test`              | `node --test tests/**/*.test.mjs`: the Mermaid CSS drift guard, the `pdf-to-images` helpers, and the repository convention guards. |
+| `pnpm check`             | Merge gate: `pnpm lint` with fixes applied, the naming and include linters, the tests, the build, and the sitemap check.           |
 | `pnpm tree`              | Regenerate `docs/site-structure.md` from the `contents/` tree.                                                                     |
 | `pnpm index`             | List every pnpm script with its command.                                                                                           |
 | `pnpm cleanup`           | List and optionally delete temporary files.                                                                                        |
 | `pnpm pdf-to-images`     | Convert a PDF into web-ready page images. Requires `poppler` and `webp`.                                                           |
 
 Run `pnpm tree` after adding, moving, or renaming content, then `pnpm lint` and `pnpm test` before finishing.
+Run `pnpm check` before merging `dev` into `main`, because the pull request checks do not build the site.
 
 A pre-commit hook installed by `pnpm setup-pre-commit` runs `pnpm lint` on every commit.
 
@@ -110,7 +112,7 @@ Other conventions:
 * Never embed a PDF with an `<iframe>`. Mobile browsers refuse to render one inline, and MD033 allows only `<br>`, `<pre>`, `<ul>`, `<li>`, and `<ol>`. Run `pnpm pdf-to-images <pdf> --width 2200 --quality 88` to convert the pages to WebP, store the images beside the source PDF in `contents/public/`, and keep a link to the PDF itself for readers who want to print it or read it offline. The script names its output after the source PDF, so rename each image after what it covers rather than its page number as a second step, and describe the contents in the alt text. Give each page its own folder under `contents/public/`, named after the page that uses it, so a site-root path says which page an asset belongs to. [contents/level-1/otama-walking-trail.md](contents/level-1/otama-walking-trail.md) is the worked example, and [contents/public/otama-walking-trail/README.md](contents/public/otama-walking-trail/README.md) records the exact regeneration commands.
 * Give a place its Japanese name as a backticked code span inside the link text, for example `[Kori Station / \`古里駅\`][kori-sta]`. Name a place in Japanese once per page, in the`Trail route` list if it is a route point and at its first mention otherwise, then use the English name alone after that. [docs/hiking-blog-style-guide.md](docs/hiking-blog-style-guide.md) holds the full convention.
 * Add Japanese place names and other repo-specific vocabulary to the `words` list in [.cspell.json](.cspell.json) rather than leaving them flagged.
-* Emoji follow a fixed vocabulary. [docs/hiking-blog-style-guide.md](docs/hiking-blog-style-guide.md) holds the standard emoji for each section heading plus the inline sets for transport, trail data, places, and food. Reuse an emoji from those tables, add a new one to the guide before using it on a page, and remember that a heading emoji leaves a trailing hyphen in the anchor, so `## Food 🍱` is `#food-`.
+* Emoji follow a fixed vocabulary. [docs/hiking-blog-style-guide.md](docs/hiking-blog-style-guide.md) holds the standard emoji for each section heading plus the inline sets for transport, trail data, places, and food. Reuse an emoji from those tables, add a new one to the guide before using it on a page, and remember that a heading emoji leaves a trailing hyphen in the anchor, so `## Food 🍱` is `#food-`. The site builds heading anchors with GitHub's rule, from [contents/.vitepress/slugify.ts](contents/.vitepress/slugify.ts), so markdownlint MD051 checks same-page links against the anchors the site really has.
 
 
 ## Mermaid diagrams

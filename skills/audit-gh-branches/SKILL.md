@@ -29,7 +29,7 @@ Audit every branch (local and remote) and classify each into a clear disposition
 
 * Run from the root of a git repository.
 * `git` on the `PATH` with read access to the target remote.
-* Node.js 24+ for running the helpers.
+* Node.js 26+ for running the helpers.
 
 
 ## Quick start
