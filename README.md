@@ -90,6 +90,9 @@ pnpm lint-target --check contents/
 
 # Run the repo tests, including the vendored Mermaid CSS drift guard
 pnpm test
+
+# Before merging into main, run every check: lint with fixes, names, includes, tests, build, and sitemap
+pnpm check
 ```
 
 
@@ -189,7 +192,7 @@ The reload keeps the reader's scroll position.
 Keep these rules in mind when adding content:
 
 * Only `png`, `jpg`, `jpeg`, `webp`, `gif`, `svg`, and `ico` images are cached. Add any new image format to `generateSW.globPatterns`, or pages that use it lose their images offline.
-* A cached file must be 2 MiB or smaller, and `pnpm build` fails on a larger one. The largest image today is `mitake-rock-garden-route-map.png` at about 1.9 MiB. Resize or compress an image before raising `maximumFileSizeToCacheInBytes`. The pull request checks do not run a build, so this failure first shows up in the deploy workflow.
+* A cached file must be 2 MiB or smaller, and `pnpm build` fails on a larger one. The largest image today is `mitake-rock-garden-route-map.png` at about 1.9 MiB. Resize or compress an image before raising `maximumFileSizeToCacheInBytes`. The pull request checks do not run a build, so run `pnpm check` before merging, or this failure first shows up in the deploy workflow.
 * PDFs are not cached, to keep the first download small. Each PDF has page images that are cached, as described in the PDF handouts section above.
 * JSON is not cached on purpose. After a deploy, VitePress fetches `hashmap.json` from the network to find renamed page files.
 

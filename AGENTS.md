@@ -69,12 +69,14 @@ Two Homebrew formulae sit outside the Node.js toolchain: `poppler` and `webp`, w
 | `pnpm lint-naming`       | Lint file and folder names against the repo naming rules.                                                                          |
 | `pnpm code-format:check` | Prettier in check-only mode, as CI runs it.                                                                                        |
 | `pnpm test`              | `node --test tests/**/*.test.mjs`: the Mermaid CSS drift guard, the `pdf-to-images` helpers, and the repository convention guards. |
+| `pnpm check`             | Merge gate: `pnpm lint` with fixes applied, the naming and include linters, the tests, the build, and the sitemap check.           |
 | `pnpm tree`              | Regenerate `docs/site-structure.md` from the `contents/` tree.                                                                     |
 | `pnpm index`             | List every pnpm script with its command.                                                                                           |
 | `pnpm cleanup`           | List and optionally delete temporary files.                                                                                        |
 | `pnpm pdf-to-images`     | Convert a PDF into web-ready page images. Requires `poppler` and `webp`.                                                           |
 
 Run `pnpm tree` after adding, moving, or renaming content, then `pnpm lint` and `pnpm test` before finishing.
+Run `pnpm check` before merging `dev` into `main`, because the pull request checks do not build the site.
 
 A pre-commit hook installed by `pnpm setup-pre-commit` runs `pnpm lint` on every commit.
 
