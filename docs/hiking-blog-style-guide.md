@@ -16,6 +16,7 @@ It covers emoji use and Japanese place names. Add further hiking-page convention
   * [Trail data](#trail-data)
   * [Places and nature](#places-and-nature)
   * [Food and drink](#food-and-drink)
+  * [Gear and clothing](#gear-and-clothing)
   * [Page and source notes](#page-and-source-notes)
 * [Headings with emoji change the anchor](#headings-with-emoji-change-the-anchor)
 * [Emoji on Japanese pages](#emoji-on-japanese-pages)
@@ -74,10 +75,14 @@ These are the standard H2 sections of a route page, in the usual order. Use the 
 | `Trail overview`                  | 📋    | Difficulty, toilets, water, season, and warnings.   |
 | `Trail route`                     | 🥾    | The ordered list of points and the route metrics.   |
 | `Map of the route`                | 🗺️    | Trail maps, map images, and map PDFs.               |
+| `Trails on other maps`            | 🗺️    | The same route on YAMAP, AllTrails, and other apps. |
 | `Shortcuts`                       | ✂️    | Ways to skip a section of the route.                |
 | `Along the trail`                 | 🌲    | The section-by-section walkthrough of the route.    |
 | `Timeline`                        | ⏱️    | A recorded hike, point by point, with clock times.  |
+| `Suggested schedule`              | 📅    | A planned day with train, hike, and bus times.      |
+| `Mountain weather`                | ⛅    | Forecast links and seasonal conditions.             |
 | `Food`                            | 🍱    | Restaurants, shops, and what to pack.               |
+| `What to bring`                   | 🎒    | The packing checklist.                              |
 | `Key photo spots`                 | 📸    | The views worth stopping for.                       |
 | `Notes from the original article` | 📝    | Notes carried over from a reproduced source.        |
 | `References`                      | 📚    | Sources and other write-ups of the same route.      |
@@ -152,6 +157,24 @@ H3 headings inside `Along the trail` are named after the stretch they cover, for
 | ☕️    | Cafe.                                |
 | 🍵    | Teahouse.                            |
 | 🍦    | Ice cream.                           |
+
+
+### Gear and clothing
+
+| Emoji | Meaning                          |
+| ----- | -------------------------------- |
+| 🥾    | Hiking shoes.                    |
+| 👖    | Pants.                           |
+| 👕    | Shirt.                           |
+| 🧥    | Sweater, fleece, or warm jacket. |
+| 🧤    | Gloves.                          |
+| 🧢    | Cap or hat.                      |
+| 🧺    | Towel.                           |
+| 🔦    | Headlamp or flashlight.          |
+| ☔    | Rain gear.                       |
+| 🔔    | Bear bell.                       |
+
+Hiking poles take `🔧`, water takes `🥤`, and snacks take `🍙`, the same as in the tables above.
 
 
 ### Page and source notes
