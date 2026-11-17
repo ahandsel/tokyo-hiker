@@ -32,6 +32,7 @@
 //   or is skipped, 2 on bad arguments. Edits alone do not fail the check.
 //
 // Version history:
+// * v1.1 - 2026-11-17 - Require pnpm 12 or newer in the missing-pnpm error.
 // * v1.0 - 2026-11-17 - Initial release.
 
 import { execFileSync, spawnSync } from 'node:child_process';
@@ -94,7 +95,7 @@ function runStage(stage) {
     },
   );
   if (result.error?.code === 'ENOENT') {
-    console.error('❌ pnpm not found. Install pnpm 11 or newer first.');
+    console.error('❌ pnpm not found. Install pnpm 12 or newer first.');
     process.exit(1);
   }
   return {
