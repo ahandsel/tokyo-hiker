@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitepress';
 import { withSidebar } from 'vitepress-sidebar';
 import { withPwa } from '@vite-pwa/vitepress';
+import { slugify } from './slugify.ts';
 
 // This file's own folder, contents/.vitepress, used to anchor the PWA asset paths below.
 const configDir = dirname(fileURLToPath(import.meta.url));
@@ -106,6 +107,11 @@ const vitePressOptions = {
     hostname: 'https://ahandsel.github.io/tokyo-hiker/',
   },
   ignoreDeadLinks: true,
+  markdown: {
+    // GitHub-style heading ids, so `## Food 🍱` is `#food-` on the site, in
+    // markdownlint MD051, and on GitHub alike. See slugify.ts.
+    anchor: { slugify },
+  },
 
   // PWA options handled by @vite-pwa/vitepress
   pwa: {

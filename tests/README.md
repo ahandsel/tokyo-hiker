@@ -6,6 +6,8 @@ Run them all with `pnpm test`, which invokes `node --test "tests/**/*.test.mjs"`
 
 ## Contents
 
+* [heading-anchors.test.mjs][heading-anchors-test-mjs] - asserts that the site builds heading ids with the GitHub rule in [slugify.ts][slugify-ts], so a `#food-` link reaches `## Food 🍱`.
+
 * [Imported helper checks][imported-helpers] - PNG trimming, include validation, Playwright argument forwarding, and cleanup confirmation behavior.
 
 * [vendored-mermaid-css.test.mjs][vendored-mermaid-css-test-mjs] - asserts that the vendored plugin stylesheet in [vitepress-mermaid-renderer.css][vitepress-mermaid-renderer-css] is still a verbatim copy of the CSS the installed `vitepress-mermaid-renderer` package ships.
@@ -23,6 +25,7 @@ Run them all with `pnpm test`, which invokes `node --test "tests/**/*.test.mjs"`
 
 | File                            | What it guards                                                                                                                                                                                                                                                       |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `heading-anchors.test.mjs`      | The site config passes the GitHub-style slugify to VitePress, and a `#fragment` link still lands on its heading after rendering.                                                                                                                                     |
 | `vendored-mermaid-css.test.mjs` | The vendored block in the Mermaid stylesheet still matches the installed plugin.                                                                                                                                                                                     |
 | `pdf-to-images.test.mjs`        | The pure helpers in `scripts/pdf-to-images.mjs`, plus the CLI error paths.                                                                                                                                                                                           |
 | `repo-conventions.test.mjs`     | Rules `AGENTS.md` states in prose that no other tool enforced: shell placeholders surviving Prettier, pnpm scripts named in the docs actually existing, skills having distinct descriptions, the script audit, the skill allowlist, and image definitions resolving. |
@@ -41,9 +44,11 @@ The comparison ignores formatting, so a Prettier reformat of the vendored copy a
 
 <!-- Internal links -->
 
+[heading-anchors-test-mjs]: heading-anchors.test.mjs
 [imported-helpers]: imported-helpers.test.mjs
 [pr-linter-yaml]: ../.github/workflows/pr-linter.yaml
 [scripts-readme-md]: ../scripts/README.md
+[slugify-ts]: ../contents/.vitepress/slugify.ts
 [tokyo-geek-helpers]: tokyo-geek-helpers.test.mjs
 [vendored-mermaid-css-test-mjs]: vendored-mermaid-css.test.mjs
 [vitepress-mermaid-renderer-css]: ../contents/.vitepress/theme/vitepress-mermaid-renderer.css

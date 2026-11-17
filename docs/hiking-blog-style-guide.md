@@ -168,10 +168,14 @@ H3 headings inside `Along the trail` are named after the stretch they cover, for
 
 ## Headings with emoji change the anchor
 
-VitePress builds a heading anchor from the heading text, and an emoji at the end leaves a trailing hyphen. `## Food 🍱` becomes `#food-`, not `#food`.
+The site builds a heading anchor the way GitHub does: it lowercases the heading text, drops emoji and punctuation, and turns each space into a hyphen. An emoji at the end therefore leaves a trailing hyphen, so `## Food 🍱` becomes `#food-`, not `#food`.
 
 * Keep the trailing hyphen in same-page links, for example `[food-options]: #food-`.
-* Check every same-page link after adding, removing, or changing a heading emoji. `pnpm lint` does not catch a broken same-page anchor.
+* A spaced hyphen in a heading becomes three hyphens, so `## Level 1 - Start from Futamatao Station` becomes `#level-1---start-from-futamatao-station`.
+* Some emoji, such as 🗺️, ⏱️, ✂️, and ⛰️, end in an invisible variation selector that stays in the anchor. To link to one of those headings, give it an explicit id, for example `## Mountains ⛰️ {#mountains}`.
+* Run `pnpm lint` after adding, removing, or changing a heading emoji. Its markdownlint rule MD051 checks every same-page link against these anchors.
+
+[contents/.vitepress/slugify.ts](../contents/.vitepress/slugify.ts) holds the rule. It is a copy of the one MD051 uses, so the site, the linter, and the GitHub preview all build the same anchor, and [tests/heading-anchors.test.mjs](../tests/heading-anchors.test.mjs) fails if they drift apart.
 
 
 ## Emoji on Japanese pages
