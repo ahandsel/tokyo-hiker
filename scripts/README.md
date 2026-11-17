@@ -97,6 +97,7 @@ Markdown files go through both stages; every other file type goes through Pretti
 `--check` asks whether the pipeline would change a file, not whether the file is in Prettier's output state.
 The two differ here: the second stage has the last word, so a committed Markdown file is deliberately not in Prettier's output state, and a plain `prettier --check` would report every one of them as out of date.
 The check therefore snapshots the files, runs both stages, compares, and restores the snapshot.
+It skips symlinks, so `--check .` covers the whole repository, and it also fails when a tool reports a finding it could not fix, as the write mode does.
 
 ```shell
 # Lint one page after editing it

@@ -23,7 +23,8 @@
 // Output:
 //   One line per stage with the files it touched, then a closing summary.
 //   With --check, the files that would change are listed instead, and the
-//   exit code is 1 when any file is out of date.
+//   exit code is 1 when any file is out of date or a tool reported findings
+//   it could not fix.
 //
 //   --check asks "does the pipeline change this file", not "is this file in
 //   Prettier's output state". The two differ here: the second stage has the
@@ -33,10 +34,19 @@
 //   restores the snapshot.
 //
 // Version history:
+//   * v1.1 - 2026-11-17 - --check skips symlinks, so `--check .` no longer
+//     crashes on the symlinked prompt and skill folders, and fails on
+//     findings a tool could not fix, matching the write mode.
 //   * v1.0 - 2026-08-19 - Initial version.
 
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import {
+  existsSync,
+  lstatSync,
+  readFileSync,
+  statSync,
+  writeFileSync,
+} from 'node:fs';
 import { relative, resolve } from 'node:path';
 
 const HELP = `Run the repository lint pipeline against specific paths.
@@ -138,6 +148,9 @@ const markdownGlobs = paths.map(markdownGlobFor).filter(Boolean);
 // The files under the given paths that the pipeline is allowed to touch.
 // --cached picks up tracked files, --others --exclude-standard adds new files
 // that are not gitignored, so a brand-new page is checked rather than skipped.
+// Only regular files are kept: git lists a symlinked folder such as
+// .claude/skills as a single entry, and its real files are listed at their
+// source path anyway. A deleted file that is still tracked is dropped too.
 function targetFiles() {
   const listed = run('git', [
     'ls-files',
@@ -148,7 +161,12 @@ function targetFiles() {
     '--',
     ...paths,
   ]);
-  return listed.output.split('\0').filter(Boolean);
+  return listed.output
+    .split('\0')
+    .filter(Boolean)
+    .filter((file) =>
+      lstatSync(resolve(repoRoot, file), { throwIfNoEntry: false })?.isFile(),
+    );
 }
 
 // Run both stages in order. Prettier makes the bulk edits, markdownlint polishes.
@@ -210,17 +228,25 @@ if (check) {
 
   report(stages);
 
+  const unfixed = !stages.prettier.ok || !stages.markdownlint.ok;
   console.log('');
-  if (changed.length === 0) {
+  if (changed.length === 0 && !unfixed) {
     console.log(
       `✅ Every file matches the lint pipeline output (${files.length} checked).`,
     );
     process.exit(0);
   }
-  console.error(
-    `❌ ${changed.length} file${changed.length === 1 ? '' : 's'} would change. Run the same command without --check.`,
-  );
-  for (const file of changed) console.error(`   ${file}`);
+  if (changed.length > 0) {
+    console.error(
+      `❌ ${changed.length} file${changed.length === 1 ? '' : 's'} would change. Run the same command without --check.`,
+    );
+    for (const file of changed) console.error(`   ${file}`);
+  }
+  if (unfixed) {
+    console.error(
+      '❌ A tool reported findings it could not fix; see the output above.',
+    );
+  }
   process.exit(1);
 }
 
