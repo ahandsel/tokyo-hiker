@@ -171,6 +171,7 @@ H3 headings inside `Along the trail` are named after the stretch they cover, for
 | 🧢    | Cap or hat.                      |
 | 🧺    | Towel.                           |
 | 🔦    | Headlamp or flashlight.          |
+| 🔋    | Power bank.                      |
 | ☔    | Rain gear.                       |
 | 🔔    | Bear bell.                       |
 
