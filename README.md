@@ -184,6 +184,10 @@ The site is a PWA built with [@vite-pwa/vitepress][], configured in [.vitepress/
 After the first visit, the service worker holds every page, script, style, font, and image, so the whole site works offline, including search.
 A page opens from that cache instantly, even on a weak mountain signal.
 
+The first time the service worker finishes saving the site, a "Ready to use offline" message appears at the bottom of the screen, so readers know they can rely on the guide before they lose signal.
+On iPhone, an app added to the Home Screen keeps its own storage, so it downloads the site and shows the message again on its first launch.
+The message lives in `contents/.vitepress/theme/offline-ready-toast/`.
+
 When the device is online, [.vitepress/theme/pwa-update.ts][] keeps the site current.
 It checks for a new deploy when the page loads, when the app returns to the foreground, when the device reconnects, and once an hour.
 A new deploy downloads in the background, and the page then reloads once to show it.
