@@ -54,7 +54,7 @@
     "prettier-plugin-sql": "^0.20.0",
     "prettier-plugin-toml": "^4.1.0",
     "vite-plugin-pwa": "^2.0.0",
-    "vitepress": "2.0.0-alpha.19",
+    "vitepress": "2.0.0-alpha.21",
     "vitepress-mermaid-renderer": "^1.2.3",
     "vitepress-sidebar": "^1.41.0",
     "vue": "^3.5.45"
