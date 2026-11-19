@@ -12,7 +12,7 @@
 // Usage:
 //   node skills/vitepress-include-lint/scripts/check-vitepress-includes.mjs
 //   node skills/vitepress-include-lint/scripts/check-vitepress-includes.mjs --paths contents
-//   node skills/vitepress-include-lint/scripts/check-vitepress-includes.mjs --paths contents/en contents/ja
+//   node skills/vitepress-include-lint/scripts/check-vitepress-includes.mjs --paths contents/level-1 contents/area
 //   node skills/vitepress-include-lint/scripts/check-vitepress-includes.mjs --paths contents --repo-root .
 // Options:
 //   --paths <path...>  Markdown files or directories to scan (default: contents).
@@ -24,6 +24,7 @@
 // * A single success or warning line when there is nothing to report.
 // * Exit codes: 0 = no findings, 1 = at least one finding or an unreadable file, 2 = invalid arguments.
 // Version history:
+// * v1.4 - 2026-11-19 - Replace the `contents/en contents/ja` usage example with folders that exist in this repository.
 // * v1.3 - 2026-09-29 - Accept closing whitespace used by Tokyo Hiker include directives.
 // * v1.2 - 2026-08-24 - Keep `..` after a symlink in include paths, and reject a `--repo-root` value that starts with `-`.
 // * v1.1 - 2026-08-21 - Order findings by path component to match Python's PosixPath ordering, and document the emoji summary lines.

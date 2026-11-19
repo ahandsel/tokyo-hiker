@@ -304,7 +304,7 @@ The existing `skills/file-folder-name-linter/scripts/lint-names.mjs` is updated 
 | `skills/gh-fix-ci/scripts/inspect-pr-checks.mjs`                     | Inspect failed GitHub Actions checks and logs.                                                               |
 | `skills/gh-sync-with-main/scripts/update-branch-from-main.mjs`       | Plan or perform a branch update from main.                                                                   |
 | `skills/playwright/scripts/playwright-cli.sh`                        | Launch Playwright with pnpm and optional session selection; v1.2.                                            |
-| `skills/vitepress-include-lint/scripts/check-vitepress-includes.mjs` | Check include paths and formatting with Tokyo Hiker closing whitespace; v1.3. Run with `pnpm lint-includes`. |
+| `skills/vitepress-include-lint/scripts/check-vitepress-includes.mjs` | Check include paths and formatting with Tokyo Hiker closing whitespace; v1.4. Run with `pnpm lint-includes`. |
 
 
 ## Authoring rules
