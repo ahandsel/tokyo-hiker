@@ -186,7 +186,7 @@ contents/level-1/takao-inariyama.ja.md   -> /level-1/takao-inariyama.ja
 * A Japanese page carries the same keys as its English counterpart, with `title` and `description` written in Japanese and wrapped in straight single quotes.
 * Keep the body opening interpolations unchanged; only the frontmatter values are translated.
 * Write the prose to the [general style guide - Japanese][general-style-guide-japanese] and the [technical style guide - Japanese][technical-style-guide-japanese].
-* Whether a Japanese page appears in the sidebar is decided per page with `excludeFromSidebar`. [`takao-inariyama.ja.md`][takao-ja] sets `false` and lists next to the English page, while [`hatonosu-valley.ja.md`][hatonosu-ja] sets `true` and stays hidden. There is no repository-wide rule yet, so choose deliberately and match the neighboring pair.
+* Always set `excludeFromSidebar: true`, as [`hatonosu-valley.ja.md`][hatonosu-ja] and [`takao-inariyama.ja.md`][takao-ja] do. The sidebar and the folder landing lists are English, so a Japanese page belongs in them only through the link on its English counterpart.
 
 
 ## Snippet frontmatter
