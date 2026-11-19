@@ -82,8 +82,9 @@ Metrics, from my YAMAP plan:
 
 From the summit, you can also go down through [Wada Pass / `和田峠`][wada-pass] instead of the Jinba Shindō trail.
 
-* Small teahouse ☕ and restroom 🚻 is on the Wada Pass.
+* Wada Pass has a small teahouse 🍵 and a toilet 🚻.
 * From Wada Pass, the way follows a paved road with cars for about 3.4 km to the bus stop.
+* It is about 30 min faster on the paved road but less fun.
 
 
 ## Trails on other maps 🗺️
