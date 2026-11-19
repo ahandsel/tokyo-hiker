@@ -87,18 +87,37 @@ From the summit, you can also go down through [Wada Pass / `和田峠`][wada-pas
 * It is about 30 min faster on the paved road but less fun.
 
 
-## Trails on other maps 🗺️
+## Food 🍱
 
-* [YAMAP model course in the opposite direction][yamap-model-course] - starts at Jinbakōgenshita Bus Stop, climbs the Jinba Shindō trail, and ends at Sagamiko Station. YAMAP lists it as 9.4 km, with 717 m up, 843 m down, and a standard time of 4 hr 55 min.
-* [Sagamiko Station - Mount Magoyama - Mount Jinba on AllTrails][alltrails]
-* [My YAMAP plan from April 2022][yamap-plan-2022-04] - a group plan that starts at 10:10 and goes down through Wada Pass. The later start suits the long days of summer.
+* [Shingen Chaya / `信玄茶屋`][shingen-chaya] - the famous soba teahouse at the summit. It posts its open days on its [blog][shingen-chaya-blog] and closes when it rains. 🍵
+* [Shimizu Chaya / `清水茶屋`][shimizu-chaya] - another teahouse at the summit that serves soba. 🍵
+* [Wada Pass teahouse / `峠の茶屋`][wada-pass-teahouse] - a small teahouse at Wada Pass, on the other way down from the summit. 🍵
 
 
-## Suggested schedule 📅
+## What to bring 🎒
+
+* [ ] 2 to 4 liters of water 🥤
+* [ ] Cap 🧢
+* [ ] Cash for the teahouses 🍵
+* [ ] Good shoes 🥾
+* [ ] Headlamp 🔦
+* [ ] Light outer layer
+* [ ] Light snacks 🍙
+* [ ] Power bank 🔋
+* [ ] _Optional_ Hiking poles 🔧
+* [ ] _Optional_ Lunch (can buy on the mountain) 🍱
+* [ ] _Optional_ Onsen set: underwear, socks, shirt, and towel ♨️
+* [ ] _Optional_ Rain gear ☔
+* [ ] _Optional_ Sweat towel 🧺
+* [ ] _Winter_ Gloves 🧤
+* [ ] _Winter_ Warm jacket 🧥
+
+
+## Example schedule 🗓️
 
 > [!TIP] In summer, the days are long, so you can start the hike later in the day.
 
-Details: [YAMAP plan][yamap-plan-2026-11].
+For the full plan, see [my YAMAP plan][yamap-plan-2026-11].
 
 * 07:20 - Leave Shinjuku on a JR `中央特快` (Chuo Special Rapid) train for Takao, arriving at Takao Station at 08:04. 🚃
 * 08:09 - Leave Takao Station on a JR Chuo Line train for Kofu / `甲府`, arriving at Sagamiko Station at 08:18.
@@ -111,7 +130,8 @@ Details: [YAMAP plan][yamap-plan-2026-11].
 
 The diagram shows the walking part of the plan, point by point.
 
-* Walking time between two points and planned arrival time.
+* Each box shows the planned arrival time, with the time since the start in parentheses.
+* Each arrow shows the walking time between two points.
 
 ```mermaid
 ---
@@ -147,46 +167,11 @@ flowchart TD
 
 Why this plan starts early:
 
-* The last 5 km is in a narrow valley so it gets really dark.
+* The last 2 km runs through a narrow valley, so it gets dark early.
 
 Other things to check:
 
-* The soba teahouse at the summit closes depending on weather (rains or snow).
-
-
-## Food 🍱
-
-* [Shingen Chaya / `信玄茶屋`][shingen-chaya] - the famous soba teahouse at the summit. It posts its open days on its [blog][shingen-chaya-blog] and closes when it rains. 🍵
-* [Shimizu Chaya / `清水茶屋`][shimizu-chaya] - another teahouse at the summit that serves soba. 🍵
-* [Wada Pass teahouse / `峠の茶屋`][wada-pass-teahouse] - a small teahouse at Wada Pass, on the other way down from the summit. 🍵
-
-
-## What to bring 🎒
-
-* [ ] 2 to 4 liters of water 🥤
-* [ ] Cap 🧢
-* [ ] Cash for the teahouses 🍵
-* [ ] Good shoes 🥾
-* [ ] Headlamp 🔦
-* [ ] Light outer layer
-* [ ] Light snacks 🍙
-* [ ] Power bank 🔋
-* [ ] _Optional_ Hiking poles 🔧
-* [ ] _Optional_ Lunch (can buy on the mountain) 🍱
-* [ ] _Optional_ Onsen set: underwear, socks, shirt, and towel ♨️
-* [ ] _Optional_ Rain gear ☔
-* [ ] _Optional_ Sweat towel 🧺
-* [ ] _Winter_ Gloves 🧤
-* [ ] _Winter_ Warm jacket 🧥
-
-
-## References 📚
-
-* [Jinbakōgenshita bus timetables on Bus Navi][bus-timetable], for the `美32` bus. 🚌
-* [JR Sagamiko Station timetable][jr-sagamiko-timetable], to check that your train stops there. 🚃
-* [Jinba and Sagamiko area trail status][kanagawa-trail-status] by Kanagawa Prefecture. 🗾
-* [Sunrise and sunset in Tokyo][naoj-tokyo] by the National Astronomical Observatory of Japan.
-* [Bear sightings in Hachioji][hachioji-bear-sightings] by Hachioji City.
+* The soba teahouse at the summit closes in bad weather, such as rain or snow.
 
 
 ## All my hikes on this route 🗻
@@ -206,6 +191,21 @@ These are all the records on my [YAMAP profile][my-yamap-profile] that start at 
 * Time is the total time of the record, including breaks.
 * The [Way down via Wada Pass][way-down-wada-pass] section above compares the two ways down from the summit.
 * The December 2024 record continues for about 35 min past the bus stop and ends about 1.3 km down the road, so its time and distance include that extra stretch.
+
+
+## Trails on other maps 🗺️
+
+* [YAMAP model course in the opposite direction][yamap-model-course] - starts at Jinbakōgenshita Bus Stop, climbs the Jinba Shindō trail, and ends at Sagamiko Station. YAMAP lists it as 9.4 km, with 717 m up, 843 m down, and a standard time of 4 hr 55 min.
+* [Sagamiko Station - Mount Magoyama - Mount Jinba on AllTrails][alltrails]
+
+
+## References 📚
+
+* [Jinbakōgenshita bus timetables on Bus Navi][bus-timetable], for the `美32` bus. 🚌
+* [JR Sagamiko Station timetable][jr-sagamiko-timetable], to check that your train stops there. 🚃
+* [Jinba and Sagamiko area trail status][kanagawa-trail-status] by Kanagawa Prefecture. 🗾
+* [Sunrise and sunset in Tokyo][naoj-tokyo] by the National Astronomical Observatory of Japan.
+* [Bear sightings in Hachioji][hachioji-bear-sightings] by Hachioji City.
 
 <!--@include: ../snippets/footer.md-->
 
@@ -244,7 +244,6 @@ These are all the records on my [YAMAP profile][my-yamap-profile] that start at 
 [wada-pass]: https://www.google.com/maps/search/?api=1&query=35.65771,139.16858
 [wada-pass-teahouse]: https://goo.gl/maps/JyZjdFXxfFcRX1Sv8
 [yamap-model-course]: https://yamap.com/model-courses/75600
-[yamap-plan-2022-04]: https://yamap.com/plans/code/zPS6JkPbEN5t7aax37qn5fablUpDV9VoRfo7kKuWccZYqozJKa5RxqQAf-nUiQ2xFp0
 [yamap-plan-2026-11]: https://yamap.com/plans/code/A9nEjXaJJ4B2gDVOlFCstRh02Aam2j7G34DMORCybbbtZkmnErjkp51hf3mpIzENTFk
 [yose-shrine]: https://www.google.com/maps/search/?api=1&query=35.61999,139.18404
 [yoshinoyanooto]: https://www.google.com/maps/search/?api=1&query=35.63476,139.17920
