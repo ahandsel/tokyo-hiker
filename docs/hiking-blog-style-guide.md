@@ -69,26 +69,27 @@ Emoji are part of the voice of this blog: they let a reader skim a route page an
 
 These are the standard H2 sections of a route page, in the usual order. Use the same emoji every time, and give a section its emoji even when the page has only some of these sections.
 
-| Heading                           | Emoji | Used for                                            |
-| --------------------------------- | ----- | --------------------------------------------------- |
-| `Getting there`                   | 🚂    | Stations, travel time, and access by car.           |
-| `Trail overview`                  | 📋    | Difficulty, toilets, water, season, and warnings.   |
-| `Trail route`                     | 🥾    | The ordered list of points and the route metrics.   |
-| `Map of the route`                | 🗺️    | Trail maps, map images, and map PDFs.               |
-| `Trails on other maps`            | 🗺️    | The same route on YAMAP, AllTrails, and other apps. |
-| `Shortcuts`                       | ✂️    | Ways to skip a section of the route.                |
-| `Along the trail`                 | 🌲    | The section-by-section walkthrough of the route.    |
-| `Timeline`                        | ⏱️    | A recorded hike, point by point, with clock times.  |
-| `Suggested schedule`              | 📅    | A planned day with train, hike, and bus times.      |
-| `Mountain weather`                | ⛅    | Forecast links and seasonal conditions.             |
-| `Food`                            | 🍱    | Restaurants, shops, and what to pack.               |
-| `What to bring`                   | 🎒    | The packing checklist.                              |
-| `Key photo spots`                 | 📸    | The views worth stopping for.                       |
-| `Notes from the original article` | 📝    | Notes carried over from a reproduced source.        |
-| `References`                      | 📚    | Sources and other write-ups of the same route.      |
-| `Related page`                    | 🔗    | Other pages on this site, including a Japanese one. |
+| Heading                           | Emoji | Used for                                                   |
+| --------------------------------- | ----- | ---------------------------------------------------------- |
+| `Getting there`                   | 🚂    | Stations, travel time, and access by car.                  |
+| `Trail overview`                  | 📋    | Difficulty, toilets, water, weather, season, and warnings. |
+| `Trail route`                     | 🥾    | The ordered list of points and the route metrics.          |
+| `Map of the route`                | 🗺️    | Trail maps, map images, and map PDFs.                      |
+| `Trails on other maps`            | 🗺️    | The same route on YAMAP, AllTrails, and other apps.        |
+| `Shortcuts`                       | ✂️    | Ways to skip a section of the route.                       |
+| `Along the trail`                 | 🌲    | The section-by-section walkthrough of the route.           |
+| `Timeline`                        | ⏱️    | A recorded hike, point by point, with clock times.         |
+| `Suggested schedule`              | 📅    | A planned day with train, hike, and bus times.             |
+| `Food`                            | 🍱    | Restaurants, shops, and what to pack.                      |
+| `What to bring`                   | 🎒    | The packing checklist.                                     |
+| `Key photo spots`                 | 📸    | The views worth stopping for.                              |
+| `Notes from the original article` | 📝    | Notes carried over from a reproduced source.               |
+| `References`                      | 📚    | Sources and other write-ups of the same route.             |
+| `Related page`                    | 🔗    | Other pages on this site, including a Japanese one.        |
 
 H3 headings inside `Along the trail` are named after the stretch they cover, for example `### Suniwa Bridge to Hatonosu Station 🌉`. Take their emoji from the inline tables below, choosing the highlight of that stretch.
+
+Do not give the weather a section of its own. Put it in `Trail overview` as a `Weather` bullet that links the tenki.jp mountain forecast for the route, for example `* Weather: Check the [Mt. Jinba forecast on tenki.jp][tenki-jinba]. ⛅`
 
 
 ## Standard inline emoji
@@ -120,6 +121,7 @@ H3 headings inside `Along the trail` are named after the stretch they cover, for
 | ↗     | Elevation gain.                                             |
 | ↘     | Elevation decline.                                          |
 | 🍃    | Best season.                                                |
+| ⛅    | Weather forecast.                                           |
 | 🚻    | Toilets.                                                    |
 | 🥤    | Water, vending machines, and what to drink.                 |
 | 🔧    | Hiking pole rating, written as `Hiking poles 🔧: 2 / 5`.    |
