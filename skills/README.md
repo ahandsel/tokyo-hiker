@@ -32,7 +32,7 @@ To use a skill, enter the skill's name in the AI interface (VS Code extension, t
 
 ### Translation skill
 
-* [`blog-translator`][blog-translator] - Translates paired English and Japanese content while preserving Markdown structure and reconciling localization frontmatter. Its current workflow assumes `contents/en/` and `contents/ja/` folders, which this repository does not use.
+* [`blog-translator`][blog-translator] - Translates a content page between English and Japanese, where the Japanese page sits beside the English one as `<name>.ja.md`. It preserves Markdown structure and heading emoji, converts the Japanese place-name form, leaves reproduced articles untouched, and links a new Japanese page from its English counterpart.
 
 
 ### Repository maintenance skills
