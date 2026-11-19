@@ -42,16 +42,11 @@ Bus back from Jinbakōgenshita Bus Stop: 🚌
   * Good to have for the uphill section and the steep way down.
 * Trail running 👟: 2 / 5
   * Quite steep with many roots, so not good for running.
+* Weather: Check the [Mt. Jinba forecast on tenki.jp][tenki-jinba]. Its 3-day forecast is for the foot of the mountain, labeled `ふもと`, so use the temperature and wind it shows at 800 m to judge the summit. ⛅
 * ⚠️ The Jinba Shindō trail down is steep, with many roots, and slippery when wet.
 * ⚠️ The last 1.3 km to the bus stop is a paved road with cars.
 * ⚠️ The ridge has many junctions, so keep a map app open.
 * ⚠️ Days are short in autumn and winter, so carry a headlamp.
-
-
-### Mountain weather ⛅
-
-* Check the [Mt. Jinba forecast on tenki.jp][tenki-jinba]. Its 3-day forecast is for Hachioji City at the foot of the mountain, labeled `ふもと`, not for the summit.
-* The same page also shows the expected temperature and wind at several heights up to 800 m. Use those numbers to judge the summit.
 
 
 ## Trail route 🥾
