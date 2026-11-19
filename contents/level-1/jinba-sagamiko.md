@@ -149,7 +149,7 @@ Why this plan starts early:
 
 * The last 5 km is in a narrow valley so it gets really dark.
 
-Other things to check for this date:
+Other things to check:
 
 * The soba teahouse at the summit closes depending on weather (rains or snow).
 
@@ -165,19 +165,19 @@ Other things to check for this date:
 
 * [ ] 2 to 4 liters of water 🥤
 * [ ] Cap 🧢
-* [ ] Cash for tea house 🎟️
+* [ ] Cash for the teahouses 🍵
 * [ ] Good shoes 🥾
 * [ ] Headlamp 🔦
 * [ ] Light outer layer
 * [ ] Light snacks 🍙
 * [ ] Power bank 🔋
 * [ ] _Optional_ Hiking poles 🔧
+* [ ] _Optional_ Lunch (can buy on the mountain) 🍱
 * [ ] _Optional_ Onsen set: underwear, socks, shirt, and towel ♨️
 * [ ] _Optional_ Rain gear ☔
 * [ ] _Optional_ Sweat towel 🧺
-* [ ] _Optional_ lunch (can buy on the mountain) 🍱
 * [ ] _Winter_ Gloves 🧤
-* [ ] _Winter_ warm jacket 🧥
+* [ ] _Winter_ Warm jacket 🧥
 
 
 ## References 📚
