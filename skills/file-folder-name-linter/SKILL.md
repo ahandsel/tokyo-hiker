@@ -46,7 +46,7 @@ Run the bundled linter through `pnpm`:
 pnpm lint-naming
 
 # Scan a subset of paths.
-pnpm lint-naming notes/ localization/
+pnpm lint-naming notes/ docs/
 
 # Rename *.yml to *.yaml in place (the only auto-fixable rule).
 pnpm lint-naming --fix
