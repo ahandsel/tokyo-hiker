@@ -67,7 +67,7 @@ Two Homebrew formulae sit outside the Node.js toolchain: `poppler` and `webp`, w
 | `pnpm lint`              | `lint-code` then `lint-md`. Run this before finishing any change.                                                                  |
 | `pnpm lint-target`       | The same two stages, scoped to given paths. `--check` reports without writing.                                                     |
 | `pnpm lint-naming`       | Lint file and folder names against the repo naming rules.                                                                          |
-| `pnpm code-format:check` | Prettier in check-only mode, as CI runs it.                                                                                        |
+| `pnpm code-format:check` | Prettier in check-only mode, skipping Markdown, whose final form comes from markdownlint.                                          |
 | `pnpm test`              | `node --test tests/**/*.test.mjs`: the Mermaid CSS drift guard, the `pdf-to-images` helpers, and the repository convention guards. |
 | `pnpm check`             | Merge gate: `pnpm lint` with fixes applied, the naming and include linters, the tests, the build, and the sitemap check.           |
 | `pnpm tree`              | Regenerate `docs/site-structure.md` from the `contents/` tree.                                                                     |
@@ -132,7 +132,7 @@ See [README.md](README.md) for the longer explanation.
 
 ## Markdown formatting
 
-Prettier ignores `*.md` on purpose; [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) owns Markdown style. Follow [.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc):
+Prettier formats `*.md` first, then [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) fixes the result into the house style, so markdownlint has the last word on Markdown. Do not add `*.md` to `.prettierignore`, and do not expect `prettier --check` to pass on Markdown. Follow [.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc):
 
 * Use `*` for unordered list items, never `-` or `+`.
 * Use 2-space indentation for nested lists.
