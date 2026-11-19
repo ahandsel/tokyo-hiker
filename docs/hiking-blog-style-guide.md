@@ -2,7 +2,7 @@
 
 This document describes the conventions that apply to the hiking pages under [contents/](../contents/), on top of the general and Markdown style guides.
 
-It covers emoji use and Japanese place names. Add further hiking-page conventions here as they are agreed.
+It covers emoji use, the standard section order, and Japanese place names. Add further hiking-page conventions here as they are agreed.
 
 
 ## Table of contents <!-- omit in toc -->
@@ -61,13 +61,13 @@ Emoji are part of the voice of this blog: they let a reader skim a route page an
 * Put a single regular space between the text and the emoji.
 * Place the emoji after the sentence punctuation: `... so pack your own. 🍱`
 * Use one emoji per line. Pair two only when the line genuinely covers two things, for example `09:12 bus -> 09:30 cable car. 🚌🚠`
-* Copy the emoji exactly from the tables below. Several of them need the variation selector `U+FE0F` to render in color rather than as a black glyph, including `⚠️`, `⏱️`, `⛰️`, `⛩️`, `♨️`, `✂️`, `🅿️`, `🗺️`, and `🕊️`.
+* Copy the emoji exactly from the tables below. Several of them need the variation selector `U+FE0F` to render in color rather than as a black glyph, including `⚠️`, `⏱️`, `⛰️`, `⛩️`, `♨️`, `✂️`, `🅿️`, `🗺️`, `🗓️`, and `🕊️`.
 * Do not use a skin-tone or gender modifier.
 
 
 ## Standard section heading emoji
 
-These are the standard H2 sections of a route page, in the usual order. Use the same emoji every time, and give a section its emoji even when the page has only some of these sections.
+These are the standard H2 sections of a route page, in the order they appear on the page. A page can skip any section it does not need, but it keeps the rest in this order, so `References` is always the last section. Use the same emoji every time, and give a section its emoji even when the page has only some of these sections.
 
 | Heading                           | Emoji | Used for                                                   |
 | --------------------------------- | ----- | ---------------------------------------------------------- |
@@ -75,17 +75,18 @@ These are the standard H2 sections of a route page, in the usual order. Use the 
 | `Trail overview`                  | 📋    | Difficulty, toilets, water, weather, season, and warnings. |
 | `Trail route`                     | 🥾    | The ordered list of points and the route metrics.          |
 | `Map of the route`                | 🗺️    | Trail maps, map images, and map PDFs.                      |
-| `Trails on other maps`            | 🗺️    | The same route on YAMAP, AllTrails, and other apps.        |
 | `Shortcuts`                       | ✂️    | Ways to skip a section of the route.                       |
 | `Along the trail`                 | 🌲    | The section-by-section walkthrough of the route.           |
 | `Timeline`                        | ⏱️    | A recorded hike, point by point, with clock times.         |
-| `Suggested schedule`              | 📅    | A planned day with train, hike, and bus times.             |
 | `Food`                            | 🍱    | Restaurants, shops, and what to pack.                      |
 | `What to bring`                   | 🎒    | The packing checklist.                                     |
 | `Key photo spots`                 | 📸    | The views worth stopping for.                              |
 | `Notes from the original article` | 📝    | Notes carried over from a reproduced source.               |
-| `References`                      | 📚    | Sources and other write-ups of the same route.             |
+| `Example schedule`                | 🗓️    | A planned day with train, hike, and bus times.             |
+| `All my hikes on this route`      | 🗻    | My YAMAP records of the route, with time and distance.     |
+| `Trails on other maps`            | 🗺️    | The same route on YAMAP, AllTrails, and other apps.        |
 | `Related page`                    | 🔗    | Other pages on this site, including a Japanese one.        |
+| `References`                      | 📚    | Sources and other write-ups of the same route.             |
 
 H3 headings inside `Along the trail` are named after the stretch they cover, for example `### Suniwa Bridge to Hatonosu Station 🌉`. Take their emoji from the inline tables below, choosing the highlight of that stretch.
 
@@ -198,7 +199,7 @@ The site builds a heading anchor the way GitHub does: it lowercases the heading 
 
 * Keep the trailing hyphen in same-page links, for example `[food-options]: #food-`.
 * A spaced hyphen in a heading becomes three hyphens, so `## Level 1 - Start from Futamatao Station` becomes `#level-1---start-from-futamatao-station`.
-* Some emoji, such as 🗺️, ⏱️, ✂️, and ⛰️, end in an invisible variation selector that stays in the anchor. To link to one of those headings, give it an explicit id, for example `## Mountains ⛰️ {#mountains}`.
+* Some emoji, such as 🗺️, 🗓️, ⏱️, ✂️, and ⛰️, end in an invisible variation selector that stays in the anchor. To link to one of those headings, give it an explicit id, for example `## Mountains ⛰️ {#mountains}`.
 * Run `pnpm lint` after adding, removing, or changing a heading emoji. Its markdownlint rule MD051 checks every same-page link against these anchors.
 
 [contents/.vitepress/slugify.ts](../contents/.vitepress/slugify.ts) holds the rule. It is a copy of the one MD051 uses, so the site, the linter, and the GitHub preview all build the same anchor, and [tests/heading-anchors.test.mjs](../tests/heading-anchors.test.mjs) fails if they drift apart.

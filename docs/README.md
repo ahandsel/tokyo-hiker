@@ -91,7 +91,7 @@ Help documentation writing falls under the technical style guides. These contain
 
 ## Hiking blog style guide
 
-* [Hiking blog style guide][hiking-blog-style-guide] - Conventions for the hiking pages under [`contents/`][contents-folder], on top of the general and Markdown style guides. It defines the standard emoji vocabulary: where an emoji belongs, the fixed emoji for each standard section heading, the inline emoji for transport, trail data, places, and food, and the anchor change that a heading emoji causes. It also defines how to give a place its Japanese name, as a backticked code span inside the link text.
+* [Hiking blog style guide][hiking-blog-style-guide] - Conventions for the hiking pages under [`contents/`][contents-folder], on top of the general and Markdown style guides. It defines the standard emoji vocabulary: where an emoji belongs, the standard route-page section headings in order with a fixed emoji for each, the inline emoji for transport, trail data, places, and food, and the anchor change that a heading emoji causes. It also defines how to give a place its Japanese name, as a backticked code span inside the link text.
 
 
 ## Frontmatter style guide
