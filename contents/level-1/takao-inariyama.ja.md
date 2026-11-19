@@ -42,4 +42,11 @@ excludeFromSidebar: true
 * トレイルランニング適性👟 = 4/5（適している）
 * 新宿からのアクセスが非常に良好
 
+
+## 関連ページ 🔗
+
+* 英語版は [Mt. Takao Inariyama Trail (dirt trail) route][english-version] をご覧ください。
+
+[english-version]: ./takao-inariyama.md
+
 <!--@include: ../snippets/footer.md-->

@@ -43,4 +43,11 @@ Takaosanguchi Station -> Hike 🥾 -> Takaosanguchi Station
 * Trail running - 4/5 (suitable)
 * Very accessible from Shinjuku
 
+
+## Related page 🔗
+
+* [高尾山 稲荷山コース（土道）ルート][japanese-version] is the Japanese version of this page. 🇯🇵
+
+[japanese-version]: ./takao-inariyama.ja.md
+
 <!--@include: ../snippets/footer.md-->
