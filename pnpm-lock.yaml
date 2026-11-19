@@ -180,10 +180,10 @@ importers:
         version: 1.1.5
       '@nolebase/vitepress-plugin-enhanced-readabilities':
         specifier: ^2.21.1
-        version: 2.21.1(vitepress@2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))(vue@3.5.45)
+        version: 2.21.1(vitepress@2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))(vue@3.5.45)
       '@nolebase/vitepress-plugin-meta':
         specifier: ^2.21.1
-        version: 2.21.1(vitepress@2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))
+        version: 2.21.1(vitepress@2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))
       '@prettier/plugin-xml':
         specifier: ^3.4.2
         version: 3.4.2(prettier@3.10.1)
@@ -192,7 +192,7 @@ importers:
         version: 2.0.0
       '@vite-pwa/vitepress':
         specifier: ^2.0.3
-        version: 2.0.3(@vite-pwa/assets-generator@2.0.0)(magicast@0.5.5)(rolldown@1.2.19)(vite@8.3.8(jiti@2.7.0)(less@4.9.1)(terser@5.51.2))(vitepress@2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))
+        version: 2.0.3(@vite-pwa/assets-generator@2.0.0)(magicast@0.5.5)(rolldown@1.2.19)(vite@8.3.8(jiti@2.7.0)(less@4.9.1)(terser@5.51.2))(vitepress@2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))
       glob:
         specifier: ^14.0.6
         version: 14.0.6
@@ -242,8 +242,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(@vite-pwa/assets-generator@2.0.0)(vite@8.3.8(jiti@2.7.0)(less@4.9.1)(terser@5.51.2))(workbox-build@7.4.1)(workbox-window@7.4.1)
       vitepress:
-        specifier: 2.0.0-alpha.19
-        version: 2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
+        specifier: 2.0.0-alpha.21
+        version: 2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
       vitepress-mermaid-renderer:
         specifier: ^1.2.3
         version: 1.2.3(mermaid@12.3.0)(vue@3.5.45)
@@ -1877,18 +1877,20 @@ packages:
   '@vue/shared@3.5.45':
     resolution: {integrity: sha512-ue9fgHmVNPlP7iW3+cxoBX/Cnlw53dHlVSw0JKGY6z1lObg8pHoj928M2nzG4/yVsMZ3NaRZ2s2z61uC16NDwQ==}
 
-  '@vueuse/core@14.4.0':
-    resolution: {integrity: sha512-X4WHz1HlCzCBoYXesUkifzzWBAcZgXG8Fi5iNPQg/epdzOB3gu8Fawj3hvuwYR1nGcXGnvxwYYcUC/71++svtQ==}
+  '@vueuse/core@15.0.0':
+    resolution: {integrity: sha512-Zv67h5mrk7YHDJsRObx+DXaCBz6RKBUpxqLesJ+3xZNPG6yuQs7ja7kg3veFrrouYLWAqydQ7CwGEbLVxB43Ng==}
+    engines: {node: '>=22'}
     peerDependencies:
       vue: ^3.5.0
 
-  '@vueuse/integrations@14.4.0':
-    resolution: {integrity: sha512-oJz9qTgczvA7L1nXQFRU7h8tQbOCoiceqvMMhT9XYMyOGTqLJ2rEa09PON+nD2t48sZUfeOmg4eaWJXV4sZb/w==}
+  '@vueuse/integrations@15.0.0':
+    resolution: {integrity: sha512-uWC1608pEocJPeRk1IqrEA3uYHhAGTJNibcMAdxgdK2Sy2Hypc6b+VdNO9KekCxyPc4VXK8SKDp8vsXefR/ZFg==}
+    engines: {node: '>=22'}
     peerDependencies:
       async-validator: ^4
       axios: ^1
       change-case: ^5
-      drauu: ^0.4
+      drauu: ^1 || ^0.4
       focus-trap: ^7 || ^8
       fuse.js: ^7
       idb-keyval: ^6
@@ -1924,11 +1926,13 @@ packages:
       universal-cookie:
         optional: true
 
-  '@vueuse/metadata@14.4.0':
-    resolution: {integrity: sha512-swx/255R6JyHZFJhx845iz5CRWDZdCfvkZOpACWc5+c5WHcG24mv8gUT1WIdFQaHt6dq79rvILd9QnCWiyVm9g==}
+  '@vueuse/metadata@15.0.0':
+    resolution: {integrity: sha512-sfWE5LADAKJ0KnjtGliMdSN8Ij/L7uP6rXIZlgPloAI4zvvefbw6H5Lt7KJA6RqQOYgVqWF5Guj50HHMIzygBg==}
+    engines: {node: '>=22'}
 
-  '@vueuse/shared@14.4.0':
-    resolution: {integrity: sha512-JRgY90Sz8DDtPMsaDflvPMp9xYk69JZAmbuDvAquUVXKr2gEjqtzGNTTthLfckH0BzBqvnu31gb4a8TGLRe79g==}
+  '@vueuse/shared@15.0.0':
+    resolution: {integrity: sha512-vbNXhGrbV53xPOMSyOzMHQRvhMgZf7oNDw2RChUetVxwTIEkInQ1joZ9JbT0G3z2n2AJNjvmCWeM9ySYrnvogA==}
+    engines: {node: '>=22'}
     peerDependencies:
       vue: ^3.5.0
 
@@ -2436,8 +2440,8 @@ packages:
     resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
     engines: {node: '>= 4'}
 
-  dompurify@3.4.17:
-    resolution: {integrity: sha512-B/pSlYVHQ58kqISD/yDjuJ1yfzI34m1gF4lAod2bwSRhiN4K5Cl3H8Af7hqB2PmTL911tdEudnnXn5FnhRoz0w==}
+  dompurify@3.4.18:
+    resolution: {integrity: sha512-ofe3wI/uNm68HInABYFJYqQxRw1EaKAjNdrFVKqjUY+UZurvNd2L/HuQe097s/4RivWiZyP6tT7aoT8atjfhwg==}
 
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
@@ -2451,8 +2455,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.5.485:
-    resolution: {integrity: sha512-m3uadzR0Z+sR19HGWgfxoZcKv9hE/edVM9OZ+FJ4wNRyfuFtkwZJIDoehEty5sisYVwmge8lKV1tenWOyClVgw==}
+  electron-to-chromium@1.5.486:
+    resolution: {integrity: sha512-rpybw4Ac4ak/An6G1Me2+61xzwobowDGyuJe71QHHOVpkZv4fPVobsLl7WH6zHSKusAMpaHxGKTpOvpy7+r3dQ==}
 
   elkjs@0.12.1:
     resolution: {integrity: sha512-IhMYKHE4S2vtx0QrhBP3lYOIKDeIiJXBrdq9MGYkuB8ZHqhrBnHNfSUndjXFewrX1CPK8chwq+2NA0K0hliYuw==}
@@ -2583,8 +2587,8 @@ packages:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
 
-  focus-trap@8.2.4:
-    resolution: {integrity: sha512-oy6dj7WZYgMbbpoOA29K5W++473F1zEzdI1oJgPb6x7yWT36YaWedUe6i6YPWEt5quSh0pRMohVyHLWXUxtdxg==}
+  focus-trap@8.2.5:
+    resolution: {integrity: sha512-VrqfyRXaHZ0EkhXlfyalszmhnSN9yjdYXwlwLSRoJrDJ0/eswY5J5Avj/Hcd/PrOHCMnsMhwx7+7+s1kmv9Asg==}
 
   for-each@0.3.5:
     resolution: {integrity: sha512-dKx12eRCVIzqCxFGplyFKJMPvLEWgmNtUrpTiJIR5u97zEhRG8ySrtboPHZXx7daLxQVrl643cTzbab2tkQjxg==}
@@ -3924,8 +3928,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  tabbable@6.5.1:
-    resolution: {integrity: sha512-dMCuwDUY6Noz3zVKLefBC4wq+aJV20yc7vWmM7uTNGwtQSFF5kX7OUIUsxuVajz/bdt5Xqdah3/0NLjth+cM5A==}
+  tabbable@6.5.2:
+    resolution: {integrity: sha512-XgdnB1nGU6KU4VgMnZPaZCx7M1hBrLyEiZYau2G2gq9UT0d7d4FUBlNX7vvPlm/B1vk1PjrzJBx9Lbv4fsqS9g==}
 
   temp-dir@2.0.0:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
@@ -4166,8 +4170,8 @@ packages:
     resolution: {integrity: sha512-nL+jWlSgmn0Ssg8/PBcZmwbJ2vBFFg3nur+pX1qWihuP/ihTCI12Z/U2cFG54e/jTsWAGLm0KVfaid0NpA/jsQ==}
     engines: {node: '>=20.0.0'}
 
-  vitepress@2.0.0-alpha.19:
-    resolution: {integrity: sha512-WnBsb0Bwr43kXKyiis+lld/7ri3hnMbthS8N3hpFtjjwsdLO4IRmiAE08D7aud4q6oMDf9uwRowxzNqRFe/amw==}
+  vitepress@2.0.0-alpha.21:
+    resolution: {integrity: sha512-b2PFPIw2mVfxDi490FhSq4AlkFi17b9lofLCqWfH4uPKz/dF4oy2C9vBpP2r7l7hl2hc5BG7OTRPvRFfRzF7MA==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4
@@ -5184,27 +5188,27 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.3
 
-  '@nolebase/ui@2.21.1(vitepress@2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))(vue@3.5.45)':
+  '@nolebase/ui@2.21.1(vitepress@2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))(vue@3.5.45)':
     dependencies:
       '@iconify-json/octicon': 1.2.40
       less: 4.9.1
-      vitepress: 2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
+      vitepress: 2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
       vue: 3.5.45
     transitivePeerDependencies:
       - supports-color
 
-  '@nolebase/vitepress-plugin-enhanced-readabilities@2.21.1(vitepress@2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))(vue@3.5.45)':
+  '@nolebase/vitepress-plugin-enhanced-readabilities@2.21.1(vitepress@2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))(vue@3.5.45)':
     dependencies:
       '@iconify-json/carbon': 1.2.30
       '@iconify-json/icon-park-outline': 1.2.4
-      '@nolebase/ui': 2.21.1(vitepress@2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))(vue@3.5.45)
+      '@nolebase/ui': 2.21.1(vitepress@2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))(vue@3.5.45)
       less: 4.9.1
-      vitepress: 2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
+      vitepress: 2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
     transitivePeerDependencies:
       - supports-color
       - vue
 
-  '@nolebase/vitepress-plugin-meta@2.21.1(vitepress@2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))':
+  '@nolebase/vitepress-plugin-meta@2.21.1(vitepress@2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))':
     dependencies:
       defu: 6.1.7
       hast-util-select: 6.0.4
@@ -5215,7 +5219,7 @@ snapshots:
       unified: 11.0.5
       unist-util-remove: 4.0.0
       unist-util-remove-position: 5.0.0
-      vitepress: 2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
+      vitepress: 2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
 
   '@oozcitak/dom@2.0.2':
     dependencies:
@@ -5782,7 +5786,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  '@vite-pwa/vitepress@2.0.3(@vite-pwa/assets-generator@2.0.0)(magicast@0.5.5)(rolldown@1.2.19)(vite@8.3.8(jiti@2.7.0)(less@4.9.1)(terser@5.51.2))(vitepress@2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))':
+  '@vite-pwa/vitepress@2.0.3(@vite-pwa/assets-generator@2.0.0)(magicast@0.5.5)(rolldown@1.2.19)(vite@8.3.8(jiti@2.7.0)(less@4.9.1)(terser@5.51.2))(vitepress@2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2))':
     dependencies:
       '@unplugin-pwa/core': 0.0.5(@vite-pwa/assets-generator@2.0.0)(magicast@0.5.5)(rolldown@1.2.19)(vite@8.3.8(jiti@2.7.0)(less@4.9.1)(terser@5.51.2))
       '@unplugin-pwa/inspector': 0.0.5
@@ -5790,7 +5794,7 @@ snapshots:
       '@vite-pwa/workbox-build': 8.0.15(magicast@0.5.5)(rolldown@1.2.19)(vite@8.3.8(jiti@2.7.0)(less@4.9.1)(terser@5.51.2))
       '@vite-pwa/workbox-swkit': 8.0.15
       '@vite-pwa/workbox-window': 8.0.15
-      vitepress: 2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
+      vitepress: 2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2)
     optionalDependencies:
       '@vite-pwa/assets-generator': 2.0.0
       magicast: 0.5.5
@@ -5900,24 +5904,24 @@ snapshots:
 
   '@vue/shared@3.5.45': {}
 
-  '@vueuse/core@14.4.0(vue@3.5.45)':
+  '@vueuse/core@15.0.0(vue@3.5.45)':
     dependencies:
       '@types/web-bluetooth': 0.0.21
-      '@vueuse/metadata': 14.4.0
-      '@vueuse/shared': 14.4.0(vue@3.5.45)
+      '@vueuse/metadata': 15.0.0
+      '@vueuse/shared': 15.0.0(vue@3.5.45)
       vue: 3.5.45
 
-  '@vueuse/integrations@14.4.0(focus-trap@8.2.4)(vue@3.5.45)':
+  '@vueuse/integrations@15.0.0(focus-trap@8.2.5)(vue@3.5.45)':
     dependencies:
-      '@vueuse/core': 14.4.0(vue@3.5.45)
-      '@vueuse/shared': 14.4.0(vue@3.5.45)
+      '@vueuse/core': 15.0.0(vue@3.5.45)
+      '@vueuse/shared': 15.0.0(vue@3.5.45)
       vue: 3.5.45
     optionalDependencies:
-      focus-trap: 8.2.4
+      focus-trap: 8.2.5
 
-  '@vueuse/metadata@14.4.0': {}
+  '@vueuse/metadata@15.0.0': {}
 
-  '@vueuse/shared@14.4.0(vue@3.5.45)':
+  '@vueuse/shared@15.0.0(vue@3.5.45)':
     dependencies:
       vue: 3.5.45
 
@@ -6033,7 +6037,7 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.11.37
       caniuse-lite: 1.0.30001826
-      electron-to-chromium: 1.5.485
+      electron-to-chromium: 1.5.486
       node-releases: 2.0.64
       update-browserslist-db: 1.3.4(browserslist@4.29.5)
 
@@ -6449,7 +6453,7 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
 
-  dompurify@3.4.17:
+  dompurify@3.4.18:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
 
@@ -6469,7 +6473,7 @@ snapshots:
     dependencies:
       jake: 10.9.4
 
-  electron-to-chromium@1.5.485: {}
+  electron-to-chromium@1.5.486: {}
 
   elkjs@0.12.1: {}
 
@@ -6639,9 +6643,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  focus-trap@8.2.4:
+  focus-trap@8.2.5:
     dependencies:
-      tabbable: 6.5.1
+      tabbable: 6.5.2
 
   for-each@0.3.5:
     dependencies:
@@ -7382,7 +7386,7 @@ snapshots:
       d3-sankey: 0.12.3
       dagre-d3-es: 7.0.14
       dayjs: 1.11.23
-      dompurify: 3.4.17
+      dompurify: 3.4.18
       elkjs: 0.12.1
       es-toolkit: 1.53.2
       katex: 0.18.10
@@ -8288,7 +8292,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  tabbable@6.5.1: {}
+  tabbable@6.5.2: {}
 
   temp-dir@2.0.0: {}
 
@@ -8542,22 +8546,20 @@ snapshots:
       gray-matter: 4.0.3
       qsu: 1.100.0
 
-  vitepress@2.0.0-alpha.19(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2):
+  vitepress@2.0.0-alpha.21(jiti@2.7.0)(less@4.9.1)(postcss@8.5.33)(terser@5.51.2):
     dependencies:
       '@docsearch/css': 4.7.1
       '@docsearch/js': 4.7.1
       '@docsearch/sidepanel-js': 4.7.1
       '@iconify-json/simple-icons': 1.2.102
-      '@shikijs/core': 4.6.0
       '@shikijs/transformers': 4.6.0
-      '@shikijs/types': 4.6.0
       '@types/markdown-it': 14.2.0
       '@vitejs/plugin-vue': 6.0.11(vite@8.3.8(jiti@2.7.0)(less@4.9.1)(terser@5.51.2))(vue@3.5.45)
       '@vue/devtools-api': 8.2.1
       '@vue/shared': 3.5.45
-      '@vueuse/core': 14.4.0(vue@3.5.45)
-      '@vueuse/integrations': 14.4.0(focus-trap@8.2.4)(vue@3.5.45)
-      focus-trap: 8.2.4
+      '@vueuse/core': 15.0.0(vue@3.5.45)
+      '@vueuse/integrations': 15.0.0(focus-trap@8.2.5)(vue@3.5.45)
+      focus-trap: 8.2.5
       mark.js: 8.11.1
       minisearch: 7.2.0
       shiki: 4.6.0
