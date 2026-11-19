@@ -26,11 +26,11 @@ This skill judges substance: are the claims true, is the writing on-guide, and d
 
 ## Required input
 
-A single target content file path, for example `contents/en/local/passport-renewal.md`.
+A single target content file path, for example `contents/level-1/jinba-sagamiko.md`.
 
 If the invoker did not name a target, default to the file currently being edited or the file named in the most recent user turn. Confirm the scope before auditing if it is ambiguous.
 
-Detect the language from the path: `contents/en/` is English, `contents/ja/` is Japanese. Apply the matching style guides (see below).
+Detect the language from the file name: a `*.ja.md` file is Japanese, and any other `.md` file is English. Apply the matching style guides (see below).
 
 
 ## Authoritative references
@@ -41,13 +41,14 @@ Read and follow these repo files; they take precedence over anything in this ski
 * [docs/general-style-guide-japanese.md][general-style-guide-japanese] and [docs/technical-style-guide-japanese.md][technical-style-guide-japanese] - prose rules for Japanese content.
 * [docs/technical-doc-overview.md][technical-doc-overview] - the four help document types (tutorial, how-to guide, reference, explanation) and when each applies. Use it to judge whether the post is structured appropriately for its purpose.
 * [docs/markdown-style-guide.md][markdown-style-guide] - note banners and reference-style links.
+* [docs/hiking-blog-style-guide.md][hiking-blog-style-guide] - route-page conventions: the standard section headings in order, the emoji vocabulary, and Japanese place names.
 * [docs/glossary.yaml][glossary] and [docs/words-to-avoid.txt][words-to-avoid] - approved terminology and terms to flag.
-* [AGENTS.md][agents] - repository conventions (plain hyphens only, bilingual parity, localization frontmatter states).
+* [AGENTS.md][agents] - repository conventions (plain hyphens only, content frontmatter, reference-style links, and Japanese pages).
 
 
 ## Workflow
 
-1. **Resolve the target.** Confirm the file exists and read it in full. Note the language, the frontmatter (`title`, `description`, `localization`, `head` keywords), the document type, and the regions to leave alone when reasoning about prose (fenced code, inline code, HTML, includes such as `<!--@include: ...-->`, and frontmatter).
+1. **Resolve the target.** Confirm the file exists and read it in full. Note the language, the frontmatter (`title`, `description`, `excludeFromSidebar`), the document type, and the regions to leave alone when reasoning about prose (fenced code, inline code, HTML, includes such as `<!--@include: ...-->`, and frontmatter).
 
 2. **Read the relevant style guides.** Load the general and technical guides for the file's language, plus the Markdown style guide, glossary, and words-to-avoid list. Skim `technical-doc-overview.md` to identify the intended document type.
 
@@ -64,7 +65,7 @@ Read and follow these repo files; they take precedence over anything in this ski
 
 ## Accuracy review
 
-The site covers travel, living in Japan, and tech - all areas where facts go stale fast. Be skeptical of anything that could have changed.
+The site covers hiking routes in and around Tokyo, where train and bus times, fares, teahouse hours, and trail conditions change often. Be skeptical of anything that could have changed.
 
 * **Extract checkable claims.** Prices and fees, dates and deadlines, opening hours, addresses and station names, procedures and eligibility rules, product or software versions, statistics, and named laws or government services.
 * **Verify time-sensitive and external facts with the web.** Use `WebSearch` to find authoritative sources and `WebFetch` to read them, preferring official sources (government agencies, the operator's own site) over aggregators. Confirm the claim still holds as of today's date. If a `WebFetch` domain is not yet permitted, ask the user to allow it or to confirm the fact manually rather than guessing.
@@ -82,9 +83,10 @@ Check what the mechanical auto-fixers cannot catch, against the guides for the f
 * **Terminology.** Terms match [glossary.yaml][glossary]; flag any word on the [words-to-avoid][words-to-avoid] list and suggest the approved alternative.
 * **Document-type fit.** The structure matches its purpose per [technical-doc-overview.md][technical-doc-overview] - for example, a how-to guide leads with prerequisites and uses numbered, imperative steps; a reference document is organized for lookup. Flag a post that mixes types in a way that hurts the reader.
 * **Headings and lists.** Sentence-case headings, a sensible heading hierarchy with no skipped levels, and parallel, consistently punctuated list items.
+* **Route page sections.** On a route page, H2 headings use the standard names and emoji from the section heading table in [hiking-blog-style-guide.md][hiking-blog-style-guide], in the table's order, so `References` is last. A page can skip sections it does not need. Flag a non-standard name or emoji, and a section that is out of order.
 * **Alert banners and inline formatting.** Note banners follow the Markdown style guide; inline code, UI labels, and key names are formatted per the technical guide.
 * **Clarity for non-native readers.** Simple, non-idiomatic wording; no contractions in English; plain hyphens only, never en-dash or em-dash; no slash standing in for "or" or "and" (write the word out, since the slash is ambiguous).
-* **Frontmatter.** `title` and `description` are present, accurate, and match the body; `head` keywords are relevant.
+* **Frontmatter.** `title` and `description` are present, accurate, and match the body; a Japanese page sets `excludeFromSidebar: true`.
 
 For findings that are purely mechanical (curly quotes, spacing, reference-link conversion, table-of-contents drift), note them briefly and point the user to [`blog-md-linter`][blog-md-linter] or [`general-en-polisher`][general-en-polisher] rather than itemizing each one.
 
@@ -102,11 +104,10 @@ Judge the post as a whole:
 
 ## Localization note
 
-When you audit a file under `contents/en/` or `contents/ja/`, check its 1-to-1 counterpart's `localization` state in the frontmatter:
+A page can have a counterpart in the other language in the same folder: `hatonosu-valley.md` pairs with `hatonosu-valley.ja.md`. Translations are optional, and no frontmatter key tracks whether a pair is in sync, so check whether the counterpart file exists:
 
-* If this file is `sync`, an accuracy fix here means the counterpart is now out of date. Note in the report that the counterpart should be flagged `TODO: drifted` and re-synced (the [`blog-translator`][blog-translator] skill handles that), but do not edit the counterpart as part of the audit.
-* If this file is `independent`, audit it on its own terms and do not compare it against the counterpart.
-* Auditing alone changes nothing, so do not flip any `localization` value unless and until the user has you apply a content fix.
+* If it exists, an accuracy fix here means the counterpart is now out of date. Note in the report that the counterpart needs the same fix (the [`blog-translator`][blog-translator] skill handles that), but do not edit the counterpart as part of the audit.
+* If it does not exist, audit the file on its own terms.
 
 
 ## Report format
@@ -154,7 +155,7 @@ If a pillar has no findings, say so explicitly ("No accuracy issues found") rath
 * Findings are grouped under the three pillars, each with a severity, a `file:line` location, and a concrete recommended fix.
 * Mechanical lint issues are summarized and delegated, not itemized.
 * The file is unchanged unless the user explicitly approved fixes after reading the report.
-* The report names any localization follow-up without altering the counterpart.
+* The report names any follow-up for the counterpart in the other language without altering it.
 
 <!-- Links -->
 
@@ -165,6 +166,7 @@ If a pillar has no findings, say so explicitly ("No accuracy issues found") rath
 [general-style-guide-english]: ../../docs/general-style-guide-english.md
 [general-style-guide-japanese]: ../../docs/general-style-guide-japanese.md
 [glossary]: ../../docs/glossary.yaml
+[hiking-blog-style-guide]: ../../docs/hiking-blog-style-guide.md
 [markdown-style-guide]: ../../docs/markdown-style-guide.md
 [technical-doc-overview]: ../../docs/technical-doc-overview.md
 [technical-style-guide-english]: ../../docs/technical-style-guide-english.md

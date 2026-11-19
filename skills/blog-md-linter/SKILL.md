@@ -12,7 +12,7 @@ You are a precise Markdown linter and editor. Your job is to bring one Markdown 
 
 One of:
 
-* A single target file path (for example, `contents/en/tech/coding-fonts.md`).
+* A single target file path (for example, `contents/level-1/jinba-sagamiko.md`).
 * A folder to process recursively (for example, `contents/` for every Markdown file on the site).
 
 If the invoker did not specify a target, default to the file currently being edited or the file named in the most recent user turn. Confirm the scope before editing if it is ambiguous.
@@ -24,8 +24,9 @@ Read and follow these repo files; they take precedence over anything in this ski
 
 * [.markdownlint-cli2.jsonc][markdownlint-config] - the enforced linter rules.
 * [docs/markdown-style-guide.md][markdown-style-guide] - linter rules, note banners, and the reference-style link convention.
+* [docs/hiking-blog-style-guide.md][hiking-blog-style-guide] - route-page conventions: the standard section headings in order, the emoji vocabulary, and Japanese place names.
 * [docs/general-style-guide-english.md][general-style-guide-english] and [docs/technical-style-guide-english.md][technical-style-guide-english] - prose rules for English content.
-* The Japanese counterparts (`*-japanese.md`) when the target lives under `contents/ja/`.
+* The Japanese counterparts (`*-japanese.md`) when the target is a Japanese page (`*.ja.md`).
 
 
 ## Workflow
@@ -101,6 +102,7 @@ The auto-fixers do not catch wording. Check the prose against the style guides a
 * Keep capitalization and end punctuation consistent within lists and parallel structures.
 * Prefer simple, clear, non-idiomatic wording for non-native readers, without changing required technical terms.
 * Provide descriptive alt text for images and a language hint on fenced code blocks where one is missing.
+* On a route page, check the H2 headings against the section heading table in [docs/hiking-blog-style-guide.md][hiking-blog-style-guide]: standard names, standard emoji, and the table's order, with `References` last. Report a mismatch in the summary instead of fixing it, because a heading change moves its anchor and moving a section is a content change.
 
 If a prose-polishing pass is the main goal, the `general-en-polisher` skill covers these writing rules in depth; this skill focuses on linting, the table of contents, and reference-style links.
 
@@ -116,7 +118,7 @@ If a prose-polishing pass is the main goal, the `general-en-polisher` skill cove
 
 ## Localization note
 
-These are formatting-only changes that preserve content parity, so do **not** flip a file's `localization` frontmatter to `TODO: drifted` for lint fixes alone. When you lint a file under `contents/en/` or `contents/ja/`, prefer to lint its 1-to-1 counterpart in the other language in the same pass so both versions stay consistently formatted.
+A page can have a counterpart in the other language in the same folder: `hatonosu-valley.md` pairs with `hatonosu-valley.ja.md`. These are formatting-only changes, so they never put a pair out of sync. When you lint a file that has a counterpart, prefer to lint the counterpart in the same pass so both versions stay consistently formatted.
 
 
 ## What success looks like
@@ -130,6 +132,7 @@ These are formatting-only changes that preserve content parity, so do **not** fl
 <!-- Links -->
 
 [general-style-guide-english]: ../../docs/general-style-guide-english.md
+[hiking-blog-style-guide]: ../../docs/hiking-blog-style-guide.md
 [markdown-style-guide]: ../../docs/markdown-style-guide.md
 [markdownlint-config]: ../../.markdownlint-cli2.jsonc
 [technical-style-guide-english]: ../../docs/technical-style-guide-english.md
